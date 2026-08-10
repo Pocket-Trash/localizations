@@ -1,0 +1,55 @@
+name: Changeset PR
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+      - edited
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  changeset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: node scripts/check-pr-changesets.mjs
+      - if: always() && steps.check.outputs.major != ''
+        uses: actions/github-script@v8
+        env:
+          IS_MAJOR: ${{ steps.check.outputs.major }}
+        with:
+          script: |
+            const label = 'Major';
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+
+            try {
+              await github.rest.issues.getLabel({ owner, repo, name: label });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              await github.rest.issues.createLabel({ owner, repo, name: label, color: 'b60205' });
+            }
+
+            const labels = await github.paginate(github.rest.issues.listLabelsOnIssue, { owner, repo, issue_number });
+            const hasLabel = labels.some((item) => item.name === label);
+
+            if (process.env.IS_MAJOR === 'true' && !hasLabel) {
+              await github.rest.issues.addLabels({ owner, repo, issue_number, labels: [label] });
+            }
+
+            if (process.env.IS_MAJOR !== 'true' && hasLabel) {
+              await github.rest.issues.removeLabel({ owner, repo, issue_number, name: label });
+            }

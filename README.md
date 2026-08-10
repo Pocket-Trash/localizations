@@ -20,8 +20,8 @@ const label = formatMessage('action.save', {}, locale);
 ## Develop
 
 ```sh
-npm ci
-npm test
+pnpm install
+pnpm test
 ```
 
 Publishing notes live in [docs/publishing.md](docs/publishing.md).

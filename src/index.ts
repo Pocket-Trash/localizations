@@ -42,10 +42,10 @@ export const messages = Object.freeze({
 
 export const messageKeys = Object.freeze(Object.keys(messages[DEFAULT_LOCALE]) as MessageKey[]);
 
-export const clerkLocalizations = Object.freeze({
+export const clerkLocalizations: Readonly<Record<SupportedLocale, ClerkLocalizationResource | undefined>> = Object.freeze({
   en: undefined,
   'es-MX': esMX,
-} satisfies Record<SupportedLocale, ClerkLocalizationResource | undefined>);
+});
 
 export function resolveLocale(...preferences: readonly LocalePreference[]): SupportedLocale {
   for (const preference of preferences.flat()) {

@@ -33,16 +33,21 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "npm run build && node --test"
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "release": "changeset publish",
+    "test": "pnpm run build && node --test"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.1",
     "typescript": "^5.9.2"
   },
   "dependencies": {
     "@clerk/localizations": "^4.14.2",
     "lts": "^2.0.0"
-  }
+  },
+  "packageManager": "pnpm@11.10.0"
 }
