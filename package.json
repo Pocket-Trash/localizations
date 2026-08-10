@@ -1,0 +1,48 @@
+{
+  "name": "field-log-localizations",
+  "version": "0.0.1",
+  "description": "Shared localization utilities and message catalogs for Field Log.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Field-Log/field-log-localizations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Field-Log/field-log-localizations/issues"
+  },
+  "homepage": "https://github.com/Field-Log/field-log-localizations#readme",
+  "keywords": [
+    "field-log",
+    "localization",
+    "i18n"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@clerk/localizations": "^4.14.2",
+    "lts": "^2.0.0"
+  }
+}
