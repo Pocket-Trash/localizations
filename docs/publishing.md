@@ -9,14 +9,14 @@ release history readable.
 2. Run tests:
 
 ```sh
-npm ci
-npm test
+pnpm install
+pnpm test
 ```
 
 3. Add a changeset:
 
 ```sh
-npx changeset
+pnpm changeset
 ```
 
 4. Commit the code and generated `.changeset/*.md` file together:
@@ -28,21 +28,20 @@ git commit -m "Add Spanish copy for save action"
 
 ## Version Commits
 
-When preparing a release, apply the pending changesets:
+Merges to `main` apply pending changesets automatically:
 
 ```sh
-npx changeset version
-npm test
-git add .
-git commit -m "Version packages"
+pnpm run changeset:version
 ```
 
-Push that commit and create a GitHub release for the new version.
+The publishing workflow combines changesets into `CHANGELOG.md`, bumps
+`package.json`, updates `pnpm-lock.yaml`, commits those files back to `main`,
+and publishes the package.
 
 ## Publishing Workflow
 
 Publishing runs through `.github/workflows/publish.yml`.
 
-The workflow currently runs when a GitHub release is published or when it is
-started manually with `workflow_dispatch`. It does not run automatically on
-merges to `main`.
+The workflow runs on merges to `main` and when started manually with
+`workflow_dispatch`. Pull requests must include a release changeset. Major
+changesets add the `Major` label to the pull request.
