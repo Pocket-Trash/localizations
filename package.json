@@ -1,6 +1,6 @@
 {
   "name": "field-log-localizations",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared localization utilities and message catalogs for Field Log.",
   "type": "module",
   "main": "./dist/index.js",
