@@ -1,4 +1,4 @@
-const PACKAGE_NAME = 'field-log-localizations';
+const PACKAGE_NAME = '@pocket-trash/localizations';
 
 export function checkChangesets(files, packageName = PACKAGE_NAME) {
   const changesets = files.filter(

@@ -1,4 +1,10 @@
-# field-log-localizations
+# @pocket-trash/localizations
+
+## 0.0.3
+
+### Patch Changes
+
+- Rename package and app copy to Pocket Trash.
 
 ## 0.0.2
 

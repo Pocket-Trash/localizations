@@ -25,14 +25,14 @@ const localeAliases = new Map<string, SupportedLocale>([
 
 export const messages = Object.freeze({
   en: Object.freeze({
-    'app.name': 'Field Log',
+    'app.name': 'Pocket Trash',
     'action.cancel': 'Cancel',
     'action.save': 'Save',
     'error.generic': 'Something went wrong.',
     'locale.current': 'Current language: {locale}',
   }),
   'es-MX': Object.freeze({
-    'app.name': 'Field Log',
+    'app.name': 'Pocket Trash',
     'action.cancel': 'Cancelar',
     'action.save': 'Guardar',
     'error.generic': 'Algo salio mal.',

@@ -25,6 +25,7 @@ test('orders Accept-Language values by q weight', () => {
 });
 
 test('interpolates message placeholders', () => {
+  assert.equal(formatMessage('app.name'), 'Pocket Trash');
   assert.equal(formatMessage('locale.current', { locale: 'es-MX' }, 'es'), 'Idioma actual: es-MX');
   assert.equal(formatMessage('locale.current', {}, 'en'), 'Current language: {locale}');
 });

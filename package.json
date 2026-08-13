@@ -1,7 +1,7 @@
 {
-  "name": "field-log-localizations",
-  "version": "0.0.2",
-  "description": "Shared localization utilities and message catalogs for Field Log.",
+  "name": "@pocket-trash/localizations",
+  "version": "0.0.3",
+  "description": "Shared localization utilities and message catalogs for Pocket Trash.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,14 +16,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Field-Log/field-log-localizations.git"
+    "url": "git+https://github.com/Pocket-Trash/pocket-trash-localizations.git"
   },
   "bugs": {
-    "url": "https://github.com/Field-Log/field-log-localizations/issues"
+    "url": "https://github.com/Pocket-Trash/pocket-trash-localizations/issues"
   },
-  "homepage": "https://github.com/Field-Log/field-log-localizations#readme",
+  "homepage": "https://github.com/Pocket-Trash/pocket-trash-localizations#readme",
   "keywords": [
-    "field-log",
+    "pocket-trash",
     "localization",
     "i18n"
   ],

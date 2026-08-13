@@ -20,8 +20,8 @@ test('fails for empty changesets', () => {
 test('passes for patch and minor changesets', () => {
   assert.deepEqual(
     checkChangesets([
-      { filename: '.changeset/fix.md', content: '---\nfield-log-localizations: patch\n---\nFix copy.' },
-      { filename: '.changeset/add.md', content: '---\n"field-log-localizations": minor\n---\nAdd copy.' },
+      { filename: '.changeset/fix.md', content: '---\n"@pocket-trash/localizations": patch\n---\nFix copy.' },
+      { filename: '.changeset/add.md', content: '---\n"@pocket-trash/localizations": minor\n---\nAdd copy.' },
     ]),
     {
       hasRelease: true,
@@ -32,7 +32,9 @@ test('passes for patch and minor changesets', () => {
 
 test('detects major changesets', () => {
   assert.deepEqual(
-    checkChangesets([{ filename: '.changeset/break.md', content: '---\nfield-log-localizations: major\n---\nBreak API.' }]),
+    checkChangesets([
+      { filename: '.changeset/break.md', content: '---\n"@pocket-trash/localizations": major\n---\nBreak API.' },
+    ]),
     {
       hasRelease: true,
       major: true,
