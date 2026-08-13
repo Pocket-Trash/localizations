@@ -1,17 +1,17 @@
-# field-log-localizations
+# @pocket-trash/localizations
 
-Shared localization utilities and message catalogs for Field Log.
+Shared localization utilities and message catalogs for Pocket Trash.
 
 ## Install
 
 ```sh
-npm install field-log-localizations
+npm install @pocket-trash/localizations
 ```
 
 ## Use
 
 ```ts
-import { formatMessage, resolveLocale } from 'field-log-localizations';
+import { formatMessage, resolveLocale } from '@pocket-trash/localizations';
 
 const locale = resolveLocale('es-MX');
 const label = formatMessage('action.save', {}, locale);
