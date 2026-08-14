@@ -215,8 +215,25 @@ and preserves existing translations.
 
 ## Develop
 
+Use `pnpm dev` when working on this package from another app. It runs the same
+TypeScript build as `pnpm build`, but watches files and rebuilds `dist/` on
+changes.
+
+```sh
+pnpm dev
+```
+
+From the app that consumes this package, link the local package:
+
+```sh
+pnpm link /path/to/field-log-localizations
+```
+
+More details live in [docs/local-development.md](docs/local-development.md).
+
 ```sh
 pnpm install
+pnpm dev
 pnpm test
 pnpm localization:create nl-BE
 pnpm localization:sync
