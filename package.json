@@ -33,10 +33,14 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "check": "biome check --write .",
     "changeset": "changeset",
     "changeset:version": "changeset version",
+    "format": "biome format --write .",
+    "lint": "biome ci .",
     "localization:create": "node scripts/localizations.mjs create",
     "localization:sync": "node scripts/localizations.mjs sync",
+    "prepare": "husky",
     "release": "changeset publish",
     "test": "pnpm run build && node --test"
   },
@@ -44,7 +48,9 @@
     "node": ">=20"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.8",
     "@changesets/cli": "^2.31.1",
+    "husky": "^9.1.7",
     "typescript": "^5.9.2"
   },
   "dependencies": {
