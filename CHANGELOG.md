@@ -1,5 +1,11 @@
 # @pocket-trash/localizations
 
+## 0.0.4
+
+### Patch Changes
+
+- 2c54e20: Split translations into typed nested per-locale resources and add localization scaffold commands.
+
 ## 0.0.3
 
 ### Patch Changes
