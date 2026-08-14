@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.0.8
+
+_Published 2026-08-14._
+
+### Patch Changes
+
+- b5dfa70: Remove the release workflow organization membership check.
+- 4f33661: Batch pending changesets into manual releases and keep generated pnpm stores ignored.
+
 ## 0.0.7
 
 _Published 2026-08-14._
