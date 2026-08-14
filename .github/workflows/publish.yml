@@ -37,23 +37,6 @@ jobs:
             echo "has_changesets=false" >> "$GITHUB_OUTPUT"
           fi
       - if: steps.pending.outputs.has_changesets == 'true'
-        uses: actions/github-script@v8
-        env:
-          RELEASE_ACTOR: ${{ github.triggering_actor }}
-        with:
-          script: |
-            const org = 'Pocket-Trash';
-            const username = process.env.RELEASE_ACTOR || context.actor;
-
-            try {
-              const { data } = await github.rest.orgs.getMembershipForUser({ org, username });
-              if (data.state !== 'active' || !['admin', 'member'].includes(data.role)) {
-                core.setFailed(`${username} is not an active ${org} owner or member.`);
-              }
-            } catch (error) {
-              core.setFailed(`Could not verify ${username} as a ${org} owner or member: ${error.message}`);
-            }
-      - if: steps.pending.outputs.has_changesets == 'true'
         run: pnpm run changeset:version
       - if: steps.pending.outputs.has_changesets == 'true'
         run: pnpm install --lockfile-only
