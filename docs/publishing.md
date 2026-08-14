@@ -28,13 +28,13 @@ git commit -m "Add Spanish copy for save action"
 
 ## Version Commits
 
-Merges to `main` apply pending changesets automatically:
+Run the publish workflow when you want to release the pending changesets:
 
 ```sh
 pnpm run changeset:version
 ```
 
-The publishing workflow combines changesets into `CHANGELOG.md`, bumps
+The version step combines changesets into `CHANGELOG.md`, bumps
 `package.json`, updates `pnpm-lock.yaml`, commits those files back to `main`,
 and publishes the package.
 
@@ -42,6 +42,6 @@ and publishes the package.
 
 Publishing runs through `.github/workflows/publish.yml`.
 
-The workflow runs on merges to `main` and when started manually with
-`workflow_dispatch`. Pull requests must include a release changeset. Major
-changesets add the `Major` label to the pull request.
+The workflow runs when started manually with `workflow_dispatch`. Pull requests
+must include a release changeset. Major changesets add the `Major` label to the
+pull request.
