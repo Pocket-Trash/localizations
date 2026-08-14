@@ -1,5 +1,17 @@
 # @pocket-trash/localizations
 
+## 0.0.6
+
+### Patch Changes
+
+- 1853747: Add contributing documentation and a pull request template.
+
+## 0.0.5
+
+### Patch Changes
+
+- a2570b8: Add Biome linting and formatting commands.
+
 ## 0.0.4
 
 ### Patch Changes
