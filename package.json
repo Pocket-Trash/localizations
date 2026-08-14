@@ -35,7 +35,7 @@
     "build": "tsc -p tsconfig.json",
     "check": "biome check --write .",
     "changeset": "changeset",
-    "changeset:version": "changeset version",
+    "changeset:version": "changeset version && node scripts/stamp-changelog-release-date.mjs",
     "format": "biome format --write .",
     "lint": "biome ci .",
     "localization:create": "node scripts/localizations.mjs create",
