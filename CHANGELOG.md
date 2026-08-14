@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.0.9
+
+_Published 2026-08-14._
+
+### Patch Changes
+
+- 082f4f8: Commit version files before publishing in the local release command.
+
 ## 0.0.8
 
 _Published 2026-08-14._
