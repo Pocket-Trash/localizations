@@ -1,6 +1,18 @@
 # @pocket-trash/localizations
 
+[![npm version](https://img.shields.io/npm/v/@pocket-trash/localizations.svg)](https://www.npmjs.com/package/@pocket-trash/localizations)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./package.json)
+[![CI](https://github.com/Pocket-Trash/pocket-trash-localizations/actions/workflows/ci.yml/badge.svg)](https://github.com/Pocket-Trash/pocket-trash-localizations/actions/workflows/ci.yml)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/contributing.md)
+
 Shared localization utilities and translation catalogs for Pocket Trash.
+
+## Documentation
+
+| File | Description |
+| --- | --- |
+| [contributing.md](docs/contributing.md) | Explains how to edit translations, run checks, commit changes, and open a pull request. |
+| [publishing.md](docs/publishing.md) | Explains how changesets become package versions and npm releases. |
 
 ## Install
 
@@ -214,26 +226,25 @@ pnpm localization:sync
 and preserves existing translations.
 
 ## Develop
+Common commands:
 
-Use `pnpm dev` when working on this package from another app. It runs the same
-TypeScript build as `pnpm build`, but watches files and rebuilds `dist/` on
-changes.
-
-```sh
-pnpm dev
-```
-
-From the app that consumes this package, link the local package:
-
-```sh
-pnpm link /path/to/field-log-localizations
-```
-
-More details live in [docs/local-development.md](docs/local-development.md).
+| Command | Description |
+| --- | --- |
+| `pnpm install` | Install dependencies. |
+| `pnpm build` | Build the package with TypeScript. |
+| `pnpm format` | Format files with Biome. |
+| `pnpm lint` | Check formatting and lint rules with Biome. |
+| `pnpm check` | Run Biome checks and apply safe fixes. |
+| `pnpm test` | Build the package and run the test suite. |
+| `pnpm localization:create nl-BE` | Create and wire a new locale from the `en-US` source shape. |
+| `pnpm localization:sync` | Add missing source keys to existing non-English locale files. |
+| `pnpm changeset` | Create a release changeset for a pull request. |
+| `pnpm release` | Publish pending package changes from the release workflow. |
 
 ```sh
 pnpm install
-pnpm dev
+pnpm format
+pnpm lint
 pnpm test
 pnpm localization:create nl-BE
 pnpm localization:sync
