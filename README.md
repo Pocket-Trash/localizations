@@ -226,7 +226,6 @@ pnpm localization:sync
 and preserves existing translations.
 
 ## Develop
-
 Common commands:
 
 | Command | Description |
