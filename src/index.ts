@@ -1,50 +1,59 @@
-import { esMX } from '@clerk/localizations';
+import { esMX as clerkEsMX } from '@clerk/localizations';
 
-export type SupportedLocale = 'en' | 'es-MX';
-export type MessageKey =
-  | 'app.name'
-  | 'action.cancel'
-  | 'action.save'
-  | 'error.generic'
-  | 'locale.current';
-export type Messages = Readonly<Record<MessageKey, string>>;
+import { enUS } from './localizations/en-US.js';
+import { esMX } from './localizations/es-MX.js';
+import type {
+  CompleteLocalizationResource,
+  LocalizationResource,
+  TranslationKey,
+  Translations,
+} from './types/localization.js';
+
+export type {
+  CompleteLocalizationResource,
+  LocalizationResource,
+  TranslationKey,
+  Translations,
+} from './types/localization.js';
+export { enUS } from './localizations/en-US.js';
+export { esMX } from './localizations/es-MX.js';
+
+export type SupportedLocale = 'en-US' | 'es-MX';
+export type MessageKey = TranslationKey;
+export type Messages = Translations;
 export type LocalePreference = string | readonly string[] | null | undefined;
-export type ClerkLocalizationResource = typeof esMX;
+export type ClerkLocalizationResource = typeof clerkEsMX;
 
-export const DEFAULT_LOCALE = 'en' satisfies SupportedLocale;
-export const SUPPORTED_LOCALES = Object.freeze(['en', 'es-MX'] as const);
+export const DEFAULT_LOCALE = 'en-US' satisfies SupportedLocale;
+export const SUPPORTED_LOCALES = Object.freeze(['en-US', 'es-MX'] as const);
 
 const localeAliases = new Map<string, SupportedLocale>([
-  ['en', 'en'],
-  ['en-us', 'en'],
-  ['en-ca', 'en'],
   ['es', 'es-MX'],
   ['es-mx', 'es-MX'],
   ['es-us', 'es-MX'],
+  ['en-us', 'en-US'],
 ]);
 
-export const messages = Object.freeze({
-  en: Object.freeze({
-    'app.name': 'Pocket Trash',
-    'action.cancel': 'Cancel',
-    'action.save': 'Save',
-    'error.generic': 'Something went wrong.',
-    'locale.current': 'Current language: {locale}',
-  }),
-  'es-MX': Object.freeze({
-    'app.name': 'Pocket Trash',
-    'action.cancel': 'Cancelar',
-    'action.save': 'Guardar',
-    'error.generic': 'Algo salio mal.',
-    'locale.current': 'Idioma actual: {locale}',
-  }),
-} satisfies Record<SupportedLocale, Messages>);
+export const localizations = Object.freeze({
+  'en-US': enUS,
+  'es-MX': esMX,
+} satisfies Record<SupportedLocale, LocalizationResource>);
 
-export const messageKeys = Object.freeze(Object.keys(messages[DEFAULT_LOCALE]) as MessageKey[]);
+const defaultTranslations = flattenLocalization(enUS) as Translations;
+
+export const translationKeys = Object.freeze(Object.keys(defaultTranslations) as TranslationKey[]);
+
+export const translations = Object.freeze({
+  'en-US': Object.freeze(defaultTranslations),
+  'es-MX': Object.freeze(mergeTranslations(defaultTranslations, flattenLocalization(esMX))),
+} satisfies Record<SupportedLocale, Translations>);
+
+export const messages = translations;
+export const messageKeys = translationKeys;
 
 export const clerkLocalizations: Readonly<Record<SupportedLocale, ClerkLocalizationResource | undefined>> = Object.freeze({
-  en: undefined,
-  'es-MX': esMX,
+  'en-US': undefined,
+  'es-MX': clerkEsMX,
 });
 
 export function resolveLocale(...preferences: readonly LocalePreference[]): SupportedLocale {
@@ -58,20 +67,22 @@ export function resolveLocale(...preferences: readonly LocalePreference[]): Supp
   return DEFAULT_LOCALE;
 }
 
-export function getMessages(locale?: string | null): Messages {
-  return messages[resolveLocale(locale)];
+export function getTranslations(locale?: SupportedLocale | null): Translations {
+  return translations[resolveLocale(locale)];
 }
 
-export function getClerkLocalization(locale?: string | null): ClerkLocalizationResource | undefined {
+export const getMessages = getTranslations;
+
+export function getClerkLocalization(locale?: SupportedLocale | null): ClerkLocalizationResource | undefined {
   return clerkLocalizations[resolveLocale(locale)];
 }
 
-export function formatMessage(
-  key: MessageKey | string,
+export function formatTranslation(
+  key: TranslationKey,
   values: Readonly<Record<string, unknown>> = {},
-  locale: string | null = DEFAULT_LOCALE,
+  locale: SupportedLocale | null = DEFAULT_LOCALE,
 ): string {
-  const template = getMessages(locale)[key as MessageKey] ?? messages[DEFAULT_LOCALE][key as MessageKey];
+  const template = getTranslations(locale)[key] ?? translations[DEFAULT_LOCALE][key];
   if (!template) return key;
 
   return template.replace(/\{([a-zA-Z0-9_]+)\}/g, (_, name: string) =>
@@ -79,17 +90,21 @@ export function formatMessage(
   );
 }
 
+export const formatMessage = formatTranslation;
+
 export function assertCompleteCatalogs(): true {
-  const expected = new Set(messageKeys);
+  const expected = new Set(translationKeys);
 
-  for (const [locale, catalog] of Object.entries(messages)) {
-    const keys = Object.keys(catalog);
-    const missing = messageKeys.filter((key) => !(key in catalog));
-    const extra = keys.filter((key) => !expected.has(key as MessageKey));
+  for (const [locale, catalog] of Object.entries(localizations)) {
+    const flatCatalog = flattenLocalization(catalog);
+    const keys = Object.keys(flatCatalog);
+    const missing = locale === DEFAULT_LOCALE ? translationKeys.filter((key) => !(key in flatCatalog)) : [];
+    const empty = locale === DEFAULT_LOCALE ? translationKeys.filter((key) => flatCatalog[key] === '') : [];
+    const extra = keys.filter((key) => !expected.has(key as TranslationKey));
 
-    if (missing.length || extra.length) {
+    if (missing.length || empty.length || extra.length) {
       throw new Error(
-        `${locale} catalog mismatch: missing ${missing.join(', ') || 'none'}; extra ${extra.join(', ') || 'none'}`,
+        `${locale} catalog mismatch: missing ${missing.join(', ') || 'none'}; empty ${empty.join(', ') || 'none'}; extra ${extra.join(', ') || 'none'}`,
       );
     }
   }
@@ -119,7 +134,35 @@ function parseLocalePreference(preference: string | null | undefined): string[] 
 function matchLocale(tag: string): SupportedLocale | null {
   const normalized = tag.trim().replace('_', '-').toLowerCase();
   if (normalized === '*') return DEFAULT_LOCALE;
-  return localeAliases.get(normalized) ?? localeAliases.get(normalized.split('-')[0] ?? '') ?? null;
+  return localeAliases.get(normalized) ?? null;
+}
+
+function flattenLocalization(resource: LocalizationResource): Partial<Record<TranslationKey, string>> {
+  const entries: Partial<Record<TranslationKey, string>> = {};
+
+  for (const [key, value] of flattenEntries(resource)) {
+    entries[key as TranslationKey] = value;
+  }
+
+  return entries;
+}
+
+function flattenEntries(resource: Record<string, unknown>, prefix = ''): Array<[string, string]> {
+  return Object.entries(resource).flatMap(([key, value]) => {
+    const path = prefix ? `${prefix}.${key}` : key;
+    if (typeof value === 'string') return [[path, value]];
+    if (value && typeof value === 'object') return flattenEntries(value as Record<string, unknown>, path);
+    return [];
+  });
+}
+
+function mergeTranslations(
+  defaults: Partial<Record<TranslationKey, string>>,
+  overrides: Partial<Record<TranslationKey, string>>,
+): Translations {
+  return Object.fromEntries(
+    translationKeys.map((key) => [key, overrides[key] === '' || overrides[key] == null ? defaults[key] : overrides[key]]),
+  ) as Translations;
 }
 
 assertCompleteCatalogs();

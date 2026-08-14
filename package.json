@@ -35,6 +35,8 @@
     "build": "tsc -p tsconfig.json",
     "changeset": "changeset",
     "changeset:version": "changeset version",
+    "localization:create": "node scripts/localizations.mjs create",
+    "localization:sync": "node scripts/localizations.mjs sync",
     "release": "changeset publish",
     "test": "pnpm run build && node --test"
   },
