@@ -42,7 +42,7 @@
     "localization:create": "node scripts/localizations.mjs create",
     "localization:sync": "node scripts/localizations.mjs sync",
     "prepare": "husky",
-    "release": "pnpm run changeset:version && pnpm install --lockfile-only && changeset publish",
+    "release": "pnpm run changeset:version && pnpm install --lockfile-only && git add package.json pnpm-lock.yaml CHANGELOG.md .changeset && git commit -m \"chore: version packages [skip ci]\" && changeset publish && git push --follow-tags",
     "test": "pnpm run build && node --test"
   },
   "engines": {
