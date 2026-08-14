@@ -27,7 +27,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: git fetch origin ${{ github.base_ref }} --depth=1
+      - run: git fetch origin ${{ github.base_ref }}
       - run: pnpm exec commitlint --from origin/${{ github.base_ref }} --to HEAD --git-log-args=--first-parent --verbose
       - run: printf '%s\n' "$PR_TITLE" | pnpm exec commitlint
         env:
