@@ -1,19 +1,17 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import vm from 'node:vm';
+import fs from "node:fs";
+import path from "node:path";
+import vm from "node:vm";
 
 const root = process.cwd();
-const localizationsDir = path.join(root, 'src/localizations');
-const indexPath = path.join(root, 'src/index.ts');
-const sourceLocale = 'en-US';
+const sourceLocale = "en-US";
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [, , command, locale] = process.argv;
 
-  if (command === 'create') {
+  if (command === "create") {
     if (!locale) usage();
     createLocalization(locale);
-  } else if (command === 'sync') {
+  } else if (command === "sync") {
     syncLocalizations();
   } else {
     usage();
@@ -33,7 +31,9 @@ export function createLocalization(locale, options = {}) {
     throw new Error(`${filePath} already exists`);
   }
 
-  const source = readLocalization(path.join(paths.localizationsDir, `${sourceLocale}.ts`));
+  const source = readLocalization(
+    path.join(paths.localizationsDir, `${sourceLocale}.ts`),
+  );
   writeLocalization(filePath, locale, blankValues(source));
   wireLocale(paths.indexPath, locale, detectClerkExport(locale, cwd));
 }
@@ -41,10 +41,12 @@ export function createLocalization(locale, options = {}) {
 export function syncLocalizations(options = {}) {
   const cwd = options.cwd ?? root;
   const paths = getPaths(cwd);
-  const source = readLocalization(path.join(paths.localizationsDir, `${sourceLocale}.ts`));
+  const source = readLocalization(
+    path.join(paths.localizationsDir, `${sourceLocale}.ts`),
+  );
 
   for (const entry of fs.readdirSync(paths.localizationsDir)) {
-    if (!entry.endsWith('.ts') || entry === `${sourceLocale}.ts`) continue;
+    if (!entry.endsWith(".ts") || entry === `${sourceLocale}.ts`) continue;
 
     const locale = entry.slice(0, -3);
     const filePath = path.join(paths.localizationsDir, entry);
@@ -55,40 +57,43 @@ export function syncLocalizations(options = {}) {
 
 function getPaths(cwd) {
   return {
-    localizationsDir: path.join(cwd, 'src/localizations'),
-    indexPath: path.join(cwd, 'src/index.ts'),
+    localizationsDir: path.join(cwd, "src/localizations"),
+    indexPath: path.join(cwd, "src/index.ts"),
   };
 }
 
 function usage() {
-  throw new Error('Usage: pnpm localization:create <locale> or pnpm localization:sync');
+  throw new Error(
+    "Usage: pnpm localization:create <locale> or pnpm localization:sync",
+  );
 }
 
 function readLocalization(filePath) {
-  const source = fs.readFileSync(filePath, 'utf8');
+  const source = fs.readFileSync(filePath, "utf8");
   const literal = extractObjectLiteral(source);
   return vm.runInNewContext(`(${literal})`);
 }
 
 function extractObjectLiteral(source) {
-  const marker = 'export const ';
+  const marker = "export const ";
   const exportIndex = source.indexOf(marker);
-  if (exportIndex === -1) throw new Error('Missing exported localization const');
+  if (exportIndex === -1)
+    throw new Error("Missing exported localization const");
 
-  const start = source.indexOf('{', exportIndex);
-  if (start === -1) throw new Error('Missing localization object');
+  const start = source.indexOf("{", exportIndex);
+  if (start === -1) throw new Error("Missing localization object");
 
   let depth = 0;
-  let quote = '';
+  let quote = "";
   let escaped = false;
 
   for (let index = start; index < source.length; index += 1) {
     const char = source[index];
 
     if (quote) {
-      escaped = char === '\\' && !escaped;
-      if (char === quote && !escaped) quote = '';
-      if (char !== '\\') escaped = false;
+      escaped = char === "\\" && !escaped;
+      if (char === quote && !escaped) quote = "";
+      if (char !== "\\") escaped = false;
       continue;
     }
 
@@ -97,24 +102,24 @@ function extractObjectLiteral(source) {
       continue;
     }
 
-    if (char === '{') depth += 1;
-    if (char === '}') depth -= 1;
+    if (char === "{") depth += 1;
+    if (char === "}") depth -= 1;
     if (depth === 0) return source.slice(start, index + 1);
   }
 
-  throw new Error('Unclosed localization object');
+  throw new Error("Unclosed localization object");
 }
 
 function blankValues(value) {
-  return mapLeaves(value, () => '');
+  return mapLeaves(value, () => "");
 }
 
 function syncShape(source, current) {
   const synced = {};
 
   for (const [key, value] of Object.entries(source)) {
-    if (typeof value === 'string') {
-      synced[key] = typeof current?.[key] === 'string' ? current[key] : '';
+    if (typeof value === "string") {
+      synced[key] = typeof current?.[key] === "string" ? current[key] : "";
     } else {
       synced[key] = syncShape(value, current?.[key]);
     }
@@ -128,9 +133,11 @@ function syncShape(source, current) {
 }
 
 function mapLeaves(value, visit) {
-  if (typeof value === 'string') return visit(value);
+  if (typeof value === "string") return visit(value);
 
-  return Object.fromEntries(Object.entries(value).map(([key, child]) => [key, mapLeaves(child, visit)]));
+  return Object.fromEntries(
+    Object.entries(value).map(([key, child]) => [key, mapLeaves(child, visit)]),
+  );
 }
 
 function writeLocalization(filePath, locale, resource) {
@@ -153,30 +160,37 @@ export const ${localeVariable(locale)} = ${formatObject(resource)} satisfies Loc
 }
 
 function formatObject(value, level = 0) {
-  if (typeof value === 'string') return `'${escapeString(value)}'`;
+  if (typeof value === "string") return `'${escapeString(value)}'`;
 
-  const indent = '  '.repeat(level);
-  const childIndent = '  '.repeat(level + 1);
+  const indent = "  ".repeat(level);
+  const childIndent = "  ".repeat(level + 1);
   const entries = Object.entries(value)
-    .map(([key, child]) => `${childIndent}${safeKey(key)}: ${formatObject(child, level + 1)},`)
-    .join('\n');
+    .map(
+      ([key, child]) =>
+        `${childIndent}${safeKey(key)}: ${formatObject(child, level + 1)},`,
+    )
+    .join("\n");
 
   return `{\n${entries}\n${indent}}`;
 }
 
 function safeKey(key) {
-  return /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key) ? key : `'${escapeString(key)}'`;
+  return /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
+    ? key
+    : `'${escapeString(key)}'`;
 }
 
 function escapeString(value) {
-  return value.replaceAll('\\', '\\\\').replaceAll("'", "\\'");
+  return value.replaceAll("\\", "\\\\").replaceAll("'", "\\'");
 }
 
 function localeVariable(locale) {
   return locale
-    .split('-')
-    .map((part, index) => (index === 0 ? part.toLowerCase() : part.toUpperCase()))
-    .join('');
+    .split("-")
+    .map((part, index) =>
+      index === 0 ? part.toLowerCase() : part.toUpperCase(),
+    )
+    .join("");
 }
 
 function clerkVariable(locale) {
@@ -187,52 +201,67 @@ function clerkVariable(locale) {
 function detectClerkExport(locale, cwd) {
   try {
     const indexPath = findClerkIndex(cwd);
-    return indexPath ? new RegExp(`\\b${localeVariable(locale)}\\b`).test(fs.readFileSync(indexPath, 'utf8')) : false;
+    return indexPath
+      ? new RegExp(`\\b${localeVariable(locale)}\\b`).test(
+          fs.readFileSync(indexPath, "utf8"),
+        )
+      : false;
   } catch {
     return false;
   }
 }
 
 function findClerkIndex(cwd) {
-  const direct = path.join(cwd, 'node_modules/@clerk/localizations/dist/index.d.ts');
+  const direct = path.join(
+    cwd,
+    "node_modules/@clerk/localizations/dist/index.d.ts",
+  );
   if (fs.existsSync(direct)) return direct;
 
-  const pnpmDir = path.join(cwd, 'node_modules/.pnpm');
+  const pnpmDir = path.join(cwd, "node_modules/.pnpm");
   if (!fs.existsSync(pnpmDir)) return null;
 
   const packageDir = fs
     .readdirSync(pnpmDir)
-    .find((entry) => entry.startsWith('@clerk+localizations@'));
+    .find((entry) => entry.startsWith("@clerk+localizations@"));
 
   return packageDir
-    ? path.join(pnpmDir, packageDir, 'node_modules/@clerk/localizations/dist/index.d.ts')
+    ? path.join(
+        pnpmDir,
+        packageDir,
+        "node_modules/@clerk/localizations/dist/index.d.ts",
+      )
     : null;
 }
 
 function wireLocale(indexFilePath, locale, hasClerkExport) {
   const variable = localeVariable(locale);
   const clerk = clerkVariable(locale);
-  let source = fs.readFileSync(indexFilePath, 'utf8');
+  let source = fs.readFileSync(indexFilePath, "utf8");
 
   source = source.replace(
-    /import \{ ([^}]+) \} from '@clerk\/localizations';/,
+    /import \{ ([^}]+) \} from ["']@clerk\/localizations["'];/,
     (_, imports) =>
       hasClerkExport
-        ? `import { ${imports}, ${variable} as ${clerk} } from '@clerk/localizations';`
-        : `import { ${imports} } from '@clerk/localizations';`,
+        ? `import { ${imports}, ${variable} as ${clerk} } from "@clerk/localizations";`
+        : `import { ${imports} } from "@clerk/localizations";`,
   );
   source = source.replace(
-    /(import \{ esMX \} from '\.\/localizations\/es-MX\.js';\n)/,
-    `$1import { ${variable} } from './localizations/${locale}.js';\n`,
+    /(import \{ esMX \} from ["']\.\/localizations\/es-MX\.js["'];\n)/,
+    `$1import { ${variable} } from "./localizations/${locale}.js";\n`,
   );
   source = source.replace(
-    /(export \{ esMX \} from '\.\/localizations\/es-MX\.js';\n)/,
-    `$1export { ${variable} } from './localizations/${locale}.js';\n`,
+    /(export \{ esMX \} from ["']\.\/localizations\/es-MX\.js["'];\n)/,
+    `$1export { ${variable} } from "./localizations/${locale}.js";\n`,
   );
-  source = source.replace(/export type SupportedLocale = ([^;]+);/, (_, union) => {
-    if (union.includes(`'${locale}'`)) return `export type SupportedLocale = ${union};`;
-    return `export type SupportedLocale = ${union} | '${locale}';`;
-  });
+  source = source.replace(
+    /export type SupportedLocale = ([^;]+);/,
+    (_, union) => {
+      if (union.includes(`'${locale}'`))
+        return `export type SupportedLocale = ${union};`;
+      return `export type SupportedLocale = ${union} | '${locale}';`;
+    },
+  );
   source = source.replace(
     /export const SUPPORTED_LOCALES = Object\.freeze\(\[([^\]]+)\] as const\);/,
     (_, locales) =>
@@ -245,16 +274,16 @@ function wireLocale(indexFilePath, locale, hasClerkExport) {
     `$1  ['${locale.toLowerCase()}', '${locale}'],\n`,
   );
   source = source.replace(
-    /(export const localizations = Object\.freeze\(\{\n[\s\S]*?  'es-MX': esMX,\n)/,
-    `$1  '${locale}': ${variable},\n`,
+    /(export const localizations = Object\.freeze\(\{\n[\s\S]*? {2}["']es-MX["']: esMX,\n)/,
+    `$1  "${locale}": ${variable},\n`,
   );
   source = source.replace(
-    /(export const translations = Object\.freeze\(\{\n[\s\S]*?  'es-MX': Object\.freeze\(mergeTranslations\(defaultTranslations, flattenLocalization\(esMX\)\)\),\n)/,
-    `$1  '${locale}': Object.freeze(mergeTranslations(defaultTranslations, flattenLocalization(${variable}))),\n`,
+    /(export const translations = Object\.freeze\(\{\n[\s\S]*? {2}["']es-MX["']: Object\.freeze\(\n {4}mergeTranslations\(defaultTranslations, flattenLocalization\(esMX\)\),\n {2}\),\n)/,
+    `$1  "${locale}": Object.freeze(mergeTranslations(defaultTranslations, flattenLocalization(${variable}))),\n`,
   );
   source = source.replace(
-    /(export const clerkLocalizations: Readonly<Record<SupportedLocale, ClerkLocalizationResource \| undefined>> = Object\.freeze\(\{\n[\s\S]*?  'es-MX': clerkEsMX,\n)/,
-    `$1  '${locale}': ${hasClerkExport ? clerk : 'undefined'},\n`,
+    /(export const clerkLocalizations: Readonly<[\s\S]*?> = Object\.freeze\(\{\n[\s\S]*? {2}["']es-MX["']: clerkEsMX,\n)/,
+    `$1  "${locale}": ${hasClerkExport ? clerk : "undefined"},\n`,
   );
 
   fs.writeFileSync(indexFilePath, source);

@@ -1,4 +1,4 @@
-import type { CompleteLocalizationResource } from '../types/localization.js';
+import type { CompleteLocalizationResource } from "../types/localization.js";
 
 /**
  * English (United States) translations for Pocket Trash.
@@ -11,16 +11,16 @@ import type { CompleteLocalizationResource } from '../types/localization.js';
  */
 export const enUS = {
   app: {
-    name: 'Pocket Trash',
+    name: "Pocket Trash",
   },
   action: {
-    cancel: 'Cancel',
-    save: 'Save',
+    cancel: "Cancel",
+    save: "Save",
   },
   error: {
-    generic: 'Something went wrong.',
+    generic: "Something went wrong.",
   },
   locale: {
-    current: 'Current language: {locale}',
+    current: "Current language: {locale}",
   },
 } satisfies CompleteLocalizationResource;

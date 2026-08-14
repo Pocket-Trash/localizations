@@ -1,5 +1,9 @@
 type DotPaths<T> = {
-  [K in keyof T & string]: T[K] extends string ? K : T[K] extends object ? `${K}.${DotPaths<T[K]>}` : never;
+  [K in keyof T & string]: T[K] extends string
+    ? K
+    : T[K] extends object
+      ? `${K}.${DotPaths<T[K]>}`
+      : never;
 }[keyof T & string];
 
 type DeepPartial<T> = {

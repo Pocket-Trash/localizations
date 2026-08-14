@@ -1,4 +1,4 @@
-import type { LocalizationResource } from '../types/localization.js';
+import type { LocalizationResource } from "../types/localization.js";
 
 /**
  * Spanish (Mexico) translations for Pocket Trash.
@@ -12,16 +12,16 @@ import type { LocalizationResource } from '../types/localization.js';
  */
 export const esMX = {
   app: {
-    name: 'Pocket Trash',
+    name: "Pocket Trash",
   },
   action: {
-    cancel: 'Cancelar',
-    save: 'Guardar',
+    cancel: "Cancelar",
+    save: "Guardar",
   },
   error: {
-    generic: 'Algo salio mal.',
+    generic: "Algo salio mal.",
   },
   locale: {
-    current: 'Idioma actual: {locale}',
+    current: "Idioma actual: {locale}",
   },
 } satisfies LocalizationResource;
