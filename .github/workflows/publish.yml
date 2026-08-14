@@ -1,9 +1,6 @@
 name: Publish
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -51,6 +48,6 @@ jobs:
           git commit -m "chore: version packages [skip ci]"
           git push
       - if: steps.pending.outputs.has_changesets == 'true'
-        run: pnpm run release
+        run: pnpm changeset publish
       - if: steps.pending.outputs.has_changesets == 'true'
         run: git push --follow-tags
