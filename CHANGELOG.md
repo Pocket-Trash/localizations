@@ -1,5 +1,11 @@
 # @pocket-trash/localizations
 
+## 0.0.5
+
+### Patch Changes
+
+- a2570b8: Add Biome linting and formatting commands.
+
 ## 0.0.4
 
 ### Patch Changes
