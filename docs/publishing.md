@@ -31,12 +31,13 @@ git commit -m "Add Spanish copy for save action"
 Run the publish workflow when you want to release the pending changesets:
 
 ```sh
-pnpm run changeset:version
+pnpm release
 ```
 
 The version step combines changesets into `CHANGELOG.md`, bumps
 `package.json`, updates `pnpm-lock.yaml`, commits those files back to `main`,
-and publishes the package.
+publishes the package, pushes tags, and creates a GitHub release. The release
+command requires an authenticated `gh` CLI.
 
 ## Publishing Workflow
 
@@ -44,4 +45,4 @@ Publishing runs through `.github/workflows/publish.yml`.
 
 The workflow runs when started manually with `workflow_dispatch`. Pull requests
 must include a release changeset. Major changesets add the `Major` label to the
-pull request.
+pull request. Published versions also create matching GitHub releases.
