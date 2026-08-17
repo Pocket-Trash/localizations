@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.0.10
+
+_Published 2026-08-17._
+
+### Patch Changes
+
+- aa129ad: Create a GitHub release for the published version during local releases.
+
 ## 0.0.9
 
 _Published 2026-08-14._
