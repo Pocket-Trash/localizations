@@ -153,20 +153,6 @@ const save = translations['action.save'];
 Returned catalogs are complete. If a non-English locale omits a translation,
 or has a blank string, that key falls back to the `en-US` value.
 
-## Clerk Localizations
-
-Use `getClerkLocalization()` when configuring Clerk UI components.
-
-```ts
-import { getClerkLocalization, resolveLocale } from '@pocket-trash/localizations';
-
-const locale = resolveLocale('es-MX');
-const localization = getClerkLocalization(locale);
-```
-
-English returns `undefined`, so Clerk uses its default English strings. Spanish
-returns Clerk's `esMX` localization.
-
 ## Adding Translations
 
 Source locale files use nested objects:
@@ -214,7 +200,6 @@ That command:
 2. Copies the nested `en-US` shape with every value set to `''`.
 3. Adds the locale to `SupportedLocale`, `SUPPORTED_LOCALES`, `localizations`,
    and `translations`.
-4. Adds a Clerk localization mapping if `@clerk/localizations` exports one.
 
 Sync missing keys into existing non-English locales:
 

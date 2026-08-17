@@ -1,5 +1,3 @@
-import { esMX as clerkEsMX } from "@clerk/localizations";
-
 import { enUS } from "./localizations/en-US.js";
 import { esMX } from "./localizations/es-MX.js";
 import type {
@@ -21,7 +19,6 @@ export type SupportedLocale = "en-US" | "es-MX";
 export type MessageKey = TranslationKey;
 export type Messages = Translations;
 export type LocalePreference = string | readonly string[] | null | undefined;
-export type ClerkLocalizationResource = typeof clerkEsMX;
 
 export const DEFAULT_LOCALE = "en-US" satisfies SupportedLocale;
 export const SUPPORTED_LOCALES = Object.freeze(["en-US", "es-MX"] as const);
@@ -54,13 +51,6 @@ export const translations = Object.freeze({
 export const messages = translations;
 export const messageKeys = translationKeys;
 
-export const clerkLocalizations: Readonly<
-  Record<SupportedLocale, ClerkLocalizationResource | undefined>
-> = Object.freeze({
-  "en-US": undefined,
-  "es-MX": clerkEsMX,
-});
-
 export function resolveLocale(
   ...preferences: readonly LocalePreference[]
 ): SupportedLocale {
@@ -79,12 +69,6 @@ export function getTranslations(locale?: SupportedLocale | null): Translations {
 }
 
 export const getMessages = getTranslations;
-
-export function getClerkLocalization(
-  locale?: SupportedLocale | null,
-): ClerkLocalizationResource | undefined {
-  return clerkLocalizations[resolveLocale(locale)];
-}
 
 export function formatTranslation(
   key: TranslationKey,
