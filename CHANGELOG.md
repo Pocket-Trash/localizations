@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.1.0
+
+_Published 2026-08-17._
+
+### Minor Changes
+
+- 6c7c240: Remove Clerk localization exports and the `@clerk/localizations` dependency so the package is standalone.
+
 ## 0.0.10
 
 _Published 2026-08-17._
