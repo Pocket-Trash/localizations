@@ -57,7 +57,6 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@clerk/localizations": "^4.14.2",
     "lts": "^2.0.0"
   },
   "packageManager": "pnpm@11.10.0"

@@ -5,13 +5,11 @@ import path from "node:path";
 import test from "node:test";
 import {
   assertCompleteCatalogs,
-  clerkLocalizations,
   DEFAULT_LOCALE,
   enUS,
   esMX,
   formatMessage,
   formatTranslation,
-  getClerkLocalization,
   getMessages,
   getTranslations,
   localizations,
@@ -82,13 +80,6 @@ test("catalogs use nested sources and flat public translations", () => {
     "error.generic",
     "locale.current",
   ]);
-});
-
-test("maps supported locales to Clerk localizations without copying English strings", () => {
-  assert.deepEqual(Object.keys(clerkLocalizations).sort(), ["en-US", "es-MX"]);
-  assert.equal(getClerkLocalization("en-US"), undefined);
-  assert.equal(getClerkLocalization("es-MX"), clerkLocalizations["es-MX"]);
-  assert.equal(getClerkLocalization(resolveLocale("fr-CA")), undefined);
 });
 
 test("scaffolds and syncs locale files from en-US", () => {

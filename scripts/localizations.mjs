@@ -35,7 +35,7 @@ export function createLocalization(locale, options = {}) {
     path.join(paths.localizationsDir, `${sourceLocale}.ts`),
   );
   writeLocalization(filePath, locale, blankValues(source));
-  wireLocale(paths.indexPath, locale, detectClerkExport(locale, cwd));
+  wireLocale(paths.indexPath, locale);
 }
 
 export function syncLocalizations(options = {}) {
@@ -193,59 +193,10 @@ function localeVariable(locale) {
     .join("");
 }
 
-function clerkVariable(locale) {
+function wireLocale(indexFilePath, locale) {
   const variable = localeVariable(locale);
-  return `clerk${variable[0].toUpperCase()}${variable.slice(1)}`;
-}
-
-function detectClerkExport(locale, cwd) {
-  try {
-    const indexPath = findClerkIndex(cwd);
-    return indexPath
-      ? new RegExp(`\\b${localeVariable(locale)}\\b`).test(
-          fs.readFileSync(indexPath, "utf8"),
-        )
-      : false;
-  } catch {
-    return false;
-  }
-}
-
-function findClerkIndex(cwd) {
-  const direct = path.join(
-    cwd,
-    "node_modules/@clerk/localizations/dist/index.d.ts",
-  );
-  if (fs.existsSync(direct)) return direct;
-
-  const pnpmDir = path.join(cwd, "node_modules/.pnpm");
-  if (!fs.existsSync(pnpmDir)) return null;
-
-  const packageDir = fs
-    .readdirSync(pnpmDir)
-    .find((entry) => entry.startsWith("@clerk+localizations@"));
-
-  return packageDir
-    ? path.join(
-        pnpmDir,
-        packageDir,
-        "node_modules/@clerk/localizations/dist/index.d.ts",
-      )
-    : null;
-}
-
-function wireLocale(indexFilePath, locale, hasClerkExport) {
-  const variable = localeVariable(locale);
-  const clerk = clerkVariable(locale);
   let source = fs.readFileSync(indexFilePath, "utf8");
 
-  source = source.replace(
-    /import \{ ([^}]+) \} from ["']@clerk\/localizations["'];/,
-    (_, imports) =>
-      hasClerkExport
-        ? `import { ${imports}, ${variable} as ${clerk} } from "@clerk/localizations";`
-        : `import { ${imports} } from "@clerk/localizations";`,
-  );
   source = source.replace(
     /(import \{ esMX \} from ["']\.\/localizations\/es-MX\.js["'];\n)/,
     `$1import { ${variable} } from "./localizations/${locale}.js";\n`,
@@ -280,10 +231,6 @@ function wireLocale(indexFilePath, locale, hasClerkExport) {
   source = source.replace(
     /(export const translations = Object\.freeze\(\{\n[\s\S]*? {2}["']es-MX["']: Object\.freeze\(\n {4}mergeTranslations\(defaultTranslations, flattenLocalization\(esMX\)\),\n {2}\),\n)/,
     `$1  "${locale}": Object.freeze(mergeTranslations(defaultTranslations, flattenLocalization(${variable}))),\n`,
-  );
-  source = source.replace(
-    /(export const clerkLocalizations: Readonly<[\s\S]*?> = Object\.freeze\(\{\n[\s\S]*? {2}["']es-MX["']: clerkEsMX,\n)/,
-    `$1  "${locale}": ${hasClerkExport ? clerk : "undefined"},\n`,
   );
 
   fs.writeFileSync(indexFilePath, source);
