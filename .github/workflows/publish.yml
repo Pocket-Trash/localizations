@@ -51,3 +51,9 @@ jobs:
         run: pnpm changeset publish
       - if: steps.pending.outputs.has_changesets == 'true'
         run: git push --follow-tags
+      - if: steps.pending.outputs.has_changesets == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          gh release create "v$VERSION" --title "v$VERSION" --generate-notes --verify-tag
