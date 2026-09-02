@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@pocket-trash/localizations.svg)](https://www.npmjs.com/package/@pocket-trash/localizations)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./package.json)
-[![CI](https://github.com/Pocket-Trash/pocket-trash-localizations/actions/workflows/ci.yml/badge.svg)](https://github.com/Pocket-Trash/pocket-trash-localizations/actions/workflows/ci.yml)
+[![CI](https://github.com/Pocket-Trash/localizations/actions/workflows/ci.yml/badge.svg)](https://github.com/Pocket-Trash/localizations/actions/workflows/ci.yml)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/contributing.md)
 
 Shared localization utilities and translation catalogs for Pocket Trash.

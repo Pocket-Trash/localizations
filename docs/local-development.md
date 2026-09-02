@@ -39,7 +39,7 @@ If symlinks cause trouble in the consuming app, use a `file:` dependency
 temporarily:
 
 ```sh
-pnpm add @pocket-trash/localizations@file:/path/to/field-log-localizations
+pnpm add @pocket-trash/localizations@file:/path/to/localizations
 ```
 
 Switch back to the published package before merging app changes.
