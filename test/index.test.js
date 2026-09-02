@@ -83,9 +83,7 @@ test("catalogs use nested sources and flat public translations", () => {
 });
 
 test("scaffolds and syncs locale files from en-US", () => {
-  const fixture = fs.mkdtempSync(
-    path.join(os.tmpdir(), "pocket-trash-localizations-"),
-  );
+  const fixture = fs.mkdtempSync(path.join(os.tmpdir(), "localizations-"));
   fs.mkdirSync(path.join(fixture, "src/localizations"), { recursive: true });
   fs.cpSync(
     "src/localizations/en-US.ts",

@@ -16,12 +16,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pocket-Trash/pocket-trash-localizations.git"
+    "url": "git+https://github.com/Pocket-Trash/localizations.git"
   },
   "bugs": {
-    "url": "https://github.com/Pocket-Trash/pocket-trash-localizations/issues"
+    "url": "https://github.com/Pocket-Trash/localizations/issues"
   },
-  "homepage": "https://github.com/Pocket-Trash/pocket-trash-localizations#readme",
+  "homepage": "https://github.com/Pocket-Trash/localizations#readme",
   "keywords": [
     "pocket-trash",
     "localization",
@@ -32,6 +32,9 @@
     "access": "public"
   },
   "scripts": {
+    "agent-skills:check": "node scripts/agent-skills.mjs check",
+    "agent-skills:install": "node scripts/agent-skills.mjs install",
+    "agent-skills:update": "node scripts/agent-skills.mjs update",
     "build": "tsc -p tsconfig.json",
     "check": "biome check --write .",
     "changeset": "changeset",
