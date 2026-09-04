@@ -2,13 +2,5 @@
   "source": "https://github.com/pocket-trash/skills",
   "version": "0.1.1",
   "agents": ["codex", "claude-code"],
-  "skills": [
-    "commit",
-    "grill-me",
-    "implement-linear-ticket",
-    "pr-create",
-    "pr-review",
-    "pr-update",
-    "update-scopes"
-  ]
+  "skills": ["pocket-trash"]
 }
