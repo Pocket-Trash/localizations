@@ -1,5 +1,21 @@
 # @pocket-trash/localizations
 
+## 0.2.0
+
+_Published 2026-09-09._
+
+### Minor Changes
+
+- 2b4334f: Add web UI translations.
+
+### Patch Changes
+
+- 038066e: Document shared Pocket Trash skills setup.
+- 8beb246: Installed pocket-trash skills v0.1.1
+- a86774f: Removed unneeded guard from release workflow
+- 9b5549e: Use the shared Pocket Trash skill router.
+- f3ba4c1: Pin shared Pocket Trash skills by version, scope installed skills, and add install/update checks.
+
 ## 0.1.0
 
 _Published 2026-08-17._
