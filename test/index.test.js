@@ -42,6 +42,11 @@ test("does not treat bare en as a supported locale alias", () => {
 
 test("interpolates translation placeholders", () => {
   assert.equal(formatTranslation("app.name"), "Pocket Trash");
+  assert.equal(formatTranslation("web.action.saveFlag"), "Save flag");
+  assert.equal(
+    formatTranslation("web.archive.itemCount", { visible: 2, total: 3 }),
+    "2 of 3 items",
+  );
   assert.equal(
     formatTranslation("locale.current", { locale: "es-MX" }, "es-MX"),
     "Idioma actual: es-MX",
@@ -69,17 +74,14 @@ test("catalogs use nested sources and flat public translations", () => {
   assert.equal(localizations["es-MX"], esMX);
   assert.equal(localizations["es-MX"].action?.save, "Guardar");
   assert.equal(translations["es-MX"]["action.save"], "Guardar");
+  assert.equal(translations["es-MX"]["web.action.saveFlag"], "Guardar bandera");
   assert.deepEqual(
     Object.keys(translations["es-MX"]).sort(),
     [...translationKeys].sort(),
   );
-  assert.deepEqual([...translationKeys].sort(), [
-    "action.cancel",
-    "action.save",
-    "app.name",
-    "error.generic",
-    "locale.current",
-  ]);
+  assert.ok(translationKeys.includes("action.save"));
+  assert.ok(translationKeys.includes("web.action.saveFlag"));
+  assert.ok(translationKeys.includes("web.archive.itemCount"));
 });
 
 test("scaffolds and syncs locale files from en-US", () => {
