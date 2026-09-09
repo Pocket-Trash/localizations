@@ -47,11 +47,21 @@ jobs:
           git add package.json pnpm-lock.yaml CHANGELOG.md .changeset
           git commit -m "chore: version packages [skip ci]"
           git push
-      - if: steps.pending.outputs.has_changesets == 'true'
+      - id: unpublished
+        run: |
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+
+          if npm view "$PACKAGE_NAME@$VERSION" version --silent >/dev/null 2>&1; then
+            echo "has_unpublished_version=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_unpublished_version=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.unpublished.outputs.has_unpublished_version == 'true'
         run: pnpm changeset publish
-      - if: steps.pending.outputs.has_changesets == 'true'
+      - if: steps.unpublished.outputs.has_unpublished_version == 'true'
         run: git push --follow-tags
-      - if: steps.pending.outputs.has_changesets == 'true'
+      - if: steps.unpublished.outputs.has_unpublished_version == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
