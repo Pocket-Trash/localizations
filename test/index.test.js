@@ -90,6 +90,87 @@ test("catalogs use nested sources and flat public translations", () => {
   assert.ok(translationKeys.includes("web.page.resources.stub"));
 });
 
+test("resource catalogs have matching keys and format dynamic copy", () => {
+  const flattenKeys = (value, prefix = "") =>
+    Object.entries(value).flatMap(([key, child]) => {
+      const path = prefix ? `${prefix}.${key}` : key;
+      return typeof child === "string" ? [path] : flattenKeys(child, path);
+    });
+
+  assert.deepEqual(
+    flattenKeys(enUS.web.resources).sort(),
+    flattenKeys(esMX.web.resources).sort(),
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.upload.progress",
+      { filename: "spinner.stl", percent: 42 },
+      "en-US",
+    ),
+    "Uploading spinner.stl: 42%",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.upload.progress",
+      { filename: "spinner.stl", percent: 42 },
+      "es-MX",
+    ),
+    "Subiendo spinner.stl: 42%",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.upload.fileFailure",
+      { filename: "spinner.stl" },
+      "en-US",
+    ),
+    "spinner.stl couldn't be uploaded. Retry this file.",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.upload.fileHelp",
+      {
+        maxFiles: 10,
+        maxFileSize: "20 MiB",
+        maxSessionSize: "50 MiB",
+      },
+      "es-MX",
+    ),
+    "Elige de 1 a 10 archivos. Cada archivo puede pesar hasta 20 MiB; la carga completa puede pesar hasta 50 MiB.",
+  );
+  assert.equal(
+    formatTranslation("web.resources.detail.version", { version: 3 }, "es-MX"),
+    "Versión 3",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.detail.filename",
+      { filename: "spinner.stl" },
+      "en-US",
+    ),
+    "File: spinner.stl",
+  );
+  assert.equal(
+    formatTranslation("web.resources.detail.fileTypeFallback", {}, "en-US"),
+    "File",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.detail.downloadCount",
+      { count: 12 },
+      "es-MX",
+    ),
+    "Descargas: 12",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.resources.category.create",
+      { category: "Bases" },
+      "es-MX",
+    ),
+    "Crear “Bases”",
+  );
+});
+
 test("scaffolds and syncs locale files from en-US", () => {
   const fixture = fs.mkdtempSync(path.join(os.tmpdir(), "localizations-"));
   fs.mkdirSync(path.join(fixture, "src/localizations"), { recursive: true });
