@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.4.0
+
+_Published 2026-09-16._
+
+### Minor Changes
+
+- a0e7c60: Add bilingual Resources interface copy.
+- b2437d6: Add composable finish and shared layout translations.
+
 ## 0.3.1
 
 _Published 2026-09-16._
