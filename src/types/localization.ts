@@ -29,6 +29,9 @@ export type CompleteLocalizationResource = Readonly<{
       name: string;
     };
     action: {
+      addColor: string;
+      addFinish: string;
+      addFinishOption: string;
       addMaker: string;
       addMaterial: string;
       addProduct: string;
@@ -38,6 +41,10 @@ export type CompleteLocalizationResource = Readonly<{
       close: string;
       confirmAdd: string;
       edit: string;
+      moveFinishOptionDown: string;
+      moveFinishOptionUp: string;
+      removeFinishOption: string;
+      removeSelection: string;
       saveFlag: string;
       search: string;
       signIn: string;
@@ -133,17 +140,34 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     catalog: {
+      colorEffect: {
+        fade: string;
+        solid: string;
+      };
       defaultButton: string;
       error: {
+        colorEffectRequired: string;
+        colorEffectWithoutColors: string;
         duplicate: string;
+        duplicateComponent: string;
+        duplicateFinishOption: string;
+        fadeColors: string;
+        finishOptionRequired: string;
+        finishRequired: string;
         form: string;
         positive: string;
+        productFinishRequired: string;
+        productMaterialRequired: string;
         required: string;
         url: string;
       };
       field: {
         button: string;
         buttonDiameter: string;
+        colorEffect: string;
+        colors: string;
+        finishes: string;
+        finishOptions: string;
         maker: string;
         materials: string;
         name: string;
@@ -154,9 +178,17 @@ export type CompleteLocalizationResource = Readonly<{
         thicknessWithButton: string;
         width: string;
       };
+      finishOptionCount: string;
+      finishPreview: string;
+      materialCount: string;
       noProducts: string;
       notImplemented: string;
+      selectColorEffect: string;
+      selectColors: string;
+      selectFinishes: string;
+      selectFinishOption: string;
       selectMaker: string;
+      selectMaterial: string;
       selectMaterials: string;
       selectProductType: string;
     };
@@ -170,6 +202,10 @@ export type CompleteLocalizationResource = Readonly<{
         noFields: string;
       };
       empty: string;
+      finishChoice: {
+        custom: string;
+        product: string;
+      };
     };
     currency: {
       aud: string;
@@ -202,6 +238,7 @@ export type CompleteLocalizationResource = Readonly<{
       logOut: string;
       products: string;
       resources: string;
+      selectLanguage: string;
       user: string;
     };
     locale: {
