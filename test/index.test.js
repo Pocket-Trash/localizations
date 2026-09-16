@@ -48,6 +48,10 @@ test("interpolates translation placeholders", () => {
     "2 of 3 items",
   );
   assert.equal(
+    formatTranslation("web.collections.directory.itemCount", { count: 4 }),
+    "Collection items: 4",
+  );
+  assert.equal(
     formatTranslation("locale.current", { locale: "es-MX" }, "es-MX"),
     "Idioma actual: es-MX",
   );
@@ -82,6 +86,8 @@ test("catalogs use nested sources and flat public translations", () => {
   assert.ok(translationKeys.includes("action.save"));
   assert.ok(translationKeys.includes("web.action.saveFlag"));
   assert.ok(translationKeys.includes("web.archive.itemCount"));
+  assert.ok(translationKeys.includes("web.catalog.field.productType"));
+  assert.ok(translationKeys.includes("web.page.resources.stub"));
 });
 
 test("scaffolds and syncs locale files from en-US", () => {

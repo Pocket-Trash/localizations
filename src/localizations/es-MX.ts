@@ -1,14 +1,13 @@
 import type { LocalizationResource } from "../types/localization.js";
 
 /**
- * Spanish (Mexico) translations for Pocket Trash.
+ * es-MX translations for Pocket Trash.
  *
  * This catalog is checked against `LocalizationResource` from
  * `src/types/localization.ts`. When adding a translation key, update that type
  * first, add the required English string in `src/localizations/en-US.ts`, then
- * add this locale's translation when available. Most new keys should remain
- * optional in the type so this catalog can omit untranslated strings and fall
- * back to `en-US` at runtime.
+ * run `pnpm localization:sync` so this locale gets any missing blank fields.
+ * Blank strings fall back to `en-US` at runtime until translated.
  */
 export const esMX = {
   app: {
@@ -29,9 +28,14 @@ export const esMX = {
       name: "Pocket Trash",
     },
     action: {
+      addMaker: "Add maker",
+      addMaterial: "Add material",
+      addProduct: "Add product",
+      addToCollection: "Add to collection",
       archive: "Archivar",
       clearAllFilters: "Borrar todos los filtros",
       close: "Cerrar",
+      confirmAdd: "Add another",
       edit: "Editar",
       saveFlag: "Guardar bandera",
       search: "Buscar",
@@ -132,6 +136,47 @@ export const esMX = {
         archived: "Archivada",
       },
     },
+    catalog: {
+      defaultButton: "Default Button",
+      error: {
+        duplicate: "That name already exists.",
+        form: "We couldn't save this. Check the fields and try again.",
+        positive: "Enter a number greater than zero.",
+        required: "This field is required.",
+        url: "Enter a valid URL.",
+      },
+      field: {
+        button: "Button",
+        buttonDiameter: "Button diameter",
+        maker: "Maker",
+        materials: "Materials",
+        name: "Name",
+        productType: "Product type",
+        rootUrl: "Maker URL",
+        slug: "Slug",
+        thickness: "Thickness",
+        thicknessWithButton: "Thickness with button",
+        width: "Width",
+      },
+      noProducts: "No products yet.",
+      notImplemented: "This product type is not implemented yet.",
+      selectMaker: "Select a maker",
+      selectMaterials: "Select materials",
+      selectProductType: "Select a product type",
+    },
+    collections: {
+      directory: {
+        avatar: "Generic collector avatar",
+        itemCount: "Collection items: {count}",
+      },
+      duplicateWarning:
+        "Matching products already owned: {count}. Confirm to add another.",
+      edit: {
+        noFields:
+          "There are no collection-specific fields to edit for this item.",
+      },
+      empty: "No collection items yet.",
+    },
     currency: {
       aud: "$ AUD",
       cad: "$ CAD (native)",
@@ -161,6 +206,8 @@ export const esMX = {
       collections: "Colecciones",
       language: "Idioma",
       logOut: "Cerrar sesion",
+      products: "Products",
+      resources: "Resources",
       user: "Usuario",
     },
     locale: {
@@ -179,6 +226,9 @@ export const esMX = {
         returnToArchive: "Volver al archivo",
         title: "No encontrado",
         unavailable: "Pagina no disponible",
+      },
+      resources: {
+        stub: "Resources are coming soon.",
       },
     },
     settings: {
