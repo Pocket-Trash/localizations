@@ -29,9 +29,14 @@ export type CompleteLocalizationResource = Readonly<{
       name: string;
     };
     action: {
+      addMaker: string;
+      addMaterial: string;
+      addProduct: string;
+      addToCollection: string;
       archive: string;
       clearAllFilters: string;
       close: string;
+      confirmAdd: string;
       edit: string;
       saveFlag: string;
       search: string;
@@ -127,6 +132,45 @@ export type CompleteLocalizationResource = Readonly<{
         archived: string;
       };
     };
+    catalog: {
+      defaultButton: string;
+      error: {
+        duplicate: string;
+        form: string;
+        positive: string;
+        required: string;
+        url: string;
+      };
+      field: {
+        button: string;
+        buttonDiameter: string;
+        maker: string;
+        materials: string;
+        name: string;
+        productType: string;
+        rootUrl: string;
+        slug: string;
+        thickness: string;
+        thicknessWithButton: string;
+        width: string;
+      };
+      noProducts: string;
+      notImplemented: string;
+      selectMaker: string;
+      selectMaterials: string;
+      selectProductType: string;
+    };
+    collections: {
+      directory: {
+        avatar: string;
+        itemCount: string;
+      };
+      duplicateWarning: string;
+      edit: {
+        noFields: string;
+      };
+      empty: string;
+    };
     currency: {
       aud: string;
       cad: string;
@@ -156,6 +200,8 @@ export type CompleteLocalizationResource = Readonly<{
       collections: string;
       language: string;
       logOut: string;
+      products: string;
+      resources: string;
       user: string;
     };
     locale: {
@@ -174,6 +220,9 @@ export type CompleteLocalizationResource = Readonly<{
         returnToArchive: string;
         title: string;
         unavailable: string;
+      };
+      resources: {
+        stub: string;
       };
     };
     settings: {
