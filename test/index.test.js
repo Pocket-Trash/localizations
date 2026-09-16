@@ -85,8 +85,12 @@ test("catalogs use nested sources and flat public translations", () => {
   );
   assert.ok(translationKeys.includes("action.save"));
   assert.ok(translationKeys.includes("web.action.saveFlag"));
+  assert.ok(translationKeys.includes("web.action.addColor"));
   assert.ok(translationKeys.includes("web.archive.itemCount"));
+  assert.ok(translationKeys.includes("web.catalog.colorEffect.fade"));
   assert.ok(translationKeys.includes("web.catalog.field.productType"));
+  assert.ok(translationKeys.includes("web.collections.finishChoice.custom"));
+  assert.ok(translationKeys.includes("web.navigation.selectLanguage"));
   assert.ok(translationKeys.includes("web.page.resources.stub"));
 });
 
