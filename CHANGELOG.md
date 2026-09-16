@@ -1,5 +1,20 @@
 # @pocket-trash/localizations
 
+## 0.3.0
+
+_Published 2026-09-16._
+
+### Minor Changes
+
+- a308c4e: Add catalog, collection, navigation, and resources translations.
+- d4243f9: Added i-have-adhd and ponytail skills
+
+### Patch Changes
+
+- 69260b1: Update Pocket Trash skills to v0.1.2.
+- 4304849: Update Pocket Trash skills to v0.2.0.
+- 052f914: Update Pocket Trash skills to v0.3.1.
+
 ## 0.2.0
 
 _Published 2026-09-09._
