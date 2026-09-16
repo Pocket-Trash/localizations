@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.3.1
+
+_Published 2026-09-16._
+
+### Patch Changes
+
+- 03b4d1c: Build localization artifacts before packing or publishing.
+
 ## 0.3.0
 
 _Published 2026-09-16._

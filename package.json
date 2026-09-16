@@ -1,6 +1,6 @@
 {
   "name": "@pocket-trash/localizations",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Shared localization utilities and message catalogs for Pocket Trash.",
   "type": "module",
   "main": "./dist/index.js",
