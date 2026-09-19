@@ -274,18 +274,29 @@ export const esMX = {
     resources: {
       action: {
         accept: "Aceptar",
+        add: "Agregar recurso",
+        closeImage: "Cerrar imagen",
+        collapseVersion: "Contraer la versión {version}",
+        collapseVersionHistory: "Contraer el historial de versiones",
         delete: "Mover a la papelera",
         details: "Detalles",
         download: "Descargar",
         edit: "Editar",
+        expandVersion: "Expandir la versión {version}",
+        expandVersionHistory: "Expandir el historial de versiones",
         markPrivate: "Marcar como privado",
+        nextImage: "Imagen siguiente",
         permanentlyDelete: "Eliminar permanentemente",
+        previousImage: "Imagen anterior",
         removeFile: "Quitar archivo",
         restore: "Restaurar",
         retry: "Reintentar",
         saveChanges: "Guardar cambios",
-        upload: "Subir recurso",
+        upload: "Agregar recurso",
         uploadNewVersion: "Subir nueva versión",
+      },
+      add: {
+        title: "Agregar recurso",
       },
       category: {
         all: "Todas las categorías",
@@ -305,9 +316,13 @@ export const esMX = {
         fileSize: "Tamaño: {size}",
         fileTypeFallback: "Archivo",
         filename: "Archivo: {filename}",
+        imageAlt: "Imagen de {name}",
+        noImage: "No hay imagen disponible",
         noPreview: "Sin imagen de vista previa",
         notFound: "Este recurso no está disponible.",
+        openImage: "Abrir {name}",
         previewAlt: "Vista previa de {name}",
+        sharedBy: "Compartido por",
         totalDownloadCount: "Descargas totales: {count}",
         updatedOn: "Actualizado el {date}",
         uploadedBy: "Subido por {uploader}",
@@ -350,6 +365,7 @@ export const esMX = {
         description: "Administra tus cargas y publica nuevas versiones.",
         editDescription:
           "Actualiza los detalles del recurso sin reemplazar los archivos subidos.",
+        editResources: "Editar recursos",
         editTitle: "Editar {name}",
         empty: "Todavía no has subido ningún recurso.",
         metadataOnly:
@@ -416,8 +432,9 @@ export const esMX = {
         softDeleteSuccess: "{name} se movió a la papelera.",
       },
       upload: {
+        browseFiles: "Examinar",
         description:
-          "Comparte archivos con la comunidad de Pocket Trash. Todos los campos, excepto la imagen de vista previa, son obligatorios.",
+          "Comparte archivos con la comunidad de Pocket Trash. Todos los campos son obligatorios.",
         descriptionLabel: "Descripción",
         descriptionPlaceholder: "Describe este recurso",
         expired: "Esta sesión de carga venció. Inicia la carga de nuevo.",
@@ -431,6 +448,10 @@ export const esMX = {
         finalizationFailure:
           "Tus archivos se subieron, pero no se pudo finalizar el recurso. Vuelve a intentarlo para completar la carga.",
         finalizing: "Finalizando tu carga…",
+        imagesHelp:
+          "Elige de 1 a {maxImages} imágenes. La primera imagen será la portada. Cada imagen puede pesar hasta {maxFileSize}; todos los archivos de esta carga pueden pesar hasta {maxSessionSize} en total.",
+        imagesLabel: "Imágenes",
+        imageTypes: "Tipos de imagen permitidos: JPEG, PNG y WebP.",
         nameLabel: "Nombre",
         namePlaceholder: "Nombre del recurso",
         newVersionTitle: "Subir una nueva versión de {name}",
@@ -441,13 +462,15 @@ export const esMX = {
         progress: "Subiendo {filename}: {percent}%",
         retryFile: "Reintentar {filename}",
         sessionFailure: "No pudimos iniciar la carga. Inténtalo de nuevo.",
-        success: "Tu recurso se subió.",
-        title: "Subir un recurso",
+        success: "Se agregó tu recurso.",
+        title: "Agregar recurso",
         versionSuccess: "La versión {version} se subió.",
       },
       validation: {
         duplicateFilename: "Quita el nombre de archivo duplicado {filename}.",
         fileTooLarge: "{filename} debe pesar {maxSize} o menos.",
+        imageInvalidType: "Elige un tipo de imagen compatible.",
+        imageTooLarge: "Cada imagen debe pesar {maxSize} o menos.",
         invalidFileType: "El tipo de archivo de {filename} no está permitido.",
         previewInvalidType:
           "Elige un tipo de imagen de vista previa compatible.",
@@ -456,10 +479,18 @@ export const esMX = {
         requiredCategory: "Selecciona al menos una categoría.",
         requiredDescription: "Escribe una descripción.",
         requiredFile: "Elige al menos un archivo de recurso.",
+        requiredImage: "Elige al menos una imagen.",
         requiredName: "Escribe un nombre para el recurso.",
         sessionTooLarge: "La carga completa debe pesar {maxSize} o menos.",
         tooManyFiles: "Elige como máximo {maxFiles} archivos de recurso.",
+        tooManyImages: "Elige como máximo {maxImages} imágenes.",
         unsafeFilename: "Cambia el nombre de {filename} antes de subirlo.",
+      },
+      visibility: {
+        adminPrivateTooltip:
+          "Un administrador marcó este recurso como privado. Solo un administrador puede hacerlo público.",
+        private: "Privado",
+        public: "Público",
       },
     },
     settings: {
