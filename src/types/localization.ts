@@ -265,18 +265,29 @@ export type CompleteLocalizationResource = Readonly<{
     resources: {
       action: {
         accept: string;
+        add: string;
+        closeImage: string;
+        collapseVersion: string;
+        collapseVersionHistory: string;
         delete: string;
         details: string;
         download: string;
         edit: string;
+        expandVersion: string;
+        expandVersionHistory: string;
         markPrivate: string;
+        nextImage: string;
         permanentlyDelete: string;
+        previousImage: string;
         removeFile: string;
         restore: string;
         retry: string;
         saveChanges: string;
         upload: string;
         uploadNewVersion: string;
+      };
+      add: {
+        title: string;
       };
       category: {
         all: string;
@@ -296,9 +307,13 @@ export type CompleteLocalizationResource = Readonly<{
         fileSize: string;
         fileTypeFallback: string;
         filename: string;
+        imageAlt: string;
+        noImage: string;
         noPreview: string;
         notFound: string;
+        openImage: string;
         previewAlt: string;
+        sharedBy: string;
         totalDownloadCount: string;
         updatedOn: string;
         uploadedBy: string;
@@ -335,6 +350,7 @@ export type CompleteLocalizationResource = Readonly<{
       management: {
         description: string;
         editDescription: string;
+        editResources: string;
         editTitle: string;
         empty: string;
         metadataOnly: string;
@@ -392,6 +408,7 @@ export type CompleteLocalizationResource = Readonly<{
         softDeleteSuccess: string;
       };
       upload: {
+        browseFiles: string;
         description: string;
         descriptionLabel: string;
         descriptionPlaceholder: string;
@@ -402,6 +419,9 @@ export type CompleteLocalizationResource = Readonly<{
         filesLabel: string;
         finalizationFailure: string;
         finalizing: string;
+        imagesHelp: string;
+        imagesLabel: string;
+        imageTypes: string;
         nameLabel: string;
         namePlaceholder: string;
         newVersionTitle: string;
@@ -418,16 +438,25 @@ export type CompleteLocalizationResource = Readonly<{
       validation: {
         duplicateFilename: string;
         fileTooLarge: string;
+        imageInvalidType: string;
+        imageTooLarge: string;
         invalidFileType: string;
         previewInvalidType: string;
         previewTooLarge: string;
         requiredCategory: string;
         requiredDescription: string;
         requiredFile: string;
+        requiredImage: string;
         requiredName: string;
         sessionTooLarge: string;
         tooManyFiles: string;
+        tooManyImages: string;
         unsafeFilename: string;
+      };
+      visibility: {
+        adminPrivateTooltip: string;
+        private: string;
+        public: string;
       };
     };
     settings: {
