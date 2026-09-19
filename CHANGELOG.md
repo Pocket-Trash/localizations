@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.5.0
+
+_Published 2026-09-19._
+
+### Minor Changes
+
+- 542785a: Add resource creation, visibility, and gallery translations in English and Mexican Spanish.
+
 ## 0.4.0
 
 _Published 2026-09-16._
