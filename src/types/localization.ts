@@ -41,6 +41,8 @@ export type CompleteLocalizationResource = Readonly<{
       close: string;
       confirmAdd: string;
       edit: string;
+      more: string;
+      moreFilters: string;
       moveFinishOptionDown: string;
       moveFinishOptionUp: string;
       removeFinishOption: string;
@@ -146,6 +148,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
       defaultButton: string;
       error: {
+        colorHex: string;
         colorEffectRequired: string;
         colorEffectWithoutColors: string;
         duplicate: string;
@@ -165,6 +168,7 @@ export type CompleteLocalizationResource = Readonly<{
         button: string;
         buttonDiameter: string;
         colorEffect: string;
+        colorValue: string;
         colors: string;
         finishes: string;
         finishOptions: string;
@@ -177,6 +181,12 @@ export type CompleteLocalizationResource = Readonly<{
         thickness: string;
         thicknessWithButton: string;
         width: string;
+      };
+      filter: {
+        description: string;
+        fadeName: string;
+        moreOptions: string;
+        productTypeAll: string;
       };
       finishOptionCount: string;
       finishPreview: string;
@@ -196,6 +206,7 @@ export type CompleteLocalizationResource = Readonly<{
       directory: {
         avatar: string;
         itemCount: string;
+        matchingItemCount: string;
       };
       duplicateWarning: string;
       edit: {
