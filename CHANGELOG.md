@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.5.1
+
+_Published 2026-09-21._
+
+### Patch Changes
+
+- 3aa24bc: Add bilingual catalog filter copy and blank untranslated English text in the Spanish catalog.
+
 ## 0.5.0
 
 _Published 2026-09-19._
