@@ -40,6 +40,8 @@ export const enUS = {
       close: "Close",
       confirmAdd: "Add another",
       edit: "Edit",
+      more: "More",
+      moreFilters: "More filters",
       moveFinishOptionDown: "Move finish option down",
       moveFinishOptionUp: "Move finish option up",
       removeFinishOption: "Remove finish option",
@@ -149,6 +151,7 @@ export const enUS = {
       },
       defaultButton: "Default Button",
       error: {
+        colorHex: "Choose a valid colour.",
         colorEffectRequired: "Select a colour effect.",
         colorEffectWithoutColors: "Add a colour or remove the colour effect.",
         duplicate: "That name already exists.",
@@ -169,6 +172,7 @@ export const enUS = {
         button: "Button",
         buttonDiameter: "Button diameter",
         colorEffect: "Colour effect",
+        colorValue: "Colour value",
         colors: "Colours",
         finishes: "Finishes",
         finishOptions: "Finish options",
@@ -181,6 +185,13 @@ export const enUS = {
         thickness: "Thickness",
         thicknessWithButton: "Thickness with button",
         width: "Width",
+      },
+      filter: {
+        description:
+          "Filter by product type, material, finish, colour, and maker.",
+        fadeName: "{colors} fade",
+        moreOptions: "More {label}",
+        productTypeAll: "All product types",
       },
       finishOptionCount: "Finish options: {count}",
       finishPreview: "Preview: {finish}",
@@ -200,6 +211,7 @@ export const enUS = {
       directory: {
         avatar: "Generic collector avatar",
         itemCount: "Collection items: {count}",
+        matchingItemCount: "{matching} of {total} collection items",
       },
       duplicateWarning:
         "Matching products already owned: {count}. Confirm to add another.",

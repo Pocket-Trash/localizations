@@ -94,6 +94,45 @@ test("catalogs use nested sources and flat public translations", () => {
   assert.ok(translationKeys.includes("web.page.resources.stub"));
 });
 
+test("catalog filter copy and blank Spanish entries use the right translations", () => {
+  for (const key of [
+    "web.action.more",
+    "web.action.moreFilters",
+    "web.catalog.error.colorHex",
+    "web.catalog.field.colorValue",
+    "web.catalog.filter.description",
+    "web.catalog.filter.fadeName",
+    "web.catalog.filter.moreOptions",
+    "web.catalog.filter.productTypeAll",
+    "web.collections.directory.matchingItemCount",
+  ]) {
+    assert.ok(translationKeys.includes(key));
+  }
+
+  assert.equal(esMX.web.action.addToCollection, "");
+  assert.equal(
+    translations["es-MX"]["web.action.addToCollection"],
+    "Add to collection",
+  );
+  assert.equal(translations["es-MX"]["web.action.addColor"], "Agregar color");
+  assert.equal(
+    formatTranslation(
+      "web.catalog.filter.moreOptions",
+      { label: "colores" },
+      "es-MX",
+    ),
+    "Más opciones de colores",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.collections.directory.matchingItemCount",
+      { matching: 2, total: 5 },
+      "es-MX",
+    ),
+    "2 de 5 artículos de la colección",
+  );
+});
+
 test("resource catalogs have matching keys and format dynamic copy", () => {
   const flattenKeys = (value, prefix = "") =>
     Object.entries(value).flatMap(([key, child]) => {
