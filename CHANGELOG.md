@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.6.0
+
+_Published 2026-09-23._
+
+### Minor Changes
+
+- 624e0b7: Add localization keys for multiple named collections and collection covers.
+
 ## 0.5.1
 
 _Published 2026-09-21._
