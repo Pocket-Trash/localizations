@@ -28,6 +28,7 @@ export const esMX = {
       name: "",
     },
     action: {
+      addCollection: "",
       addColor: "Agregar color",
       addFinish: "Agregar acabado",
       addFinishOption: "Agregar opción de acabado",
@@ -37,8 +38,10 @@ export const esMX = {
       addToCollection: "",
       archive: "Archivar",
       clearAllFilters: "Borrar todos los filtros",
+      clearCover: "",
       close: "Cerrar",
       confirmAdd: "",
+      deleteCover: "",
       edit: "Editar",
       more: "Más",
       moreFilters: "Más filtros",
@@ -48,6 +51,7 @@ export const esMX = {
       removeSelection: "Quitar {name}",
       saveFlag: "Guardar bandera",
       search: "Buscar",
+      selectCover: "",
       signIn: "Iniciar sesion",
       visitProductPage: "Visitar pagina del producto",
     },
@@ -211,6 +215,15 @@ export const esMX = {
       selectProductType: "",
     },
     collections: {
+      add: {
+        title: "",
+      },
+      cover: {
+        clearConfirmation: "",
+        current: "",
+        deleteConfirmation: "",
+        history: "",
+      },
       directory: {
         avatar: "",
         itemCount: "",
@@ -219,11 +232,35 @@ export const esMX = {
       duplicateWarning: "",
       edit: {
         noFields: "",
+        title: "",
       },
       empty: "",
+      emptyCollections: "",
+      error: {
+        chooseCollection: "",
+        syncIncomplete: "",
+        upload: "",
+      },
+      field: {
+        collection: "",
+        cover: "",
+        description: "",
+        name: "",
+      },
       finishChoice: {
         custom: "Acabado personalizado",
         product: "Acabado del producto",
+      },
+      placeholder: {
+        description: "",
+        name: "",
+      },
+      select: {
+        addNew: "",
+        placeholder: "",
+      },
+      visibility: {
+        privateCallout: "",
       },
     },
     currency: {
