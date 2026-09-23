@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.7.0
+
+_Published 2026-09-23._
+
+### Minor Changes
+
+- 1667122: Add bilingual catalog and help interface copy.
+
 ## 0.6.0
 
 _Published 2026-09-23._
