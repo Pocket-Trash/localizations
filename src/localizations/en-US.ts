@@ -28,6 +28,7 @@ export const enUS = {
       name: "Pocket Trash",
     },
     action: {
+      addCollection: "Add collection",
       addColor: "Add colour",
       addFinish: "Add finish",
       addFinishOption: "Add finish option",
@@ -37,8 +38,10 @@ export const enUS = {
       addToCollection: "Add to collection",
       archive: "Archive",
       clearAllFilters: "Clear all filters",
+      clearCover: "Clear cover",
       close: "Close",
       confirmAdd: "Add another",
+      deleteCover: "Delete cover",
       edit: "Edit",
       more: "More",
       moreFilters: "More filters",
@@ -48,6 +51,7 @@ export const enUS = {
       removeSelection: "Remove {name}",
       saveFlag: "Save flag",
       search: "Search",
+      selectCover: "Use this cover",
       signIn: "Sign in",
       visitProductPage: "Visit product page",
     },
@@ -208,6 +212,17 @@ export const enUS = {
       selectProductType: "Select a product type",
     },
     collections: {
+      add: {
+        title: "Add collection",
+      },
+      cover: {
+        clearConfirmation:
+          "Clear the current cover? It will remain available under previous covers.",
+        current: "Current cover",
+        deleteConfirmation:
+          "Permanently delete this cover image? This cannot be undone.",
+        history: "Previous covers",
+      },
       directory: {
         avatar: "Generic collector avatar",
         itemCount: "Collection items: {count}",
@@ -218,11 +233,37 @@ export const enUS = {
       edit: {
         noFields:
           "There are no collection-specific fields to edit for this item.",
+        title: "Edit collection",
       },
       empty: "No collection items yet.",
+      emptyCollections: "You don't have any collections yet.",
+      error: {
+        chooseCollection: "Choose a collection.",
+        syncIncomplete: "Your profile is still syncing. Try again.",
+        upload:
+          "The collection was saved, but its cover could not be uploaded. Try again from Edit collection.",
+      },
+      field: {
+        collection: "Collection",
+        cover: "Cover image",
+        description: "Description",
+        name: "Name",
+      },
       finishChoice: {
         custom: "Custom finish",
         product: "Product finish",
+      },
+      placeholder: {
+        description: "Describe this collection",
+        name: "Collection name",
+      },
+      select: {
+        addNew: "Add new collection",
+        placeholder: "Select a collection",
+      },
+      visibility: {
+        privateCallout:
+          "This item is public, but it will remain hidden while its collection is private.",
       },
     },
     currency: {

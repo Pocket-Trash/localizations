@@ -133,6 +133,43 @@ test("catalog filter copy and blank Spanish entries use the right translations",
   );
 });
 
+test("multiple collection copy falls back from blank Spanish entries", () => {
+  const keys = [
+    "web.action.addCollection",
+    "web.action.clearCover",
+    "web.action.deleteCover",
+    "web.action.selectCover",
+    "web.collections.add.title",
+    "web.collections.cover.clearConfirmation",
+    "web.collections.cover.current",
+    "web.collections.cover.deleteConfirmation",
+    "web.collections.cover.history",
+    "web.collections.edit.title",
+    "web.collections.emptyCollections",
+    "web.collections.error.chooseCollection",
+    "web.collections.error.syncIncomplete",
+    "web.collections.error.upload",
+    "web.collections.field.collection",
+    "web.collections.field.cover",
+    "web.collections.field.description",
+    "web.collections.field.name",
+    "web.collections.placeholder.description",
+    "web.collections.placeholder.name",
+    "web.collections.select.addNew",
+    "web.collections.select.placeholder",
+    "web.collections.visibility.privateCallout",
+  ];
+
+  for (const key of keys) {
+    const esMXValue = key
+      .split(".")
+      .reduce((resource, segment) => resource[segment], esMX);
+
+    assert.equal(esMXValue, "");
+    assert.equal(translations["es-MX"][key], translations["en-US"][key]);
+  }
+});
+
 test("resource catalogs have matching keys and format dynamic copy", () => {
   const flattenKeys = (value, prefix = "") =>
     Object.entries(value).flatMap(([key, child]) => {

@@ -29,6 +29,7 @@ export type CompleteLocalizationResource = Readonly<{
       name: string;
     };
     action: {
+      addCollection: string;
       addColor: string;
       addFinish: string;
       addFinishOption: string;
@@ -38,8 +39,10 @@ export type CompleteLocalizationResource = Readonly<{
       addToCollection: string;
       archive: string;
       clearAllFilters: string;
+      clearCover: string;
       close: string;
       confirmAdd: string;
+      deleteCover: string;
       edit: string;
       more: string;
       moreFilters: string;
@@ -49,6 +52,7 @@ export type CompleteLocalizationResource = Readonly<{
       removeSelection: string;
       saveFlag: string;
       search: string;
+      selectCover: string;
       signIn: string;
       visitProductPage: string;
     };
@@ -203,6 +207,15 @@ export type CompleteLocalizationResource = Readonly<{
       selectProductType: string;
     };
     collections: {
+      add: {
+        title: string;
+      };
+      cover: {
+        clearConfirmation: string;
+        current: string;
+        deleteConfirmation: string;
+        history: string;
+      };
       directory: {
         avatar: string;
         itemCount: string;
@@ -211,11 +224,35 @@ export type CompleteLocalizationResource = Readonly<{
       duplicateWarning: string;
       edit: {
         noFields: string;
+        title: string;
       };
       empty: string;
+      emptyCollections: string;
+      error: {
+        chooseCollection: string;
+        syncIncomplete: string;
+        upload: string;
+      };
+      field: {
+        collection: string;
+        cover: string;
+        description: string;
+        name: string;
+      };
       finishChoice: {
         custom: string;
         product: string;
+      };
+      placeholder: {
+        description: string;
+        name: string;
+      };
+      select: {
+        addNew: string;
+        placeholder: string;
+      };
+      visibility: {
+        privateCallout: string;
       };
     };
     currency: {
