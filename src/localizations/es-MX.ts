@@ -53,6 +53,10 @@ export const esMX = {
       search: "Buscar",
       selectCover: "",
       signIn: "Iniciar sesion",
+      view: "Ver",
+      viewCollection: "Ver colección",
+      viewItem: "Ver artículo",
+      viewProductDetails: "Ver detalles del producto",
       visitProductPage: "Visitar pagina del producto",
     },
     admin: {
@@ -150,6 +154,7 @@ export const esMX = {
       },
     },
     catalog: {
+      collectionsWithProduct: "Colecciones con este producto",
       colorEffect: {
         fade: "Degradado",
         solid: "Sólido",
@@ -200,6 +205,11 @@ export const esMX = {
         moreOptions: "Más opciones de {label}",
         productTypeAll: "Todos los tipos de producto",
       },
+      images: {
+        aspectRatioGuideLink: "Leer la guía de tamaño y resolución de imágenes",
+        aspectRatioWarning:
+          "Esta imagen no tiene una relación de aspecto de 4:3 y se recortará al mostrarse.",
+      },
       finishOptionCount: "Opciones de acabado: {count}",
       finishPreview: "Vista previa: {finish}",
       materialCount: "Materiales: {count}",
@@ -245,6 +255,7 @@ export const esMX = {
         collection: "",
         cover: "",
         description: "",
+        displayName: "Nombre para mostrar",
         name: "",
       },
       finishChoice: {
@@ -285,11 +296,20 @@ export const esMX = {
       settingsSaveFailed: "",
       userSettingsObject: "",
     },
+    help: {
+      comingSoon: "Próximamente.",
+      contact: "Contacto",
+      dateModified: "Fecha de modificación",
+      datePublished: "Fecha",
+      developmentCallout: "Esta página todavía está en desarrollo.",
+      topics: "Temas de ayuda",
+    },
     navigation: {
       account: "Cuenta",
       accountMenu: "Menu de cuenta",
       betaFeatures: "Funciones beta",
       collections: "Colecciones",
+      help: "Ayuda",
       language: "Idioma",
       logOut: "Cerrar sesion",
       products: "",
