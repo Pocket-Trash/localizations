@@ -53,6 +53,10 @@ export const enUS = {
       search: "Search",
       selectCover: "Use this cover",
       signIn: "Sign in",
+      view: "View",
+      viewCollection: "View collection",
+      viewItem: "View item",
+      viewProductDetails: "View product details",
       visitProductPage: "Visit product page",
     },
     admin: {
@@ -149,6 +153,7 @@ export const enUS = {
       },
     },
     catalog: {
+      collectionsWithProduct: "Collections with this product",
       colorEffect: {
         fade: "Fade",
         solid: "Solid",
@@ -196,6 +201,11 @@ export const enUS = {
         fadeName: "{colors} fade",
         moreOptions: "More {label}",
         productTypeAll: "All product types",
+      },
+      images: {
+        aspectRatioGuideLink: "Read the image size and resolution guide",
+        aspectRatioWarning:
+          "This image is not 4:3 and will be cropped when displayed.",
       },
       finishOptionCount: "Finish options: {count}",
       finishPreview: "Preview: {finish}",
@@ -247,6 +257,7 @@ export const enUS = {
         collection: "Collection",
         cover: "Cover image",
         description: "Description",
+        displayName: "Display name",
         name: "Name",
       },
       finishChoice: {
@@ -288,11 +299,20 @@ export const enUS = {
       settingsSaveFailed: "We couldn't save your settings. Please try again.",
       userSettingsObject: "Expected a user settings object.",
     },
+    help: {
+      comingSoon: "Coming soon.",
+      contact: "Contact",
+      dateModified: "Date Modified",
+      datePublished: "Date",
+      developmentCallout: "This page is still in development.",
+      topics: "Help Topics",
+    },
     navigation: {
       account: "Account",
       accountMenu: "Account menu",
       betaFeatures: "Beta features",
       collections: "Collections",
+      help: "Help",
       language: "Language",
       logOut: "Log out",
       products: "Products",

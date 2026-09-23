@@ -54,6 +54,10 @@ export type CompleteLocalizationResource = Readonly<{
       search: string;
       selectCover: string;
       signIn: string;
+      view: string;
+      viewCollection: string;
+      viewItem: string;
+      viewProductDetails: string;
       visitProductPage: string;
     };
     admin: {
@@ -146,6 +150,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     catalog: {
+      collectionsWithProduct: string;
       colorEffect: {
         fade: string;
         solid: string;
@@ -192,6 +197,10 @@ export type CompleteLocalizationResource = Readonly<{
         moreOptions: string;
         productTypeAll: string;
       };
+      images: {
+        aspectRatioGuideLink: string;
+        aspectRatioWarning: string;
+      };
       finishOptionCount: string;
       finishPreview: string;
       materialCount: string;
@@ -237,6 +246,7 @@ export type CompleteLocalizationResource = Readonly<{
         collection: string;
         cover: string;
         description: string;
+        displayName: string;
         name: string;
       };
       finishChoice: {
@@ -277,11 +287,20 @@ export type CompleteLocalizationResource = Readonly<{
       settingsSaveFailed: string;
       userSettingsObject: string;
     };
+    help: {
+      comingSoon: string;
+      contact: string;
+      dateModified: string;
+      datePublished: string;
+      developmentCallout: string;
+      topics: string;
+    };
     navigation: {
       account: string;
       accountMenu: string;
       betaFeatures: string;
       collections: string;
+      help: string;
       language: string;
       logOut: string;
       products: string;

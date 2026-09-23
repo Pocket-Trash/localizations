@@ -170,6 +170,41 @@ test("multiple collection copy falls back from blank Spanish entries", () => {
   }
 });
 
+test("catalog and help copy is complete in both supported locales", () => {
+  const keys = [
+    "web.action.view",
+    "web.action.viewCollection",
+    "web.action.viewItem",
+    "web.action.viewProductDetails",
+    "web.catalog.collectionsWithProduct",
+    "web.catalog.images.aspectRatioGuideLink",
+    "web.catalog.images.aspectRatioWarning",
+    "web.collections.field.displayName",
+    "web.help.comingSoon",
+    "web.help.contact",
+    "web.help.dateModified",
+    "web.help.datePublished",
+    "web.help.developmentCallout",
+    "web.help.topics",
+    "web.navigation.help",
+  ];
+
+  for (const key of keys) {
+    assert.ok(translationKeys.includes(key));
+    assert.ok(translations["en-US"][key]);
+    assert.ok(translations["es-MX"][key]);
+    assert.notEqual(translations["es-MX"][key], translations["en-US"][key]);
+    assert.notEqual(
+      translations["en-US"][key],
+      translations["en-US"]["error.generic"],
+    );
+    assert.notEqual(
+      translations["es-MX"][key],
+      translations["es-MX"]["error.generic"],
+    );
+  }
+});
+
 test("resource catalogs have matching keys and format dynamic copy", () => {
   const flattenKeys = (value, prefix = "") =>
     Object.entries(value).flatMap(([key, child]) => {
