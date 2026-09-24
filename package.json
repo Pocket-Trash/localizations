@@ -9,10 +9,12 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./help/*.mdx": "./help/*.mdx"
   },
   "files": [
-    "dist"
+    "dist",
+    "help"
   ],
   "repository": {
     "type": "git",

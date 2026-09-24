@@ -236,3 +236,16 @@ pnpm localization:sync
 ```
 
 Publishing notes live in [docs/publishing.md](docs/publishing.md).
+
+## Help documents
+
+Localized help sources are published unchanged under
+`@pocket-trash/localizations/help/<locale>/<slug>.mdx`. They contain frontmatter
+and Markdown; consumers handle parsing and rendering. The package does not
+compile MDX or execute JSX.
+
+For example, a Vite app can load the English image guide as text:
+
+```ts
+import source from "@pocket-trash/localizations/help/en-US/image-size-and-resolution-guide.mdx?raw";
+```
