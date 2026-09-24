@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.8.0
+
+_Published 2026-09-24._
+
+### Minor Changes
+
+- eeb5668: Export localized help documents as raw MDX files.
+
 ## 0.7.0
 
 _Published 2026-09-23._
