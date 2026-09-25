@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.9.0
+
+_Published 2026-09-25._
+
+### Minor Changes
+
+- cdd437b: Add shared upload size and failure translations and list supported resource image files.
+
 ## 0.8.0
 
 _Published 2026-09-24._
