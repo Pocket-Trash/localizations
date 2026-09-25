@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.9.1
+
+_Published 2026-09-25._
+
+### Patch Changes
+
+- a4350f2: Check npm authentication before starting a release.
+
 ## 0.9.0
 
 _Published 2026-09-25._
