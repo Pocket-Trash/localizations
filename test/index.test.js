@@ -286,6 +286,40 @@ test("resource catalogs have matching keys and format dynamic copy", () => {
   );
 });
 
+test("shared upload copy formats sizes and keeps failures target-neutral", () => {
+  for (const locale of ["en-US", "es-MX"]) {
+    assert.equal(
+      formatTranslation("web.storage.sizeMiB", { value: 25 }, locale),
+      "25 MiB",
+    );
+  }
+
+  assert.equal(
+    translations["en-US"]["web.upload.saveFailed"],
+    "We couldn't save your upload. Try again.",
+  );
+  assert.equal(
+    translations["es-MX"]["web.upload.saveFailed"],
+    "No pudimos guardar tu carga. Inténtalo de nuevo.",
+  );
+  assert.equal(
+    translations["en-US"]["web.upload.finalizationFailure"],
+    "Your files were uploaded, but the upload could not be finalized. Try again.",
+  );
+  assert.equal(
+    translations["es-MX"]["web.upload.finalizationFailure"],
+    "Tus archivos se cargaron, pero no se pudo finalizar la carga. Inténtalo de nuevo.",
+  );
+  assert.equal(
+    translations["en-US"]["web.resources.upload.fileTypes"],
+    "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, and WebP.",
+  );
+  assert.equal(
+    translations["es-MX"]["web.resources.upload.fileTypes"],
+    "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG y WebP.",
+  );
+});
+
 test("scaffolds and syncs locale files from en-US", () => {
   const fixture = fs.mkdtempSync(path.join(os.tmpdir(), "localizations-"));
   fs.mkdirSync(path.join(fixture, "src/localizations"), { recursive: true });

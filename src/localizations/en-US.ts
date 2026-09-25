@@ -507,7 +507,7 @@ export const enUS = {
         fileHelp:
           "Choose 1–{maxFiles} files. Each file can be up to {maxFileSize}; the complete upload can be up to {maxSessionSize}.",
         fileTypes:
-          "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, and ZIP.",
+          "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, and WebP.",
         filesLabel: "Resource files",
         finalizationFailure:
           "Your files were uploaded, but the resource could not be finalized. Retry to finish the upload.",
@@ -587,6 +587,14 @@ export const enUS = {
       disabled: "Disabled",
       enabled: "Enabled",
       failedToLoad: "Failed to load.",
+    },
+    storage: {
+      sizeMiB: "{value} MiB",
+    },
+    upload: {
+      finalizationFailure:
+        "Your files were uploaded, but the upload could not be finalized. Try again.",
+      saveFailed: "We couldn't save your upload. Try again.",
     },
   },
 } satisfies CompleteLocalizationResource;

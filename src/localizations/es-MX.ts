@@ -510,7 +510,7 @@ export const esMX = {
         fileHelp:
           "Elige de 1 a {maxFiles} archivos. Cada archivo puede pesar hasta {maxFileSize}; la carga completa puede pesar hasta {maxSessionSize}.",
         fileTypes:
-          "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT y ZIP.",
+          "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG y WebP.",
         filesLabel: "Archivos del recurso",
         finalizationFailure:
           "Tus archivos se subieron, pero no se pudo finalizar el recurso. Vuelve a intentarlo para completar la carga.",
@@ -593,6 +593,14 @@ export const esMX = {
       disabled: "Desactivada",
       enabled: "Activada",
       failedToLoad: "No se pudo cargar.",
+    },
+    storage: {
+      sizeMiB: "{value} MiB",
+    },
+    upload: {
+      finalizationFailure:
+        "Tus archivos se cargaron, pero no se pudo finalizar la carga. Inténtalo de nuevo.",
+      saveFailed: "No pudimos guardar tu carga. Inténtalo de nuevo.",
     },
   },
 } satisfies LocalizationResource;
