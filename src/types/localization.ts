@@ -157,9 +157,11 @@ export type CompleteLocalizationResource = Readonly<{
       };
       defaultButton: string;
       error: {
+        bearingLength: string;
         colorHex: string;
         colorEffectRequired: string;
         colorEffectWithoutColors: string;
+        descriptionLength: string;
         duplicate: string;
         duplicateComponent: string;
         duplicateFinishOption: string;
@@ -174,19 +176,23 @@ export type CompleteLocalizationResource = Readonly<{
         url: string;
       };
       field: {
+        bearing: string;
         button: string;
         buttonDiameter: string;
         colorEffect: string;
         colorValue: string;
         colors: string;
+        description: string;
         finishes: string;
         finishOptions: string;
         maker: string;
+        makerProductUrl: string;
         materials: string;
         name: string;
         productType: string;
         rootUrl: string;
         slug: string;
+        spinDiameter: string;
         thickness: string;
         thicknessWithButton: string;
         width: string;
@@ -196,6 +202,11 @@ export type CompleteLocalizationResource = Readonly<{
         fadeName: string;
         moreOptions: string;
         productTypeAll: string;
+      };
+      help: {
+        collectionDescriptionOverride: string;
+        makerProductUrl: string;
+        markdownDescription: string;
       };
       images: {
         aspectRatioGuideLink: string;
