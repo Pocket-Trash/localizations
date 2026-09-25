@@ -559,6 +559,13 @@ export type CompleteLocalizationResource = Readonly<{
       enabled: string;
       failedToLoad: string;
     };
+    storage: {
+      sizeMiB: string;
+    };
+    upload: {
+      finalizationFailure: string;
+      saveFailed: string;
+    };
   };
 }>;
 
