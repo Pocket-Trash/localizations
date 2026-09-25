@@ -133,6 +133,33 @@ test("catalog filter copy and blank Spanish entries use the right translations",
   );
 });
 
+test("catalog source-detail copy falls back from blank Spanish entries", () => {
+  const entries = {
+    "web.catalog.field.description": "Description",
+    "web.catalog.field.makerProductUrl": "Maker product URL",
+    "web.catalog.field.spinDiameter": "Spin diameter",
+    "web.catalog.field.bearing": "Bearing",
+    "web.catalog.help.markdownDescription":
+      "Markdown supported. 5,000 characters maximum.",
+    "web.catalog.help.makerProductUrl":
+      "Direct link to the product on the maker's website.",
+    "web.catalog.help.collectionDescriptionOverride":
+      "Leave blank to use the product description. Markdown supported. 5,000 characters maximum.",
+    "web.catalog.error.descriptionLength": "Enter 5,000 characters or fewer.",
+    "web.catalog.error.bearingLength": "Enter 200 characters or fewer.",
+  };
+
+  for (const [key, english] of Object.entries(entries)) {
+    const esMXValue = key
+      .split(".")
+      .reduce((resource, segment) => resource[segment], esMX);
+
+    assert.equal(esMXValue, "");
+    assert.equal(translations["en-US"][key], english);
+    assert.equal(translations["es-MX"][key], english);
+  }
+});
+
 test("multiple collection copy falls back from blank Spanish entries", () => {
   const keys = [
     "web.action.addCollection",
