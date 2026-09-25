@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.9.2
+
+_Published 2026-09-25._
+
+### Patch Changes
+
+- a81346d: Update Pocket Trash skills to v0.4.0.
+
 ## 0.9.1
 
 _Published 2026-09-25._
