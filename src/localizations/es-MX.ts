@@ -391,8 +391,20 @@ export const esMX = {
       collections: {
         empty: "Las colecciones estaran disponibles mas adelante.",
       },
+      error: {
+        copied: "Copiado",
+        copyDetails: "Copiar detalles del error",
+        copyFailed: "No se pudo copiar",
+        description: "No pudimos cargar esta página. Inténtalo de nuevo.",
+        retry: "Reintentar",
+        retrying: "Reintentando…",
+        returnHome: "Volver al inicio",
+        technicalDetails: "Detalles técnicos",
+        title: "Algo salió mal",
+      },
       notFound: {
         description: "Esta pagina no existe o ya no esta disponible.",
+        returnHome: "Volver al inicio",
         returnToArchive: "Volver al archivo",
         title: "No encontrado",
         unavailable: "Pagina no disponible",
