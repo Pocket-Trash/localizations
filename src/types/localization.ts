@@ -298,6 +298,58 @@ export type CompleteLocalizationResource = Readonly<{
       settingsSaveFailed: string;
       userSettingsObject: string;
     };
+    feedback: {
+      title: string;
+      new: {
+        title: string;
+        description: string;
+        titleLabel: string;
+        titleHelp: string;
+        descriptionHelp: string;
+        categoryLabel: string;
+        categoryPlaceholder: string;
+        submit: string;
+        submitting: string;
+        success: string;
+        failure: string;
+        limit: string;
+      };
+      myRequests: {
+        title: string;
+        empty: string;
+      };
+      admin: {
+        requests: {
+          title: string;
+          empty: string;
+          approve: string;
+          deny: string;
+          categoryRequired: string;
+          approved: string;
+          denied: string;
+          updated: string;
+          actionFailed: string;
+          previousPage: string;
+          nextPage: string;
+        };
+      };
+      status: {
+        pending: string;
+        requested: string;
+      };
+      category: {
+        productType: string;
+        feature: string;
+        improvement: string;
+        bug: string;
+        unset: string;
+      };
+      metadata: {
+        submittedOn: string;
+        submittedBy: string;
+        votes: string;
+      };
+    };
     help: {
       comingSoon: string;
       contact: string;
