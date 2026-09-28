@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.10.1
+
+_Published 2026-09-28._
+
+### Patch Changes
+
+- c638bc0: Add Feedback tool translations.
+
 ## 0.10.0
 
 _Published 2026-09-25._
