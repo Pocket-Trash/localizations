@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.13.1
+
+_Published 2026-09-29._
+
+### Patch Changes
+
+- 02e0271: Add shared footer and public navigation copy in English and Spanish.
+
 ## 0.13.0
 
 _Published 2026-09-29._
