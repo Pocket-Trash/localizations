@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.12.1
+
+_Published 2026-09-29._
+
+### Patch Changes
+
+- 0bb2f4b: Refine feedback administration copy and actions.
+
 ## 0.12.0
 
 _Published 2026-09-29._
