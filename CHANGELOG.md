@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.11.0
+
+_Published 2026-09-29._
+
+### Minor Changes
+
+- 2ad1581: Add localized feedback discovery, voting, duplicate, detail, and request-list copy.
+- 4ab81e5: Add localized global error recovery and return-home copy.
+
 ## 0.10.1
 
 _Published 2026-09-28._
