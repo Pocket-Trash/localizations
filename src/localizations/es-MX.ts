@@ -39,6 +39,7 @@ export const esMX = {
       archive: "Archivar",
       clearAllFilters: "Borrar todos los filtros",
       clearCover: "",
+      clearSearch: "Borrar búsqueda",
       close: "Cerrar",
       confirmAdd: "",
       deleteCover: "",
@@ -353,7 +354,7 @@ export const esMX = {
       },
       admin: {
         navigation: {
-          active: "Activas",
+          active: "Planificadas",
           archive: "Archivo",
           requests: "Solicitudes",
         },
@@ -378,6 +379,7 @@ export const esMX = {
           error: "No pudimos cargar las solicitudes pendientes.",
           loading: "Cargando solicitudes pendientes…",
           approve: "Aprobar",
+          saveAndApprove: "Guardar y aprobar",
           deny: "Rechazar",
           categoryRequired: "Selecciona una categoría antes de aprobar.",
           approved: "Solicitud aprobada.",
@@ -396,14 +398,14 @@ export const esMX = {
           nextPage: "Página siguiente",
         },
         active: {
-          empty: "No hay sugerencias activas.",
-          error: "No pudimos cargar las sugerencias activas.",
-          loading: "Cargando sugerencias activas…",
+          empty: "No hay sugerencias planificadas.",
+          error: "No pudimos cargar las sugerencias planificadas.",
+          loading: "Cargando sugerencias planificadas…",
           nextPage: "Página siguiente",
           previousPage: "Página anterior",
-          searchLabel: "Buscar sugerencias activas",
-          searchPlaceholder: "Buscar solicitudes activas",
-          title: "Sugerencias activas",
+          searchLabel: "Buscar sugerencias planificadas",
+          searchPlaceholder: "Buscar solicitudes planificadas",
+          title: "Planificadas",
         },
         archive: {
           allStatuses: "Todos los estados",
@@ -459,6 +461,7 @@ export const esMX = {
     navigation: {
       account: "Cuenta",
       accountMenu: "Menu de cuenta",
+      admin: "Administración",
       betaFeatures: "Funciones beta",
       collections: "Colecciones",
       help: "Ayuda",

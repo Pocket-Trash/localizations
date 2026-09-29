@@ -40,6 +40,7 @@ export type CompleteLocalizationResource = Readonly<{
       archive: string;
       clearAllFilters: string;
       clearCover: string;
+      clearSearch: string;
       close: string;
       confirmAdd: string;
       deleteCover: string;
@@ -369,6 +370,7 @@ export type CompleteLocalizationResource = Readonly<{
           error: string;
           loading: string;
           approve: string;
+          saveAndApprove: string;
           deny: string;
           categoryRequired: string;
           approved: string;
@@ -449,6 +451,7 @@ export type CompleteLocalizationResource = Readonly<{
     navigation: {
       account: string;
       accountMenu: string;
+      admin: string;
       betaFeatures: string;
       collections: string;
       help: string;

@@ -39,6 +39,7 @@ export const enUS = {
       archive: "Archive",
       clearAllFilters: "Clear all filters",
       clearCover: "Clear cover",
+      clearSearch: "Clear search",
       close: "Close",
       confirmAdd: "Add another",
       deleteCover: "Delete cover",
@@ -357,7 +358,7 @@ export const enUS = {
       },
       admin: {
         navigation: {
-          active: "Active",
+          active: "Planned",
           archive: "Archive",
           requests: "Requests",
         },
@@ -382,6 +383,7 @@ export const enUS = {
           error: "We couldn't load pending requests.",
           loading: "Loading pending requests…",
           approve: "Approve",
+          saveAndApprove: "Save & Approve",
           deny: "Deny",
           categoryRequired: "Select a category before approval.",
           approved: "Request approved.",
@@ -400,14 +402,14 @@ export const enUS = {
           nextPage: "Next page",
         },
         active: {
-          empty: "There is no active feedback.",
-          error: "We couldn't load active feedback.",
-          loading: "Loading active feedback…",
+          empty: "There is no planned feedback.",
+          error: "We couldn't load planned feedback.",
+          loading: "Loading planned feedback…",
           nextPage: "Next page",
           previousPage: "Previous page",
-          searchLabel: "Search active feedback",
-          searchPlaceholder: "Search active requests",
-          title: "Active feedback",
+          searchLabel: "Search planned feedback",
+          searchPlaceholder: "Search planned requests",
+          title: "Planned",
         },
         archive: {
           allStatuses: "All statuses",
@@ -463,6 +465,7 @@ export const enUS = {
     navigation: {
       account: "Account",
       accountMenu: "Account menu",
+      admin: "Admin",
       betaFeatures: "Beta features",
       collections: "Collections",
       help: "Help",
