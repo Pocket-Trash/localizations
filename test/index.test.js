@@ -141,6 +141,8 @@ test("admin hub and feedback notification copy is complete", () => {
       "web.admin.hub.description": "Manage Pocket Trash administration.",
       "web.admin.hub.title": "Admin Panel",
       "web.admin.notifications.title": "Notifications",
+      "web.admin.trash.title": "Trash",
+      "web.feedback.admin.navigation.allActive": "All active",
       "web.feedback.notification.completed": "Completed",
       "web.feedback.notification.description":
         "Review submitted and completed feedback activity.",
@@ -153,6 +155,8 @@ test("admin hub and feedback notification copy is complete", () => {
       "web.admin.hub.description": "Administra Pocket Trash.",
       "web.admin.hub.title": "Panel de administración",
       "web.admin.notifications.title": "Notificaciones",
+      "web.admin.trash.title": "Papelera",
+      "web.feedback.admin.navigation.allActive": "Todas activas",
       "web.feedback.notification.completed": "Completada",
       "web.feedback.notification.description":
         "Revisa la actividad de sugerencias enviadas y completadas.",

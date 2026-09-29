@@ -87,6 +87,9 @@ export const esMX = {
       notifications: {
         title: "Notificaciones",
       },
+      trash: {
+        title: "Papelera",
+      },
     },
     archive: {
       closeSearch: "Cerrar busqueda",
@@ -362,6 +365,7 @@ export const esMX = {
       },
       admin: {
         navigation: {
+          allActive: "Todas activas",
           active: "Planificadas",
           archive: "Archivo",
           requests: "Solicitudes",
