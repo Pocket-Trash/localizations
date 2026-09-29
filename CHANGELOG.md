@@ -1,5 +1,17 @@
 # @pocket-trash/localizations
 
+## 0.13.0
+
+_Published 2026-09-29._
+
+### Minor Changes
+
+- 6c309d4: Add admin hub and feedback notification copy.
+
+### Patch Changes
+
+- f0d0c98: Add localized guidance for failed multi-file resource downloads.
+
 ## 0.12.1
 
 _Published 2026-09-29._
