@@ -309,6 +309,23 @@ export const esMX = {
     },
     feedback: {
       title: "Sugerencias",
+      board: {
+        empty: "No hay sugerencias activas que coincidan con tu búsqueda.",
+        error: "No pudimos cargar las sugerencias.",
+        loading: "Cargando sugerencias…",
+        searchLabel: "Buscar sugerencias",
+        searchPlaceholder: "Buscar solicitudes",
+      },
+      details: {
+        open: "Ver detalles de {title}",
+        title: "Detalles de la solicitud",
+      },
+      duplicates: {
+        description: "Estas solicitudes pueden corresponder a tu idea.",
+        submitAnyway: "Enviar de todos modos",
+        title: "Solicitudes similares",
+        upvote: "Votar por esta solicitud",
+      },
       new: {
         title: "Enviar sugerencia",
         description: "Comparte una idea o reporta un problema.",
@@ -326,6 +343,13 @@ export const esMX = {
       myRequests: {
         title: "Mis solicitudes",
         empty: "Aún no has enviado ninguna solicitud.",
+        error: "No pudimos cargar tus solicitudes.",
+        loading: "Cargando solicitudes…",
+        nextPage: "Página siguiente",
+        noResults: "Ninguna solicitud coincide con tu búsqueda.",
+        previousPage: "Página anterior",
+        searchLabel: "Buscar mis solicitudes",
+        searchPlaceholder: "Buscar solicitudes",
       },
       admin: {
         requests: {
@@ -343,8 +367,17 @@ export const esMX = {
         },
       },
       status: {
+        completed: "Completada",
+        inProgress: "En curso",
         pending: "Pendiente",
+        planned: "Planificada",
         requested: "Solicitada",
+      },
+      vote: {
+        add: "Votar",
+        failure: "No pudimos actualizar tu voto.",
+        permanent: "Tu voto de envío es permanente.",
+        remove: "Quitar voto",
       },
       category: {
         productType: "Tipo de producto",
