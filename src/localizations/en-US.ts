@@ -313,6 +313,23 @@ export const enUS = {
     },
     feedback: {
       title: "Feedback",
+      board: {
+        empty: "No active feedback matches your search.",
+        error: "We couldn't load feedback.",
+        loading: "Loading feedback…",
+        searchLabel: "Search feedback",
+        searchPlaceholder: "Search requests",
+      },
+      details: {
+        open: "View details for {title}",
+        title: "Request details",
+      },
+      duplicates: {
+        description: "These requests may already cover your idea.",
+        submitAnyway: "Submit anyway",
+        title: "Similar requests",
+        upvote: "Upvote this request",
+      },
       new: {
         title: "Submit feedback",
         description: "Share an idea or report a problem.",
@@ -330,6 +347,13 @@ export const enUS = {
       myRequests: {
         title: "My requests",
         empty: "You haven't submitted any requests yet.",
+        error: "We couldn't load your requests.",
+        loading: "Loading requests…",
+        nextPage: "Next page",
+        noResults: "No requests match your search.",
+        previousPage: "Previous page",
+        searchLabel: "Search my requests",
+        searchPlaceholder: "Search requests",
       },
       admin: {
         requests: {
@@ -347,8 +371,17 @@ export const enUS = {
         },
       },
       status: {
+        completed: "Completed",
+        inProgress: "In progress",
         pending: "Pending",
+        planned: "Planned",
         requested: "Requested",
+      },
+      vote: {
+        add: "Upvote",
+        failure: "We couldn't update your vote.",
+        permanent: "Your submission vote is permanent.",
+        remove: "Remove vote",
       },
       category: {
         productType: "Product type",

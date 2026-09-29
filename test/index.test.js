@@ -232,6 +232,52 @@ test("catalog and help copy is complete in both supported locales", () => {
   }
 });
 
+test("feedback discovery copy is complete in both supported locales", () => {
+  const keys = [
+    "web.feedback.board.empty",
+    "web.feedback.board.error",
+    "web.feedback.board.loading",
+    "web.feedback.board.searchLabel",
+    "web.feedback.board.searchPlaceholder",
+    "web.feedback.details.open",
+    "web.feedback.details.title",
+    "web.feedback.duplicates.description",
+    "web.feedback.duplicates.submitAnyway",
+    "web.feedback.duplicates.title",
+    "web.feedback.duplicates.upvote",
+    "web.feedback.myRequests.error",
+    "web.feedback.myRequests.loading",
+    "web.feedback.myRequests.nextPage",
+    "web.feedback.myRequests.noResults",
+    "web.feedback.myRequests.previousPage",
+    "web.feedback.myRequests.searchLabel",
+    "web.feedback.myRequests.searchPlaceholder",
+    "web.feedback.status.completed",
+    "web.feedback.status.inProgress",
+    "web.feedback.status.planned",
+    "web.feedback.vote.add",
+    "web.feedback.vote.failure",
+    "web.feedback.vote.permanent",
+    "web.feedback.vote.remove",
+  ];
+
+  for (const key of keys) {
+    assert.ok(translationKeys.includes(key));
+    assert.ok(translations["en-US"][key]);
+    assert.ok(translations["es-MX"][key]);
+    assert.notEqual(translations["es-MX"][key], translations["en-US"][key]);
+  }
+
+  assert.equal(
+    formatTranslation(
+      "web.feedback.details.open",
+      { title: "Saved searches" },
+      "en-US",
+    ),
+    "View details for Saved searches",
+  );
+});
+
 test("resource catalogs have matching keys and format dynamic copy", () => {
   const flattenKeys = (value, prefix = "") =>
     Object.entries(value).flatMap(([key, child]) => {

@@ -300,6 +300,23 @@ export type CompleteLocalizationResource = Readonly<{
     };
     feedback: {
       title: string;
+      board: {
+        empty: string;
+        error: string;
+        loading: string;
+        searchLabel: string;
+        searchPlaceholder: string;
+      };
+      details: {
+        open: string;
+        title: string;
+      };
+      duplicates: {
+        description: string;
+        submitAnyway: string;
+        title: string;
+        upvote: string;
+      };
       new: {
         title: string;
         description: string;
@@ -317,6 +334,13 @@ export type CompleteLocalizationResource = Readonly<{
       myRequests: {
         title: string;
         empty: string;
+        error: string;
+        loading: string;
+        nextPage: string;
+        noResults: string;
+        previousPage: string;
+        searchLabel: string;
+        searchPlaceholder: string;
       };
       admin: {
         requests: {
@@ -334,8 +358,17 @@ export type CompleteLocalizationResource = Readonly<{
         };
       };
       status: {
+        completed: string;
+        inProgress: string;
         pending: string;
+        planned: string;
         requested: string;
+      };
+      vote: {
+        add: string;
+        failure: string;
+        permanent: string;
+        remove: string;
       };
       category: {
         productType: string;
