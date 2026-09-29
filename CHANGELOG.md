@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.14.0
+
+_Published 2026-09-29._
+
+### Minor Changes
+
+- 9b2e9dd: Add grouped admin navigation copy.
+
 ## 0.13.1
 
 _Published 2026-09-29._
