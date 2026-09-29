@@ -175,7 +175,6 @@ test("catalog filter copy and blank Spanish entries use the right translations",
 
 test("catalog source-detail copy falls back from blank Spanish entries", () => {
   const entries = {
-    "web.catalog.field.description": "Description",
     "web.catalog.field.makerProductUrl": "Maker product URL",
     "web.catalog.field.spinDiameter": "Spin diameter",
     "web.catalog.field.bearing": "Bearing",
@@ -315,6 +314,51 @@ test("feedback discovery copy is complete in both supported locales", () => {
       "en-US",
     ),
     "View details for Saved searches",
+  );
+});
+
+test("feedback administration copy is complete in both supported locales", () => {
+  const flatten = (value, prefix = "") =>
+    Object.entries(value).flatMap(([key, child]) => {
+      const path = prefix ? `${prefix}.${key}` : key;
+      return typeof child === "string" ? [[path, child]] : flatten(child, path);
+    });
+  const english = flatten(enUS.web.feedback.admin);
+  const spanish = new Map(flatten(esMX.web.feedback.admin));
+
+  assert.deepEqual(
+    english.map(([key]) => key).sort(),
+    [...spanish.keys()].sort(),
+  );
+  for (const [key, value] of english) {
+    assert.ok(value);
+    assert.ok(spanish.get(key));
+  }
+  for (const status of ["canceled", "denied", "merged"]) {
+    assert.ok(enUS.web.feedback.status[status]);
+    assert.ok(esMX.web.feedback.status[status]);
+  }
+  for (const value of [
+    esMX.action.cancel,
+    esMX.action.save,
+    esMX.web.action.edit,
+    esMX.web.catalog.field.description,
+    esMX.web.feedback.new.categoryLabel,
+    esMX.web.feedback.new.titleLabel,
+  ]) {
+    assert.ok(value);
+  }
+  assert.equal(
+    translations["es-MX"]["web.catalog.field.description"],
+    "Descripción",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.feedback.admin.sort.ascending",
+      { column: "Title" },
+      "en-US",
+    ),
+    "Sort Title ascending",
   );
 });
 
