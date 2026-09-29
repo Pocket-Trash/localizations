@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.12.0
+
+_Published 2026-09-29._
+
+### Minor Changes
+
+- ee45755: Add feedback administration and archive translations.
+
 ## 0.11.0
 
 _Published 2026-09-29._
