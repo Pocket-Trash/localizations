@@ -79,6 +79,14 @@ export type CompleteLocalizationResource = Readonly<{
         searchUsers: string;
         slugPlaceholder: string;
       };
+      hub: {
+        catalogImageTrash: string;
+        description: string;
+        title: string;
+      };
+      notifications: {
+        title: string;
+      };
     };
     archive: {
       closeSearch: string;
@@ -438,6 +446,13 @@ export type CompleteLocalizationResource = Readonly<{
         submittedOn: string;
         submittedBy: string;
         votes: string;
+      };
+      notification: {
+        completed: string;
+        description: string;
+        empty: string;
+        submitted: string;
+        title: string;
       };
     };
     help: {

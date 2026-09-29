@@ -79,6 +79,14 @@ export const enUS = {
         searchUsers: "Search users",
         slugPlaceholder: "new-library-ui",
       },
+      hub: {
+        catalogImageTrash: "Catalog image trash",
+        description: "Manage Pocket Trash administration.",
+        title: "Admin Panel",
+      },
+      notifications: {
+        title: "Notifications",
+      },
     },
     archive: {
       closeSearch: "Close search",
@@ -452,6 +460,13 @@ export const enUS = {
         submittedOn: "Submitted {date}",
         submittedBy: "Submitted by {submitter}",
         votes: "{count} votes",
+      },
+      notification: {
+        completed: "Completed",
+        description: "Review submitted and completed feedback activity.",
+        empty: "No feedback notifications.",
+        submitted: "Submitted",
+        title: "Feedback notifications",
       },
     },
     help: {

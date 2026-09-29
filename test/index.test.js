@@ -134,6 +134,43 @@ test("global error recovery copy is complete in both supported locales", () => {
   assert.ok(translationKeys.includes("web.resources.action.retry"));
 });
 
+test("admin hub and feedback notification copy is complete", () => {
+  const expected = {
+    "en-US": {
+      "web.admin.hub.catalogImageTrash": "Catalog image trash",
+      "web.admin.hub.description": "Manage Pocket Trash administration.",
+      "web.admin.hub.title": "Admin Panel",
+      "web.admin.notifications.title": "Notifications",
+      "web.feedback.notification.completed": "Completed",
+      "web.feedback.notification.description":
+        "Review submitted and completed feedback activity.",
+      "web.feedback.notification.empty": "No feedback notifications.",
+      "web.feedback.notification.submitted": "Submitted",
+      "web.feedback.notification.title": "Feedback notifications",
+    },
+    "es-MX": {
+      "web.admin.hub.catalogImageTrash": "Papelera de imágenes del catálogo",
+      "web.admin.hub.description": "Administra Pocket Trash.",
+      "web.admin.hub.title": "Panel de administración",
+      "web.admin.notifications.title": "Notificaciones",
+      "web.feedback.notification.completed": "Completada",
+      "web.feedback.notification.description":
+        "Revisa la actividad de sugerencias enviadas y completadas.",
+      "web.feedback.notification.empty":
+        "No hay notificaciones de sugerencias.",
+      "web.feedback.notification.submitted": "Enviada",
+      "web.feedback.notification.title": "Notificaciones de sugerencias",
+    },
+  };
+
+  for (const [locale, entries] of Object.entries(expected)) {
+    for (const [key, value] of Object.entries(entries)) {
+      assert.ok(translationKeys.includes(key));
+      assert.equal(translations[locale][key], value);
+    }
+  }
+});
+
 test("catalog filter copy and blank Spanish entries use the right translations", () => {
   for (const key of [
     "web.action.more",
