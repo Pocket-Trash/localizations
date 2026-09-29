@@ -323,6 +323,69 @@ export const enUS = {
       settingsSaveFailed: "We couldn't save your settings. Please try again.",
       userSettingsObject: "Expected a user settings object.",
     },
+    erasure: {
+      self: {
+        title: "Delete account",
+        description:
+          "Permanently erase your Pocket Trash account and account-linked data.",
+        open: "Delete my account",
+        dialogTitle: "Delete your account?",
+        dialogIntro: "Erasure starts immediately and cannot be canceled.",
+        deletedData:
+          "Your profile, settings, collections, collection items, resources, and uploaded files will be deleted.",
+        productsRemain:
+          "Products you submitted may remain in the catalog without attribution to you.",
+        retention:
+          "Backups, caches, and security logs may retain limited data until their documented retention periods expire.",
+        publicCopies:
+          "Copies saved or shared by other people cannot be recalled.",
+        confirm: "I understand that this is permanent and cannot be canceled.",
+        submit: "Permanently delete my account",
+        failure: "Account erasure could not be started. Try again.",
+      },
+      status: {
+        title: "Account erasure",
+        processing: "Erasure in progress",
+        processingDescription:
+          "Your account is restricted while Pocket Trash removes your account-linked data.",
+        needsSupport: "Erasure needs support",
+        needsSupportDescription:
+          "We could not complete every erasure step automatically. Contact support and include the request ID below.",
+        completed: "Account erased",
+        completedDescription:
+          "Your Pocket Trash account and account-linked active-system data have been erased.",
+        requestId: "Request ID: {requestId}",
+        support: "Contact support",
+      },
+      admin: {
+        navigation: "Account erasure",
+        title: "Account erasure",
+        description:
+          "Start or retry a verified privacy request. Do not enter personal information in the request reference.",
+        emailLabel: "Clerk account email",
+        emailPlaceholder: "user@example.com",
+        findTarget: "Find account",
+        findingTarget: "Finding account…",
+        targetNotFound: "No Clerk account matched that email.",
+        targetLabel: "Target account",
+        verificationMethodLabel: "How was the request verified?",
+        authenticatedRequest: "Authenticated privacy request",
+        verifiedEmail: "Manually verified Clerk email",
+        referenceLabel: "Opaque request reference",
+        referenceDescription:
+          "Use a ticket or request ID. Do not enter a name, email address, or request details.",
+        start: "Start erasure",
+        starting: "Starting erasure…",
+        requestTitle: "Erasure request",
+        statusLabel: "Status: {status}",
+        errorLabel: "Failure code: {errorCode}",
+        retry: "Retry erasure",
+        retrying: "Retrying erasure…",
+        failure: "The erasure action failed.",
+      },
+      productNotice:
+        "Products you submit may remain in the catalog without attribution after your account is erased.",
+    },
     feedback: {
       title: "Feedback",
       board: {
