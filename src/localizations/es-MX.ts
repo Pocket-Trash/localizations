@@ -594,6 +594,8 @@ export const esMX = {
         title: "Recursos",
       },
       error: {
+        archiveDownloadFallback:
+          "Los archivos siguen disponibles individualmente en la página de detalles del recurso.",
         deleteUnauthorized: "No puedes eliminar este recurso.",
         downloadAccess: "No tienes acceso para descargar este archivo.",
         downloadUnavailable:
