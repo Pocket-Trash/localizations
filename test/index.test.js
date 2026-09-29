@@ -341,10 +341,12 @@ test("feedback administration copy is complete in both supported locales", () =>
   for (const value of [
     esMX.action.cancel,
     esMX.action.save,
+    esMX.web.action.clearSearch,
     esMX.web.action.edit,
     esMX.web.catalog.field.description,
     esMX.web.feedback.new.categoryLabel,
     esMX.web.feedback.new.titleLabel,
+    esMX.web.navigation.admin,
   ]) {
     assert.ok(value);
   }
@@ -352,6 +354,8 @@ test("feedback administration copy is complete in both supported locales", () =>
     translations["es-MX"]["web.catalog.field.description"],
     "Descripción",
   );
+  assert.equal(enUS.web.feedback.admin.active.title, "Planned");
+  assert.equal(esMX.web.feedback.admin.active.title, "Planificadas");
   assert.equal(
     formatTranslation(
       "web.feedback.admin.sort.ascending",
