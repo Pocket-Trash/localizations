@@ -319,6 +319,72 @@ export const esMX = {
       settingsSaveFailed: "",
       userSettingsObject: "",
     },
+    erasure: {
+      self: {
+        title: "Eliminar cuenta",
+        description:
+          "Borra permanentemente tu cuenta de Pocket Trash y los datos vinculados con ella.",
+        open: "Eliminar mi cuenta",
+        dialogTitle: "¿Eliminar tu cuenta?",
+        dialogIntro:
+          "La eliminación comienza de inmediato y no se puede cancelar.",
+        deletedData:
+          "Se eliminarán tu perfil, configuración, colecciones, elementos de colecciones, recursos y archivos cargados.",
+        productsRemain:
+          "Los productos que enviaste pueden permanecer en el catálogo sin atribución a ti.",
+        retention:
+          "Las copias de seguridad, cachés y registros de seguridad pueden conservar datos limitados hasta que venzan sus periodos de retención documentados.",
+        publicCopies:
+          "Las copias guardadas o compartidas por otras personas no se pueden retirar.",
+        confirm:
+          "Entiendo que esta acción es permanente y no se puede cancelar.",
+        submit: "Eliminar permanentemente mi cuenta",
+        failure:
+          "No se pudo iniciar la eliminación de la cuenta. Inténtalo de nuevo.",
+      },
+      status: {
+        title: "Eliminación de cuenta",
+        processing: "Eliminación en curso",
+        processingDescription:
+          "Tu cuenta está restringida mientras Pocket Trash elimina los datos vinculados con ella.",
+        needsSupport: "La eliminación necesita asistencia",
+        needsSupportDescription:
+          "No pudimos completar automáticamente todos los pasos de eliminación. Comunícate con soporte e incluye el ID de solicitud que aparece abajo.",
+        completed: "Cuenta eliminada",
+        completedDescription:
+          "Tu cuenta de Pocket Trash y los datos vinculados con ella en los sistemas activos se eliminaron.",
+        requestId: "ID de solicitud: {requestId}",
+        support: "Contactar a soporte",
+      },
+      admin: {
+        navigation: "Eliminación de cuentas",
+        title: "Eliminación de cuentas",
+        description:
+          "Inicia o reintenta una solicitud de privacidad verificada. No ingreses información personal en la referencia.",
+        emailLabel: "Correo de la cuenta de Clerk",
+        emailPlaceholder: "usuario@ejemplo.com",
+        findTarget: "Buscar cuenta",
+        findingTarget: "Buscando cuenta…",
+        targetNotFound: "Ninguna cuenta de Clerk coincide con ese correo.",
+        targetLabel: "Cuenta objetivo",
+        verificationMethodLabel: "¿Cómo se verificó la solicitud?",
+        authenticatedRequest: "Solicitud de privacidad autenticada",
+        verifiedEmail: "Correo de Clerk verificado manualmente",
+        referenceLabel: "Referencia opaca de la solicitud",
+        referenceDescription:
+          "Usa un ID de ticket o solicitud. No ingreses nombres, correos electrónicos ni detalles de la solicitud.",
+        start: "Iniciar eliminación",
+        starting: "Iniciando eliminación…",
+        requestTitle: "Solicitud de eliminación",
+        statusLabel: "Estado: {status}",
+        errorLabel: "Código de error: {errorCode}",
+        retry: "Reintentar eliminación",
+        retrying: "Reintentando eliminación…",
+        failure: "La acción de eliminación falló.",
+      },
+      productNotice:
+        "Los productos que envíes pueden permanecer en el catálogo sin atribución después de que se elimine tu cuenta.",
+    },
     feedback: {
       title: "Sugerencias",
       board: {

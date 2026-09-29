@@ -310,6 +310,58 @@ export type CompleteLocalizationResource = Readonly<{
       settingsSaveFailed: string;
       userSettingsObject: string;
     };
+    erasure: {
+      self: {
+        title: string;
+        description: string;
+        open: string;
+        dialogTitle: string;
+        dialogIntro: string;
+        deletedData: string;
+        productsRemain: string;
+        retention: string;
+        publicCopies: string;
+        confirm: string;
+        submit: string;
+        failure: string;
+      };
+      status: {
+        title: string;
+        processing: string;
+        processingDescription: string;
+        needsSupport: string;
+        needsSupportDescription: string;
+        completed: string;
+        completedDescription: string;
+        requestId: string;
+        support: string;
+      };
+      admin: {
+        navigation: string;
+        title: string;
+        description: string;
+        emailLabel: string;
+        emailPlaceholder: string;
+        findTarget: string;
+        findingTarget: string;
+        targetNotFound: string;
+        targetLabel: string;
+        verificationMethodLabel: string;
+        authenticatedRequest: string;
+        verifiedEmail: string;
+        referenceLabel: string;
+        referenceDescription: string;
+        start: string;
+        starting: string;
+        requestTitle: string;
+        statusLabel: string;
+        errorLabel: string;
+        retry: string;
+        retrying: string;
+        failure: string;
+      };
+      productNotice: string;
+    };
     feedback: {
       title: string;
       board: {
