@@ -580,6 +580,8 @@ export const enUS = {
         title: "Resources",
       },
       error: {
+        archiveDownloadFallback:
+          "Files remain available individually on the resource details page.",
         deleteUnauthorized: "You cannot delete this resource.",
         downloadAccess: "You do not have access to download this file.",
         downloadUnavailable:

@@ -566,6 +566,7 @@ export type CompleteLocalizationResource = Readonly<{
         title: string;
       };
       error: {
+        archiveDownloadFallback: string;
         deleteUnauthorized: string;
         downloadAccess: string;
         downloadUnavailable: string;
