@@ -94,6 +94,46 @@ test("catalogs use nested sources and flat public translations", () => {
   assert.ok(translationKeys.includes("web.page.resources.stub"));
 });
 
+test("global error recovery copy is complete in both supported locales", () => {
+  const expected = {
+    "en-US": {
+      "web.page.error.title": "Something went wrong",
+      "web.page.error.description": "We couldn't load this page. Try again.",
+      "web.page.error.retry": "Retry",
+      "web.page.error.retrying": "Retrying…",
+      "web.page.error.returnHome": "Return home",
+      "web.page.error.technicalDetails": "Technical details",
+      "web.page.error.copyDetails": "Copy error details",
+      "web.page.error.copied": "Copied",
+      "web.page.error.copyFailed": "Copy failed",
+      "web.page.notFound.returnHome": "Return home",
+    },
+    "es-MX": {
+      "web.page.error.title": "Algo salió mal",
+      "web.page.error.description":
+        "No pudimos cargar esta página. Inténtalo de nuevo.",
+      "web.page.error.retry": "Reintentar",
+      "web.page.error.retrying": "Reintentando…",
+      "web.page.error.returnHome": "Volver al inicio",
+      "web.page.error.technicalDetails": "Detalles técnicos",
+      "web.page.error.copyDetails": "Copiar detalles del error",
+      "web.page.error.copied": "Copiado",
+      "web.page.error.copyFailed": "No se pudo copiar",
+      "web.page.notFound.returnHome": "Volver al inicio",
+    },
+  };
+
+  for (const [locale, entries] of Object.entries(expected)) {
+    for (const [key, value] of Object.entries(entries)) {
+      assert.ok(translationKeys.includes(key));
+      assert.equal(translations[locale][key], value);
+    }
+  }
+
+  assert.ok(translationKeys.includes("web.page.notFound.returnToArchive"));
+  assert.ok(translationKeys.includes("web.resources.action.retry"));
+});
+
 test("catalog filter copy and blank Spanish entries use the right translations", () => {
   for (const key of [
     "web.action.more",

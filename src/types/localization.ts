@@ -382,8 +382,20 @@ export type CompleteLocalizationResource = Readonly<{
       collections: {
         empty: string;
       };
+      error: {
+        copied: string;
+        copyDetails: string;
+        copyFailed: string;
+        description: string;
+        retry: string;
+        retrying: string;
+        returnHome: string;
+        technicalDetails: string;
+        title: string;
+      };
       notFound: {
         description: string;
+        returnHome: string;
         returnToArchive: string;
         title: string;
         unavailable: string;

@@ -395,8 +395,20 @@ export const enUS = {
       collections: {
         empty: "Collections will be available later.",
       },
+      error: {
+        copied: "Copied",
+        copyDetails: "Copy error details",
+        copyFailed: "Copy failed",
+        description: "We couldn't load this page. Try again.",
+        retry: "Retry",
+        retrying: "Retrying…",
+        returnHome: "Return home",
+        technicalDetails: "Technical details",
+        title: "Something went wrong",
+      },
       notFound: {
         description: "This page does not exist or is no longer available.",
+        returnHome: "Return home",
         returnToArchive: "Return to archive",
         title: "Not found",
         unavailable: "Page unavailable",
