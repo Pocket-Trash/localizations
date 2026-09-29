@@ -79,6 +79,14 @@ export const esMX = {
         searchUsers: "Buscar usuarios",
         slugPlaceholder: "",
       },
+      hub: {
+        catalogImageTrash: "Papelera de imágenes del catálogo",
+        description: "Administra Pocket Trash.",
+        title: "Panel de administración",
+      },
+      notifications: {
+        title: "Notificaciones",
+      },
     },
     archive: {
       closeSearch: "Cerrar busqueda",
@@ -448,6 +456,14 @@ export const esMX = {
         submittedOn: "Enviada el {date}",
         submittedBy: "Enviada por {submitter}",
         votes: "{count} votos",
+      },
+      notification: {
+        completed: "Completada",
+        description:
+          "Revisa la actividad de sugerencias enviadas y completadas.",
+        empty: "No hay notificaciones de sugerencias.",
+        submitted: "Enviada",
+        title: "Notificaciones de sugerencias",
       },
     },
     help: {
