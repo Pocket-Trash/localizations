@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.14.1
+
+_Published 2026-09-29._
+
+### Patch Changes
+
+- 4de4ee7: Add localized account-erasure actions, status, administration, and product notice copy.
+
 ## 0.14.0
 
 _Published 2026-09-29._
