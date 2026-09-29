@@ -469,6 +469,11 @@ export const enUS = {
         title: "Feedback notifications",
       },
     },
+    footer: {
+      discordNewTab: "Discord (opens in a new tab)",
+      tagline: "Made by EDC fans for EDC fans",
+      xNewTab: "X (opens in a new tab)",
+    },
     help: {
       comingSoon: "Coming soon.",
       contact: "Contact",
@@ -483,12 +488,16 @@ export const enUS = {
       admin: "Admin",
       betaFeatures: "Beta features",
       collections: "Collections",
+      contact: "Contact",
       help: "Help",
+      home: "Home",
       language: "Language",
       logOut: "Log out",
+      privacy: "Privacy",
       products: "Products",
       resources: "Resources",
       selectLanguage: "Select language",
+      termsOfService: "Terms of service",
       user: "User",
     },
     locale: {

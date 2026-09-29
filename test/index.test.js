@@ -308,6 +308,36 @@ test("catalog and help copy is complete in both supported locales", () => {
   }
 });
 
+test("footer and public navigation copy is complete in both supported locales", () => {
+  const expected = {
+    "en-US": {
+      "web.footer.discordNewTab": "Discord (opens in a new tab)",
+      "web.footer.tagline": "Made by EDC fans for EDC fans",
+      "web.footer.xNewTab": "X (opens in a new tab)",
+      "web.navigation.contact": "Contact",
+      "web.navigation.home": "Home",
+      "web.navigation.privacy": "Privacy",
+      "web.navigation.termsOfService": "Terms of service",
+    },
+    "es-MX": {
+      "web.footer.discordNewTab": "Discord (se abre en una pestaña nueva)",
+      "web.footer.tagline": "Hecho por fans de EDC para fans de EDC",
+      "web.footer.xNewTab": "X (se abre en una pestaña nueva)",
+      "web.navigation.contact": "Contacto",
+      "web.navigation.home": "Inicio",
+      "web.navigation.privacy": "Privacidad",
+      "web.navigation.termsOfService": "Términos del servicio",
+    },
+  };
+
+  for (const [locale, entries] of Object.entries(expected)) {
+    for (const [key, value] of Object.entries(entries)) {
+      assert.ok(translationKeys.includes(key));
+      assert.equal(translations[locale][key], value);
+    }
+  }
+});
+
 test("feedback discovery copy is complete in both supported locales", () => {
   const keys = [
     "web.feedback.board.empty",
