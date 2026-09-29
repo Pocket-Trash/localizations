@@ -343,23 +343,78 @@ export type CompleteLocalizationResource = Readonly<{
         searchPlaceholder: string;
       };
       admin: {
+        navigation: {
+          active: string;
+          archive: string;
+          requests: string;
+        };
+        table: {
+          actions: string;
+          category: string;
+          status: string;
+          submitted: string;
+          submitter: string;
+          title: string;
+          updated: string;
+          votes: string;
+        };
+        sort: {
+          ascending: string;
+          descending: string;
+          remove: string;
+        };
         requests: {
           title: string;
           empty: string;
+          error: string;
+          loading: string;
           approve: string;
           deny: string;
           categoryRequired: string;
           approved: string;
           denied: string;
+          detailsOpen: string;
+          detailsTitle: string;
+          merge: string;
+          mergeTargetLabel: string;
+          mergeTargetPlaceholder: string;
+          merged: string;
+          planRecoveryRequired: string;
           updated: string;
           actionFailed: string;
           previousPage: string;
           nextPage: string;
         };
+        active: {
+          empty: string;
+          error: string;
+          loading: string;
+          nextPage: string;
+          previousPage: string;
+          searchLabel: string;
+          searchPlaceholder: string;
+          title: string;
+        };
+        archive: {
+          allStatuses: string;
+          empty: string;
+          error: string;
+          loading: string;
+          nextPage: string;
+          noResults: string;
+          previousPage: string;
+          searchLabel: string;
+          searchPlaceholder: string;
+          statusLabel: string;
+          title: string;
+        };
       };
       status: {
+        canceled: string;
         completed: string;
+        denied: string;
         inProgress: string;
+        merged: string;
         pending: string;
         planned: string;
         requested: string;
