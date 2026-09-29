@@ -87,6 +87,9 @@ export type CompleteLocalizationResource = Readonly<{
       notifications: {
         title: string;
       };
+      trash: {
+        title: string;
+      };
     };
     archive: {
       closeSearch: string;
@@ -353,6 +356,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
       admin: {
         navigation: {
+          allActive: string;
           active: string;
           archive: string;
           requests: string;

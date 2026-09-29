@@ -87,6 +87,9 @@ export const enUS = {
       notifications: {
         title: "Notifications",
       },
+      trash: {
+        title: "Trash",
+      },
     },
     archive: {
       closeSearch: "Close search",
@@ -366,6 +369,7 @@ export const enUS = {
       },
       admin: {
         navigation: {
+          allActive: "All active",
           active: "Planned",
           archive: "Archive",
           requests: "Requests",
