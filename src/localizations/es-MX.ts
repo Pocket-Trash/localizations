@@ -466,6 +466,11 @@ export const esMX = {
         title: "Notificaciones de sugerencias",
       },
     },
+    footer: {
+      discordNewTab: "Discord (se abre en una pestaña nueva)",
+      tagline: "Hecho por fans de EDC para fans de EDC",
+      xNewTab: "X (se abre en una pestaña nueva)",
+    },
     help: {
       comingSoon: "Próximamente.",
       contact: "Contacto",
@@ -480,12 +485,16 @@ export const esMX = {
       admin: "Administración",
       betaFeatures: "Funciones beta",
       collections: "Colecciones",
+      contact: "Contacto",
       help: "Ayuda",
+      home: "Inicio",
       language: "Idioma",
       logOut: "Cerrar sesion",
+      privacy: "Privacidad",
       products: "",
       resources: "",
       selectLanguage: "Seleccionar idioma",
+      termsOfService: "Términos del servicio",
       user: "Usuario",
     },
     locale: {

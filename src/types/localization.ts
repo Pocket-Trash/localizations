@@ -455,6 +455,11 @@ export type CompleteLocalizationResource = Readonly<{
         title: string;
       };
     };
+    footer: {
+      discordNewTab: string;
+      tagline: string;
+      xNewTab: string;
+    };
     help: {
       comingSoon: string;
       contact: string;
@@ -469,12 +474,16 @@ export type CompleteLocalizationResource = Readonly<{
       admin: string;
       betaFeatures: string;
       collections: string;
+      contact: string;
       help: string;
+      home: string;
       language: string;
       logOut: string;
+      privacy: string;
       products: string;
       resources: string;
       selectLanguage: string;
+      termsOfService: string;
       user: string;
     };
     locale: {
