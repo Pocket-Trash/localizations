@@ -1,5 +1,17 @@
 # @pocket-trash/localizations
 
+## 0.15.1
+
+_Published 2026-09-30._
+
+### Patch Changes
+
+- ee78988: Keep the Pocket Trash agent skill installation current.
+- 9228212: Update Pocket Trash skills to v0.4.2.
+- 285f3fc: Updated Pocket Trash skills
+- 684f18e: Remove legacy Pocket Trash skill version checks and install the current skills on demand.
+- afb8c50: Keep pull request release labels synchronized with their Changesets.
+
 ## 0.15.0
 
 _Published 2026-09-30._
