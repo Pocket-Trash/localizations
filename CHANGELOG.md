@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.14.2
+
+_Published 2026-09-30._
+
+### Patch Changes
+
+- c5cee93: List AVIF as a supported image format.
+
 ## 0.14.1
 
 _Published 2026-09-29._
