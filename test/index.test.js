@@ -544,11 +544,19 @@ test("shared upload copy formats sizes and keeps failures target-neutral", () =>
   );
   assert.equal(
     translations["en-US"]["web.resources.upload.fileTypes"],
-    "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, and WebP.",
+    "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, WebP, and AVIF.",
   );
   assert.equal(
     translations["es-MX"]["web.resources.upload.fileTypes"],
-    "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG y WebP.",
+    "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, WebP y AVIF.",
+  );
+  assert.equal(
+    translations["en-US"]["web.resources.upload.imageTypes"],
+    "Allowed image types: JPEG, PNG, WebP, and AVIF.",
+  );
+  assert.equal(
+    translations["es-MX"]["web.resources.upload.imageTypes"],
+    "Tipos de imagen permitidos: JPEG, PNG, WebP y AVIF.",
   );
 });
 

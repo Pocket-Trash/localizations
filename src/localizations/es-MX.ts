@@ -774,7 +774,7 @@ export const esMX = {
         fileHelp:
           "Elige de 1 a {maxFiles} archivos. Cada archivo puede pesar hasta {maxFileSize}; la carga completa puede pesar hasta {maxSessionSize}.",
         fileTypes:
-          "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG y WebP.",
+          "Tipos de archivo permitidos: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, WebP y AVIF.",
         filesLabel: "Archivos del recurso",
         finalizationFailure:
           "Tus archivos se subieron, pero no se pudo finalizar el recurso. Vuelve a intentarlo para completar la carga.",
@@ -782,14 +782,15 @@ export const esMX = {
         imagesHelp:
           "Elige de 1 a {maxImages} imágenes. La primera imagen será la portada. Cada imagen puede pesar hasta {maxFileSize}; todos los archivos de esta carga pueden pesar hasta {maxSessionSize} en total.",
         imagesLabel: "Imágenes",
-        imageTypes: "Tipos de imagen permitidos: JPEG, PNG y WebP.",
+        imageTypes: "Tipos de imagen permitidos: JPEG, PNG, WebP y AVIF.",
         nameLabel: "Nombre",
         namePlaceholder: "Nombre del recurso",
         newVersionTitle: "Subir una nueva versión de {name}",
         previewHelp:
           "Imagen opcional que se muestra en las tarjetas y los detalles del recurso.",
         previewLabel: "Imagen de vista previa",
-        previewTypes: "Tipos de vista previa permitidos: JPEG, PNG y WebP.",
+        previewTypes:
+          "Tipos de vista previa permitidos: JPEG, PNG, WebP y AVIF.",
         progress: "Subiendo {filename}: {percent}%",
         retryFile: "Reintentar {filename}",
         sessionFailure: "No pudimos iniciar la carga. Inténtalo de nuevo.",
