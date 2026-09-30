@@ -73,6 +73,12 @@ export const enUS = {
         coveredDomains: "Covered domains: {domains}",
         deletedUser: "Deleted user",
         description: "Review recorded administrative and product changes.",
+        exportAction: "Export",
+        exportDescription:
+          "Download up to 10,000 oldest unexported events recorded more than 60 days ago. Downloaded copies remain the operator's responsibility.",
+        exportReasonPlaceholder: "Explain why these audit logs are needed",
+        exportSummary: "{count} events through {date}",
+        exportTitle: "Export audit log",
         fromDate: "From date",
         metadata: "Metadata",
         noEvents: "No audit events match these filters.",

@@ -74,6 +74,11 @@ export type CompleteLocalizationResource = Readonly<{
         coveredDomains: string;
         deletedUser: string;
         description: string;
+        exportAction: string;
+        exportDescription: string;
+        exportReasonPlaceholder: string;
+        exportSummary: string;
+        exportTitle: string;
         fromDate: string;
         metadata: string;
         noEvents: string;
