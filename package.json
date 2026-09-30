@@ -34,9 +34,7 @@
     "access": "public"
   },
   "scripts": {
-    "agent-skills:check": "node scripts/agent-skills.mjs check",
-    "agent-skills:install": "node scripts/agent-skills.mjs install",
-    "agent-skills:update": "node scripts/agent-skills.mjs update",
+    "agent-skills:update": "npx skills add pocket-trash/skills --skill '*' --agent codex claude-code -y",
     "build": "tsc -p tsconfig.json",
     "check": "biome check --write .",
     "changeset": "changeset",
