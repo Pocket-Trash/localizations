@@ -89,6 +89,19 @@ export type CompleteLocalizationResource = Readonly<{
       notifications: {
         title: string;
       };
+      settings: {
+        title: string;
+        linear: {
+          title: string;
+          description: string;
+          connect: string;
+          connectedAs: string;
+          update: string;
+          remove: string;
+          needsUpdate: string;
+          actionFailed: string;
+        };
+      };
       trash: {
         title: string;
       };
@@ -423,6 +436,22 @@ export type CompleteLocalizationResource = Readonly<{
           active: string;
           archive: string;
           requests: string;
+        };
+        plan: {
+          action: string;
+          title: string;
+          typeLabel: string;
+          issue: string;
+          project: string;
+          assignIssue: string;
+          leadProject: string;
+          labels: string;
+          submit: string;
+          loading: string;
+          success: string;
+          failure: string;
+          connectionRequired: string;
+          settingsLink: string;
         };
         table: {
           actions: string;

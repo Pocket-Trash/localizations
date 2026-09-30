@@ -89,6 +89,21 @@ export const esMX = {
       notifications: {
         title: "Notificaciones",
       },
+      settings: {
+        title: "Configuración de administración",
+        linear: {
+          title: "Linear",
+          description:
+            "Conecta Linear para planificar solicitudes de sugerencias aprobadas.",
+          connect: "Conectar Linear",
+          connectedAs: "Conectado como {name}",
+          update: "Actualizar conexión",
+          remove: "Eliminar conexión",
+          needsUpdate:
+            "Actualiza la conexión para conceder acceso de escritura.",
+          actionFailed: "No pudimos actualizar la conexión de Linear.",
+        },
+      },
       trash: {
         title: "Papelera",
       },
@@ -450,6 +465,24 @@ export const esMX = {
           active: "Planificadas",
           archive: "Archivo",
           requests: "Solicitudes",
+        },
+        plan: {
+          action: "Planificar",
+          title: "Planificar solicitud",
+          typeLabel: "Crear en Linear",
+          issue: "Incidencia",
+          project: "Proyecto",
+          assignIssue: "Asignarme",
+          leadProject: "Asignarme como líder del proyecto",
+          labels: "Etiquetas",
+          submit: "Crear y planificar",
+          loading: "Cargando opciones de Linear…",
+          success: "Solicitud planificada en Linear.",
+          failure:
+            "No pudimos crear esto en Linear. Puedes volver a intentarlo de forma segura.",
+          connectionRequired:
+            "Conecta o actualiza Linear en Configuración de administración antes de planificar.",
+          settingsLink: "Abrir Configuración de administración",
         },
         table: {
           actions: "Acciones",
