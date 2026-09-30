@@ -7,8 +7,8 @@ test("fails when there is no changeset", () => {
   assert.deepEqual(
     checkChangesets([{ filename: "src/index.ts", content: "" }]),
     {
+      bump: null,
       hasRelease: false,
-      major: false,
     },
   );
 });
@@ -19,8 +19,8 @@ test("fails for empty changesets", () => {
       { filename: ".changeset/empty.md", content: "---\n---\nNo release." },
     ]),
     {
+      bump: null,
       hasRelease: false,
-      major: false,
     },
   );
 });
@@ -38,8 +38,8 @@ test("passes for patch and minor changesets", () => {
       },
     ]),
     {
+      bump: "minor",
       hasRelease: true,
-      major: false,
     },
   );
 });
@@ -53,8 +53,8 @@ test("detects major changesets", () => {
       },
     ]),
     {
+      bump: "major",
       hasRelease: true,
-      major: true,
     },
   );
 });
