@@ -1,4 +1,5 @@
 const PACKAGE_NAME = "@pocket-trash/localizations";
+const bumpPriority = ["patch", "minor", "major"];
 
 export function checkChangesets(files, packageName = PACKAGE_NAME) {
   const changesets = files.filter(
@@ -8,17 +9,19 @@ export function checkChangesets(files, packageName = PACKAGE_NAME) {
       filename !== ".changeset/README.md",
   );
 
-  let hasRelease = false;
-  let major = false;
+  let bump = null;
 
   for (const file of changesets) {
-    const bump = getPackageBump(file.content ?? "", packageName);
-    if (!bump) continue;
-    hasRelease = true;
-    if (bump === "major") major = true;
+    const fileBump = getPackageBump(file.content ?? "", packageName);
+    if (
+      fileBump &&
+      (!bump || bumpPriority.indexOf(fileBump) > bumpPriority.indexOf(bump))
+    ) {
+      bump = fileBump;
+    }
   }
 
-  return { hasRelease, major };
+  return { bump, hasRelease: bump !== null };
 }
 
 export function getPackageBump(content, packageName = PACKAGE_NAME) {
@@ -42,7 +45,7 @@ async function main() {
   if (process.env.GITHUB_OUTPUT) {
     await appendFile(
       process.env.GITHUB_OUTPUT,
-      `has_release=${result.hasRelease}\nmajor=${result.major}\n`,
+      `checked=true\nbump=${result.bump ?? ""}\n`,
     );
   }
 
