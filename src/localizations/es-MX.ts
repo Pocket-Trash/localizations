@@ -74,6 +74,11 @@ export const esMX = {
         deletedUser: "Usuario eliminado",
         description:
           "Revisa los cambios administrativos y de productos registrados.",
+        exportAction: "",
+        exportDescription: "",
+        exportReasonPlaceholder: "",
+        exportSummary: "",
+        exportTitle: "",
         fromDate: "Fecha inicial",
         metadata: "Metadatos",
         noEvents: "Ningún evento de auditoría coincide con estos filtros.",
