@@ -768,7 +768,7 @@ export const enUS = {
         fileHelp:
           "Choose 1–{maxFiles} files. Each file can be up to {maxFileSize}; the complete upload can be up to {maxSessionSize}.",
         fileTypes:
-          "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, and WebP.",
+          "Allowed file types: STL, 3MF, STEP, STP, PDF, TXT, ZIP, JPEG, PNG, WebP, and AVIF.",
         filesLabel: "Resource files",
         finalizationFailure:
           "Your files were uploaded, but the resource could not be finalized. Retry to finish the upload.",
@@ -776,13 +776,13 @@ export const enUS = {
         imagesHelp:
           "Choose 1–{maxImages} images. The first image is the cover. Each image can be up to {maxFileSize}; all files in this upload can total up to {maxSessionSize}.",
         imagesLabel: "Images",
-        imageTypes: "Allowed image types: JPEG, PNG, and WebP.",
+        imageTypes: "Allowed image types: JPEG, PNG, WebP, and AVIF.",
         nameLabel: "Name",
         namePlaceholder: "Resource name",
         newVersionTitle: "Upload a new version of {name}",
         previewHelp: "Optional image shown in resource cards and details.",
         previewLabel: "Preview image",
-        previewTypes: "Allowed preview types: JPEG, PNG, and WebP.",
+        previewTypes: "Allowed preview types: JPEG, PNG, WebP, and AVIF.",
         progress: "Uploading {filename}: {percent}%",
         retryFile: "Retry {filename}",
         sessionFailure: "We couldn't start the upload. Try again.",
