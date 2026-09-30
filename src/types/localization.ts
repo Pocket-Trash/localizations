@@ -44,6 +44,7 @@ export type CompleteLocalizationResource = Readonly<{
       close: string;
       confirmAdd: string;
       deleteCover: string;
+      deleteImage: string;
       edit: string;
       more: string;
       moreFilters: string;
@@ -55,6 +56,7 @@ export type CompleteLocalizationResource = Readonly<{
       search: string;
       selectCover: string;
       signIn: string;
+      uploadImages: string;
       view: string;
       viewCollection: string;
       viewItem: string;
@@ -264,6 +266,15 @@ export type CompleteLocalizationResource = Readonly<{
         chooseCollection: string;
         syncIncomplete: string;
         upload: string;
+      };
+      gallery: {
+        deleteConfirmation: string;
+        imagesHelp: string;
+        nextPage: string;
+        owner: string;
+        pageStatus: string;
+        previousPage: string;
+        title: string;
       };
       field: {
         collection: string;
