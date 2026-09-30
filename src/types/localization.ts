@@ -64,6 +64,30 @@ export type CompleteLocalizationResource = Readonly<{
       visitProductPage: string;
     };
     admin: {
+      audit: {
+        action: string;
+        actor: string;
+        actorId: string;
+        after: string;
+        before: string;
+        coverage: string;
+        coveredDomains: string;
+        deletedUser: string;
+        description: string;
+        fromDate: string;
+        metadata: string;
+        noEvents: string;
+        noValue: string;
+        occurred: string;
+        olderEvents: string;
+        owner: string;
+        reason: string;
+        target: string;
+        targetId: string;
+        targetType: string;
+        title: string;
+        toDate: string;
+      };
       featureFlags: {
         actions: string;
         adminOnlyTargeting: string;
