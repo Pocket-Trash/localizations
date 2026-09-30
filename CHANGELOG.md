@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.17.0
+
+_Published 2026-09-30._
+
+### Minor Changes
+
+- 55c42d9: Add audit-log export copy.
+
 ## 0.16.0
 
 _Published 2026-09-30._
