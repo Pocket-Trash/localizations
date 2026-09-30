@@ -89,6 +89,19 @@ export const enUS = {
       notifications: {
         title: "Notifications",
       },
+      settings: {
+        title: "Admin settings",
+        linear: {
+          title: "Linear",
+          description: "Connect Linear to plan approved feedback requests.",
+          connect: "Connect Linear",
+          connectedAs: "Connected as {name}",
+          update: "Update connection",
+          remove: "Remove connection",
+          needsUpdate: "Update the connection to grant write access.",
+          actionFailed: "We couldn't update the Linear connection.",
+        },
+      },
       trash: {
         title: "Trash",
       },
@@ -449,6 +462,23 @@ export const enUS = {
           active: "Planned",
           archive: "Archive",
           requests: "Requests",
+        },
+        plan: {
+          action: "Plan",
+          title: "Plan request",
+          typeLabel: "Create in Linear",
+          issue: "Issue",
+          project: "Project",
+          assignIssue: "Assign to me",
+          leadProject: "Make me project lead",
+          labels: "Labels",
+          submit: "Create and plan",
+          loading: "Loading Linear options…",
+          success: "Request planned in Linear.",
+          failure: "We couldn't create this in Linear. You can retry safely.",
+          connectionRequired:
+            "Connect or update Linear in Admin settings before planning.",
+          settingsLink: "Open Admin settings",
         },
         table: {
           actions: "Actions",
