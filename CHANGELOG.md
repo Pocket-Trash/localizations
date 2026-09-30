@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.15.0
+
+_Published 2026-09-30._
+
+### Minor Changes
+
+- 2237ee0: Add English and Spanish collection gallery, upload, and pagination copy.
+
 ## 0.14.2
 
 _Published 2026-09-30._
