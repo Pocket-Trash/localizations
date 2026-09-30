@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.16.0
+
+_Published 2026-09-30._
+
+### Minor Changes
+
+- 75d81d2: Add localized admin audit-log copy.
+- c70c0b3: Add localized admin Linear connection and feedback planning copy.
+
 ## 0.15.2
 
 _Published 2026-09-30._
