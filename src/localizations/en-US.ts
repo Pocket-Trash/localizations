@@ -43,6 +43,7 @@ export const enUS = {
       close: "Close",
       confirmAdd: "Add another",
       deleteCover: "Delete cover",
+      deleteImage: "Delete image",
       edit: "Edit",
       more: "More",
       moreFilters: "More filters",
@@ -54,6 +55,7 @@ export const enUS = {
       search: "Search",
       selectCover: "Use this cover",
       signIn: "Sign in",
+      uploadImages: "Upload images",
       view: "View",
       viewCollection: "View collection",
       viewItem: "View item",
@@ -251,7 +253,7 @@ export const enUS = {
       },
       cover: {
         clearConfirmation:
-          "Clear the current cover? It will remain available under previous covers.",
+          "Clear the current cover? The image will remain in the gallery.",
         current: "Current cover",
         deleteConfirmation:
           "Permanently delete this cover image? This cannot be undone.",
@@ -275,7 +277,18 @@ export const enUS = {
         chooseCollection: "Choose a collection.",
         syncIncomplete: "Your profile is still syncing. Try again.",
         upload:
-          "The collection was saved, but its cover could not be uploaded. Try again from Edit collection.",
+          "The collection was saved, but its images could not be uploaded. Try again from Edit collection.",
+      },
+      gallery: {
+        deleteConfirmation:
+          "Permanently delete this collection image? This cannot be undone.",
+        imagesHelp:
+          "Choose 1–{maxImages} images. If the collection has no cover, the first image becomes the cover. Each image can be up to {maxFileSize}; all files in this upload can total up to {maxSessionSize}.",
+        nextPage: "Next page",
+        owner: "Owner: {owner}",
+        pageStatus: "Page {page} of {pageCount}",
+        previousPage: "Previous page",
+        title: "Gallery",
       },
       field: {
         collection: "Collection",

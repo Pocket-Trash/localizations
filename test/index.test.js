@@ -243,19 +243,14 @@ test("catalog source-detail copy falls back from blank Spanish entries", () => {
 test("multiple collection copy falls back from blank Spanish entries", () => {
   const keys = [
     "web.action.addCollection",
-    "web.action.clearCover",
     "web.action.deleteCover",
-    "web.action.selectCover",
     "web.collections.add.title",
-    "web.collections.cover.clearConfirmation",
-    "web.collections.cover.current",
     "web.collections.cover.deleteConfirmation",
     "web.collections.cover.history",
     "web.collections.edit.title",
     "web.collections.emptyCollections",
     "web.collections.error.chooseCollection",
     "web.collections.error.syncIncomplete",
-    "web.collections.error.upload",
     "web.collections.field.collection",
     "web.collections.field.cover",
     "web.collections.field.description",
@@ -275,6 +270,33 @@ test("multiple collection copy falls back from blank Spanish entries", () => {
     assert.equal(esMXValue, "");
     assert.equal(translations["es-MX"][key], translations["en-US"][key]);
   }
+});
+
+test("collection gallery copy is localized in English and Spanish", () => {
+  assert.equal(
+    formatTranslation("web.action.uploadImages", {}, "en-US"),
+    "Upload images",
+  );
+  assert.equal(
+    formatTranslation("web.action.uploadImages", {}, "es-MX"),
+    "Subir imágenes",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.collections.gallery.pageStatus",
+      { page: 2, pageCount: 3 },
+      "es-MX",
+    ),
+    "Página 2 de 3",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.collections.gallery.owner",
+      { owner: "royanger" },
+      "en-US",
+    ),
+    "Owner: royanger",
+  );
 });
 
 test("catalog and help copy is complete in both supported locales", () => {

@@ -38,11 +38,12 @@ export const esMX = {
       addToCollection: "",
       archive: "Archivar",
       clearAllFilters: "Borrar todos los filtros",
-      clearCover: "",
+      clearCover: "Quitar portada",
       clearSearch: "Borrar búsqueda",
       close: "Cerrar",
       confirmAdd: "",
       deleteCover: "",
+      deleteImage: "Eliminar imagen",
       edit: "Editar",
       more: "Más",
       moreFilters: "Más filtros",
@@ -52,8 +53,9 @@ export const esMX = {
       removeSelection: "Quitar {name}",
       saveFlag: "Guardar bandera",
       search: "Buscar",
-      selectCover: "",
+      selectCover: "Usar como portada",
       signIn: "Iniciar sesion",
+      uploadImages: "Subir imágenes",
       view: "Ver",
       viewCollection: "Ver colección",
       viewItem: "Ver artículo",
@@ -252,14 +254,15 @@ export const esMX = {
         title: "",
       },
       cover: {
-        clearConfirmation: "",
-        current: "",
+        clearConfirmation:
+          "¿Quieres quitar la portada actual? La imagen permanecerá en la galería.",
+        current: "Portada actual",
         deleteConfirmation: "",
         history: "",
       },
       directory: {
         avatar: "",
-        itemCount: "",
+        itemCount: "Artículos de la colección: {count}",
         matchingItemCount: "{matching} de {total} artículos de la colección",
       },
       duplicateWarning: "",
@@ -272,7 +275,19 @@ export const esMX = {
       error: {
         chooseCollection: "",
         syncIncomplete: "",
-        upload: "",
+        upload:
+          "La colección se guardó, pero no se pudieron subir sus imágenes. Inténtalo de nuevo desde Editar colección.",
+      },
+      gallery: {
+        deleteConfirmation:
+          "¿Quieres eliminar permanentemente esta imagen de la colección? Esta acción no se puede deshacer.",
+        imagesHelp:
+          "Elige de 1 a {maxImages} imágenes. Si la colección no tiene portada, la primera imagen será la portada. Cada imagen puede pesar hasta {maxFileSize}; todos los archivos de esta carga pueden pesar hasta {maxSessionSize} en total.",
+        nextPage: "Página siguiente",
+        owner: "Propietario: {owner}",
+        pageStatus: "Página {page} de {pageCount}",
+        previousPage: "Página anterior",
+        title: "Galería",
       },
       field: {
         collection: "",
