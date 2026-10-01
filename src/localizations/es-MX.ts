@@ -645,6 +645,52 @@ export const esMX = {
       developmentCallout: "Esta página todavía está en desarrollo.",
       topics: "Temas de ayuda",
     },
+    markdownEditor: {
+      mode: {
+        visual: "",
+        source: "",
+      },
+      toolbar: {
+        heading1: "",
+        heading2: "",
+        heading3: "",
+        bold: "",
+        italic: "",
+        strikethrough: "",
+        link: "",
+        unorderedList: "",
+        orderedList: "",
+        table: "",
+        horizontalRule: "",
+        blockquote: "",
+      },
+      link: {
+        text: "",
+        url: "",
+        insert: "",
+        update: "",
+        remove: "",
+        invalidUrl: "",
+      },
+      status: {
+        loading: "",
+        fallback: "",
+      },
+      count: {
+        characters: {
+          normal: "",
+          warning: "",
+          limitReached: "",
+          overLimit: "",
+        },
+        words: {
+          normal: "",
+          warning: "",
+          limitReached: "",
+          overLimit: "",
+        },
+      },
+    },
     navigation: {
       account: "Cuenta",
       accountMenu: "Menu de cuenta",

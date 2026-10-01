@@ -334,6 +334,73 @@ test("catalog and help copy is complete in both supported locales", () => {
   }
 });
 
+test("markdown editor copy covers controls, links, status, and limits", () => {
+  const english = {
+    "web.markdownEditor.mode.visual": "Visual",
+    "web.markdownEditor.mode.source": "Source",
+    "web.markdownEditor.toolbar.heading1": "Heading 1",
+    "web.markdownEditor.toolbar.heading2": "Heading 2",
+    "web.markdownEditor.toolbar.heading3": "Heading 3",
+    "web.markdownEditor.toolbar.bold": "Bold",
+    "web.markdownEditor.toolbar.italic": "Italic",
+    "web.markdownEditor.toolbar.strikethrough": "Strikethrough",
+    "web.markdownEditor.toolbar.link": "Link",
+    "web.markdownEditor.toolbar.unorderedList": "Bulleted list",
+    "web.markdownEditor.toolbar.orderedList": "Numbered list",
+    "web.markdownEditor.toolbar.table": "Table",
+    "web.markdownEditor.toolbar.horizontalRule": "Horizontal rule",
+    "web.markdownEditor.toolbar.blockquote": "Blockquote",
+    "web.markdownEditor.link.text": "Link text",
+    "web.markdownEditor.link.url": "URL",
+    "web.markdownEditor.link.insert": "Insert link",
+    "web.markdownEditor.link.update": "Update link",
+    "web.markdownEditor.link.remove": "Remove link",
+    "web.markdownEditor.link.invalidUrl":
+      "Enter a relative, HTTP, or HTTPS URL.",
+    "web.markdownEditor.status.loading": "Loading Markdown editor.",
+    "web.markdownEditor.status.fallback":
+      "The visual editor couldn't load. Continue editing in Source mode.",
+    "web.markdownEditor.count.characters.normal":
+      "{current} / {limit} characters",
+    "web.markdownEditor.count.characters.warning":
+      "{current} / {limit} characters, approaching limit",
+    "web.markdownEditor.count.characters.limitReached":
+      "{current} / {limit} characters, limit reached",
+    "web.markdownEditor.count.characters.overLimit":
+      "{current} / {limit} characters, {over} over limit",
+    "web.markdownEditor.count.words.normal": "{current} / {limit} words",
+    "web.markdownEditor.count.words.warning":
+      "{current} / {limit} words, approaching limit",
+    "web.markdownEditor.count.words.limitReached":
+      "{current} / {limit} words, limit reached",
+    "web.markdownEditor.count.words.overLimit":
+      "{current} / {limit} words, {over} over limit",
+  };
+
+  for (const [key, value] of Object.entries(english)) {
+    assert.ok(translationKeys.includes(key));
+    assert.equal(translations["en-US"][key], value);
+    assert.equal(translations["es-MX"][key], value);
+  }
+
+  assert.equal(
+    formatTranslation(
+      "web.markdownEditor.count.characters.overLimit",
+      { current: 5_012, limit: 5_000, over: 12 },
+      "en-US",
+    ),
+    "5012 / 5000 characters, 12 over limit",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.markdownEditor.count.words.limitReached",
+      { current: 200, limit: 200 },
+      "es-MX",
+    ),
+    "200 / 200 words, limit reached",
+  );
+});
+
 test("footer and public navigation copy is complete in both supported locales", () => {
   const expected = {
     "en-US": {

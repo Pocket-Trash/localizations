@@ -610,6 +610,52 @@ export type CompleteLocalizationResource = Readonly<{
       developmentCallout: string;
       topics: string;
     };
+    markdownEditor: {
+      mode: {
+        visual: string;
+        source: string;
+      };
+      toolbar: {
+        heading1: string;
+        heading2: string;
+        heading3: string;
+        bold: string;
+        italic: string;
+        strikethrough: string;
+        link: string;
+        unorderedList: string;
+        orderedList: string;
+        table: string;
+        horizontalRule: string;
+        blockquote: string;
+      };
+      link: {
+        text: string;
+        url: string;
+        insert: string;
+        update: string;
+        remove: string;
+        invalidUrl: string;
+      };
+      status: {
+        loading: string;
+        fallback: string;
+      };
+      count: {
+        characters: {
+          normal: string;
+          warning: string;
+          limitReached: string;
+          overLimit: string;
+        };
+        words: {
+          normal: string;
+          warning: string;
+          limitReached: string;
+          overLimit: string;
+        };
+      };
+    };
     navigation: {
       account: string;
       accountMenu: string;
