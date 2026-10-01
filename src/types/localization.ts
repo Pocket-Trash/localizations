@@ -112,6 +112,20 @@ export type CompleteLocalizationResource = Readonly<{
         searchUsers: string;
         slugPlaceholder: string;
       };
+      users: {
+        active: string;
+        ban: string;
+        banned: string;
+        description: string;
+        noResults: string;
+        pendingBan: string;
+        pendingUnban: string;
+        reasonPlaceholder: string;
+        title: string;
+        unban: string;
+        updated: string;
+        updateReason: string;
+      };
       hub: {
         catalogImageTrash: string;
         description: string;
