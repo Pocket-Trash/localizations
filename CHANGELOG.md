@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.20.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- c416624: Add collection archive and deletion workflow copy.
+
 ## 0.19.0
 
 _Published 2026-10-01._
