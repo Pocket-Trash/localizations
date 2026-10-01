@@ -16,6 +16,7 @@ test("exports the English privacy policy with publication metadata", () => {
   assert.match(source, /\neffectiveDate: \d{4}-\d{2}-\d{2}\n/);
   assert.match(source, /\nversion: \d+\.\d+\n---\n/);
   assert.ok(source.includes("privacy@pocket-trash.app"));
+  assert.ok(source.includes("rights@pocket-trash.app"));
   assert.ok(source.includes("complete account erasure"));
 });
 
@@ -33,6 +34,8 @@ test("exports the English Terms of Service with publication metadata", () => {
   assert.match(source, /\neffectiveDate: \d{4}-\d{2}-\d{2}\n/);
   assert.match(source, /\nversion: \d+\.\d+\n---\n/);
   assert.ok(source.includes("privacy@pocket-trash.app"));
+  assert.ok(source.includes("rights@pocket-trash.app"));
+  assert.ok(source.includes("property of their respective owners"));
   assert.ok(source.includes("You must be at least 13"));
   assert.ok(source.includes("[Privacy Policy](/privacy)"));
 });
