@@ -242,6 +242,19 @@ export const esMX = {
       },
     },
     catalog: {
+      approval: {
+        approve: "Aprobar producto",
+        reasonLabel: "Motivo de la decisión",
+        reasonPlaceholder: "Explica esta decisión de aprobación",
+        reject: "Rechazar producto",
+        reverse: "Devolver a pendiente",
+        status: {
+          approved: "Aprobado",
+          pending: "Pendiente de revisión",
+          rejected: "Rechazado",
+        },
+        title: "Aprobación del producto",
+      },
       collectionsWithProduct: "Colecciones con este producto",
       colorEffect: {
         fade: "Degradado",
