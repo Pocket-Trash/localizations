@@ -71,6 +71,8 @@ export const esMX = {
         before: "Antes",
         coverage: "La cobertura comienza el {date}",
         coveredDomains: "Dominios cubiertos: {domains}",
+        deleteAction: "",
+        deleteConfirmation: "",
         deletedUser: "Usuario eliminado",
         description:
           "Revisa los cambios administrativos y de productos registrados.",
