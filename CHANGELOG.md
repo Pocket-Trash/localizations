@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.24.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- ccb51aa: Add product approval workflow translations.
+
 ## 0.23.2
 
 _Published 2026-10-01._
