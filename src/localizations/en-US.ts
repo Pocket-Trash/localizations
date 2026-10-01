@@ -251,7 +251,6 @@ export const enUS = {
           pending: "Pending review",
           rejected: "Rejected",
         },
-        success: "Product approval updated.",
         title: "Product approval",
       },
       collectionsWithProduct: "Collections with this product",

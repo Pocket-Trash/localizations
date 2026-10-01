@@ -246,7 +246,6 @@ export type CompleteLocalizationResource = Readonly<{
           pending: string;
           rejected: string;
         };
-        success: string;
         title: string;
       };
       collectionsWithProduct: string;

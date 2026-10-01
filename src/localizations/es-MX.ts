@@ -253,7 +253,6 @@ export const esMX = {
           pending: "Pendiente de revisión",
           rejected: "Rechazado",
         },
-        success: "Aprobación del producto actualizada.",
         title: "Aprobación del producto",
       },
       collectionsWithProduct: "Colecciones con este producto",
