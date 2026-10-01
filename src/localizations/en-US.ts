@@ -641,6 +641,53 @@ export const enUS = {
       developmentCallout: "This page is still in development.",
       topics: "Help Topics",
     },
+    markdownEditor: {
+      mode: {
+        visual: "Visual",
+        source: "Source",
+      },
+      toolbar: {
+        heading1: "Heading 1",
+        heading2: "Heading 2",
+        heading3: "Heading 3",
+        bold: "Bold",
+        italic: "Italic",
+        strikethrough: "Strikethrough",
+        link: "Link",
+        unorderedList: "Bulleted list",
+        orderedList: "Numbered list",
+        table: "Table",
+        horizontalRule: "Horizontal rule",
+        blockquote: "Blockquote",
+      },
+      link: {
+        text: "Link text",
+        url: "URL",
+        insert: "Insert link",
+        update: "Update link",
+        remove: "Remove link",
+        invalidUrl: "Enter a relative, HTTP, or HTTPS URL.",
+      },
+      status: {
+        loading: "Loading Markdown editor.",
+        fallback:
+          "The visual editor couldn't load. Continue editing in Source mode.",
+      },
+      count: {
+        characters: {
+          normal: "{current} / {limit} characters",
+          warning: "{current} / {limit} characters, approaching limit",
+          limitReached: "{current} / {limit} characters, limit reached",
+          overLimit: "{current} / {limit} characters, {over} over limit",
+        },
+        words: {
+          normal: "{current} / {limit} words",
+          warning: "{current} / {limit} words, approaching limit",
+          limitReached: "{current} / {limit} words, limit reached",
+          overLimit: "{current} / {limit} words, {over} over limit",
+        },
+      },
+    },
     navigation: {
       account: "Account",
       accountMenu: "Account menu",
