@@ -249,3 +249,15 @@ For example, a Vite app can load the English image guide as text:
 ```ts
 import source from "@pocket-trash/localizations/help/en-US/image-size-and-resolution-guide.mdx?raw";
 ```
+
+## Product changelog
+
+Changelog entries are published under
+`@pocket-trash/localizations/changelog/<locale>/<dated-slug>.mdx`. English files
+define `title`, `datePublished`, optional `dateModified`, and `categories`
+frontmatter. Translations use the same filename and define only `title`; missing
+translations fall back to English in the consuming app.
+
+Run `pnpm changelog:validate` after editing entries. On pull requests, CI also
+requires every existing translation to change or be removed when its English
+source changes.

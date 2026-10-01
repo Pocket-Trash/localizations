@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "declaration": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",

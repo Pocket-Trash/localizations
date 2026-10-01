@@ -10,11 +10,13 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./changelog/*.mdx": "./changelog/*.mdx",
     "./help/*.mdx": "./help/*.mdx",
     "./legal/*.mdx": "./legal/*.mdx"
   },
   "files": [
     "dist",
+    "changelog",
     "help",
     "legal"
   ],
@@ -39,6 +41,7 @@
     "agent-skills:update": "npx skills add pocket-trash/skills --skill '*' --agent codex claude-code -y",
     "build": "tsc -p tsconfig.json",
     "check": "biome check --write .",
+    "changelog:validate": "node scripts/validate-changelog.mjs",
     "changeset": "changeset",
     "changeset:version": "changeset version && node scripts/stamp-changelog-release-date.mjs",
     "dev": "tsc -p tsconfig.json --watch",
@@ -49,7 +52,7 @@
     "prepack": "pnpm run build",
     "prepare": "husky",
     "release": "npm whoami && pnpm run changeset:version && pnpm install --lockfile-only && git add package.json pnpm-lock.yaml CHANGELOG.md .changeset && git commit -m \"chore: version packages [skip ci]\" && changeset publish && git push --follow-tags && VERSION=$(node -p \"require('./package.json').version\") && gh release create \"v$VERSION\" --title \"v$VERSION\" --generate-notes --verify-tag",
-    "test": "pnpm run build && node --test"
+    "test": "pnpm changelog:validate && pnpm run build && node --test"
   },
   "engines": {
     "node": ">=20"
