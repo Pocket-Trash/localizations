@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.18.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- 3a6f4f2: Add feedback status synchronization copy.
+
 ## 0.17.0
 
 _Published 2026-09-30._
