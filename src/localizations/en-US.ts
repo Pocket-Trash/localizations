@@ -71,6 +71,8 @@ export const enUS = {
         before: "Before",
         coverage: "Coverage starts {date}",
         coveredDomains: "Covered domains: {domains}",
+        deleteAction: "Delete exported logs",
+        deleteConfirmation: "I confirm I have downloaded these logs.",
         deletedUser: "Deleted user",
         description: "Review recorded administrative and product changes.",
         exportAction: "Export",
