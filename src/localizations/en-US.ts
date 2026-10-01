@@ -79,7 +79,8 @@ export const enUS = {
         exportDescription:
           "Download up to 10,000 oldest unexported events recorded more than 60 days ago. Downloaded copies remain the operator's responsibility.",
         exportReasonPlaceholder: "Explain why these audit logs are needed",
-        exportSummary: "{count} events through {date}",
+        exportSummary:
+          "Oldest {count} events recorded before {cutoff}, ending at {date}",
         exportTitle: "Export audit log",
         fromDate: "From date",
         metadata: "Metadata",
