@@ -299,6 +299,15 @@ export type CompleteLocalizationResource = Readonly<{
         itemCount: string;
         matchingItemCount: string;
       };
+      deletion: {
+        deleteChoice: string;
+        destination: string;
+        moveAction: string;
+        moveChoice: string;
+        moveSummary: string;
+        noDestination: string;
+        open: string;
+      };
       duplicateWarning: string;
       edit: {
         noFields: string;
