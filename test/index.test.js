@@ -214,6 +214,28 @@ test("catalog filter copy and blank Spanish entries use the right translations",
   );
 });
 
+test("product approval copy is complete in both supported locales", () => {
+  const expected = {
+    "en-US": {
+      "web.catalog.approval.approve": "Approve product",
+      "web.catalog.approval.status.pending": "Pending review",
+      "web.catalog.approval.title": "Product approval",
+    },
+    "es-MX": {
+      "web.catalog.approval.approve": "Aprobar producto",
+      "web.catalog.approval.status.pending": "Pendiente de revisión",
+      "web.catalog.approval.title": "Aprobación del producto",
+    },
+  };
+
+  for (const [locale, entries] of Object.entries(expected)) {
+    for (const [key, value] of Object.entries(entries)) {
+      assert.ok(translationKeys.includes(key));
+      assert.equal(translations[locale][key], value);
+    }
+  }
+});
+
 test("catalog source-detail copy falls back from blank Spanish entries", () => {
   const entries = {
     "web.catalog.field.makerProductUrl": "Maker product URL",

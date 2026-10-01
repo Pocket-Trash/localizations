@@ -240,6 +240,20 @@ export const enUS = {
       },
     },
     catalog: {
+      approval: {
+        approve: "Approve product",
+        reasonLabel: "Decision reason",
+        reasonPlaceholder: "Explain this approval decision",
+        reject: "Reject product",
+        reverse: "Return to pending",
+        status: {
+          approved: "Approved",
+          pending: "Pending review",
+          rejected: "Rejected",
+        },
+        success: "Product approval updated.",
+        title: "Product approval",
+      },
       collectionsWithProduct: "Collections with this product",
       colorEffect: {
         fade: "Fade",

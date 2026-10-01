@@ -235,6 +235,20 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     catalog: {
+      approval: {
+        approve: string;
+        reasonLabel: string;
+        reasonPlaceholder: string;
+        reject: string;
+        reverse: string;
+        status: {
+          approved: string;
+          pending: string;
+          rejected: string;
+        };
+        success: string;
+        title: string;
+      };
       collectionsWithProduct: string;
       colorEffect: {
         fade: string;
