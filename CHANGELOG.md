@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.21.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- ad426c7: Add the English Pocket Trash privacy policy.
+
 ## 0.20.0
 
 _Published 2026-10-01._
