@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.19.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- a582268: Add audit-log deletion confirmation copy.
+
 ## 0.18.0
 
 _Published 2026-10-01._
