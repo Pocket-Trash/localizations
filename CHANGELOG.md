@@ -1,5 +1,17 @@
 # @pocket-trash/localizations
 
+## 0.22.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- 49f46af: Publish the English Terms of Service.
+
+### Patch Changes
+
+- 4c3b742: Add Markdown editor controls, status notices, and limit-state copy.
+
 ## 0.21.0
 
 _Published 2026-10-01._
