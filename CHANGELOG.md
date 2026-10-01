@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.23.2
+
+_Published 2026-10-01._
+
+### Patch Changes
+
+- f91a4e1: Publish localized product changelog content.
+
 ## 0.23.1
 
 _Published 2026-10-01._
