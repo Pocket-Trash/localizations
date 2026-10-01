@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.23.0
+
+_Published 2026-10-01._
+
+### Minor Changes
+
+- c8d9c2b: Add localized administrator user-access and ban-management copy.
+
 ## 0.22.1
 
 _Published 2026-10-01._
