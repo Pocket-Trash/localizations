@@ -514,6 +514,13 @@ export const esMX = {
             "Conecta o actualiza Linear en Configuración de administración antes de planificar.",
           settingsLink: "Abrir Configuración de administración",
         },
+        sync: {
+          action: "Sincronizar",
+          connectionRequired:
+            "Conecta o actualiza Linear en Configuración de administración antes de sincronizar.",
+          failure: "No pudimos sincronizar este estado desde Linear.",
+          success: "Estado de la sugerencia sincronizado.",
+        },
         table: {
           actions: "Acciones",
           category: "Categoría",
