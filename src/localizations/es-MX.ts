@@ -310,6 +310,15 @@ export const esMX = {
         itemCount: "Artículos de la colección: {count}",
         matchingItemCount: "{matching} de {total} artículos de la colección",
       },
+      deletion: {
+        deleteChoice: "",
+        destination: "",
+        moveAction: "",
+        moveChoice: "",
+        moveSummary: "",
+        noDestination: "",
+        open: "",
+      },
       duplicateWarning: "",
       edit: {
         noFields: "",

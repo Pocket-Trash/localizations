@@ -307,6 +307,15 @@ export const enUS = {
         itemCount: "Collection items: {count}",
         matchingItemCount: "{matching} of {total} collection items",
       },
+      deletion: {
+        deleteChoice: "Permanently delete collection and items",
+        destination: "Destination collection",
+        moveAction: "Move items and delete",
+        moveChoice: "Move items, then delete collection",
+        moveSummary: "Move {count} items to {destination}.",
+        noDestination: "Create another collection before moving items.",
+        open: "Delete or archive",
+      },
       duplicateWarning:
         "Matching products already owned: {count}. Confirm to add another.",
       edit: {
