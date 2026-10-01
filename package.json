@@ -10,11 +10,13 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./help/*.mdx": "./help/*.mdx"
+    "./help/*.mdx": "./help/*.mdx",
+    "./legal/*.mdx": "./legal/*.mdx"
   },
   "files": [
     "dist",
-    "help"
+    "help",
+    "legal"
   ],
   "repository": {
     "type": "git",
