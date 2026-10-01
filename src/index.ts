@@ -1,4 +1,4 @@
-import type { changelogCategories } from "./changelog-categories.js";
+import { changelogCategories } from "./changelog-categories.js";
 import { enUS } from "./localizations/en-US.js";
 import { esMX } from "./localizations/es-MX.js";
 import type {
@@ -32,6 +32,16 @@ export type ChangelogEntryMetadata = Readonly<{
   categories: readonly ChangelogCategorySlug[];
 }>;
 export type ChangelogTranslationMetadata = Readonly<{ title: string }>;
+
+export function getChangelogCategoryTitle(
+  slug: ChangelogCategorySlug,
+  locale: string,
+): string {
+  const titles = changelogCategories[slug].titles as Readonly<
+    Record<string, string>
+  >;
+  return titles[locale] ?? titles[DEFAULT_LOCALE];
+}
 
 export const DEFAULT_LOCALE = "en-US" satisfies SupportedLocale;
 export const SUPPORTED_LOCALES = Object.freeze(["en-US", "es-MX"] as const);

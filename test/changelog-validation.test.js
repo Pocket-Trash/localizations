@@ -89,6 +89,15 @@ Content.
     },
     {
       entries: {
+        "en-US/2027-10-02-duplicate-metadata.mdx": valid.replace(
+          "title: Valid entry",
+          "title: First title\ntitle: Valid entry",
+        ),
+      },
+      error: /duplicate metadata/,
+    },
+    {
+      entries: {
         "en-US/2027-10-02-empty.mdx": valid.replace("Content.", ""),
       },
       error: /is empty/,

@@ -92,6 +92,9 @@ function parseEntry(source, filename) {
     const field = line.match(/^([a-zA-Z][a-zA-Z0-9]*):(?: (.*))?$/);
     if (!field) throw new Error(`${filename} has invalid frontmatter.`);
     const [, key, value] = field;
+    if (Object.hasOwn(metadata, key)) {
+      throw new Error(`${filename} has duplicate metadata: ${key}.`);
+    }
     metadata[key] = value ?? [];
     listKey = value == null ? key : undefined;
   }

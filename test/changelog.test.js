@@ -4,6 +4,7 @@ import test from "node:test";
 
 import {
   changelogCategories,
+  getChangelogCategoryTitle,
   translationKeys,
   translations,
 } from "../dist/index.js";
@@ -33,6 +34,7 @@ test("exports localized changelog categories and interface copy", () => {
       titles: { "en-US": "Improvement", "es-MX": "Mejora" },
     },
   });
+  assert.equal(getChangelogCategoryTitle("feature", "fr-CA"), "New Feature");
 
   const expected = {
     "en-US": {
