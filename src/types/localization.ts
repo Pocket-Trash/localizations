@@ -482,6 +482,12 @@ export type CompleteLocalizationResource = Readonly<{
           connectionRequired: string;
           settingsLink: string;
         };
+        sync: {
+          action: string;
+          connectionRequired: string;
+          failure: string;
+          success: string;
+        };
         table: {
           actions: string;
           category: string;

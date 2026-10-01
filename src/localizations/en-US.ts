@@ -510,6 +510,13 @@ export const enUS = {
             "Connect or update Linear in Admin settings before planning.",
           settingsLink: "Open Admin settings",
         },
+        sync: {
+          action: "Sync",
+          connectionRequired:
+            "Connect or update Linear in Admin settings before syncing.",
+          failure: "We couldn't synchronize this status from Linear.",
+          success: "Feedback status synchronized.",
+        },
         table: {
           actions: "Actions",
           category: "Category",
