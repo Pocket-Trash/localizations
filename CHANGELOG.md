@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.23.1
+
+_Published 2026-10-01._
+
+### Patch Changes
+
+- abd1cb3: Refine privacy and Terms contact guidance for maker and rights requests
+
 ## 0.23.0
 
 _Published 2026-10-01._
