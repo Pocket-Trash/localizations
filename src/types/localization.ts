@@ -28,6 +28,19 @@ export type CompleteLocalizationResource = Readonly<{
     site: {
       name: string;
     };
+    changelog: {
+      allCategories: string;
+      copyFailed: string;
+      copyLink: string;
+      dateModified: string;
+      datePublished: string;
+      empty: string;
+      emptyCategory: string;
+      linkCopied: string;
+      nextPage: string;
+      pageStatus: string;
+      previousPage: string;
+    };
     action: {
       addCollection: string;
       addColor: string;
@@ -675,6 +688,7 @@ export type CompleteLocalizationResource = Readonly<{
       accountMenu: string;
       admin: string;
       betaFeatures: string;
+      changelog: string;
       collections: string;
       contact: string;
       help: string;

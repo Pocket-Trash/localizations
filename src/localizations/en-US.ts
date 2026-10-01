@@ -27,6 +27,19 @@ export const enUS = {
     site: {
       name: "Pocket Trash",
     },
+    changelog: {
+      allCategories: "All categories",
+      copyFailed: "Couldn’t copy link",
+      copyLink: "Copy link",
+      dateModified: "Date Modified",
+      datePublished: "Date",
+      empty: "No changelog entries yet.",
+      emptyCategory: "No entries in this category.",
+      linkCopied: "Link copied",
+      nextPage: "Next page",
+      pageStatus: "Page {page} of {pageCount}",
+      previousPage: "Previous page",
+    },
     action: {
       addCollection: "Add collection",
       addColor: "Add colour",
@@ -707,6 +720,7 @@ export const enUS = {
       accountMenu: "Account menu",
       admin: "Admin",
       betaFeatures: "Beta features",
+      changelog: "Changelog",
       collections: "Collections",
       contact: "Contact",
       help: "Help",

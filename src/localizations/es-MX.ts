@@ -27,6 +27,19 @@ export const esMX = {
     site: {
       name: "",
     },
+    changelog: {
+      allCategories: "Todas las categorías",
+      copyFailed: "No se pudo copiar el enlace",
+      copyLink: "Copiar enlace",
+      dateModified: "Fecha de modificación",
+      datePublished: "Fecha",
+      empty: "Aún no hay entradas en el registro de cambios.",
+      emptyCategory: "No hay entradas en esta categoría.",
+      linkCopied: "Enlace copiado",
+      nextPage: "Página siguiente",
+      pageStatus: "Página {page} de {pageCount}",
+      previousPage: "Página anterior",
+    },
     action: {
       addCollection: "",
       addColor: "Agregar color",
@@ -710,6 +723,7 @@ export const esMX = {
       accountMenu: "Menu de cuenta",
       admin: "Administración",
       betaFeatures: "Funciones beta",
+      changelog: "Registro de cambios",
       collections: "Colecciones",
       contact: "Contacto",
       help: "Ayuda",

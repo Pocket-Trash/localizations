@@ -1,3 +1,4 @@
+import type { changelogCategories } from "./changelog-categories.js";
 import { enUS } from "./localizations/en-US.js";
 import { esMX } from "./localizations/es-MX.js";
 import type {
@@ -6,6 +7,7 @@ import type {
   Translations,
 } from "./types/localization.js";
 
+export { changelogCategories } from "./changelog-categories.js";
 export { enUS } from "./localizations/en-US.js";
 export { esMX } from "./localizations/es-MX.js";
 export type {
@@ -19,6 +21,17 @@ export type SupportedLocale = "en-US" | "es-MX";
 export type MessageKey = TranslationKey;
 export type Messages = Translations;
 export type LocalePreference = string | readonly string[] | null | undefined;
+
+export type ChangelogCategorySlug = keyof typeof changelogCategories;
+export type ChangelogCategory =
+  (typeof changelogCategories)[ChangelogCategorySlug];
+export type ChangelogEntryMetadata = Readonly<{
+  title: string;
+  datePublished: string;
+  dateModified?: string;
+  categories: readonly ChangelogCategorySlug[];
+}>;
+export type ChangelogTranslationMetadata = Readonly<{ title: string }>;
 
 export const DEFAULT_LOCALE = "en-US" satisfies SupportedLocale;
 export const SUPPORTED_LOCALES = Object.freeze(["en-US", "es-MX"] as const);
