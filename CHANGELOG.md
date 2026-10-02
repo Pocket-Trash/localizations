@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.25.0
+
+_Published 2026-10-02._
+
+### Minor Changes
+
+- 62bcd0b: Add English and Mexican Spanish collection-item approval copy.
+
 ## 0.24.0
 
 _Published 2026-10-01._
