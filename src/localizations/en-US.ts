@@ -68,6 +68,7 @@ export const enUS = {
       search: "Search",
       selectCover: "Use this cover",
       signIn: "Sign in",
+      signOut: "Sign out",
       uploadImages: "Upload images",
       view: "View",
       viewCollection: "View collection",
@@ -1037,8 +1038,10 @@ export const enUS = {
       ounces: "Ounces",
     },
     sidebar: {
+      adminMenu: "Admin Menu",
       close: "Close sidebar",
       description: "Displays the mobile sidebar.",
+      profile: "Profile",
       sidebar: "Sidebar",
       toggle: "Toggle sidebar",
     },
