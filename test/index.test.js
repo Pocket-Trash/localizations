@@ -68,6 +68,44 @@ test("keeps message helpers as compatibility aliases", () => {
   assert.equal(messageKeys, translationKeys);
 });
 
+test("collection deletion warnings are translated and interpolate names", () => {
+  for (const locale of ["en-US", "es-MX"]) {
+    for (const key of [
+      "deleteConfirmation",
+      "deleteChoice",
+      "destination",
+      "itemAction",
+      "itemConfirmation",
+      "itemDescription",
+      "moveAction",
+      "moveChoice",
+      "moveConfirmation",
+      "moveSummary",
+      "noDestination",
+      "open",
+    ]) {
+      assert.ok(translations[locale][`web.collections.deletion.${key}`]);
+    }
+    assert.ok(
+      formatTranslation(
+        "web.collections.deletion.itemDescription",
+        { name: "Katla" },
+        locale,
+      ).includes("Katla"),
+    );
+    const move = formatTranslation(
+      "web.collections.deletion.moveSummary",
+      { count: 2, destination: "Archive" },
+      locale,
+    );
+    assert.ok(move.includes("2") && move.includes("Archive"));
+    assert.notEqual(
+      translations[locale]["web.collections.deletion.deleteConfirmation"],
+      translations[locale]["web.collections.deletion.moveConfirmation"],
+    );
+  }
+});
+
 test("falls back to en-US translations for unsupported locales", () => {
   assert.equal(getTranslations(resolveLocale("fr-CA")), translations["en-US"]);
 });
