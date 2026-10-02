@@ -69,6 +69,7 @@ export type CompleteLocalizationResource = Readonly<{
       search: string;
       selectCover: string;
       signIn: string;
+      signOut: string;
       uploadImages: string;
       view: string;
       viewCollection: string;
@@ -984,8 +985,10 @@ export type CompleteLocalizationResource = Readonly<{
       ounces: string;
     };
     sidebar: {
+      adminMenu: string;
       close: string;
       description: string;
+      profile: string;
       sidebar: string;
       toggle: string;
     };

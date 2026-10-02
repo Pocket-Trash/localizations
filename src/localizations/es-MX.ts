@@ -68,6 +68,7 @@ export const esMX = {
       search: "Buscar",
       selectCover: "Usar como portada",
       signIn: "Iniciar sesion",
+      signOut: "Cerrar sesión",
       uploadImages: "Subir imágenes",
       view: "Ver",
       viewCollection: "Ver colección",
@@ -1050,8 +1051,10 @@ export const esMX = {
       ounces: "Onzas",
     },
     sidebar: {
+      adminMenu: "Menú de administración",
       close: "Cerrar barra lateral",
       description: "Muestra la barra lateral movil.",
+      profile: "Perfil",
       sidebar: "Barra lateral",
       toggle: "Alternar barra lateral",
     },
