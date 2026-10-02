@@ -20,11 +20,9 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: pnpm/action-setup@v4
-        with:
-          version: 11.10.0
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.20.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: git fetch origin ${{ github.base_ref }}
