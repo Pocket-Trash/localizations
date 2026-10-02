@@ -38,8 +38,8 @@
     "access": "public"
   },
   "scripts": {
-    "agent-skills:update": "npx skills add pocket-trash/skills --skill '*' --agent codex claude-code -y",
-    "build": "tsc -p tsconfig.json",
+    "agent-skills:update": "pnpm exec skills add pocket-trash/skills --skill '*' --agent codex claude-code -y",
+    "build": "pnpm run security:audit && tsc -p tsconfig.json",
     "check": "biome check --write .",
     "changelog:validate": "node scripts/validate-changelog.mjs",
     "changeset": "changeset",
@@ -51,22 +51,22 @@
     "localization:sync": "node scripts/localizations.mjs sync",
     "prepack": "pnpm run build",
     "prepare": "husky",
-    "release": "npm whoami && pnpm run changeset:version && pnpm install --lockfile-only && git add package.json pnpm-lock.yaml CHANGELOG.md .changeset && git commit -m \"chore: version packages [skip ci]\" && changeset publish && git push --follow-tags && VERSION=$(node -p \"require('./package.json').version\") && gh release create \"v$VERSION\" --title \"v$VERSION\" --generate-notes --verify-tag",
+    "release": "pnpm run security:audit && pnpm exec npm whoami && pnpm run changeset:version && pnpm install --lockfile-only && git add package.json pnpm-lock.yaml CHANGELOG.md .changeset && git commit -m \"chore: version packages [skip ci]\" && changeset publish && git push --follow-tags && VERSION=$(node -p \"require('./package.json').version\") && gh release create \"v$VERSION\" --title \"v$VERSION\" --generate-notes --verify-tag",
+    "security:audit": "pnpm audit --audit-level high",
     "test": "pnpm changelog:validate && pnpm run build && node --test"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.20.0 <23"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.8",
+    "@biomejs/biome": "^2.5.14",
     "@changesets/cli": "^2.31.1",
-    "@commitlint/cli": "^21.2.2",
-    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
     "husky": "^9.1.7",
-    "typescript": "^5.9.2"
+    "npm": "11.20.0",
+    "skills": "1.7.0",
+    "typescript": "^5.9.3"
   },
-  "dependencies": {
-    "lts": "^2.0.0"
-  },
-  "packageManager": "pnpm@11.10.0"
+  "packageManager": "pnpm@11.27.1"
 }

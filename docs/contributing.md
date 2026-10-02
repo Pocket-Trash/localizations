@@ -70,3 +70,25 @@ git commit -m "fix: update Spanish save label"
 
 Use a conventional commit message for the pull request title too, such as
 `fix: update Spanish save label`.
+
+## Dependency Security
+
+Use Node 22.20.0 or newer within Node 22 and pnpm 11.27.1. Installs reject
+external package releases younger than seven days, missing publication times,
+and lockfiles that do not satisfy the current policy.
+
+Run the all-scope high/critical audit before building or publishing:
+
+```sh
+pnpm security:audit
+```
+
+For an urgent security release, add only the reviewed exact package version to
+`minimumReleaseAgeExclude` in `pnpm-workspace.yaml`. Include a YAML comment with
+the Linear issue, reason, and UTC maturity/removal time, then remove the entry
+after it matures. Never lower `minimumReleaseAge` or add a scope wildcard.
+
+There are no vulnerability exceptions. Do not add one without Roy's explicit
+approval for the specific GHSA, an owner, a follow-up Linear issue, and a UTC
+expiry within seven days. The first such exception also requires an expiry
+validator so incomplete or expired entries fail every security gate.

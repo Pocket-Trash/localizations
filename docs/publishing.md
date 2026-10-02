@@ -10,6 +10,7 @@ release history readable.
 
 ```sh
 pnpm install
+pnpm security:audit
 pnpm test
 ```
 
@@ -45,4 +46,6 @@ Publishing runs through `.github/workflows/publish.yml`.
 
 The workflow runs when started manually with `workflow_dispatch`. Pull requests
 must include a release changeset. Major changesets add the `Major` label to the
-pull request. Published versions also create matching GitHub releases.
+pull request. The workflow installs with the repository supply-chain policy and
+runs the blocking high/critical audit before tests, versioning, packing, or
+publishing. Published versions also create matching GitHub releases.

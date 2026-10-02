@@ -1,2 +1,7 @@
-allowBuilds:
-  phantomjs-prebuilt: true
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - "@pocket-trash/cli"
+  - "@pocket-trash/localizations"
+  - "@pocket-trash/skills"
+minimumReleaseAgeIgnoreMissingTime: false
+minimumReleaseAgeStrict: true
