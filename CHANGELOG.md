@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.28.0
+
+_Published 2026-10-02._
+
+### Minor Changes
+
+- e596b89: Add collection and item deletion confirmations in English and Spanish.
+
 ## 0.27.0
 
 _Published 2026-10-02._
