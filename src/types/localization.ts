@@ -237,6 +237,11 @@ export type CompleteLocalizationResource = Readonly<{
     catalog: {
       approval: {
         approve: string;
+        collectionItem: {
+          approve: string;
+          reject: string;
+          title: string;
+        };
         reasonLabel: string;
         reasonPlaceholder: string;
         reject: string;

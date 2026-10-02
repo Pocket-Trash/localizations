@@ -218,11 +218,20 @@ test("product approval copy is complete in both supported locales", () => {
   const expected = {
     "en-US": {
       "web.catalog.approval.approve": "Approve product",
+      "web.catalog.approval.collectionItem.approve": "Approve collection item",
+      "web.catalog.approval.collectionItem.reject": "Reject collection item",
+      "web.catalog.approval.collectionItem.title": "Collection item approval",
       "web.catalog.approval.status.pending": "Pending review",
       "web.catalog.approval.title": "Product approval",
     },
     "es-MX": {
       "web.catalog.approval.approve": "Aprobar producto",
+      "web.catalog.approval.collectionItem.approve":
+        "Aprobar artículo de la colección",
+      "web.catalog.approval.collectionItem.reject":
+        "Rechazar artículo de la colección",
+      "web.catalog.approval.collectionItem.title":
+        "Aprobación del artículo de la colección",
       "web.catalog.approval.status.pending": "Pendiente de revisión",
       "web.catalog.approval.title": "Aprobación del producto",
     },
