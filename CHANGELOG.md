@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.26.1
+
+_Published 2026-10-02._
+
+### Patch Changes
+
+- f2da1dc: Add collection summary field copy in English and Mexican Spanish
+- ce9024e: Secure dependency installs and publishing.
+
 ## 0.26.0
 
 _Published 2026-10-02._
