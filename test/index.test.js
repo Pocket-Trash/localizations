@@ -72,6 +72,37 @@ test("falls back to en-US translations for unsupported locales", () => {
   assert.equal(getTranslations(resolveLocale("fr-CA")), translations["en-US"]);
 });
 
+test("product deletion copy is translated and interpolates the product name", () => {
+  for (const locale of ["en-US", "es-MX"]) {
+    for (const key of [
+      "action",
+      "blocked",
+      "confirmation",
+      "description",
+      "failed",
+      "title",
+    ]) {
+      assert.ok(translations[locale][`web.catalog.deletion.${key}`]);
+      assert.ok(translationKeys.includes(`web.catalog.deletion.${key}`));
+    }
+    assert.ok(
+      formatTranslation(
+        "web.catalog.deletion.description",
+        { name: "Katla" },
+        locale,
+      ).includes("Katla"),
+    );
+    assert.notEqual(
+      translations[locale]["web.catalog.deletion.failed"],
+      translations[locale]["error.generic"],
+    );
+  }
+  assert.notEqual(
+    translations["en-US"]["web.catalog.deletion.confirmation"],
+    translations["es-MX"]["web.catalog.deletion.confirmation"],
+  );
+});
+
 test("catalogs use nested sources and flat public translations", () => {
   assert.equal(assertCompleteCatalogs(), true);
   assert.equal(localizations["en-US"], enUS);
