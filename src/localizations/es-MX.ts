@@ -266,6 +266,17 @@ export const esMX = {
         solid: "Sólido",
       },
       defaultButton: "",
+      deletion: {
+        action: "Eliminar producto permanentemente",
+        blocked:
+          "Este producto está en uso en una colección o en otro producto y no se puede eliminar.",
+        confirmation:
+          "Entiendo que la eliminación de este producto y sus imágenes no se puede deshacer.",
+        description:
+          "¿Eliminar {name} permanentemente? Se eliminarán sus imágenes, opciones de acabado, vínculos con materiales y especificaciones. Esta acción no se puede deshacer.",
+        failed: "No pudimos eliminar este producto. Inténtalo de nuevo.",
+        title: "Eliminar producto",
+      },
       error: {
         bearingLength: "",
         colorHex: "Elige un color válido.",

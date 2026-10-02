@@ -259,6 +259,14 @@ export type CompleteLocalizationResource = Readonly<{
         solid: string;
       };
       defaultButton: string;
+      deletion: {
+        action: string;
+        blocked: string;
+        confirmation: string;
+        description: string;
+        failed: string;
+        title: string;
+      };
       error: {
         bearingLength: string;
         colorHex: string;

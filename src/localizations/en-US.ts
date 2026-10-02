@@ -264,6 +264,17 @@ export const enUS = {
         solid: "Solid",
       },
       defaultButton: "Default Button",
+      deletion: {
+        action: "Permanently delete product",
+        blocked:
+          "This product is used by a collection or another product and cannot be deleted.",
+        confirmation:
+          "I understand that deleting this product and its images cannot be undone.",
+        description:
+          "Permanently delete {name}? Its images, finish options, material links, and specifications will be removed. This cannot be undone.",
+        failed: "We couldn't delete this product. Try again.",
+        title: "Delete product",
+      },
       error: {
         bearingLength: "Enter 200 characters or fewer.",
         colorHex: "Choose a valid colour.",
