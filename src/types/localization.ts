@@ -388,6 +388,7 @@ export type CompleteLocalizationResource = Readonly<{
         description: string;
         displayName: string;
         name: string;
+        summary: string;
       };
       finishChoice: {
         custom: string;
@@ -396,6 +397,7 @@ export type CompleteLocalizationResource = Readonly<{
       placeholder: {
         description: string;
         name: string;
+        summary: string;
       };
       select: {
         addNew: string;
