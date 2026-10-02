@@ -242,6 +242,11 @@ export const enUS = {
     catalog: {
       approval: {
         approve: "Approve product",
+        collectionItem: {
+          approve: "Approve collection item",
+          reject: "Reject collection item",
+          title: "Collection item approval",
+        },
         reasonLabel: "Decision reason",
         reasonPlaceholder: "Explain this approval decision",
         reject: "Reject product",

@@ -244,6 +244,11 @@ export const esMX = {
     catalog: {
       approval: {
         approve: "Aprobar producto",
+        collectionItem: {
+          approve: "Aprobar artículo de la colección",
+          reject: "Rechazar artículo de la colección",
+          title: "Aprobación del artículo de la colección",
+        },
         reasonLabel: "Motivo de la decisión",
         reasonPlaceholder: "Explica esta decisión de aprobación",
         reject: "Rechazar producto",
