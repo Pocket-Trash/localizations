@@ -354,10 +354,15 @@ export type CompleteLocalizationResource = Readonly<{
         matchingItemCount: string;
       };
       deletion: {
+        deleteConfirmation: string;
         deleteChoice: string;
         destination: string;
+        itemAction: string;
+        itemConfirmation: string;
+        itemDescription: string;
         moveAction: string;
         moveChoice: string;
+        moveConfirmation: string;
         moveSummary: string;
         noDestination: string;
         open: string;

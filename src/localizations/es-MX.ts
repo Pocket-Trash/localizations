@@ -370,13 +370,22 @@ export const esMX = {
         matchingItemCount: "{matching} de {total} artículos de la colección",
       },
       deletion: {
-        deleteChoice: "",
-        destination: "",
-        moveAction: "",
-        moveChoice: "",
-        moveSummary: "",
-        noDestination: "",
-        open: "",
+        deleteConfirmation:
+          "Entiendo que eliminar esta colección, sus artículos y sus imágenes no se puede deshacer.",
+        deleteChoice: "Eliminar permanentemente la colección y sus artículos",
+        destination: "Colección de destino",
+        itemAction: "Eliminar artículo permanentemente",
+        itemConfirmation:
+          "Entiendo que eliminar este artículo y sus imágenes no se puede deshacer.",
+        itemDescription:
+          "¿Quieres eliminar permanentemente {name} de su colección? Se eliminarán sus imágenes y su selección de acabado. Se conservarán los artículos vinculados y los productos del catálogo; se quitará cualquier vínculo de botón instalado con este artículo.",
+        moveAction: "Mover artículos y eliminar",
+        moveChoice: "Mover artículos y luego eliminar la colección",
+        moveConfirmation:
+          "Entiendo que esta colección y sus imágenes de portada se eliminarán permanentemente. Se conservarán los artículos movidos y sus imágenes.",
+        moveSummary: "Mover {count} artículos a {destination}.",
+        noDestination: "Crea otra colección antes de mover artículos.",
+        open: "Eliminar o archivar",
       },
       duplicateWarning: "",
       edit: {

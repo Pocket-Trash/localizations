@@ -368,10 +368,19 @@ export const enUS = {
         matchingItemCount: "{matching} of {total} collection items",
       },
       deletion: {
+        deleteConfirmation:
+          "I understand that deleting this collection, its items, and their images cannot be undone.",
         deleteChoice: "Permanently delete collection and items",
         destination: "Destination collection",
+        itemAction: "Permanently delete item",
+        itemConfirmation:
+          "I understand that deleting this item and its images cannot be undone.",
+        itemDescription:
+          "Permanently delete {name} from its collection? Its images and finish selection will be removed. Linked items and catalog products will be kept; any installed-button link to this item will be cleared.",
         moveAction: "Move items and delete",
         moveChoice: "Move items, then delete collection",
+        moveConfirmation:
+          "I understand that this collection and its cover images will be permanently deleted. Moved items and their images will be kept.",
         moveSummary: "Move {count} items to {destination}.",
         noDestination: "Create another collection before moving items.",
         open: "Delete or archive",
