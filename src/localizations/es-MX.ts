@@ -407,6 +407,7 @@ export const esMX = {
         description: "",
         displayName: "Nombre para mostrar",
         name: "",
+        summary: "Resumen",
       },
       finishChoice: {
         custom: "Acabado personalizado",
@@ -415,6 +416,7 @@ export const esMX = {
       placeholder: {
         description: "",
         name: "",
+        summary: "Resume esta colección",
       },
       select: {
         addNew: "",

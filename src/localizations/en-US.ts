@@ -407,6 +407,7 @@ export const enUS = {
         description: "Description",
         displayName: "Display name",
         name: "Name",
+        summary: "Summary",
       },
       finishChoice: {
         custom: "Custom finish",
@@ -415,6 +416,7 @@ export const enUS = {
       placeholder: {
         description: "Describe this collection",
         name: "Collection name",
+        summary: "Summarize this collection",
       },
       select: {
         addNew: "Add new collection",
