@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.26.0
+
+_Published 2026-10-02._
+
+### Minor Changes
+
+- 39ea090: Add product deletion confirmation and failure messages in English and Mexican Spanish.
+
 ## 0.25.0
 
 _Published 2026-10-02._
