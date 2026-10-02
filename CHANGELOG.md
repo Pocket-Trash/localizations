@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.27.0
+
+_Published 2026-10-02._
+
+### Minor Changes
+
+- ac773fa: Add sidebar navigation labels.
+
 ## 0.26.1
 
 _Published 2026-10-02._
