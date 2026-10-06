@@ -358,10 +358,15 @@ export const enUS = {
         slider: "Slider",
         plate: "Slider plate",
         insert: "Slider insert",
+        spinner: "Spinner",
+        spinnerButton: "Spinner button",
       },
       alias: {
+        add: "Add terminology alias",
         canonicalLabel: "Canonical term: {label}",
+        managementLabel: "Maker terminology",
         matchedContext: "Matched term: {alias}",
+        preferred: "Preferred",
         preferredMakerLabel: "Maker term: {alias}",
       },
       capability: {

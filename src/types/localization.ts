@@ -346,10 +346,15 @@ export type CompleteLocalizationResource = Readonly<{
         slider: string;
         plate: string;
         insert: string;
+        spinner: string;
+        spinnerButton: string;
       };
       alias: {
+        add: string;
         canonicalLabel: string;
+        managementLabel: string;
         matchedContext: string;
+        preferred: string;
         preferredMakerLabel: string;
       };
       capability: {
