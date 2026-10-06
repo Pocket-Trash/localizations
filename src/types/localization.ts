@@ -440,6 +440,8 @@ export type CompleteLocalizationResource = Readonly<{
         spare: string;
         installedPlate: string;
         installedInsert: string;
+        noPlate: string;
+        noInsert: string;
         createIncluded: string;
         linkExisting: string;
         install: string;

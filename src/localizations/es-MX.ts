@@ -456,6 +456,8 @@ export const esMX = {
         spare: "Repuesto",
         installedPlate: "Placa instalada",
         installedInsert: "Inserto instalado",
+        noPlate: "Sin placa instalada",
+        noInsert: "Sin inserto instalado",
         createIncluded: "Crear componente incluido",
         linkExisting: "Vincular componente existente",
         install: "Instalar componente",

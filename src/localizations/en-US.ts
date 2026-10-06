@@ -458,6 +458,8 @@ export const enUS = {
         spare: "Spare",
         installedPlate: "Installed plate",
         installedInsert: "Installed insert",
+        noPlate: "No plate installed",
+        noInsert: "No insert installed",
         createIncluded: "Create included component",
         linkExisting: "Link existing component",
         install: "Install component",
