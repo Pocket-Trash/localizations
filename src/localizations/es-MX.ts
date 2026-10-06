@@ -43,6 +43,8 @@ export const esMX = {
     action: {
       addCollection: "",
       addColor: "Agregar color",
+      addCompatibilityAdvisory: "Agregar aviso de compatibilidad",
+      addCompatibilityFamily: "Agregar familia de compatibilidad",
       addFinish: "Agregar acabado",
       addFinishOption: "Agregar opción de acabado",
       addMaker: "",
@@ -62,6 +64,7 @@ export const esMX = {
       moreFilters: "Más filtros",
       moveFinishOptionDown: "Mover la opción de acabado hacia abajo",
       moveFinishOptionUp: "Mover la opción de acabado hacia arriba",
+      removeCompatibilityAdvisory: "Quitar aviso de compatibilidad",
       removeFinishOption: "Quitar opción de acabado",
       removeSelection: "Quitar {name}",
       saveFlag: "Guardar bandera",
@@ -353,6 +356,228 @@ export const esMX = {
       selectMaterials: "",
       selectProductType: "",
     },
+    slider: {
+      productType: {
+        slider: "Deslizador",
+        plate: "Placa para deslizador",
+        insert: "Inserto para deslizador",
+      },
+      alias: {
+        canonicalLabel: "Término canónico: {label}",
+        matchedContext: "Término coincidente: {alias}",
+        preferredMakerLabel: "Término del fabricante: {alias}",
+      },
+      capability: {
+        label: "Alojamiento de imanes",
+        bodyHosted: "Integrado en el cuerpo",
+        insertDriven: "Basado en inserto",
+        notRecorded: "Alojamiento de imanes no registrado",
+      },
+      measurement: {
+        basis: "Base de las medidas",
+        bodyOnly: "Solo el cuerpo",
+        completeBuild: "Ensamble completo",
+        setLevel: "Juego completo emparejado",
+        setLevelHelp:
+          "Las medidas y el peso de la placa y del inserto describen el juego completo emparejado.",
+        weightBasis: "Base del peso",
+      },
+      appearance: {
+        label: "Apariencia",
+        materialRequired: "El material es obligatorio",
+        optional: "La apariencia es opcional",
+        none: "Sin apariencia seleccionada",
+        pattern: "Patrón",
+        patterns: "Patrones",
+        selectPattern: "Selecciona un patrón",
+      },
+      setup: {
+        title: "Configuración de imanes",
+        default: "Configuración predeterminada",
+        defaultDescription:
+          "La configuración vigente anunciada en el catálogo. No crea una configuración personalizada guardada.",
+        advertisedDefault: "Predeterminada anunciada",
+        availableOffers: "Configuraciones de inserto disponibles",
+        offer: "Oferta de configuración",
+        selectOffer: "Selecciona una oferta de configuración",
+        custom: "Configuración personalizada",
+        copyAndCustomize: "Copiar y personalizar",
+        fromScratch: "Crear desde cero",
+        liveCatalog: "Configuración vigente del catálogo",
+        sourceNote: "Nota de la fuente",
+        incompleteSourceNote:
+          "La fuente no documenta una configuración estructurada completa.",
+        clickCount: "Cantidad de clics",
+        clicks: "{count} clics",
+        clearClickCount: "Borrar cantidad de clics",
+        clickCountCleared:
+          "Se borró la cantidad de clics seleccionada porque cambió la distribución.",
+        notRecorded: "No registrado",
+      },
+      magnet: {
+        configuration: "Configuración de imanes",
+        configurations: "Configuraciones de imanes",
+        vocabularyLabel: "Etiqueta de configuración",
+        halfA: "Mitad A",
+        halfB: "Mitad B",
+        slot: "Posición de imán",
+        slots: "Posiciones de imanes",
+        group: "Grupo de imanes",
+        groups: "Grupos de imanes",
+        size: "Tamaño del imán",
+        grade: "Grado del imán",
+        row: "Fila documentada",
+        column: "Columna documentada",
+        insertionPosition: "Posición de inserción {position}",
+        state: {
+          occupied: "Ocupada",
+          empty: "Vacía",
+          unknown: "Desconocida",
+        },
+      },
+      relationship: {
+        compatibility: "Compatibilidad",
+        compatibilityFamilies: "Familias de compatibilidad",
+        compatible: "Compatible",
+        incompatible: "No compatible",
+        includedComponents: "Componentes incluidos",
+        included: "Incluido",
+        installed: "Instalado",
+        availableInsertOffers: "Ofertas de inserto disponibles",
+        reviewedAdvisory: "Aviso revisado",
+        inclusionHelp:
+          "Los componentes incluidos describen lo que se vende con este producto. No crean artículos de colección.",
+        compatibilityHelp:
+          "La compatibilidad se basa en familias aprobadas compartidas y es independiente de la inclusión.",
+      },
+      component: {
+        plateSet: "Juego de placas",
+        insertSet: "Juego de insertos",
+        spare: "Repuesto",
+        installedPlate: "Placa instalada",
+        installedInsert: "Inserto instalado",
+        noPlate: "Sin placa instalada",
+        noInsert: "Sin inserto instalado",
+        createIncluded: "Crear componente incluido",
+        linkExisting: "Vincular componente existente",
+        install: "Instalar componente",
+        uninstall: "Desinstalar componente",
+        replace: "Reemplazar componente",
+        detach: "Desvincular componente",
+        moveAssembly: "Mover el conjunto completo",
+        moveAssemblySummary:
+          "Al mover este artículo también se mueven {count} artículos conectados del conjunto.",
+        uninstallBeforeTransfer:
+          "Desinstala este componente antes de instalarlo en otro deslizador.",
+        historyWarning:
+          "Esta instalación era válida cuando se creó. La compatibilidad actual cambió.",
+        grandfatheredWarning:
+          "Esta instalación puede permanecer conectada, pero una reinstalación usará la compatibilidad actual.",
+        deleteSliderKeepsComponents:
+          "Al eliminar este deslizador, sus componentes quedan como repuestos independientes.",
+        deleteComponentDetaches:
+          "Al eliminar este componente instalado, se desvincula del conjunto.",
+      },
+      search: {
+        label: "Buscar en el catálogo y las colecciones",
+        placeholder:
+          "Busca productos, fabricantes, tipos, alias o propietarios",
+        matchedAliasContext: "Alias coincidente: {alias}",
+        matchedTypeContext: "Tipo de producto coincidente: {type}",
+        ownerMatchContext: "Propietario coincidente: {owner}",
+        noResults:
+          "Ningún producto o artículo de colección coincide con esta búsqueda.",
+      },
+      filter: {
+        description:
+          "Filtra por material, acabado, color, fabricante, tipo, patrón, familia de compatibilidad o componente exacto.",
+        pattern: "Patrón",
+        compatibilityFamily: "Familia de compatibilidad",
+        plate: "Placa para deslizador",
+        spinnerButton: "Botón de spinner",
+        any: "Coincidir con cualquier opción seleccionada",
+        all: "Coincidir con todas las opciones seleccionadas",
+        resultsAnnouncement: "{count} resultados coincidentes",
+      },
+      privacy: {
+        inherited: "Privacidad heredada",
+        inheritedDescription:
+          "Este componente instalado sigue la privacidad de su deslizador o spinner principal.",
+        inheritedHelp:
+          "Usa el botón de información con un puntero, teclado o toque para saber por qué esta opción de privacidad es de solo lectura.",
+        savedPreference:
+          "Tu preferencia de privacidad guardada para el componente se restaura cuando se desvincula.",
+        staffForcedPrivate:
+          "El personal indicó que este componente debe permanecer privado.",
+        blockingComponent: "{component} impide que este conjunto sea público.",
+      },
+      moderation: {
+        blockedTitle: "Acción bloqueada",
+        publicBlocked:
+          "Este conjunto no puede ser público porque un componente instalado no está disponible o el personal lo marcó como privado.",
+        installBlocked:
+          "Este componente no se puede instalar porque su estado de moderación entra en conflicto con el conjunto.",
+        unavailableComponent: "Componente no disponible",
+      },
+      validation: {
+        capabilityRequired:
+          "Selecciona integrado en el cuerpo o basado en inserto.",
+        bodyHostedInsert:
+          "Los deslizadores integrados en el cuerpo no pueden instalar un inserto.",
+        incompatible:
+          "Selecciona un componente con una familia de compatibilidad aprobada compartida.",
+        alreadyInstalled:
+          "Este componente ya está instalado en otro deslizador.",
+        differentOwner:
+          "Todos los artículos del conjunto deben tener el mismo propietario.",
+        unapproved: "Solo se pueden instalar productos aprobados del catálogo.",
+        exactProduct:
+          "Selecciona una opción de este producto exacto del catálogo.",
+        onePlate: "Un deslizador puede tener como máximo una placa instalada.",
+        oneInsert:
+          "Un deslizador basado en inserto puede tener como máximo un inserto instalado.",
+        clickOption: "Selecciona una opción de clic vigente de este inserto.",
+        completeConfiguration:
+          "Las configuraciones del catálogo deben registrar todas las posiciones obligatorias.",
+        unknownSlot:
+          "Las configuraciones del catálogo no pueden contener posiciones desconocidas.",
+        incompleteSlot:
+          "Completa todas las posiciones de imanes antes de guardar.",
+        overlappingGroup:
+          "Una posición de imán solo puede pertenecer a un grupo.",
+        positiveDimension: "Ingresa una dimensión mayor que cero.",
+        crossConfiguration:
+          "Los grupos de imanes no pueden hacer referencia a posiciones de otra configuración.",
+        advertisedDefault:
+          "Selecciona como máximo una opción predeterminada anunciada.",
+      },
+      confirmation: {
+        createIncluded:
+          "¿Crear este componente incluido como un nuevo artículo de colección?",
+        linkIncluded:
+          "¿Vincular un artículo de colección existente como este componente?",
+        install: "¿Instalar {component} en {slider}?",
+        uninstall: "¿Desinstalar {component} y conservarlo como repuesto?",
+        replace:
+          "¿Reemplazar {current} por {replacement}? El componente actual permanecerá como repuesto.",
+        moveAssembly: "¿Mover todo el conjunto instalado a {collection}?",
+        deleteStandalone:
+          "¿Eliminar permanentemente este artículo independiente? Esta acción no se puede deshacer.",
+        deleteInstalledComponent:
+          "¿Eliminar permanentemente este componente y desvincularlo del conjunto?",
+        deleteSlider:
+          "¿Eliminar permanentemente este deslizador y conservar sus componentes como repuestos?",
+      },
+      empty: {
+        noCompatiblePlates: "No hay placas compatibles disponibles.",
+        noCompatibleInserts: "No hay insertos compatibles disponibles.",
+        noOffers: "No hay ofertas de configuración disponibles.",
+        noSearchResults:
+          "Ningún producto de deslizador coincide con esta búsqueda.",
+        noFilterResults:
+          "Ningún producto de deslizador coincide con estos filtros.",
+      },
+    },
     collections: {
       add: {
         title: "",
@@ -378,7 +603,7 @@ export const esMX = {
         itemConfirmation:
           "Entiendo que eliminar este artículo y sus imágenes no se puede deshacer.",
         itemDescription:
-          "¿Quieres eliminar permanentemente {name} de su colección? Se eliminarán sus imágenes y su selección de acabado. Se conservarán los artículos vinculados y los productos del catálogo; se quitará cualquier vínculo de botón instalado con este artículo.",
+          "¿Quieres eliminar permanentemente {name} de su colección? Se eliminarán sus imágenes y su selección de acabado. Se conservarán los artículos vinculados y los productos del catálogo; se quitará cualquier vínculo de componente instalado con este artículo y los componentes instalados en este artículo quedarán como repuestos.",
         moveAction: "Mover artículos y eliminar",
         moveChoice: "Mover artículos y luego eliminar la colección",
         moveConfirmation:
