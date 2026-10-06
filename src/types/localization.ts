@@ -126,6 +126,15 @@ export type CompleteLocalizationResource = Readonly<{
         searchUsers: string;
         slugPlaceholder: string;
       };
+      makers: {
+        description: string;
+        editMaker: string;
+        empty: string;
+        imageAction: string;
+        imagesEmpty: string;
+        rootUrl: string;
+        title: string;
+      };
       users: {
         active: string;
         ban: string;
@@ -763,6 +772,26 @@ export type CompleteLocalizationResource = Readonly<{
         duplicateImage: string;
       };
     };
+    makers: {
+      collectionItems: string;
+      collectionItemsPagination: string;
+      collectionItemCount: string;
+      detailDescription: string;
+      directoryDescription: string;
+      empty: string;
+      imageAlt: string;
+      imageCount: string;
+      noCollectionItems: string;
+      noProducts: string;
+      other: string;
+      popular: string;
+      products: string;
+      productsPagination: string;
+      productCount: string;
+      productMakerAttribution: string;
+      tableOfContents: string;
+      visitWebsite: string;
+    };
     navigation: {
       account: string;
       accountMenu: string;
@@ -776,6 +805,7 @@ export type CompleteLocalizationResource = Readonly<{
       language: string;
       logOut: string;
       materials: string;
+      makers: string;
       privacy: string;
       products: string;
       resources: string;

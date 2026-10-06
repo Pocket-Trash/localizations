@@ -127,6 +127,16 @@ export const esMX = {
         searchUsers: "Buscar usuarios",
         slugPlaceholder: "",
       },
+      makers: {
+        description:
+          "Administra los perfiles de fabricantes y sus URL públicas.",
+        editMaker: "Editar {name}",
+        empty: "No se encontraron fabricantes.",
+        imageAction: "{action} {fileName}",
+        imagesEmpty: "Todavía no hay imágenes del fabricante.",
+        rootUrl: "Sitio web",
+        title: "Fabricantes",
+      },
       users: {
         active: "Activo",
         ban: "Bloquear usuario",
@@ -809,6 +819,28 @@ export const esMX = {
         duplicateImage: "Esta imagen ya se agregó.",
       },
     },
+    makers: {
+      collectionItems: "Artículos de colección",
+      collectionItemsPagination: "Artículos de colección del fabricante",
+      collectionItemCount: "Artículos de colección: {count}",
+      detailDescription:
+        "Explora productos y artículos de colección públicos de {name}.",
+      directoryDescription:
+        "Explora todos los fabricantes representados en el catálogo de Pocket Trash.",
+      empty: "No se encontraron fabricantes.",
+      imageAlt: "Imagen del fabricante {name}",
+      imageCount: "Imágenes: {count}",
+      noCollectionItems: "Todavía no hay artículos de colección públicos.",
+      noProducts: "Todavía no hay productos públicos.",
+      other: "Otros",
+      popular: "Fabricantes populares",
+      products: "Productos",
+      productsPagination: "Productos del fabricante",
+      productCount: "Productos: {count}",
+      productMakerAttribution: "{productType} · {maker}",
+      tableOfContents: "Directorio de fabricantes",
+      visitWebsite: "Visitar el sitio web del fabricante",
+    },
     navigation: {
       account: "Cuenta",
       accountMenu: "Menu de cuenta",
@@ -822,6 +854,7 @@ export const esMX = {
       language: "Idioma",
       logOut: "Cerrar sesion",
       materials: "Materiales",
+      makers: "Fabricantes",
       privacy: "Privacidad",
       products: "",
       resources: "",
