@@ -43,6 +43,8 @@ export const enUS = {
     action: {
       addCollection: "Add collection",
       addColor: "Add colour",
+      addCompatibilityAdvisory: "Add compatibility advisory",
+      addCompatibilityFamily: "Add compatibility family",
       addFinish: "Add finish",
       addFinishOption: "Add finish option",
       addMaker: "Add maker",
@@ -62,6 +64,7 @@ export const enUS = {
       moreFilters: "More filters",
       moveFinishOptionDown: "Move finish option down",
       moveFinishOptionUp: "Move finish option up",
+      removeCompatibilityAdvisory: "Remove compatibility advisory",
       removeFinishOption: "Remove finish option",
       removeSelection: "Remove {name}",
       saveFlag: "Save flag",
@@ -366,6 +369,15 @@ export const enUS = {
         bodyHosted: "Body-hosted",
         insertDriven: "Insert-driven",
         notRecorded: "Magnet host not recorded",
+      },
+      measurement: {
+        basis: "Measurement basis",
+        bodyOnly: "Body only",
+        completeBuild: "Complete build",
+        setLevel: "Complete matched set",
+        setLevelHelp:
+          "Plate and insert measurements and weight describe the complete matched set.",
+        weightBasis: "Weight basis",
       },
       appearance: {
         label: "Appearance",

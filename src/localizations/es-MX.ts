@@ -43,6 +43,8 @@ export const esMX = {
     action: {
       addCollection: "",
       addColor: "Agregar color",
+      addCompatibilityAdvisory: "Agregar aviso de compatibilidad",
+      addCompatibilityFamily: "Agregar familia de compatibilidad",
       addFinish: "Agregar acabado",
       addFinishOption: "Agregar opción de acabado",
       addMaker: "",
@@ -62,6 +64,7 @@ export const esMX = {
       moreFilters: "Más filtros",
       moveFinishOptionDown: "Mover la opción de acabado hacia abajo",
       moveFinishOptionUp: "Mover la opción de acabado hacia arriba",
+      removeCompatibilityAdvisory: "Quitar aviso de compatibilidad",
       removeFinishOption: "Quitar opción de acabado",
       removeSelection: "Quitar {name}",
       saveFlag: "Guardar bandera",
@@ -369,6 +372,15 @@ export const esMX = {
         bodyHosted: "Integrado en el cuerpo",
         insertDriven: "Basado en inserto",
         notRecorded: "Alojamiento de imanes no registrado",
+      },
+      measurement: {
+        basis: "Base de las medidas",
+        bodyOnly: "Solo el cuerpo",
+        completeBuild: "Ensamble completo",
+        setLevel: "Juego completo emparejado",
+        setLevelHelp:
+          "Las medidas y el peso de la placa y del inserto describen el juego completo emparejado.",
+        weightBasis: "Base del peso",
       },
       appearance: {
         label: "Apariencia",

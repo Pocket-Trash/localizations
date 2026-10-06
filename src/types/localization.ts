@@ -44,6 +44,8 @@ export type CompleteLocalizationResource = Readonly<{
     action: {
       addCollection: string;
       addColor: string;
+      addCompatibilityAdvisory: string;
+      addCompatibilityFamily: string;
       addFinish: string;
       addFinishOption: string;
       addMaker: string;
@@ -63,6 +65,7 @@ export type CompleteLocalizationResource = Readonly<{
       moreFilters: string;
       moveFinishOptionDown: string;
       moveFinishOptionUp: string;
+      removeCompatibilityAdvisory: string;
       removeFinishOption: string;
       removeSelection: string;
       saveFlag: string;
@@ -354,6 +357,14 @@ export type CompleteLocalizationResource = Readonly<{
         bodyHosted: string;
         insertDriven: string;
         notRecorded: string;
+      };
+      measurement: {
+        basis: string;
+        bodyOnly: string;
+        completeBuild: string;
+        setLevel: string;
+        setLevelHelp: string;
+        weightBasis: string;
       };
       appearance: {
         label: string;
