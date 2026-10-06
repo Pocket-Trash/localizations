@@ -338,6 +338,176 @@ export type CompleteLocalizationResource = Readonly<{
       selectMaterials: string;
       selectProductType: string;
     };
+    slider: {
+      productType: {
+        slider: string;
+        plate: string;
+        insert: string;
+      };
+      alias: {
+        canonicalLabel: string;
+        matchedContext: string;
+        preferredMakerLabel: string;
+      };
+      capability: {
+        label: string;
+        bodyHosted: string;
+        insertDriven: string;
+        notRecorded: string;
+      };
+      appearance: {
+        label: string;
+        materialRequired: string;
+        optional: string;
+        none: string;
+        pattern: string;
+        patterns: string;
+        selectPattern: string;
+      };
+      setup: {
+        title: string;
+        default: string;
+        defaultDescription: string;
+        advertisedDefault: string;
+        availableOffers: string;
+        offer: string;
+        selectOffer: string;
+        custom: string;
+        copyAndCustomize: string;
+        fromScratch: string;
+        liveCatalog: string;
+        sourceNote: string;
+        incompleteSourceNote: string;
+        clickCount: string;
+        clicks: string;
+        clearClickCount: string;
+        clickCountCleared: string;
+        notRecorded: string;
+      };
+      magnet: {
+        configuration: string;
+        configurations: string;
+        vocabularyLabel: string;
+        halfA: string;
+        halfB: string;
+        slot: string;
+        slots: string;
+        group: string;
+        groups: string;
+        size: string;
+        grade: string;
+        row: string;
+        column: string;
+        insertionPosition: string;
+        state: {
+          occupied: string;
+          empty: string;
+          unknown: string;
+        };
+      };
+      relationship: {
+        compatibility: string;
+        compatibilityFamilies: string;
+        compatible: string;
+        incompatible: string;
+        includedComponents: string;
+        included: string;
+        installed: string;
+        availableInsertOffers: string;
+        reviewedAdvisory: string;
+        inclusionHelp: string;
+        compatibilityHelp: string;
+      };
+      component: {
+        plateSet: string;
+        insertSet: string;
+        spare: string;
+        installedPlate: string;
+        installedInsert: string;
+        createIncluded: string;
+        linkExisting: string;
+        install: string;
+        uninstall: string;
+        replace: string;
+        detach: string;
+        moveAssembly: string;
+        moveAssemblySummary: string;
+        uninstallBeforeTransfer: string;
+        historyWarning: string;
+        grandfatheredWarning: string;
+        deleteSliderKeepsComponents: string;
+        deleteComponentDetaches: string;
+      };
+      search: {
+        label: string;
+        placeholder: string;
+        matchedAliasContext: string;
+        matchedTypeContext: string;
+        ownerMatchContext: string;
+        noResults: string;
+      };
+      filter: {
+        description: string;
+        pattern: string;
+        compatibilityFamily: string;
+        plate: string;
+        spinnerButton: string;
+        any: string;
+        all: string;
+        resultsAnnouncement: string;
+      };
+      privacy: {
+        inherited: string;
+        inheritedDescription: string;
+        inheritedHelp: string;
+        savedPreference: string;
+        staffForcedPrivate: string;
+        blockingComponent: string;
+      };
+      moderation: {
+        blockedTitle: string;
+        publicBlocked: string;
+        installBlocked: string;
+        unavailableComponent: string;
+      };
+      validation: {
+        capabilityRequired: string;
+        bodyHostedInsert: string;
+        incompatible: string;
+        alreadyInstalled: string;
+        differentOwner: string;
+        unapproved: string;
+        exactProduct: string;
+        onePlate: string;
+        oneInsert: string;
+        clickOption: string;
+        completeConfiguration: string;
+        unknownSlot: string;
+        incompleteSlot: string;
+        overlappingGroup: string;
+        positiveDimension: string;
+        crossConfiguration: string;
+        advertisedDefault: string;
+      };
+      confirmation: {
+        createIncluded: string;
+        linkIncluded: string;
+        install: string;
+        uninstall: string;
+        replace: string;
+        moveAssembly: string;
+        deleteStandalone: string;
+        deleteInstalledComponent: string;
+        deleteSlider: string;
+      };
+      empty: {
+        noCompatiblePlates: string;
+        noCompatibleInserts: string;
+        noOffers: string;
+        noSearchResults: string;
+        noFilterResults: string;
+      };
+    };
     collections: {
       add: {
         title: string;

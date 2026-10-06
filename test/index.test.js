@@ -283,6 +283,104 @@ test("catalog filter copy and blank Spanish entries use the right translations",
   );
 });
 
+test("slider vocabulary is complete in English and Spanish", () => {
+  const expected = {
+    "en-US": {
+      "web.slider.productType.slider": "Slider",
+      "web.slider.productType.plate": "Slider plate",
+      "web.slider.productType.insert": "Slider insert",
+      "web.slider.capability.bodyHosted": "Body-hosted",
+      "web.slider.capability.insertDriven": "Insert-driven",
+      "web.slider.appearance.optional": "Appearance is optional",
+      "web.slider.setup.default": "Default setup",
+      "web.slider.setup.notRecorded": "Not recorded",
+      "web.slider.magnet.halfA": "Half A",
+      "web.slider.magnet.halfB": "Half B",
+      "web.slider.magnet.state.occupied": "Occupied",
+      "web.slider.magnet.state.empty": "Empty",
+      "web.slider.magnet.state.unknown": "Unknown",
+      "web.slider.relationship.compatibility": "Compatibility",
+      "web.slider.relationship.includedComponents": "Included components",
+      "web.slider.component.plateSet": "Plate set",
+      "web.slider.component.insertSet": "Insert set",
+      "web.slider.component.spare": "Spare",
+      "web.slider.search.matchedAliasContext": "Matched alias: {alias}",
+      "web.slider.filter.compatibilityFamily": "Compatibility family",
+      "web.slider.filter.spinnerButton": "Spinner button",
+      "web.slider.privacy.inherited": "Inherited privacy",
+      "web.slider.moderation.blockedTitle": "Action blocked",
+      "web.slider.empty.noOffers": "No setup offers are available.",
+    },
+    "es-MX": {
+      "web.slider.productType.slider": "Deslizador",
+      "web.slider.productType.plate": "Placa para deslizador",
+      "web.slider.productType.insert": "Inserto para deslizador",
+      "web.slider.capability.bodyHosted": "Integrado en el cuerpo",
+      "web.slider.capability.insertDriven": "Basado en inserto",
+      "web.slider.appearance.optional": "La apariencia es opcional",
+      "web.slider.setup.default": "Configuración predeterminada",
+      "web.slider.setup.notRecorded": "No registrado",
+      "web.slider.magnet.halfA": "Mitad A",
+      "web.slider.magnet.halfB": "Mitad B",
+      "web.slider.magnet.state.occupied": "Ocupada",
+      "web.slider.magnet.state.empty": "Vacía",
+      "web.slider.magnet.state.unknown": "Desconocida",
+      "web.slider.relationship.compatibility": "Compatibilidad",
+      "web.slider.relationship.includedComponents": "Componentes incluidos",
+      "web.slider.component.plateSet": "Juego de placas",
+      "web.slider.component.insertSet": "Juego de insertos",
+      "web.slider.component.spare": "Repuesto",
+      "web.slider.search.matchedAliasContext": "Alias coincidente: {alias}",
+      "web.slider.filter.compatibilityFamily": "Familia de compatibilidad",
+      "web.slider.filter.spinnerButton": "Botón de spinner",
+      "web.slider.privacy.inherited": "Privacidad heredada",
+      "web.slider.moderation.blockedTitle": "Acción bloqueada",
+      "web.slider.empty.noOffers":
+        "No hay ofertas de configuración disponibles.",
+    },
+  };
+
+  for (const [locale, entries] of Object.entries(expected)) {
+    for (const [key, value] of Object.entries(entries)) {
+      assert.ok(translationKeys.includes(key));
+      assert.equal(translations[locale][key], value);
+    }
+  }
+
+  const sliderKeys = translationKeys.filter((key) =>
+    key.startsWith("web.slider."),
+  );
+  assert.ok(sliderKeys.length >= 80);
+  assert.ok(
+    sliderKeys.every(
+      (key) =>
+        translations["en-US"][key].trim() && translations["es-MX"][key].trim(),
+    ),
+  );
+  assert.ok(
+    sliderKeys.every(
+      (key) => !/(?:magnus|novel|fidgetboy|cage|cassette)/i.test(key),
+    ),
+  );
+
+  assert.equal(
+    formatTranslation(
+      "web.slider.search.matchedAliasContext",
+      { alias: "Cage" },
+      "es-MX",
+    ),
+    "Alias coincidente: Cage",
+  );
+  assert.match(
+    translations["en-US"]["web.slider.privacy.inheritedHelp"],
+    /pointer, keyboard, or touch/,
+  );
+  assert.match(
+    translations["es-MX"]["web.slider.privacy.inheritedHelp"],
+    /puntero, teclado o toque/,
+  );
+});
+
 test("product approval copy is complete in both supported locales", () => {
   const expected = {
     "en-US": {
