@@ -1,5 +1,19 @@
 # @pocket-trash/localizations
 
+## 0.29.0
+
+_Published 2026-10-06._
+
+### Minor Changes
+
+- 1d2c93c: Add translations for material administration and public material pages.
+- 2c1f8a5: Add English and Spanish vocabulary for slider catalog and collection workflows.
+- ec91bf1: Add localized Makers administration and public directory copy.
+
+### Patch Changes
+
+- 2c1f8a5: Constrain the temporary Changesets braces audit exception to its reviewed development-only path.
+
 ## 0.28.0
 
 _Published 2026-10-02._
