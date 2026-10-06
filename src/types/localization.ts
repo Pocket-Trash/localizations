@@ -143,6 +143,7 @@ export type CompleteLocalizationResource = Readonly<{
       hub: {
         catalogImageTrash: string;
         description: string;
+        materials: string;
         title: string;
       };
       notifications: {
@@ -717,6 +718,51 @@ export type CompleteLocalizationResource = Readonly<{
         };
       };
     };
+    materials: {
+      admin: {
+        addTitle: string;
+        created: string;
+        description: string;
+        editTitle: string;
+        empty: string;
+        saved: string;
+        slugHelp: string;
+        title: string;
+      };
+      count: {
+        collectionItems: string;
+        products: string;
+      };
+      detail: {
+        collectionItems: string;
+        collectionItemsPagination: string;
+        noCollectionItems: string;
+        noProducts: string;
+        products: string;
+        productsPagination: string;
+      };
+      directory: {
+        description: string;
+        empty: string;
+        other: string;
+        popular: string;
+        tableOfContents: string;
+        title: string;
+      };
+      image: {
+        alt: string;
+        archiveConfirmation: string;
+        empty: string;
+        placeholder: string;
+        restore: string;
+        restoreConfirmation: string;
+        uploadFailed: string;
+        uploadHelp: string;
+      };
+      validation: {
+        duplicateImage: string;
+      };
+    };
     navigation: {
       account: string;
       accountMenu: string;
@@ -729,6 +775,7 @@ export type CompleteLocalizationResource = Readonly<{
       home: string;
       language: string;
       logOut: string;
+      materials: string;
       privacy: string;
       products: string;
       resources: string;

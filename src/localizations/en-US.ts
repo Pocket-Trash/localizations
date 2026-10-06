@@ -145,6 +145,7 @@ export const enUS = {
       hub: {
         catalogImageTrash: "Catalog image trash",
         description: "Manage Pocket Trash administration.",
+        materials: "Materials",
         title: "Admin Panel",
       },
       notifications: {
@@ -756,6 +757,53 @@ export const enUS = {
         },
       },
     },
+    materials: {
+      admin: {
+        addTitle: "Add material",
+        created: "Material added.",
+        description: "Add and edit material details and images.",
+        editTitle: "Edit material",
+        empty: "No materials found.",
+        saved: "Material saved.",
+        slugHelp: "The slug is permanent and cannot be changed.",
+        title: "Materials",
+      },
+      count: {
+        collectionItems: "Collection items: {count}",
+        products: "Products: {count}",
+      },
+      detail: {
+        collectionItems: "Collection items",
+        collectionItemsPagination: "Collection item pages",
+        noCollectionItems: "No collection items use this material yet.",
+        noProducts: "No products use this material yet.",
+        products: "Products",
+        productsPagination: "Product pages",
+      },
+      directory: {
+        description: "Browse materials used by products and collections.",
+        empty: "No materials are available yet.",
+        other: "Other",
+        popular: "Popular Materials",
+        tableOfContents: "Materials A to Z",
+        title: "Materials",
+      },
+      image: {
+        alt: "Image of {name}",
+        archiveConfirmation: "Archive this material image?",
+        empty: "No images have been added.",
+        placeholder: "No image available for {name}",
+        restore: "Restore image",
+        restoreConfirmation: "Restore this material image?",
+        uploadFailed:
+          "The material was saved, but its images could not be uploaded. Try again from Edit material.",
+        uploadHelp:
+          "Choose up to {maxImages} images. Each image can be up to {maxFileSize}; all files in this upload can total up to {maxSessionSize}.",
+      },
+      validation: {
+        duplicateImage: "This image has already been added.",
+      },
+    },
     navigation: {
       account: "Account",
       accountMenu: "Account menu",
@@ -768,6 +816,7 @@ export const enUS = {
       home: "Home",
       language: "Language",
       logOut: "Log out",
+      materials: "Materials",
       privacy: "Privacy",
       products: "Products",
       resources: "Resources",

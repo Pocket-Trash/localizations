@@ -144,6 +144,7 @@ export const esMX = {
       hub: {
         catalogImageTrash: "Papelera de imágenes del catálogo",
         description: "Administra Pocket Trash.",
+        materials: "Materiales",
         title: "Panel de administración",
       },
       notifications: {
@@ -759,6 +760,55 @@ export const esMX = {
         },
       },
     },
+    materials: {
+      admin: {
+        addTitle: "Agregar material",
+        created: "Se agregó el material.",
+        description: "Agrega y edita los detalles e imágenes de materiales.",
+        editTitle: "Editar material",
+        empty: "No se encontraron materiales.",
+        saved: "Se guardó el material.",
+        slugHelp: "El slug es permanente y no se puede cambiar.",
+        title: "Materiales",
+      },
+      count: {
+        collectionItems: "Artículos de colección: {count}",
+        products: "Productos: {count}",
+      },
+      detail: {
+        collectionItems: "Artículos de colección",
+        collectionItemsPagination: "Páginas de artículos de colección",
+        noCollectionItems:
+          "Aún no hay artículos de colección que usen este material.",
+        noProducts: "Aún no hay productos que usen este material.",
+        products: "Productos",
+        productsPagination: "Páginas de productos",
+      },
+      directory: {
+        description:
+          "Explora los materiales utilizados por productos y colecciones.",
+        empty: "Aún no hay materiales disponibles.",
+        other: "Otros",
+        popular: "Materiales populares",
+        tableOfContents: "Materiales de la A a la Z",
+        title: "Materiales",
+      },
+      image: {
+        alt: "Imagen de {name}",
+        archiveConfirmation: "¿Quieres archivar esta imagen del material?",
+        empty: "No se han agregado imágenes.",
+        placeholder: "No hay imagen disponible para {name}",
+        restore: "Restaurar imagen",
+        restoreConfirmation: "¿Quieres restaurar esta imagen del material?",
+        uploadFailed:
+          "Se guardó el material, pero no se pudieron subir sus imágenes. Inténtalo de nuevo desde Editar material.",
+        uploadHelp:
+          "Elige hasta {maxImages} imágenes. Cada imagen puede pesar hasta {maxFileSize}; todos los archivos de esta carga pueden pesar hasta {maxSessionSize} en total.",
+      },
+      validation: {
+        duplicateImage: "Esta imagen ya se agregó.",
+      },
+    },
     navigation: {
       account: "Cuenta",
       accountMenu: "Menu de cuenta",
@@ -771,6 +821,7 @@ export const esMX = {
       home: "Inicio",
       language: "Idioma",
       logOut: "Cerrar sesion",
+      materials: "Materiales",
       privacy: "Privacidad",
       products: "",
       resources: "",

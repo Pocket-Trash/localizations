@@ -244,6 +244,61 @@ test("admin hub and feedback notification copy is complete", () => {
   }
 });
 
+test("materials copy is complete in both supported locales", () => {
+  const keys = [
+    "web.admin.hub.materials",
+    "web.materials.admin.addTitle",
+    "web.materials.admin.created",
+    "web.materials.admin.description",
+    "web.materials.admin.editTitle",
+    "web.materials.admin.empty",
+    "web.materials.admin.saved",
+    "web.materials.admin.slugHelp",
+    "web.materials.admin.title",
+    "web.materials.count.collectionItems",
+    "web.materials.count.products",
+    "web.materials.detail.collectionItems",
+    "web.materials.detail.collectionItemsPagination",
+    "web.materials.detail.noCollectionItems",
+    "web.materials.detail.noProducts",
+    "web.materials.detail.products",
+    "web.materials.detail.productsPagination",
+    "web.materials.directory.description",
+    "web.materials.directory.empty",
+    "web.materials.directory.other",
+    "web.materials.directory.popular",
+    "web.materials.directory.tableOfContents",
+    "web.materials.directory.title",
+    "web.materials.image.alt",
+    "web.materials.image.archiveConfirmation",
+    "web.materials.image.empty",
+    "web.materials.image.placeholder",
+    "web.materials.image.restore",
+    "web.materials.image.restoreConfirmation",
+    "web.materials.image.uploadFailed",
+    "web.materials.image.uploadHelp",
+    "web.materials.validation.duplicateImage",
+    "web.navigation.materials",
+  ];
+
+  for (const locale of ["en-US", "es-MX"]) {
+    for (const key of keys) {
+      assert.ok(translationKeys.includes(key), `${key} is typed`);
+      assert.ok(localizations[locale].web.materials, `${locale} has materials`);
+      assert.ok(translations[locale][key], `${locale} has ${key}`);
+    }
+  }
+
+  assert.equal(
+    formatTranslation(
+      "web.materials.count.collectionItems",
+      { count: 3 },
+      "es-MX",
+    ),
+    "Artículos de colección: 3",
+  );
+});
+
 test("catalog filter copy and blank Spanish entries use the right translations", () => {
   for (const key of [
     "web.action.more",
