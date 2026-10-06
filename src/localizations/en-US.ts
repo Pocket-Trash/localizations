@@ -43,6 +43,8 @@ export const enUS = {
     action: {
       addCollection: "Add collection",
       addColor: "Add colour",
+      addCompatibilityAdvisory: "Add compatibility advisory",
+      addCompatibilityFamily: "Add compatibility family",
       addFinish: "Add finish",
       addFinishOption: "Add finish option",
       addMaker: "Add maker",
@@ -62,6 +64,7 @@ export const enUS = {
       moreFilters: "More filters",
       moveFinishOptionDown: "Move finish option down",
       moveFinishOptionUp: "Move finish option up",
+      removeCompatibilityAdvisory: "Remove compatibility advisory",
       removeFinishOption: "Remove finish option",
       removeSelection: "Remove {name}",
       saveFlag: "Save flag",
@@ -359,6 +362,220 @@ export const enUS = {
       selectMaterials: "Select materials",
       selectProductType: "Select a product type",
     },
+    slider: {
+      productType: {
+        slider: "Slider",
+        plate: "Slider plate",
+        insert: "Slider insert",
+        spinner: "Spinner",
+        spinnerButton: "Spinner button",
+      },
+      alias: {
+        add: "Add terminology alias",
+        canonicalLabel: "Canonical term: {label}",
+        managementLabel: "Maker terminology",
+        matchedContext: "Matched term: {alias}",
+        preferred: "Preferred",
+        preferredMakerLabel: "Maker term: {alias}",
+      },
+      capability: {
+        label: "Magnet host",
+        bodyHosted: "Body-hosted",
+        insertDriven: "Insert-driven",
+        notRecorded: "Magnet host not recorded",
+      },
+      measurement: {
+        basis: "Measurement basis",
+        bodyOnly: "Body only",
+        completeBuild: "Complete build",
+        setLevel: "Complete matched set",
+        setLevelHelp:
+          "Plate and insert measurements and weight describe the complete matched set.",
+        weightBasis: "Weight basis",
+      },
+      appearance: {
+        label: "Appearance",
+        materialRequired: "Material is required",
+        optional: "Appearance is optional",
+        none: "No appearance selected",
+        pattern: "Pattern",
+        patterns: "Patterns",
+        selectPattern: "Select a pattern",
+      },
+      setup: {
+        title: "Magnet setup",
+        default: "Default setup",
+        defaultDescription:
+          "The live setup advertised by the catalog. It does not create a saved custom setup.",
+        advertisedDefault: "Advertised default",
+        availableOffers: "Available insert setups",
+        offer: "Setup offer",
+        selectOffer: "Select a setup offer",
+        custom: "Custom setup",
+        copyAndCustomize: "Copy and customize",
+        fromScratch: "Build from scratch",
+        liveCatalog: "Live catalog setup",
+        sourceNote: "Source note",
+        incompleteSourceNote:
+          "The source does not document a complete structured setup.",
+        clickCount: "Click count",
+        clicks: "{count} clicks",
+        clearClickCount: "Clear click count",
+        clickCountCleared:
+          "The selected click count was cleared because the layout changed.",
+        notRecorded: "Not recorded",
+      },
+      magnet: {
+        configuration: "Magnet configuration",
+        configurations: "Magnet configurations",
+        vocabularyLabel: "Configuration label",
+        halfA: "Half A",
+        halfB: "Half B",
+        slot: "Magnet slot",
+        slots: "Magnet slots",
+        group: "Magnet group",
+        groups: "Magnet groups",
+        size: "Magnet size",
+        grade: "Magnet grade",
+        row: "Documented row",
+        column: "Documented column",
+        insertionPosition: "Insertion position {position}",
+        state: {
+          occupied: "Occupied",
+          empty: "Empty",
+          unknown: "Unknown",
+        },
+      },
+      relationship: {
+        compatibility: "Compatibility",
+        compatibilityFamilies: "Compatibility families",
+        compatible: "Compatible",
+        incompatible: "Not compatible",
+        includedComponents: "Included components",
+        included: "Included",
+        installed: "Installed",
+        availableInsertOffers: "Available insert offers",
+        reviewedAdvisory: "Reviewed advisory",
+        inclusionHelp:
+          "Included components describe what is sold with this product. They do not create collection items.",
+        compatibilityHelp:
+          "Compatibility is based on shared approved families and is separate from inclusion.",
+      },
+      component: {
+        plateSet: "Plate set",
+        insertSet: "Insert set",
+        spare: "Spare",
+        installedPlate: "Installed plate",
+        installedInsert: "Installed insert",
+        noPlate: "No plate installed",
+        noInsert: "No insert installed",
+        createIncluded: "Create included component",
+        linkExisting: "Link existing component",
+        install: "Install component",
+        uninstall: "Uninstall component",
+        replace: "Replace component",
+        detach: "Detach component",
+        moveAssembly: "Move complete assembly",
+        moveAssemblySummary:
+          "Moving this item also moves {count} connected assembly items.",
+        uninstallBeforeTransfer:
+          "Uninstall this component before installing it on another slider.",
+        historyWarning:
+          "This installation was valid when it was created. Current compatibility has changed.",
+        grandfatheredWarning:
+          "This installation can remain connected, but reinstalling will use current compatibility.",
+        deleteSliderKeepsComponents:
+          "Deleting this slider leaves its components as standalone spares.",
+        deleteComponentDetaches:
+          "Deleting this installed component detaches it from the assembly.",
+      },
+      search: {
+        label: "Search catalog and collections",
+        placeholder: "Search products, makers, types, aliases, or owners",
+        matchedAliasContext: "Matched alias: {alias}",
+        matchedTypeContext: "Matched product type: {type}",
+        ownerMatchContext: "Matched owner: {owner}",
+        noResults: "No products or collection items match this search.",
+      },
+      filter: {
+        description:
+          "Filter by material, finish, colour, maker, type, pattern, compatibility family, or exact component.",
+        pattern: "Pattern",
+        compatibilityFamily: "Compatibility family",
+        plate: "Slider plate",
+        spinnerButton: "Spinner button",
+        any: "Match any selected option",
+        all: "Match all selected options",
+        resultsAnnouncement: "{count} matching results",
+      },
+      privacy: {
+        inherited: "Inherited privacy",
+        inheritedDescription:
+          "This installed component follows the privacy of its parent slider or spinner.",
+        inheritedHelp:
+          "Use the information button with a pointer, keyboard, or touch to learn why this privacy setting is read-only.",
+        savedPreference:
+          "Your saved component privacy preference resumes when the component is detached.",
+        staffForcedPrivate: "Staff required this component to remain private.",
+        blockingComponent:
+          "{component} prevents this assembly from being public.",
+      },
+      moderation: {
+        blockedTitle: "Action blocked",
+        publicBlocked:
+          "This assembly cannot be public because an installed component is unavailable or staff-private.",
+        installBlocked:
+          "This component cannot be installed because its moderation state conflicts with the assembly.",
+        unavailableComponent: "Unavailable component",
+      },
+      validation: {
+        capabilityRequired: "Select body-hosted or insert-driven.",
+        bodyHostedInsert: "Body-hosted sliders cannot install an insert.",
+        incompatible:
+          "Select a component with a shared approved compatibility family.",
+        alreadyInstalled:
+          "This component is already installed on another slider.",
+        differentOwner: "Every assembly item must have the same owner.",
+        unapproved: "Only approved catalog products can be installed.",
+        exactProduct: "Select an option from this exact catalog product.",
+        onePlate: "A slider can have at most one installed plate.",
+        oneInsert:
+          "An insert-driven slider can have at most one installed insert.",
+        clickOption: "Select a current click option from this insert.",
+        completeConfiguration:
+          "Catalog configurations must record every required slot.",
+        unknownSlot: "Catalog configurations cannot contain unknown slots.",
+        incompleteSlot: "Complete every magnet slot before saving.",
+        overlappingGroup: "A magnet slot can belong to only one group.",
+        positiveDimension: "Enter a dimension greater than zero.",
+        crossConfiguration:
+          "Magnet groups cannot reference slots from another configuration.",
+        advertisedDefault: "Select no more than one advertised default.",
+      },
+      confirmation: {
+        createIncluded:
+          "Create this included component as a new collection item?",
+        linkIncluded: "Link an existing collection item as this component?",
+        install: "Install {component} on {slider}?",
+        uninstall: "Uninstall {component} and keep it as a spare?",
+        replace:
+          "Replace {current} with {replacement}? The current component will remain as a spare.",
+        moveAssembly: "Move the complete installed assembly to {collection}?",
+        deleteStandalone:
+          "Permanently delete this standalone item? This cannot be undone.",
+        deleteInstalledComponent:
+          "Permanently delete this component and detach it from the assembly?",
+        deleteSlider:
+          "Permanently delete this slider and keep its components as spares?",
+      },
+      empty: {
+        noCompatiblePlates: "No compatible plates are available.",
+        noCompatibleInserts: "No compatible inserts are available.",
+        noOffers: "No setup offers are available.",
+        noSearchResults: "No slider products match this search.",
+        noFilterResults: "No slider products match these filters.",
+      },
+    },
     collections: {
       add: {
         title: "Add collection",
@@ -385,7 +602,7 @@ export const enUS = {
         itemConfirmation:
           "I understand that deleting this item and its images cannot be undone.",
         itemDescription:
-          "Permanently delete {name} from its collection? Its images and finish selection will be removed. Linked items and catalog products will be kept; any installed-button link to this item will be cleared.",
+          "Permanently delete {name} from its collection? Its images and finish selection will be removed. Linked items and catalog products will be kept; any installed-component link to this item will be cleared, and components installed on this item will remain as spares.",
         moveAction: "Move items and delete",
         moveChoice: "Move items, then delete collection",
         moveConfirmation:
