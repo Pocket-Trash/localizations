@@ -593,7 +593,7 @@ export const enUS = {
         itemConfirmation:
           "I understand that deleting this item and its images cannot be undone.",
         itemDescription:
-          "Permanently delete {name} from its collection? Its images and finish selection will be removed. Linked items and catalog products will be kept; any installed-button link to this item will be cleared.",
+          "Permanently delete {name} from its collection? Its images and finish selection will be removed. Linked items and catalog products will be kept; any installed-component link to this item will be cleared, and components installed on this item will remain as spares.",
         moveAction: "Move items and delete",
         moveChoice: "Move items, then delete collection",
         moveConfirmation:

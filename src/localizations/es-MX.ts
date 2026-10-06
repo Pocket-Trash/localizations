@@ -603,7 +603,7 @@ export const esMX = {
         itemConfirmation:
           "Entiendo que eliminar este artículo y sus imágenes no se puede deshacer.",
         itemDescription:
-          "¿Quieres eliminar permanentemente {name} de su colección? Se eliminarán sus imágenes y su selección de acabado. Se conservarán los artículos vinculados y los productos del catálogo; se quitará cualquier vínculo de botón instalado con este artículo.",
+          "¿Quieres eliminar permanentemente {name} de su colección? Se eliminarán sus imágenes y su selección de acabado. Se conservarán los artículos vinculados y los productos del catálogo; se quitará cualquier vínculo de componente instalado con este artículo y los componentes instalados en este artículo quedarán como repuestos.",
         moveAction: "Mover artículos y eliminar",
         moveChoice: "Mover artículos y luego eliminar la colección",
         moveConfirmation:
