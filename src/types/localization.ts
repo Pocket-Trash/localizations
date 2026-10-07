@@ -44,8 +44,6 @@ export type CompleteLocalizationResource = Readonly<{
     action: {
       addCollection: string;
       addColor: string;
-      addCompatibilityAdvisory: string;
-      addCompatibilityFamily: string;
       addFinish: string;
       addFinishOption: string;
       addMaker: string;
@@ -65,7 +63,6 @@ export type CompleteLocalizationResource = Readonly<{
       moreFilters: string;
       moveFinishOptionDown: string;
       moveFinishOptionUp: string;
-      removeCompatibilityAdvisory: string;
       removeFinishOption: string;
       removeSelection: string;
       saveFlag: string;
@@ -399,7 +396,6 @@ export type CompleteLocalizationResource = Readonly<{
         offer: string;
         selectOffer: string;
         custom: string;
-        copyAndCustomize: string;
         fromScratch: string;
         liveCatalog: string;
         sourceNote: string;
@@ -432,17 +428,11 @@ export type CompleteLocalizationResource = Readonly<{
         };
       };
       relationship: {
-        compatibility: string;
-        compatibilityFamilies: string;
-        compatible: string;
-        incompatible: string;
         includedComponents: string;
         included: string;
         installed: string;
         availableInsertOffers: string;
-        reviewedAdvisory: string;
         inclusionHelp: string;
-        compatibilityHelp: string;
       };
       component: {
         plateSet: string;
@@ -461,8 +451,6 @@ export type CompleteLocalizationResource = Readonly<{
         moveAssembly: string;
         moveAssemblySummary: string;
         uninstallBeforeTransfer: string;
-        historyWarning: string;
-        grandfatheredWarning: string;
         deleteSliderKeepsComponents: string;
         deleteComponentDetaches: string;
       };
@@ -477,7 +465,6 @@ export type CompleteLocalizationResource = Readonly<{
       filter: {
         description: string;
         pattern: string;
-        compatibilityFamily: string;
         plate: string;
         spinnerButton: string;
         any: string;
@@ -501,7 +488,6 @@ export type CompleteLocalizationResource = Readonly<{
       validation: {
         capabilityRequired: string;
         bodyHostedInsert: string;
-        incompatible: string;
         alreadyInstalled: string;
         differentOwner: string;
         unapproved: string;
@@ -529,8 +515,6 @@ export type CompleteLocalizationResource = Readonly<{
         deleteSlider: string;
       };
       empty: {
-        noCompatiblePlates: string;
-        noCompatibleInserts: string;
         noOffers: string;
         noSearchResults: string;
         noFilterResults: string;

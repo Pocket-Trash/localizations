@@ -43,8 +43,6 @@ export const enUS = {
     action: {
       addCollection: "Add collection",
       addColor: "Add colour",
-      addCompatibilityAdvisory: "Add compatibility advisory",
-      addCompatibilityFamily: "Add compatibility family",
       addFinish: "Add finish",
       addFinishOption: "Add finish option",
       addMaker: "Add maker",
@@ -64,7 +62,6 @@ export const enUS = {
       moreFilters: "More filters",
       moveFinishOptionDown: "Move finish option down",
       moveFinishOptionUp: "Move finish option up",
-      removeCompatibilityAdvisory: "Remove compatibility advisory",
       removeFinishOption: "Remove finish option",
       removeSelection: "Remove {name}",
       saveFlag: "Save flag",
@@ -413,7 +410,6 @@ export const enUS = {
         offer: "Setup offer",
         selectOffer: "Select a setup offer",
         custom: "Custom setup",
-        copyAndCustomize: "Copy and customize",
         fromScratch: "Build from scratch",
         liveCatalog: "Live catalog setup",
         sourceNote: "Source note",
@@ -448,19 +444,12 @@ export const enUS = {
         },
       },
       relationship: {
-        compatibility: "Compatibility",
-        compatibilityFamilies: "Compatibility families",
-        compatible: "Compatible",
-        incompatible: "Not compatible",
         includedComponents: "Included components",
         included: "Included",
         installed: "Installed",
         availableInsertOffers: "Available insert offers",
-        reviewedAdvisory: "Reviewed advisory",
         inclusionHelp:
           "Included components describe what is sold with this product. They do not create collection items.",
-        compatibilityHelp:
-          "Compatibility is based on shared approved families and is separate from inclusion.",
       },
       component: {
         plateSet: "Plate set",
@@ -481,10 +470,6 @@ export const enUS = {
           "Moving this item also moves {count} connected assembly items.",
         uninstallBeforeTransfer:
           "Uninstall this component before installing it on another slider.",
-        historyWarning:
-          "This installation was valid when it was created. Current compatibility has changed.",
-        grandfatheredWarning:
-          "This installation can remain connected, but reinstalling will use current compatibility.",
         deleteSliderKeepsComponents:
           "Deleting this slider leaves its components as standalone spares.",
         deleteComponentDetaches:
@@ -500,9 +485,8 @@ export const enUS = {
       },
       filter: {
         description:
-          "Filter by material, finish, colour, maker, type, pattern, compatibility family, or exact component.",
+          "Filter by material, finish, colour, maker, type, pattern, or exact component.",
         pattern: "Pattern",
-        compatibilityFamily: "Compatibility family",
         plate: "Slider plate",
         spinnerButton: "Spinner button",
         any: "Match any selected option",
@@ -532,8 +516,6 @@ export const enUS = {
       validation: {
         capabilityRequired: "Select body-hosted or insert-driven.",
         bodyHostedInsert: "Body-hosted sliders cannot install an insert.",
-        incompatible:
-          "Select a component with a shared approved compatibility family.",
         alreadyInstalled:
           "This component is already installed on another slider.",
         differentOwner: "Every assembly item must have the same owner.",
@@ -570,8 +552,6 @@ export const enUS = {
           "Permanently delete this slider and keep its components as spares?",
       },
       empty: {
-        noCompatiblePlates: "No compatible plates are available.",
-        noCompatibleInserts: "No compatible inserts are available.",
         noOffers: "No setup offers are available.",
         noSearchResults: "No slider products match this search.",
         noFilterResults: "No slider products match these filters.",
