@@ -444,6 +444,9 @@ export const enUS = {
         },
       },
       relationship: {
+        plates: "Plates",
+        includedPlates: "Included plates",
+        addPlates: "Add plates",
         includedComponents: "Included components",
         included: "Included",
         installed: "Installed",
