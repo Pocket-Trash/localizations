@@ -386,12 +386,9 @@ export const enUS = {
       },
       measurement: {
         basis: "Measurement basis",
-        bodyOnly: "Body only",
-        completeBuild: "Complete build",
         setLevel: "Complete matched set",
         setLevelHelp:
           "Plate and insert measurements and weight describe the complete matched set.",
-        weightBasis: "Weight basis",
       },
       appearance: {
         label: "Appearance",

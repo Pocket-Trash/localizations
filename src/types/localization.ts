@@ -374,11 +374,8 @@ export type CompleteLocalizationResource = Readonly<{
       };
       measurement: {
         basis: string;
-        bodyOnly: string;
-        completeBuild: string;
         setLevel: string;
         setLevelHelp: string;
-        weightBasis: string;
       };
       appearance: {
         label: string;

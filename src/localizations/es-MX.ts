@@ -385,12 +385,9 @@ export const esMX = {
       },
       measurement: {
         basis: "Base de las medidas",
-        bodyOnly: "Solo el cuerpo",
-        completeBuild: "Ensamble completo",
         setLevel: "Juego completo emparejado",
         setLevelHelp:
           "Las medidas y el peso de la placa y del inserto describen el juego completo emparejado.",
-        weightBasis: "Base del peso",
       },
       appearance: {
         label: "Apariencia",
