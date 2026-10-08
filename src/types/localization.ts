@@ -389,6 +389,11 @@ export type CompleteLocalizationResource = Readonly<{
         patterns: string;
         selectPattern: string;
       };
+      layout: {
+        label: string;
+        option: string;
+        help: string;
+      };
       setup: {
         title: string;
         default: string;
@@ -401,11 +406,8 @@ export type CompleteLocalizationResource = Readonly<{
         fromScratch: string;
         liveCatalog: string;
         sourceNote: string;
-        incompleteSourceNote: string;
         clickCount: string;
         clicks: string;
-        clearClickCount: string;
-        clickCountCleared: string;
         notRecorded: string;
       };
       magnet: {

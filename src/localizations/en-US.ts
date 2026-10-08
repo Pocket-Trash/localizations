@@ -402,6 +402,11 @@ export const enUS = {
         patterns: "Patterns",
         selectPattern: "Select a pattern",
       },
+      layout: {
+        label: "Magnet layout",
+        option: "{layout} — {count}-click",
+        help: "{layout} has {rows} rows, {columns} lengthwise positions, {slots} slots per side, and {clicks} clicks.",
+      },
       setup: {
         title: "Magnet setup",
         default: "Default setup",
@@ -415,13 +420,8 @@ export const enUS = {
         fromScratch: "Build from scratch",
         liveCatalog: "Live catalog setup",
         sourceNote: "Source note",
-        incompleteSourceNote:
-          "The source does not document a complete structured setup.",
         clickCount: "Click count",
         clicks: "{count} clicks",
-        clearClickCount: "Clear click count",
-        clickCountCleared:
-          "The selected click count was cleared because the layout changed.",
         notRecorded: "Not recorded",
       },
       magnet: {

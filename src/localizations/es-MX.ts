@@ -401,6 +401,11 @@ export const esMX = {
         patterns: "Patrones",
         selectPattern: "Selecciona un patrón",
       },
+      layout: {
+        label: "Distribución de imanes",
+        option: "{layout} — {count} clics",
+        help: "{layout} tiene {rows} filas, {columns} posiciones longitudinales, {slots} espacios por lado y {clicks} clics.",
+      },
       setup: {
         title: "Configuración de imanes",
         default: "Configuración predeterminada",
@@ -414,13 +419,8 @@ export const esMX = {
         fromScratch: "Crear desde cero",
         liveCatalog: "Configuración vigente del catálogo",
         sourceNote: "Nota de la fuente",
-        incompleteSourceNote:
-          "La fuente no documenta una configuración estructurada completa.",
         clickCount: "Cantidad de clics",
         clicks: "{count} clics",
-        clearClickCount: "Borrar cantidad de clics",
-        clickCountCleared:
-          "Se borró la cantidad de clics seleccionada porque cambió la distribución.",
         notRecorded: "No registrado",
       },
       magnet: {

@@ -350,6 +350,10 @@ test("slider vocabulary is complete in English and Spanish", () => {
         "Slider body holds magnets",
       "web.slider.capability.usesInserts": "This slider uses inserts",
       "web.slider.appearance.optional": "Appearance is optional",
+      "web.slider.layout.label": "Magnet layout",
+      "web.slider.layout.option": "{layout} — {count}-click",
+      "web.slider.layout.help":
+        "{layout} has {rows} rows, {columns} lengthwise positions, {slots} slots per side, and {clicks} clicks.",
       "web.slider.setup.default": "Default setup",
       "web.slider.setup.notRecorded": "Not recorded",
       "web.slider.magnet.halfA": "Half A",
@@ -378,6 +382,10 @@ test("slider vocabulary is complete in English and Spanish", () => {
         "El cuerpo del deslizador sostiene los imanes",
       "web.slider.capability.usesInserts": "Este deslizador usa insertos",
       "web.slider.appearance.optional": "La apariencia es opcional",
+      "web.slider.layout.label": "Distribución de imanes",
+      "web.slider.layout.option": "{layout} — {count} clics",
+      "web.slider.layout.help":
+        "{layout} tiene {rows} filas, {columns} posiciones longitudinales, {slots} espacios por lado y {clicks} clics.",
       "web.slider.setup.default": "Configuración predeterminada",
       "web.slider.setup.notRecorded": "No registrado",
       "web.slider.magnet.halfA": "Mitad A",
