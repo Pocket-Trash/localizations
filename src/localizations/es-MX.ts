@@ -376,10 +376,12 @@ export const esMX = {
         preferredMakerLabel: "Término del fabricante: {alias}",
       },
       capability: {
-        label: "Alojamiento de imanes",
+        label: "Uso de insertos",
         bodyHosted: "Integrado en el cuerpo",
         insertDriven: "Basado en inserto",
         notRecorded: "Alojamiento de imanes no registrado",
+        sliderBodyHoldsMagnets: "El cuerpo del deslizador sostiene los imanes",
+        usesInserts: "Este deslizador usa insertos",
       },
       measurement: {
         basis: "Base de las medidas",
@@ -443,7 +445,10 @@ export const esMX = {
         },
       },
       relationship: {
+        addInsert: "Agregar inserto",
         plates: "Placas",
+        inserts: "Insertos",
+        includedInsert: "Inserto incluido",
         includedPlates: "Placas incluidas",
         addPlates: "Agregar placas",
         includedComponents: "Componentes incluidos",
@@ -451,7 +456,7 @@ export const esMX = {
         installed: "Instalado",
         availableInsertOffers: "Ofertas de inserto disponibles",
         inclusionHelp:
-          "Los componentes incluidos describen lo que se vende con este producto. No crean artículos de colección.",
+          "Las piezas incluidas describen lo que se vende con este producto. No crean artículos de colección.",
       },
       component: {
         plateSet: "Juego de placas",
@@ -518,10 +523,9 @@ export const esMX = {
         unavailableComponent: "Componente no disponible",
       },
       validation: {
-        capabilityRequired:
-          "Selecciona integrado en el cuerpo o basado en inserto.",
-        bodyHostedInsert:
-          "Los deslizadores integrados en el cuerpo no pueden instalar un inserto.",
+        capabilityRequired: "Elige si este deslizador usa insertos.",
+        bodyHostedInsert: "Este deslizador no usa insertos.",
+        insertMaterial: "Selecciona exactamente un material para un inserto.",
         alreadyInstalled:
           "Este componente ya está instalado en otro deslizador.",
         differentOwner:
