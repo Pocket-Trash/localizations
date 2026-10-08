@@ -43,8 +43,6 @@ export const esMX = {
     action: {
       addCollection: "",
       addColor: "Agregar color",
-      addCompatibilityAdvisory: "Agregar aviso de compatibilidad",
-      addCompatibilityFamily: "Agregar familia de compatibilidad",
       addFinish: "Agregar acabado",
       addFinishOption: "Agregar opción de acabado",
       addMaker: "",
@@ -64,7 +62,6 @@ export const esMX = {
       moreFilters: "Más filtros",
       moveFinishOptionDown: "Mover la opción de acabado hacia abajo",
       moveFinishOptionUp: "Mover la opción de acabado hacia arriba",
-      removeCompatibilityAdvisory: "Quitar aviso de compatibilidad",
       removeFinishOption: "Quitar opción de acabado",
       removeSelection: "Quitar {name}",
       saveFlag: "Guardar bandera",
@@ -412,7 +409,6 @@ export const esMX = {
         offer: "Oferta de configuración",
         selectOffer: "Selecciona una oferta de configuración",
         custom: "Configuración personalizada",
-        copyAndCustomize: "Copiar y personalizar",
         fromScratch: "Crear desde cero",
         liveCatalog: "Configuración vigente del catálogo",
         sourceNote: "Nota de la fuente",
@@ -447,19 +443,12 @@ export const esMX = {
         },
       },
       relationship: {
-        compatibility: "Compatibilidad",
-        compatibilityFamilies: "Familias de compatibilidad",
-        compatible: "Compatible",
-        incompatible: "No compatible",
         includedComponents: "Componentes incluidos",
         included: "Incluido",
         installed: "Instalado",
         availableInsertOffers: "Ofertas de inserto disponibles",
-        reviewedAdvisory: "Aviso revisado",
         inclusionHelp:
           "Los componentes incluidos describen lo que se vende con este producto. No crean artículos de colección.",
-        compatibilityHelp:
-          "La compatibilidad se basa en familias aprobadas compartidas y es independiente de la inclusión.",
       },
       component: {
         plateSet: "Juego de placas",
@@ -480,10 +469,6 @@ export const esMX = {
           "Al mover este artículo también se mueven {count} artículos conectados del conjunto.",
         uninstallBeforeTransfer:
           "Desinstala este componente antes de instalarlo en otro deslizador.",
-        historyWarning:
-          "Esta instalación era válida cuando se creó. La compatibilidad actual cambió.",
-        grandfatheredWarning:
-          "Esta instalación puede permanecer conectada, pero una reinstalación usará la compatibilidad actual.",
         deleteSliderKeepsComponents:
           "Al eliminar este deslizador, sus componentes quedan como repuestos independientes.",
         deleteComponentDetaches:
@@ -501,9 +486,8 @@ export const esMX = {
       },
       filter: {
         description:
-          "Filtra por material, acabado, color, fabricante, tipo, patrón, familia de compatibilidad o componente exacto.",
+          "Filtra por material, acabado, color, fabricante, tipo, patrón o componente exacto.",
         pattern: "Patrón",
-        compatibilityFamily: "Familia de compatibilidad",
         plate: "Placa para deslizador",
         spinnerButton: "Botón de spinner",
         any: "Coincidir con cualquier opción seleccionada",
@@ -535,8 +519,6 @@ export const esMX = {
           "Selecciona integrado en el cuerpo o basado en inserto.",
         bodyHostedInsert:
           "Los deslizadores integrados en el cuerpo no pueden instalar un inserto.",
-        incompatible:
-          "Selecciona un componente con una familia de compatibilidad aprobada compartida.",
         alreadyInstalled:
           "Este componente ya está instalado en otro deslizador.",
         differentOwner:
@@ -580,8 +562,6 @@ export const esMX = {
           "¿Eliminar permanentemente este deslizador y conservar sus componentes como repuestos?",
       },
       empty: {
-        noCompatiblePlates: "No hay placas compatibles disponibles.",
-        noCompatibleInserts: "No hay insertos compatibles disponibles.",
         noOffers: "No hay ofertas de configuración disponibles.",
         noSearchResults:
           "Ningún producto de deslizador coincide con esta búsqueda.",
