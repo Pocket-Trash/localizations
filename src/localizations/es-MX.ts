@@ -443,6 +443,9 @@ export const esMX = {
         },
       },
       relationship: {
+        plates: "Placas",
+        includedPlates: "Placas incluidas",
+        addPlates: "Agregar placas",
         includedComponents: "Componentes incluidos",
         included: "Incluido",
         installed: "Instalado",

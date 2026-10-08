@@ -428,6 +428,9 @@ export type CompleteLocalizationResource = Readonly<{
         };
       };
       relationship: {
+        plates: string;
+        includedPlates: string;
+        addPlates: string;
         includedComponents: string;
         included: string;
         installed: string;
