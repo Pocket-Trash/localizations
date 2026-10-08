@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.30.1
+
+_Published 2026-10-08._
+
+### Patch Changes
+
+- 1debe5d: Clarify the default and custom slider magnet configuration controls.
+
 ## 0.30.0
 
 _Published 2026-10-08._
