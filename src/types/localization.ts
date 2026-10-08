@@ -310,6 +310,7 @@ export type CompleteLocalizationResource = Readonly<{
         maker: string;
         makerProductUrl: string;
         materials: string;
+        measurementUnit: string;
         name: string;
         productType: string;
         rootUrl: string;
@@ -628,6 +629,7 @@ export type CompleteLocalizationResource = Readonly<{
       invalidDimensionUnit: string;
       invalidLocale: string;
       invalidLogClientKey: string;
+      invalidMeasurementSystem: string;
       invalidTheme: string;
       invalidWeightUnit: string;
       missingSetting: string;
@@ -1244,9 +1246,13 @@ export type CompleteLocalizationResource = Readonly<{
       displayPreferences: string;
       displayPreferencesMachinedPens: string;
       grams: string;
+      imperial: string;
       inches: string;
       language: string;
       light: string;
+      measurementSystem: string;
+      measurementSystemLabel: string;
+      metric: string;
       millimeters: string;
       settings: string;
       system: string;
