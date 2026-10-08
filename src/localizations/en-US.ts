@@ -425,8 +425,18 @@ export const enUS = {
         notRecorded: "Not recorded",
       },
       magnet: {
+        advanced: "Edit individual positions",
+        clear: "Clear magnet configuration",
         configuration: "Magnet configuration",
         configurations: "Magnet configurations",
+        deletePresetConfirmation: 'Delete the preset "{name}"?',
+        differentSides: "Use a different configuration for side B",
+        layoutChanged:
+          "The magnet configuration was cleared because the physical layout changed.",
+        position: "Side {side}, position {position}",
+        preset: "Preset",
+        presets: "Magnet presets",
+        selectPreset: "Select a preset",
         vocabularyLabel: "Configuration label",
         halfA: "Half A",
         halfB: "Half B",

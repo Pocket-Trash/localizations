@@ -411,8 +411,17 @@ export type CompleteLocalizationResource = Readonly<{
         notRecorded: string;
       };
       magnet: {
+        advanced: string;
+        clear: string;
         configuration: string;
         configurations: string;
+        deletePresetConfirmation: string;
+        differentSides: string;
+        layoutChanged: string;
+        position: string;
+        preset: string;
+        presets: string;
+        selectPreset: string;
         vocabularyLabel: string;
         halfA: string;
         halfB: string;
