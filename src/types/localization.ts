@@ -369,6 +369,8 @@ export type CompleteLocalizationResource = Readonly<{
         bodyHosted: string;
         insertDriven: string;
         notRecorded: string;
+        sliderBodyHoldsMagnets: string;
+        usesInserts: string;
       };
       measurement: {
         basis: string;
@@ -428,7 +430,10 @@ export type CompleteLocalizationResource = Readonly<{
         };
       };
       relationship: {
+        addInsert: string;
         plates: string;
+        inserts: string;
+        includedInsert: string;
         includedPlates: string;
         addPlates: string;
         includedComponents: string;
@@ -491,6 +496,7 @@ export type CompleteLocalizationResource = Readonly<{
       validation: {
         capabilityRequired: string;
         bodyHostedInsert: string;
+        insertMaterial: string;
         alreadyInstalled: string;
         differentOwner: string;
         unapproved: string;

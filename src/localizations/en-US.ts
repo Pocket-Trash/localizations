@@ -377,10 +377,12 @@ export const enUS = {
         preferredMakerLabel: "Maker term: {alias}",
       },
       capability: {
-        label: "Magnet host",
+        label: "Insert use",
         bodyHosted: "Body-hosted",
         insertDriven: "Insert-driven",
         notRecorded: "Magnet host not recorded",
+        sliderBodyHoldsMagnets: "Slider body holds magnets",
+        usesInserts: "This slider uses inserts",
       },
       measurement: {
         basis: "Measurement basis",
@@ -444,7 +446,10 @@ export const enUS = {
         },
       },
       relationship: {
+        addInsert: "Add insert",
         plates: "Plates",
+        inserts: "Inserts",
+        includedInsert: "Included insert",
         includedPlates: "Included plates",
         addPlates: "Add plates",
         includedComponents: "Included components",
@@ -452,7 +457,7 @@ export const enUS = {
         installed: "Installed",
         availableInsertOffers: "Available insert offers",
         inclusionHelp:
-          "Included components describe what is sold with this product. They do not create collection items.",
+          "Included parts describe what is sold with this product. They do not create collection items.",
       },
       component: {
         plateSet: "Plate set",
@@ -517,8 +522,9 @@ export const enUS = {
         unavailableComponent: "Unavailable component",
       },
       validation: {
-        capabilityRequired: "Select body-hosted or insert-driven.",
-        bodyHostedInsert: "Body-hosted sliders cannot install an insert.",
+        capabilityRequired: "Choose whether this slider uses inserts.",
+        bodyHostedInsert: "This slider does not use inserts.",
+        insertMaterial: "Select exactly one material for an insert.",
         alreadyInstalled:
           "This component is already installed on another slider.",
         differentOwner: "Every assembly item must have the same owner.",
