@@ -423,7 +423,7 @@ export const enUS = {
         notRecorded: "Not recorded",
       },
       magnet: {
-        advanced: "Edit individual positions",
+        advanced: "Set custom magnet configuration or strengths",
         clear: "Clear magnet configuration",
         configuration: "Magnet configuration",
         configurations: "Magnet configurations",
@@ -443,7 +443,7 @@ export const enUS = {
         group: "Magnet group",
         groups: "Magnet groups",
         size: "Magnet size",
-        grade: "Magnet grade",
+        grade: "Choose magnet strength for all magnets",
         row: "Documented row",
         column: "Documented column",
         insertionPosition: "Insertion position {position}",
