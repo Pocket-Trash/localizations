@@ -1,5 +1,22 @@
 # @pocket-trash/localizations
 
+## 0.30.0
+
+_Published 2026-10-08._
+
+### Minor Changes
+
+- 7d7ac93: Add slider insert-use and included-insert copy.
+- 5108ed9: Add copy for slider magnet configuration editing and preset management.
+
+### Patch Changes
+
+- 8febdc5: Add copy for stored measurement units and the metric or imperial display preference.
+- 2b995da: Remove obsolete slider weight-basis copy.
+- f7e4d83: Remove obsolete slider compatibility and magnet template copy.
+- d9f25b6: Add localized copy for top-level slider plate selection.
+- 772387d: Add localized slider magnet layout copy.
+
 ## 0.29.0
 
 _Published 2026-10-06._
