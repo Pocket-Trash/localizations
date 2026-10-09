@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.31.1
+
+_Published 2026-10-09._
+
+### Patch Changes
+
+- 21f2811: Automate releases with npm Trusted Publishing and safe retries.
+
 ## 0.31.0
 
 _Published 2026-10-09._
