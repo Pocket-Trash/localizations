@@ -6,6 +6,7 @@ import {
   mkdtempSync,
   readFileSync,
   rmSync,
+  unlinkSync,
   writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
@@ -61,6 +62,30 @@ test("a failed publish retries the tagged source before releasing newly merged C
   assert.deepEqual(fixture.state().releases, ["v1.0.0", "v1.0.1", "v1.0.2"]);
 });
 
+test("publication uses the release tag as the signed workflow source", (t) => {
+  const fixture = setup(t);
+  addChange(fixture);
+  const result = fixture.release();
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(
+    fixture.state().provenance["1.0.1"],
+    fixture.git("rev-parse", "v1.0.1^{}"),
+  );
+});
+
+test("recovery excludes modules removed from the following release", (t) => {
+  const fixture = setup(t);
+  writeFileSync(join(fixture.cwd, "old-module.txt"), "removed module");
+  addChange(fixture);
+  assert.notEqual(fixture.release({ FAIL_PUBLISH: "1" }).status, 0);
+  unlinkSync(join(fixture.cwd, "old-module.txt"));
+  addChange(fixture);
+  const result = fixture.release();
+  assert.equal(result.status, 0, result.stderr);
+  assert.ok(fixture.state().artifacts["1.0.1"].includes("old-module.js"));
+  assert.deepEqual(fixture.state().artifacts["1.0.2"], ["index.js"]);
+});
+
 test("a failed GitHub release is repaired without publishing or versioning again", (t) => {
   const fixture = setup(t);
   addChange(fixture);
@@ -109,6 +134,43 @@ for (const env of [
     assert.deepEqual(fixture.state().calls, []);
   });
 }
+
+test("a tag publisher rejects a workflow SHA that differs from its source", (t) => {
+  const fixture = setup(t);
+  const result = fixture.release(
+    { GITHUB_REF: "refs/tags/v1.0.0", GITHUB_SHA: "wrong-source" },
+    ["--publish-tag"],
+  );
+  assert.notEqual(result.status, 0);
+  assert.deepEqual(fixture.state().calls, []);
+});
+
+test("a tag outside protected main cannot publish", (t) => {
+  const fixture = setup(t);
+  const pkg = JSON.parse(
+    readFileSync(join(fixture.cwd, "package.json"), "utf8"),
+  );
+  pkg.version = "1.0.1";
+  writeFileSync(join(fixture.cwd, "package.json"), JSON.stringify(pkg));
+  fixture.git("add", "package.json");
+  fixture.git("commit", "-m", "Unmerged source");
+  fixture.git("tag", "v1.0.1");
+  const result = fixture.release({ GITHUB_REF: "refs/tags/v1.0.1" }, [
+    "--publish-tag",
+  ]);
+  assert.notEqual(result.status, 0);
+  assert.deepEqual(fixture.state().calls, []);
+});
+
+test("a failed tag dispatch preserves the pushed version for manual retry", (t) => {
+  const fixture = setup(t);
+  addChange(fixture);
+  assert.notEqual(fixture.release({ FAIL_DISPATCH: "1" }).status, 0);
+  const source = fixture.git("rev-parse", "v1.0.1^{}");
+  assert.equal(fixture.release().status, 0);
+  assert.equal(fixture.git("rev-parse", "HEAD"), source);
+  assert.equal(fixture.state().provenance["1.0.1"], source);
+});
 
 test("a dirty checkout cannot release", (t) => {
   const fixture = setup(t);
@@ -183,6 +245,17 @@ test("the workflow releases main automatically and exposes an OIDC manual retry"
   assert.match(workflow, /cancel-in-progress: false/);
   assert.match(workflow, /ref: main/);
   assert.match(workflow, /node scripts\/release\.mjs/);
+  assert.match(workflow, /group: publish-\$\{\{ github.ref_type \}\}/);
+  assert.match(workflow, /actions: write/);
+  assert.match(workflow, /node scripts\/release\.mjs --publish-tag/);
+  const publisher = workflow.slice(workflow.indexOf("  publish:"));
+  assert.match(publisher, /github.event_name == 'workflow_dispatch'/);
+  assert.match(publisher, /refs\/tags\/v/);
+  assert.match(publisher, /ref: \$\{\{ github.sha \}\}/);
+  assert.doesNotMatch(
+    publisher,
+    /RELEASE_APP|steps.app|create-github-app-token/,
+  );
   assert.doesNotMatch(workflow, /NPM_TOKEN|NODE_AUTH_TOKEN|npm whoami/);
   assert.equal(
     pkg.scripts.release,
@@ -207,6 +280,8 @@ function setup(t) {
   const bin = join(root, "bin");
   mkdirSync(cwd);
   mkdirSync(bin);
+  mkdirSync(join(cwd, "scripts"));
+  writeFileSync(join(cwd, "scripts/release.mjs"), readFileSync(runner, "utf8"));
   const statePath = join(root, "state.json");
   const git = (...args) =>
     execFileSync("git", args, {
@@ -228,6 +303,7 @@ function setup(t) {
     "# Changelog\n\n## 1.0.0\n\nInitial.\n",
   );
   writeFileSync(join(cwd, "source.txt"), "original source");
+  writeFileSync(join(cwd, ".gitignore"), "dist/\n");
   mkdirSync(join(cwd, ".changeset"));
   writeFileSync(join(cwd, ".changeset", "config.json"), "{}");
   git("add", ".");
@@ -241,6 +317,8 @@ function setup(t) {
       published: { "1.0.0": "original source" },
       releases: ["v1.0.0"],
       calls: [],
+      artifacts: {},
+      provenance: {},
     }),
   );
   for (const name of ["pnpm", "npm", "gh"]) {
@@ -255,14 +333,15 @@ function setup(t) {
     initialCommit: git("rev-parse", "HEAD"),
     state: () => JSON.parse(readFileSync(statePath, "utf8")),
     setState: (state) => writeFileSync(statePath, JSON.stringify(state)),
-    release: (env = {}) =>
-      spawnSync(process.execPath, [runner.pathname], {
+    release: (env = {}, args = []) =>
+      spawnSync(process.execPath, [join(cwd, "scripts/release.mjs"), ...args], {
         cwd,
         encoding: "utf8",
         env: {
           ...process.env,
           PATH: `${bin}:${process.env.PATH}`,
           RELEASE_TEST_STATE: statePath,
+          GITHUB_SHA: git("rev-parse", "HEAD"),
           GITHUB_ACTIONS: "true",
           GITHUB_REF: "refs/heads/main",
           GITHUB_REPOSITORY: "Pocket-Trash/localizations",
@@ -277,8 +356,9 @@ function setup(t) {
 }
 
 const fakeCommands = `#!/usr/bin/env node
-const { readFileSync, writeFileSync, readdirSync, unlinkSync } = require("node:fs");
-const { basename, join } = require("node:path");
+const { readFileSync, writeFileSync, readdirSync, unlinkSync, mkdirSync, existsSync, rmSync } = require("node:fs");
+const { basename, dirname, join } = require("node:path");
+const { execFileSync, spawnSync } = require("node:child_process");
 const statePath = process.env.RELEASE_TEST_STATE;
 const state = JSON.parse(readFileSync(statePath, "utf8"));
 const command = basename(process.argv[1]);
@@ -289,9 +369,7 @@ function fail(code, message) {
   save(); console.log(JSON.stringify({ error: { code } })); console.error(message); process.exit(1);
 }
 function manifest() { return JSON.parse(readFileSync("package.json", "utf8")); }
-if (command === "pnpm" || command === "npm") {
-  if (command === "npm" || (args[0] === "exec" && args[1] === "npm")) {
-    if (command === "pnpm") args.splice(0, 2);
+if (command === "npm") {
     const version = manifest().version;
     if (args[0] === "view") {
       if (process.env.FAIL_REGISTRY) fail(process.env.FAIL_REGISTRY, "Registry failed");
@@ -300,7 +378,7 @@ if (command === "pnpm" || command === "npm") {
       console.log(JSON.stringify(queried));
     } else if (args[0] === "pack") {
       const path = join(args[args.indexOf("--pack-destination") + 1], "package.tgz");
-      writeFileSync(path, JSON.stringify({ version, source: readFileSync("source.txt", "utf8") }));
+      writeFileSync(path, JSON.stringify({ version, source: readFileSync("source.txt", "utf8"), files: readdirSync("dist") }));
       console.log(JSON.stringify([{ filename: "package.tgz", name: manifest().name, version,
         files: process.env.FAIL_PACK ? [] : [{ path: "dist/index.js" }, { path: "dist/index.d.ts" }] }]));
     } else if (args[0] === "publish") {
@@ -308,16 +386,43 @@ if (command === "pnpm" || command === "npm") {
       const tarball = JSON.parse(readFileSync(args[1], "utf8"));
       if (tarball.version in state.published) fail("EPUBLISHCONFLICT", "Version exists");
       state.published[tarball.version] = tarball.source;
+      state.artifacts[tarball.version] = tarball.files;
+      state.provenance[tarball.version] = process.env.GITHUB_SHA;
     } else fail("UNKNOWN", "Unexpected npm command");
-  } else if (args.join(" ") === "changeset version" || args.join(" ") === "run changeset:version") {
+} else if (command === "pnpm") {
+  if (args.join(" ") === "run changeset:version") {
     const pkg = manifest();
     const parts = pkg.version.split("."); parts[2] = String(Number(parts[2]) + 1); pkg.version = parts.join(".");
     writeFileSync("package.json", JSON.stringify(pkg));
     writeFileSync("CHANGELOG.md", "# Changelog\\n\\n## " + pkg.version + "\\n\\nNew release.\\n\\n## 1.0.0\\n\\nInitial.\\n");
     for (const name of readdirSync(".changeset")) if (name.endsWith(".md")) unlinkSync(join(".changeset", name));
   } else if (process.env.FAIL_STEP === args.join(" ")) fail("CHECK", "Validation failed");
+  else if (args[0] === "build") {
+    mkdirSync("dist", { recursive: true });
+    writeFileSync("dist/index.js", readFileSync("source.txt", "utf8"));
+    if (existsSync("old-module.txt")) writeFileSync("dist/old-module.js", readFileSync("old-module.txt", "utf8"));
+  }
 } else if (command === "gh") {
-  if (args[0] === "api") {
+  if (args[0] === "api" && args.includes("POST")) {
+    if (process.env.FAIL_DISPATCH) fail("HTTP500", "Dispatch failed");
+    state.dispatch = args[args.indexOf("-f") + 1].slice(4);
+    console.log(JSON.stringify({ workflow_run_id: 123 }));
+  } else if (args[0] === "run" && args[1] === "watch") {
+    save();
+    const cwd = join(dirname(statePath), "publish-checkout");
+    rmSync(cwd, { recursive: true, force: true });
+    execFileSync("git", ["clone", "--quiet", process.cwd(), cwd]);
+    execFileSync("git", ["remote", "set-url", "origin", execFileSync("git", ["remote", "get-url", "origin"], { encoding: "utf8" }).trim()], { cwd });
+    execFileSync("git", ["fetch", "--quiet", "origin"], { cwd });
+    execFileSync("git", ["checkout", "--quiet", "--detach", state.dispatch], { cwd });
+    const sha = execFileSync("git", ["rev-parse", "HEAD"], { cwd, encoding: "utf8" }).trim();
+    const result = spawnSync(process.execPath, [join(cwd, "scripts/release.mjs"), "--publish-tag"], {
+      cwd, encoding: "utf8", env: { ...process.env, GITHUB_REF: "refs/tags/" + state.dispatch, GITHUB_SHA: sha }
+    });
+    Object.assign(state, JSON.parse(readFileSync(statePath, "utf8")));
+    rmSync(cwd, { recursive: true, force: true });
+    if (result.status !== 0) fail("PUBLISH", result.stderr);
+  } else if (args[0] === "api") {
     const tag = args[1].split("/").pop();
     if (process.env.FAIL_GITHUB) fail("HTTP500", "API failed (HTTP 500)");
     if (!state.releases.includes(tag)) fail("HTTP404", "Not Found (HTTP 404)");

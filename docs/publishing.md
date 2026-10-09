@@ -48,8 +48,11 @@ The runner blocks on the high/critical audit, lint, changelog validation,
 build, and tests. It uses `changeset:version` to combine Changesets into the
 root `CHANGELOG.md`, stamp the release date, and bump the package version.
 It refreshes the lockfile and validates the versioned tarball before pushing
-its release commit and annotated tag atomically. npm publishes that tarball
-through OIDC, and the workflow creates the matching GitHub release.
+its release commit and annotated tag atomically. It dispatches a publishing
+run at that tag, which rebuilds and validates the package, publishes through
+OIDC, and creates the matching GitHub release. The coordinator waits for that
+run before processing newer Changesets. Signed provenance identifies the exact
+release commit.
 
 A retry recovers an incomplete release from its exact tagged source before
 consuming newer Changesets. An already-published version is never republished;
@@ -73,8 +76,9 @@ to avoid scheduling another automatic release.
    writes; the job's GitHub token creates release metadata. npm authenticates
    only through OIDC; do not configure `NPM_TOKEN` or `NODE_AUTH_TOKEN`.
 
-The workflow accepts only `main` and serializes releases on GitHub-hosted
-runners. It installs npm 11.20.0 for OIDC and uses an isolated temporary npm
+The coordinator accepts only `main`; its tag publishing runs verify ancestry
+on `main` and require the checkout to match GitHub's signed workflow SHA.
+Coordination and publication serialize separately on GitHub-hosted runners. It installs npm 11.20.0 for OIDC and uses an isolated temporary npm
 configuration. Missing setup fails safely; retry after completing it.
 Setup is tracked by
 [ENG-429](https://linear.app/pocket-trash/issue/ENG-429/set-up-localizations-trusted-publishing-in-npm-and-github).

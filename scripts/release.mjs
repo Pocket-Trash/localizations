@@ -52,6 +52,7 @@ function githubRelease(tag) {
 
 function pack(directory) {
   run("pnpm", ["security:audit"]);
+  rmSync("dist", { recursive: true, force: true });
   run("pnpm", ["build"]);
   run("pnpm", ["test"]);
   run("pnpm", ["lint"]);
@@ -105,25 +106,71 @@ function publish(tarball) {
   ]);
 }
 
+function requestPublication(tag) {
+  const result = JSON.parse(
+    run("gh", [
+      "api",
+      "--method",
+      "POST",
+      `repos/${process.env.GITHUB_REPOSITORY}/actions/workflows/publish.yml/dispatches`,
+      "-H",
+      "X-GitHub-Api-Version: 2026-03-10",
+      "-f",
+      `ref=${tag}`,
+    ]),
+  );
+  if (!Number.isSafeInteger(result.workflow_run_id))
+    throw new Error("GitHub did not return the publishing run ID.");
+  run("gh", [
+    "run",
+    "watch",
+    String(result.workflow_run_id),
+    "--exit-status",
+    "--interval",
+    "5",
+  ]);
+}
+
 function recover(name, version, tag) {
   const exists = published(name, version);
-  let url = githubRelease(tag);
+  const url = githubRelease(tag);
   if (exists && url) return;
+  if (!exists) {
+    requestPublication(tag);
+    if (!published(name, version) || !githubRelease(tag))
+      throw new Error(`Publishing run did not complete ${tag}.`);
+    return;
+  }
+  // Older published tags may predate this workflow; repair their metadata here.
   const head = run("git", ["rev-parse", "HEAD"]);
-  const directory = mkdtempSync(join(tmpdir(), "pocket-trash-release-"));
   try {
     run("git", ["checkout", "--detach", tag]);
-    if (!exists) {
-      run("pnpm", ["install", "--frozen-lockfile"]);
-      publish(pack(directory));
-    }
-    if (!url) url = createRelease(tag);
-    console.log(
-      `Recovered ${name}@${version} from ${run("git", ["rev-parse", "HEAD"])}. ${url}`,
-    );
+    createRelease(tag);
   } finally {
     run("git", ["checkout", "--detach", head]);
-    if (!exists) run("pnpm", ["install", "--frozen-lockfile"]);
+  }
+}
+
+function publishTag() {
+  const { name, version } = manifest();
+  const tag = `v${version}`;
+  const head = run("git", ["rev-parse", "HEAD"]);
+  if (
+    process.env.GITHUB_REF !== `refs/tags/${tag}` ||
+    !/^v\d+\.\d+\.\d+(?:-[\w.-]+)?$/.test(tag) ||
+    head !== process.env.GITHUB_SHA ||
+    run("git", ["rev-parse", `${tag}^{}`]) !== head
+  )
+    throw new Error(
+      "Publishing requires the matching immutable release tag and workflow SHA.",
+    );
+  run("git", ["merge-base", "--is-ancestor", "HEAD", "origin/main"]);
+  const directory = mkdtempSync(join(tmpdir(), "pocket-trash-release-"));
+  try {
+    if (!published(name, version)) publish(pack(directory));
+    const url = githubRelease(tag) || createRelease(tag);
+    console.log(`Published ${name}@${version} from ${head}. ${url}`);
+  } finally {
     rmSync(directory, { recursive: true, force: true });
   }
 }
@@ -131,7 +178,11 @@ function recover(name, version, tag) {
 function main() {
   if (
     process.env.GITHUB_ACTIONS !== "true" ||
-    process.env.GITHUB_REF !== "refs/heads/main" ||
+    (process.env.GITHUB_REF !== "refs/heads/main" &&
+      !(
+        process.argv[2] === "--publish-tag" &&
+        process.env.GITHUB_REF?.startsWith("refs/tags/v")
+      )) ||
     !process.env.ACTIONS_ID_TOKEN_REQUEST_URL ||
     !process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN
   ) {
@@ -146,6 +197,9 @@ function main() {
   }
   if (run("git", ["status", "--porcelain"]))
     throw new Error("Release requires a clean working tree.");
+  if (process.argv[2] === "--publish-tag") return publishTag();
+  if (process.argv.length !== 2)
+    throw new Error("Unexpected release arguments.");
   const { name, version } = manifest();
   const tag = `v${version}`;
   const pending = readdirSync(".changeset").some(
@@ -177,7 +231,7 @@ function main() {
       throw new Error(
         `npm already contains ${next.name}@${next.version} without its release tag.`,
       );
-    const tarball = pack(directory);
+    pack(directory);
     const changes = run("git", ["status", "--porcelain"]).split("\n");
     if (
       changes.some(
@@ -205,10 +259,11 @@ function main() {
       "HEAD:refs/heads/main",
       `refs/tags/${nextTag}`,
     ]);
-    publish(tarball);
-    const url = createRelease(nextTag);
+    requestPublication(nextTag);
+    if (!published(next.name, next.version) || !githubRelease(nextTag))
+      throw new Error(`Publishing run did not complete ${nextTag}.`);
     console.log(
-      `Published ${next.name}@${next.version} from ${run("git", ["rev-parse", "HEAD"])}. ${url}`,
+      `Completed ${next.name}@${next.version} from ${run("git", ["rev-parse", "HEAD"])}.`,
     );
   } finally {
     rmSync(directory, { recursive: true, force: true });
