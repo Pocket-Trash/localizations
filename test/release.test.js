@@ -25,6 +25,56 @@ test("an already complete release is a no-op without another version", (t) => {
   assert.deepEqual(Object.keys(fixture.state().published), ["1.0.0"]);
 });
 
+test("a completed release retries stale registry metadata without attempting publication", (t) => {
+  const fixture = setup(t);
+  const result = fixture.release({ STALE_EXISTING_READS: "2" });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Nothing to release/);
+  assert.equal(fixture.git("rev-parse", "HEAD"), fixture.initialCommit);
+  assert.equal(
+    fixture
+      .state()
+      .calls.filter((call) => call[0] === "npm" && call[1] === "publish")
+      .length,
+    0,
+  );
+});
+
+test("stale npm metadata can repair missing GitHub release metadata without republishing", (t) => {
+  const fixture = setup(t);
+  const state = fixture.state();
+  state.releases = [];
+  fixture.setState(state);
+  const result = fixture.release({ STALE_EXISTING_READS: "2" });
+  assert.equal(result.status, 0, result.stderr);
+  assert.ok(fixture.state().releases.includes("v1.0.0"));
+  assert.equal(fixture.git("rev-parse", "HEAD"), fixture.initialCommit);
+  assert.equal(
+    fixture
+      .state()
+      .calls.filter((call) => call[0] === "npm" && call[1] === "publish")
+      .length,
+    0,
+  );
+});
+
+test("a truly unpublished tag with an existing GitHub release is recovered after a bounded wait", (t) => {
+  const fixture = setup(t);
+  const state = fixture.state();
+  state.published = {};
+  fixture.setState(state);
+  const result = fixture.release();
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(fixture.state().published["1.0.0"], "original source");
+  assert.deepEqual(fixture.state().releases, ["v1.0.0"]);
+  assert.equal(fixture.git("rev-parse", "HEAD"), fixture.initialCommit);
+  const delay = fixture
+    .state()
+    .calls.filter((call) => call[0] === "sleep")
+    .reduce((total, call) => total + Number(call[1]), 0);
+  assert.ok(delay > 0 && delay <= 360);
+});
+
 test("pending Changesets publish a validated version with a matching git tag and GitHub release", (t) => {
   const fixture = setup(t);
   writeFileSync(
@@ -340,7 +390,7 @@ function setup(t) {
       provenance: {},
     }),
   );
-  for (const name of ["pnpm", "npm", "gh"]) {
+  for (const name of ["pnpm", "npm", "gh", "sleep"]) {
     const path = join(bin, name);
     writeFileSync(path, fakeCommands);
     chmodSync(path, 0o755);
@@ -394,6 +444,10 @@ if (command === "npm") {
       if (process.env.FAIL_REGISTRY) fail(process.env.FAIL_REGISTRY, "Registry failed");
       const queried = args[1].slice(args[1].lastIndexOf("@") + 1);
       if (process.env.STALE_AFTER_PUBLISH && queried !== "1.0.0") fail("E404", "Registry metadata still propagating");
+      if (queried === "1.0.0" && process.env.STALE_EXISTING_READS) {
+        state.staleReads = (state.staleReads || 0) + 1;
+        if (state.staleReads <= Number(process.env.STALE_EXISTING_READS)) fail("E404", "Registry metadata still propagating");
+      }
       if (!(queried in state.published)) fail("E404", "Version not found");
       console.log(JSON.stringify(queried));
     } else if (args[0] === "pack") {
@@ -452,6 +506,8 @@ if (command === "npm") {
     state.releases.push(args[2]);
     console.log("https://github.example.test/releases/" + args[2]);
   } else fail("UNKNOWN", "Unexpected gh command");
+} else if (command === "sleep") {
+  if (args.join(" ") !== "30") fail("UNKNOWN", "Unexpected metadata retry delay");
 } else fail("UNKNOWN", "Local npm login must not be used");
 save();
 `;

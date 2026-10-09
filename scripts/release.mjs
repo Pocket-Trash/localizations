@@ -23,6 +23,7 @@ function published(name, version) {
         `${name}@${version}`,
         "version",
         "--json",
+        "--prefer-online",
         "--registry",
         "https://registry.npmjs.org",
       ]),
@@ -133,8 +134,16 @@ function requestPublication(tag) {
 }
 
 function recover(name, version, tag) {
-  const exists = published(name, version);
+  let exists = published(name, version);
   const url = githubRelease(tag);
+  if (!exists) {
+    console.log(`Waiting for npm metadata before retrying ${name}@${version}.`);
+    // shortcut: allow six minutes for registry propagation; extend if it takes longer.
+    for (let attempt = 0; attempt < 12 && !exists; attempt++) {
+      run("sleep", ["30"]);
+      exists = published(name, version);
+    }
+  }
   if (exists && url) return;
   if (!exists) {
     requestPublication(tag);
