@@ -23,6 +23,7 @@ function published(name, version) {
         `${name}@${version}`,
         "version",
         "--json",
+        "--prefer-online",
         "--registry",
         "https://registry.npmjs.org",
       ]),
@@ -121,6 +122,7 @@ function requestPublication(tag) {
   );
   if (!Number.isSafeInteger(result.workflow_run_id))
     throw new Error("GitHub did not return the publishing run ID.");
+  // A successful publishing job is authoritative while npm metadata propagates.
   run("gh", [
     "run",
     "watch",
@@ -132,13 +134,19 @@ function requestPublication(tag) {
 }
 
 function recover(name, version, tag) {
-  const exists = published(name, version);
+  let exists = published(name, version);
   const url = githubRelease(tag);
+  if (!exists) {
+    console.log(`Waiting for npm metadata before retrying ${name}@${version}.`);
+    // shortcut: allow six minutes for registry propagation; extend if it takes longer.
+    for (let attempt = 0; attempt < 12 && !exists; attempt++) {
+      run("sleep", ["30"]);
+      exists = published(name, version);
+    }
+  }
   if (exists && url) return;
   if (!exists) {
     requestPublication(tag);
-    if (!published(name, version) || !githubRelease(tag))
-      throw new Error(`Publishing run did not complete ${tag}.`);
     return;
   }
   // Older published tags may predate this workflow; repair their metadata here.
@@ -260,8 +268,6 @@ function main() {
       `refs/tags/${nextTag}`,
     ]);
     requestPublication(nextTag);
-    if (!published(next.name, next.version) || !githubRelease(nextTag))
-      throw new Error(`Publishing run did not complete ${nextTag}.`);
     console.log(
       `Completed ${next.name}@${next.version} from ${run("git", ["rev-parse", "HEAD"])}.`,
     );

@@ -52,12 +52,17 @@ its release commit and annotated tag atomically. It dispatches a publishing
 run at that tag, which rebuilds and validates the package, publishes through
 OIDC, and creates the matching GitHub release. The coordinator waits for that
 run before processing newer Changesets. Signed provenance identifies the exact
-release commit.
+release commit. A successful publishing job completes the release even while
+npm registry metadata takes a few minutes to become readable.
 
 A retry recovers an incomplete release from its exact tagged source before
 consuming newer Changesets. An already-published version is never republished;
-a missing GitHub release can be repaired independently. Completed releases
-are a no-op. Network, authentication, and server errors stop the run rather
+a missing GitHub release can be repaired independently. Recovery allows up to six minutes for missing npm
+metadata to propagate before
+attempting publication. A genuinely unpublished tagged version incurs that wait;
+longer propagation can still result in a safely rejected duplicate attempt.
+Completed releases are a no-op. Network, authentication, and server errors stop
+the run rather
 than being interpreted as missing versions. Release commits use `[skip ci]`
 to avoid scheduling another automatic release.
 
