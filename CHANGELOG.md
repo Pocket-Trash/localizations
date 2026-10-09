@@ -1,5 +1,17 @@
 # @pocket-trash/localizations
 
+## 0.31.0
+
+_Published 2026-10-09._
+
+### Minor Changes
+
+- 21c450d: Add material alloy and grade copy in English and Spanish.
+
+### Patch Changes
+
+- 44f94c3: update skills to 0.5.4
+
 ## 0.30.1
 
 _Published 2026-10-08._
