@@ -1,6 +1,8 @@
 name: Publish
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -8,60 +10,41 @@ permissions:
   id-token: write
 
 concurrency:
-  group: publish-${{ github.ref }}
+  group: publish
   cancel-in-progress: false
 
 jobs:
   publish:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      - name: Create release App token
+        id: app
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+          token: ${{ steps.app.outputs.token }}
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22.20.0
-          registry-url: https://registry.npmjs.org
-          cache: pnpm
+      - name: Install publishing CLI
+        run: npm install --global npm@11.20.0 --ignore-scripts
       - run: pnpm install --frozen-lockfile
-      - run: pnpm security:audit
-      - run: pnpm test
-      - id: pending
-        run: |
-          if find .changeset -maxdepth 1 -name '*.md' ! -name README.md | grep -q .; then
-            echo "has_changesets=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_changesets=false" >> "$GITHUB_OUTPUT"
-          fi
-      - if: steps.pending.outputs.has_changesets == 'true'
-        run: pnpm run changeset:version
-      - if: steps.pending.outputs.has_changesets == 'true'
-        run: pnpm install --lockfile-only
-      - if: steps.pending.outputs.has_changesets == 'true'
+      - name: Configure release author
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package.json pnpm-lock.yaml CHANGELOG.md .changeset
-          git commit -m "chore: version packages [skip ci]"
-          git push
-      - id: unpublished
-        run: |
-          PACKAGE_NAME=$(node -p "require('./package.json').name")
-          VERSION=$(node -p "require('./package.json').version")
-
-          if pnpm exec npm view "$PACKAGE_NAME@$VERSION" version --silent >/dev/null 2>&1; then
-            echo "has_unpublished_version=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_unpublished_version=true" >> "$GITHUB_OUTPUT"
-          fi
-      - if: steps.unpublished.outputs.has_unpublished_version == 'true'
-        run: pnpm changeset publish
-      - if: steps.unpublished.outputs.has_unpublished_version == 'true'
-        run: git push --follow-tags
-      - if: steps.unpublished.outputs.has_unpublished_version == 'true'
+      - name: Release with npm Trusted Publishing
         env:
           GH_TOKEN: ${{ github.token }}
+          NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/publish.npmrc
         run: |
-          VERSION=$(node -p "require('./package.json').version")
-          gh release create "v$VERSION" --title "v$VERSION" --generate-notes --verify-tag
+          touch "$NPM_CONFIG_USERCONFIG"
+          node scripts/release.mjs

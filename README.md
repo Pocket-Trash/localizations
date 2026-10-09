@@ -224,7 +224,7 @@ Common commands:
 | `pnpm localization:create nl-BE` | Create and wire a new locale from the `en-US` source shape. |
 | `pnpm localization:sync` | Add missing source keys to existing non-English locale files. |
 | `pnpm changeset` | Create a release changeset for a pull request. |
-| `pnpm release` | Publish pending package changes from the release workflow. |
+| `pnpm release` | Queue the main publishing workflow to retry a release. |
 
 ```sh
 pnpm install
