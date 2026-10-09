@@ -982,6 +982,28 @@ export const enUS = {
       },
     },
     materials: {
+      specific: {
+        title: "Alloys and grades",
+        add: "Add alloy or grade",
+        edit: "Edit alloy or grade",
+        name: "Alloy or grade name",
+        empty: "No alloys or grades have been added.",
+        select: "Select an alloy or grade",
+        optional: "Alloy or grade (optional)",
+        general: "General only",
+        help: "Choose an alloy or grade for this material, or leave it general.",
+        noProducts: "No products use this alloy or grade yet.",
+        noCollectionItems: "No collection items use this alloy or grade yet.",
+        noImages: "No images have been added for this alloy or grade.",
+      },
+      slug: {
+        help: "Renaming keeps the current slug. Select Update slug to change the URL.",
+        update: "Update slug",
+        preview: "New URL: {url}",
+        confirmation:
+          "Change {oldUrl} to {newUrl}? The old URL will stop working.",
+        affected: "Nested material URLs affected: {count}",
+      },
       admin: {
         addTitle: "Add material",
         created: "Material added.",
@@ -1014,6 +1036,12 @@ export const enUS = {
       },
       image: {
         alt: "Image of {name}",
+        scope: "Image scope",
+        generalScope: "General",
+        specificScope: "Alloy or grade",
+        move: "Move image",
+        moveConfirmation: "Move this image to {scope}?",
+        moved: "Image moved.",
         archiveConfirmation: "Archive this material image?",
         empty: "No images have been added.",
         placeholder: "No image available for {name}",
@@ -1026,6 +1054,18 @@ export const enUS = {
       },
       validation: {
         duplicateImage: "This image has already been added.",
+        invalidSpecific: "Choose an alloy or grade belonging to this material.",
+        duplicateSpecific:
+          "This alloy or grade name already exists for this material.",
+        duplicateAssignment:
+          "This material and alloy or grade combination is already selected.",
+        parentNameConflict:
+          "An alloy or grade cannot have the same name as its general material.",
+        slugCollision: "This slug is already in use.",
+        duplicateAtDestination:
+          "This image already exists in the destination scope.",
+        immutableParent:
+          "The general material of an alloy or grade cannot be changed.",
       },
     },
     makers: {
