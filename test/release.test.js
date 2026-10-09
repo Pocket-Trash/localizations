@@ -62,6 +62,25 @@ test("a failed publish retries the tagged source before releasing newly merged C
   assert.deepEqual(fixture.state().releases, ["v1.0.0", "v1.0.1", "v1.0.2"]);
 });
 
+test("successful publication and recovery do not fail on registry metadata propagation", (t) => {
+  const fixture = setup(t);
+  addChange(fixture);
+  const result = fixture.release({ STALE_AFTER_PUBLISH: "1" });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(fixture.state().published["1.0.1"], "original source");
+  assert.ok(fixture.state().releases.includes("v1.0.1"));
+
+  const recovery = setup(t);
+  addChange(recovery);
+  assert.notEqual(recovery.release({ FAIL_PUBLISH: "1" }).status, 0);
+  const source = recovery.git("rev-parse", "HEAD");
+  const retry = recovery.release({ STALE_AFTER_PUBLISH: "1" });
+  assert.equal(retry.status, 0, retry.stderr);
+  assert.equal(recovery.git("rev-parse", "HEAD"), source);
+  assert.equal(recovery.state().published["1.0.1"], "original source");
+  assert.ok(recovery.state().releases.includes("v1.0.1"));
+});
+
 test("publication uses the release tag as the signed workflow source", (t) => {
   const fixture = setup(t);
   addChange(fixture);
@@ -374,6 +393,7 @@ if (command === "npm") {
     if (args[0] === "view") {
       if (process.env.FAIL_REGISTRY) fail(process.env.FAIL_REGISTRY, "Registry failed");
       const queried = args[1].slice(args[1].lastIndexOf("@") + 1);
+      if (process.env.STALE_AFTER_PUBLISH && queried !== "1.0.0") fail("E404", "Registry metadata still propagating");
       if (!(queried in state.published)) fail("E404", "Version not found");
       console.log(JSON.stringify(queried));
     } else if (args[0] === "pack") {

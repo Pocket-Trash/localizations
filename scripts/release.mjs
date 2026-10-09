@@ -121,6 +121,7 @@ function requestPublication(tag) {
   );
   if (!Number.isSafeInteger(result.workflow_run_id))
     throw new Error("GitHub did not return the publishing run ID.");
+  // A successful publishing job is authoritative while npm metadata propagates.
   run("gh", [
     "run",
     "watch",
@@ -137,8 +138,6 @@ function recover(name, version, tag) {
   if (exists && url) return;
   if (!exists) {
     requestPublication(tag);
-    if (!published(name, version) || !githubRelease(tag))
-      throw new Error(`Publishing run did not complete ${tag}.`);
     return;
   }
   // Older published tags may predate this workflow; repair their metadata here.
@@ -260,8 +259,6 @@ function main() {
       `refs/tags/${nextTag}`,
     ]);
     requestPublication(nextTag);
-    if (!published(next.name, next.version) || !githubRelease(nextTag))
-      throw new Error(`Publishing run did not complete ${nextTag}.`);
     console.log(
       `Completed ${next.name}@${next.version} from ${run("git", ["rev-parse", "HEAD"])}.`,
     );
