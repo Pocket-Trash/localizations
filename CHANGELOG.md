@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.31.2
+
+_Published 2026-10-09._
+
+### Patch Changes
+
+- a0374e5: Avoid failed release runs while npm registry metadata propagates.
+
 ## 0.31.1
 
 _Published 2026-10-09._
