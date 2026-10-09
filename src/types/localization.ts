@@ -919,6 +919,27 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     materials: {
+      specific: {
+        title: string;
+        add: string;
+        edit: string;
+        name: string;
+        empty: string;
+        select: string;
+        optional: string;
+        general: string;
+        help: string;
+        noProducts: string;
+        noCollectionItems: string;
+        noImages: string;
+      };
+      slug: {
+        help: string;
+        update: string;
+        preview: string;
+        confirmation: string;
+        affected: string;
+      };
       admin: {
         addTitle: string;
         created: string;
@@ -951,6 +972,12 @@ export type CompleteLocalizationResource = Readonly<{
       };
       image: {
         alt: string;
+        scope: string;
+        generalScope: string;
+        specificScope: string;
+        move: string;
+        moveConfirmation: string;
+        moved: string;
         archiveConfirmation: string;
         empty: string;
         placeholder: string;
@@ -961,6 +988,13 @@ export type CompleteLocalizationResource = Readonly<{
       };
       validation: {
         duplicateImage: string;
+        invalidSpecific: string;
+        duplicateSpecific: string;
+        duplicateAssignment: string;
+        parentNameConflict: string;
+        slugCollision: string;
+        duplicateAtDestination: string;
+        immutableParent: string;
       };
     };
     makers: {

@@ -991,6 +991,29 @@ export const esMX = {
       },
     },
     materials: {
+      specific: {
+        title: "Aleaciones y grados",
+        add: "Agregar aleación o grado",
+        edit: "Editar aleación o grado",
+        name: "Nombre de la aleación o grado",
+        empty: "No se han agregado aleaciones ni grados.",
+        select: "Selecciona una aleación o grado",
+        optional: "Aleación o grado (opcional)",
+        general: "Solo material general",
+        help: "Elige una aleación o grado para este material, o conserva el material general.",
+        noProducts: "Aún no hay productos que usen esta aleación o grado.",
+        noCollectionItems:
+          "Aún no hay artículos de colección que usen esta aleación o grado.",
+        noImages: "No se han agregado imágenes para esta aleación o grado.",
+      },
+      slug: {
+        help: "Cambiar el nombre conserva el slug actual. Selecciona Actualizar slug para cambiar la URL.",
+        update: "Actualizar slug",
+        preview: "Nueva URL: {url}",
+        confirmation:
+          "¿Cambiar {oldUrl} a {newUrl}? La URL anterior dejará de funcionar.",
+        affected: "URL de materiales anidadas afectadas: {count}",
+      },
       admin: {
         addTitle: "Agregar material",
         created: "Se agregó el material.",
@@ -1025,6 +1048,12 @@ export const esMX = {
       },
       image: {
         alt: "Imagen de {name}",
+        scope: "Ámbito de la imagen",
+        generalScope: "General",
+        specificScope: "Aleación o grado",
+        move: "Mover imagen",
+        moveConfirmation: "¿Mover esta imagen a {scope}?",
+        moved: "Se movió la imagen.",
         archiveConfirmation: "¿Quieres archivar esta imagen del material?",
         empty: "No se han agregado imágenes.",
         placeholder: "No hay imagen disponible para {name}",
@@ -1037,6 +1066,19 @@ export const esMX = {
       },
       validation: {
         duplicateImage: "Esta imagen ya se agregó.",
+        invalidSpecific:
+          "Elige una aleación o grado que pertenezca a este material.",
+        duplicateSpecific:
+          "Este nombre de aleación o grado ya existe para este material.",
+        duplicateAssignment:
+          "Esta combinación de material y aleación o grado ya está seleccionada.",
+        parentNameConflict:
+          "Una aleación o grado no puede tener el mismo nombre que su material general.",
+        slugCollision: "Este slug ya está en uso.",
+        duplicateAtDestination:
+          "Esta imagen ya existe en el ámbito de destino.",
+        immutableParent:
+          "No se puede cambiar el material general de una aleación o grado.",
       },
     },
     makers: {
