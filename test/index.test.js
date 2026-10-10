@@ -247,6 +247,8 @@ test("admin hub and feedback notification copy is complete", () => {
 test("product directory and configuration copy is complete", () => {
   const expected = {
     "en-US": {
+      "web.admin.config.products.description":
+        "Search product types and choose which ones are parts or accessories.",
       "web.admin.config.products.noResults":
         "No product types match your search.",
       "web.admin.config.products.partOrAccessoryLabel":
@@ -259,6 +261,8 @@ test("product directory and configuration copy is complete", () => {
       "web.catalog.partsAndAccessories": "Parts and Accessories",
     },
     "es-MX": {
+      "web.admin.config.products.description":
+        "Busca tipos de producto y elige cuáles son piezas o accesorios.",
       "web.admin.config.products.noResults":
         "Ningún tipo de producto coincide con tu búsqueda.",
       "web.admin.config.products.partOrAccessoryLabel":
