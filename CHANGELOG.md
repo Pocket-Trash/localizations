@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.31.3
+
+_Published 2026-10-10._
+
+### Patch Changes
+
+- 26006be: Add localized product directory and administrator configuration copy.
+
 ## 0.31.2
 
 _Published 2026-10-09._
