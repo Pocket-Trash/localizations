@@ -80,6 +80,8 @@ export const esMX = {
       config: {
         title: "Configuración y ajustes",
         products: {
+          description:
+            "Busca tipos de producto y elige cuáles son piezas o accesorios.",
           noResults: "Ningún tipo de producto coincide con tu búsqueda.",
           partOrAccessoryLabel: "Marcar {name} como pieza o accesorio",
           searchPlaceholder: "Buscar tipos de producto",

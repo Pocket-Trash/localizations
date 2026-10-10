@@ -80,6 +80,8 @@ export const enUS = {
       config: {
         title: "Config and Settings",
         products: {
+          description:
+            "Search product types and choose which ones are parts or accessories.",
           noResults: "No product types match your search.",
           partOrAccessoryLabel: "Mark {name} as a part or accessory",
           searchPlaceholder: "Search product types",

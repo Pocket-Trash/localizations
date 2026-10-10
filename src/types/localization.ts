@@ -81,6 +81,7 @@ export type CompleteLocalizationResource = Readonly<{
       config: {
         title: string;
         products: {
+          description: string;
           noResults: string;
           partOrAccessoryLabel: string;
           searchPlaceholder: string;
