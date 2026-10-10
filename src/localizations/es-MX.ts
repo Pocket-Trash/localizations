@@ -77,6 +77,16 @@ export const esMX = {
       visitProductPage: "Visitar pagina del producto",
     },
     admin: {
+      config: {
+        title: "Configuración y ajustes",
+        products: {
+          noResults: "Ningún tipo de producto coincide con tu búsqueda.",
+          partOrAccessoryLabel: "Marcar {name} como pieza o accesorio",
+          searchPlaceholder: "Buscar tipos de producto",
+          updated: "Se actualizó {name}.",
+          updateFailed: "No se pudo actualizar {name}.",
+        },
+      },
       audit: {
         action: "Acción",
         actor: "Actor",
@@ -254,6 +264,7 @@ export const esMX = {
       },
     },
     catalog: {
+      allProducts: "Todos los productos",
       approval: {
         approve: "Aprobar producto",
         collectionItem: {
@@ -356,6 +367,7 @@ export const esMX = {
       materialCount: "Materiales: {count}",
       noProducts: "",
       notImplemented: "",
+      partsAndAccessories: "Piezas y accesorios",
       selectColorEffect: "Selecciona un efecto de color",
       selectColors: "Selecciona colores",
       selectFinishes: "Selecciona acabados",
