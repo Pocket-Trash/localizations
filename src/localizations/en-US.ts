@@ -77,6 +77,16 @@ export const enUS = {
       visitProductPage: "Visit product page",
     },
     admin: {
+      config: {
+        title: "Config and Settings",
+        products: {
+          noResults: "No product types match your search.",
+          partOrAccessoryLabel: "Mark {name} as a part or accessory",
+          searchPlaceholder: "Search product types",
+          updated: "Updated {name}.",
+          updateFailed: "Could not update {name}.",
+        },
+      },
       audit: {
         action: "Action",
         actor: "Actor",
@@ -251,6 +261,7 @@ export const enUS = {
       },
     },
     catalog: {
+      allProducts: "All Products",
       approval: {
         approve: "Approve product",
         collectionItem: {
@@ -352,6 +363,7 @@ export const enUS = {
       materialCount: "Materials: {count}",
       noProducts: "No products yet.",
       notImplemented: "This product type is not implemented yet.",
+      partsAndAccessories: "Parts and Accessories",
       selectColorEffect: "Select a colour effect",
       selectColors: "Select colours",
       selectFinishes: "Select finishes",

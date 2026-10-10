@@ -244,6 +244,42 @@ test("admin hub and feedback notification copy is complete", () => {
   }
 });
 
+test("product directory and configuration copy is complete", () => {
+  const expected = {
+    "en-US": {
+      "web.admin.config.products.noResults":
+        "No product types match your search.",
+      "web.admin.config.products.partOrAccessoryLabel":
+        "Mark {name} as a part or accessory",
+      "web.admin.config.products.searchPlaceholder": "Search product types",
+      "web.admin.config.products.updated": "Updated {name}.",
+      "web.admin.config.products.updateFailed": "Could not update {name}.",
+      "web.admin.config.title": "Config and Settings",
+      "web.catalog.allProducts": "All Products",
+      "web.catalog.partsAndAccessories": "Parts and Accessories",
+    },
+    "es-MX": {
+      "web.admin.config.products.noResults":
+        "Ningún tipo de producto coincide con tu búsqueda.",
+      "web.admin.config.products.partOrAccessoryLabel":
+        "Marcar {name} como pieza o accesorio",
+      "web.admin.config.products.searchPlaceholder": "Buscar tipos de producto",
+      "web.admin.config.products.updated": "Se actualizó {name}.",
+      "web.admin.config.products.updateFailed": "No se pudo actualizar {name}.",
+      "web.admin.config.title": "Configuración y ajustes",
+      "web.catalog.allProducts": "Todos los productos",
+      "web.catalog.partsAndAccessories": "Piezas y accesorios",
+    },
+  };
+
+  for (const [locale, entries] of Object.entries(expected)) {
+    for (const [key, value] of Object.entries(entries)) {
+      assert.ok(translationKeys.includes(key));
+      assert.equal(translations[locale][key], value);
+    }
+  }
+});
+
 test("materials copy is complete in both supported locales", () => {
   const keys = [
     "web.admin.hub.materials",

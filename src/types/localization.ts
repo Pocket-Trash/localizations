@@ -78,6 +78,16 @@ export type CompleteLocalizationResource = Readonly<{
       visitProductPage: string;
     };
     admin: {
+      config: {
+        title: string;
+        products: {
+          noResults: string;
+          partOrAccessoryLabel: string;
+          searchPlaceholder: string;
+          updated: string;
+          updateFailed: string;
+        };
+      };
       audit: {
         action: string;
         actor: string;
@@ -246,6 +256,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     catalog: {
+      allProducts: string;
       approval: {
         approve: string;
         collectionItem: {
@@ -340,6 +351,7 @@ export type CompleteLocalizationResource = Readonly<{
       materialCount: string;
       noProducts: string;
       notImplemented: string;
+      partsAndAccessories: string;
       selectColorEffect: string;
       selectColors: string;
       selectFinishes: string;
