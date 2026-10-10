@@ -24,6 +24,46 @@ export type CompleteLocalizationResource = Readonly<{
   locale: {
     current: string;
   };
+  catalog: {
+    configurationSlots: {
+      actuator: string;
+      appearance: string;
+      clip: string;
+      material: string;
+      mechanism: string;
+      tip: string;
+      topCap: string;
+    };
+    markets: {
+      global: string;
+    };
+    penNoseProfiles: {
+      cone: string;
+      round: string;
+      step: string;
+    };
+    penPartRoles: {
+      actuator: string;
+      clip: string;
+      mechanism: string;
+      tip: string;
+      topCap: string;
+    };
+    productTypes: {
+      pen: string;
+      "pen-actuator": string;
+      "pen-clip": string;
+      "pen-mechanism": string;
+      "pen-tip": string;
+      "pen-top-cap": string;
+      refill: string;
+    };
+    refillCompatibilityGroups: {
+      energel: string;
+      parkerG2: string;
+      pilotG2: string;
+    };
+  };
   web: {
     site: {
       name: string;
@@ -607,6 +647,7 @@ export type CompleteLocalizationResource = Readonly<{
         description: string;
         displayName: string;
         name: string;
+        serialNumber: string;
         summary: string;
       };
       finishChoice: {
@@ -622,8 +663,150 @@ export type CompleteLocalizationResource = Readonly<{
         addNew: string;
         placeholder: string;
       };
+      serial: {
+        hasSerialNumber: string;
+      };
       visibility: {
         privateCallout: string;
+      };
+    };
+    pens: {
+      admin: {
+        action: {
+          "compatibility-assertion": string;
+          "compatibility-evidence": string;
+          "compatibility-group": string;
+          "compatibility-membership": string;
+          "configuration-choice": string;
+          "configuration-rule": string;
+          "configuration-slot": string;
+          "configuration-slot-required": string;
+          market: string;
+          "offering-identifier": string;
+          "offering-market-status": string;
+          "refill-ink-color": string;
+          "refill-offering": string;
+          "refill-tip-style": string;
+          "source-evidence": string;
+        };
+        actionLabel: string;
+        aliases: string;
+        and: string;
+        approved: string;
+        availableWhen: string;
+        availableWhenAnd: string;
+        captureDate: string;
+        catalogEdition: string;
+        choice: string;
+        claim: string;
+        code: string;
+        compatibilityGroup: string;
+        displayName: string;
+        effectiveDate: string;
+        evidence: string;
+        evidenceKind: {
+          curatedObservation: string;
+          dimensionalComparison: string;
+          manufacturerStatement: string;
+          physicalFitTest: string;
+        };
+        evidenceKindLabel: string;
+        explanation: string;
+        firstFormat: string;
+        firstSourceUrl: string;
+        heading: string;
+        identifier: string;
+        identifierKind: {
+          makerCode: string;
+          sku: string;
+        };
+        identifierKindLabel: string;
+        inkColor: string;
+        lifecycle: {
+          current: string;
+          discontinued: string;
+          historical: string;
+        };
+        lifecycleLabel: string;
+        localizationKey: string;
+        market: string;
+        marketKind: {
+          country: string;
+          region: string;
+        };
+        marketKindLabel: string;
+        mechanism: string;
+        name: string;
+        offering: string;
+        originalUrl: string;
+        outcome: {
+          compatible: string;
+          conditional: string;
+          incompatible: string;
+          variable: string;
+        };
+        outcomeLabel: string;
+        pen: string;
+        procedure: string;
+        publisher: string;
+        refill: string;
+        refillModel: string;
+        registeredGroup: string;
+        remedy: string;
+        required: string;
+        result: string;
+        secondFormat: string;
+        secondSourceUrl: string;
+        slot: string;
+        slotKind: string;
+        slug: string;
+        sourceDate: string;
+        sourceKind: string;
+        sourceUrl: string;
+        summary: string;
+        target: string;
+        targetChoice: string;
+        targetType: {
+          group: string;
+          refill: string;
+        };
+        targetTypeLabel: string;
+        testDate: string;
+        tipSize: string;
+        tipStyle: string;
+        warning: string;
+      };
+      collection: {
+        noRefill: string;
+        noRefillOffering: string;
+        notSupported: string;
+        refill: string;
+        refillOffering: string;
+      };
+      configuration: {
+        availableWhen: string;
+        heading: string;
+        required: string;
+        unknownChoice: string;
+      };
+      field: {
+        aliases: string;
+        refillModel: string;
+      };
+      productType: {
+        actuator: string;
+        clip: string;
+        mechanism: string;
+        pen: string;
+        refill: string;
+        tip: string;
+        topCap: string;
+      };
+      refill: {
+        compatiblePens: string;
+        noCompatiblePens: string;
+        offerings: string;
+        requiresTip: string;
       };
     };
     currency: {
