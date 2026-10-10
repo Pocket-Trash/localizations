@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.31.4
+
+_Published 2026-10-10._
+
+### Patch Changes
+
+- b35b344: Add the product-type configuration description.
+
 ## 0.31.3
 
 _Published 2026-10-10._
