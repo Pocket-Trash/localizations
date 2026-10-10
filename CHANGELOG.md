@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.32.0
+
+_Published 2026-10-10._
+
+### Minor Changes
+
+- bbef202: Add English and Mexican Spanish translations for Pens, refills, and owned configurations.
+
 ## 0.31.4
 
 _Published 2026-10-10._
