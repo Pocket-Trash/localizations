@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.32.1
+
+_Published 2026-10-13._
+
+### Patch Changes
+
+- b71e1c6: Remove superseded refill evidence and lifecycle copy.
+
 ## 0.32.0
 
 _Published 2026-10-10._
