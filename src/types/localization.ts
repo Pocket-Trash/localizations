@@ -674,46 +674,28 @@ export type CompleteLocalizationResource = Readonly<{
       admin: {
         action: {
           "compatibility-assertion": string;
-          "compatibility-evidence": string;
+          "compatibility-assertion-remove": string;
           "compatibility-group": string;
           "compatibility-membership": string;
+          "compatibility-membership-remove": string;
           "configuration-choice": string;
           "configuration-rule": string;
           "configuration-slot": string;
           "configuration-slot-required": string;
-          market: string;
           "offering-identifier": string;
-          "offering-market-status": string;
           "refill-ink-color": string;
           "refill-offering": string;
           "refill-tip-style": string;
-          "source-evidence": string;
         };
         actionLabel: string;
         aliases: string;
         and: string;
-        approved: string;
         availableWhen: string;
         availableWhenAnd: string;
-        captureDate: string;
-        catalogEdition: string;
         choice: string;
-        claim: string;
-        code: string;
         compatibilityGroup: string;
-        displayName: string;
-        effectiveDate: string;
-        evidence: string;
-        evidenceKind: {
-          curatedObservation: string;
-          dimensionalComparison: string;
-          manufacturerStatement: string;
-          physicalFitTest: string;
-        };
-        evidenceKindLabel: string;
-        explanation: string;
-        firstFormat: string;
-        firstSourceUrl: string;
+        compatibilityMembership: string;
+        compatibilityRelationship: string;
         heading: string;
         identifier: string;
         identifierKind: {
@@ -722,48 +704,16 @@ export type CompleteLocalizationResource = Readonly<{
         };
         identifierKindLabel: string;
         inkColor: string;
-        lifecycle: {
-          current: string;
-          discontinued: string;
-          historical: string;
-        };
-        lifecycleLabel: string;
-        localizationKey: string;
-        market: string;
-        marketKind: {
-          country: string;
-          region: string;
-        };
-        marketKindLabel: string;
         mechanism: string;
         name: string;
         offering: string;
-        originalUrl: string;
-        outcome: {
-          compatible: string;
-          conditional: string;
-          incompatible: string;
-          variable: string;
-        };
-        outcomeLabel: string;
-        pen: string;
-        procedure: string;
-        publisher: string;
-        refill: string;
         refillModel: string;
         registeredGroup: string;
-        remedy: string;
         required: string;
-        result: string;
-        secondFormat: string;
-        secondSourceUrl: string;
+        requiredTip: string;
         slot: string;
         slotKind: string;
         slug: string;
-        sourceDate: string;
-        sourceKind: string;
-        sourceUrl: string;
-        summary: string;
         target: string;
         targetChoice: string;
         targetType: {
@@ -771,10 +721,8 @@ export type CompleteLocalizationResource = Readonly<{
           refill: string;
         };
         targetTypeLabel: string;
-        testDate: string;
         tipSize: string;
         tipStyle: string;
-        warning: string;
       };
       collection: {
         noRefill: string;
