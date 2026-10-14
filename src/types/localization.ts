@@ -134,9 +134,17 @@ export type CompleteLocalizationResource = Readonly<{
     userTrends: {
       collectionCount: string;
       collectionSize: string;
+      communityComparison: string;
+      communityPercentage: string;
+      communityStale: string;
+      communitySuppressed: string;
+      communitySuppressedNote: string;
+      communityUnavailable: string;
+      comparisonDescription: string;
       description: string;
       empty: string;
       items: string;
+      personalPercentage: string;
       privateNote: string;
       title: string;
     };

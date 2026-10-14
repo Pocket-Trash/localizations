@@ -150,9 +150,19 @@ export const enUS = {
     userTrends: {
       collectionCount: "Collections",
       collectionSize: "Collection size",
+      communityComparison: "Community comparison",
+      communityPercentage: "Community %",
+      communityStale: "Community data may be out of date.",
+      communitySuppressed: "Suppressed",
+      communitySuppressedNote:
+        "Some community values are hidden because they do not meet the privacy threshold.",
+      communityUnavailable: "Community comparison is unavailable right now.",
+      comparisonDescription:
+        "Percentages compare composition only; raw collection sizes are never compared.",
       description: "Explore the current composition of your collection.",
       empty: "No collection items match these filters.",
       items: "Items",
+      personalPercentage: "Personal %",
       privateNote: "Only you can see these personal Trends.",
       title: "Your Trends",
     },
