@@ -70,9 +70,19 @@ export type CompleteLocalizationResource = Readonly<{
     };
     trends: {
       allProductTypes: string;
+      approximateItems: string;
       catalogProducts: string;
       chartLabel: string;
+      collectionItems: string;
+      collectionItemsChartLabel: string;
+      collectionItemsEmpty: string;
+      collectionItemsError: string;
+      collectionItemsPrivacy: string;
+      collectionItemsStale: string;
+      collectionItemsSuppressed: string;
+      collectionItemsSuppressedEmpty: string;
       empty: string;
+      lastUpdated: string;
       loading: string;
       other: string;
       productType: string;

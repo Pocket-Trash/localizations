@@ -69,9 +69,25 @@ export const esMX = {
     },
     trends: {
       allProductTypes: "Todos los tipos de producto",
+      approximateItems: "Artículos aproximados",
       catalogProducts: "Productos del catálogo",
       chartLabel: "Productos del catálogo por tipo de producto",
+      collectionItems: "Artículos de colecciones",
+      collectionItemsChartLabel:
+        "Artículos actualmente en colecciones por tipo de producto",
+      collectionItemsEmpty: "Aún no hay artículos de colecciones disponibles.",
+      collectionItemsError:
+        "Las tendencias de artículos de colecciones no están disponibles en este momento.",
+      collectionItemsPrivacy:
+        "Los conteos aparecen solo para tipos de producto con al menos cinco coleccionistas y se redondean al múltiplo de cinco más cercano.",
+      collectionItemsStale:
+        "Las tendencias de artículos de colecciones pueden estar desactualizadas.",
+      collectionItemsSuppressed:
+        "Algunos tipos de producto están ocultos porque no alcanzan el umbral de privacidad.",
+      collectionItemsSuppressedEmpty:
+        "Las tendencias de artículos de colecciones permanecen ocultas hasta alcanzar el umbral de privacidad.",
       empty: "No hay productos del catálogo disponibles para estos filtros.",
+      lastUpdated: "Última actualización: {date}",
       loading: "Cargando tendencias…",
       other: "Otros",
       productType: "Tipo de producto",
