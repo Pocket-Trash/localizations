@@ -161,9 +161,20 @@ export const esMX = {
     userTrends: {
       collectionCount: "Colecciones",
       collectionSize: "Tamaño de la colección",
+      communityComparison: "Comparación con la comunidad",
+      communityPercentage: "Comunidad %",
+      communityStale: "Los datos de la comunidad pueden estar desactualizados.",
+      communitySuppressed: "Oculto",
+      communitySuppressedNote:
+        "Algunos valores de la comunidad están ocultos porque no alcanzan el umbral de privacidad.",
+      communityUnavailable:
+        "La comparación con la comunidad no está disponible en este momento.",
+      comparisonDescription:
+        "Los porcentajes comparan únicamente la composición; nunca se comparan los tamaños brutos de las colecciones.",
       description: "Explora la composición actual de tu colección.",
       empty: "Ningún artículo de tu colección coincide con estos filtros.",
       items: "Artículos",
+      personalPercentage: "Personal %",
       privateNote: "Solo tú puedes ver estas tendencias personales.",
       title: "Tus tendencias",
     },
