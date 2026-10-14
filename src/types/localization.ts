@@ -69,9 +69,11 @@ export type CompleteLocalizationResource = Readonly<{
       name: string;
     };
     trends: {
+      allMakers: string;
       allMaterials: string;
       allMaterialSpecifics: string;
       allProductTypes: string;
+      allProducts: string;
       approximateCollectors: string;
       approximateItems: string;
       catalogProducts: string;
@@ -95,6 +97,14 @@ export type CompleteLocalizationResource = Readonly<{
       empty: string;
       lastUpdated: string;
       loading: string;
+      maker: string;
+      makerProductsEmpty: string;
+      makerProductsError: string;
+      makerProductsPrivacy: string;
+      makerProductsStale: string;
+      makerProductsSuppressed: string;
+      makers: string;
+      makersChartLabel: string;
       generalMaterial: string;
       material: string;
       materialSpecific: string;
@@ -114,6 +124,9 @@ export type CompleteLocalizationResource = Readonly<{
       partsAndAccessoriesSuppressed: string;
       partsAndAccessoriesSuppressedEmpty: string;
       productType: string;
+      product: string;
+      products: string;
+      productsChartLabel: string;
       title: string;
       unspecifiedMaterial: string;
       viewProducts: string;

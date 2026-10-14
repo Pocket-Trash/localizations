@@ -68,9 +68,11 @@ export const enUS = {
       name: "Pocket Trash",
     },
     trends: {
+      allMakers: "All makers",
       allMaterials: "All materials",
       allMaterialSpecifics: "All alloys and grades",
       allProductTypes: "All product types",
+      allProducts: "All products",
       approximateCollectors: "Approximate collectors",
       approximateItems: "Approximate items",
       catalogProducts: "Catalog products",
@@ -98,6 +100,17 @@ export const enUS = {
       empty: "No catalog products are available for these filters.",
       lastUpdated: "Last updated {date}",
       loading: "Loading Trends…",
+      maker: "Maker",
+      makerProductsEmpty:
+        "No maker or product data is available for these filters.",
+      makerProductsError: "Maker and product Trends are unavailable right now.",
+      makerProductsPrivacy:
+        "Maker and product counts appear only with at least five collectors and are rounded to the nearest five.",
+      makerProductsStale: "Maker and product Trends may be out of date.",
+      makerProductsSuppressed:
+        "Some makers or products are hidden because they do not meet the privacy threshold.",
+      makers: "Most collected makers",
+      makersChartLabel: "Makers ranked by approximate collectors",
       generalMaterial: "General",
       material: "Material",
       materialSpecific: "Alloy or grade",
@@ -127,6 +140,9 @@ export const enUS = {
       partsAndAccessoriesSuppressedEmpty:
         "Parts and Accessories Trends are hidden until the privacy threshold is met.",
       productType: "Product type",
+      product: "Product",
+      products: "Most collected products",
+      productsChartLabel: "Products ranked by approximate collectors",
       title: "Trends",
       unspecifiedMaterial: "Unspecified",
       viewProducts: "View products",
