@@ -90,6 +90,21 @@ export const enUS = {
       lastUpdated: "Last updated {date}",
       loading: "Loading Trends…",
       other: "Other",
+      partsAndAccessories: "Parts and Accessories",
+      partsAndAccessoriesChartLabel:
+        "Currently owned Parts and Accessories by product type",
+      partsAndAccessoriesEmpty:
+        "No enabled Parts and Accessories are available yet.",
+      partsAndAccessoriesError:
+        "Parts and Accessories Trends are unavailable right now.",
+      partsAndAccessoriesPrivacy:
+        "Counts appear only for product types with at least five collectors and are rounded to the nearest five.",
+      partsAndAccessoriesStale:
+        "Parts and Accessories Trends may be out of date.",
+      partsAndAccessoriesSuppressed:
+        "Some enabled product types are hidden because they do not meet the privacy threshold.",
+      partsAndAccessoriesSuppressedEmpty:
+        "Parts and Accessories Trends are hidden until the privacy threshold is met.",
       productType: "Product type",
       title: "Trends",
     },
@@ -153,6 +168,16 @@ export const enUS = {
           noResults: "No product types match your search.",
           partOrAccessoryLabel: "Mark {name} as a part or accessory",
           searchPlaceholder: "Search product types",
+          updated: "Updated {name}.",
+          updateFailed: "Could not update {name}.",
+        },
+        trends: {
+          alwaysIncluded: "Always included",
+          description:
+            "Choose which secondary product types appear in Trends. Primary product types are always included.",
+          includeLabel: "Include {name} in Trends",
+          included: "Included",
+          title: "Trends",
           updated: "Updated {name}.",
           updateFailed: "Could not update {name}.",
         },

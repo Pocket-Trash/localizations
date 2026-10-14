@@ -88,6 +88,14 @@ export type CompleteLocalizationResource = Readonly<{
       lastUpdated: string;
       loading: string;
       other: string;
+      partsAndAccessories: string;
+      partsAndAccessoriesChartLabel: string;
+      partsAndAccessoriesEmpty: string;
+      partsAndAccessoriesError: string;
+      partsAndAccessoriesPrivacy: string;
+      partsAndAccessoriesStale: string;
+      partsAndAccessoriesSuppressed: string;
+      partsAndAccessoriesSuppressedEmpty: string;
       productType: string;
       title: string;
     };
@@ -150,6 +158,15 @@ export type CompleteLocalizationResource = Readonly<{
           noResults: string;
           partOrAccessoryLabel: string;
           searchPlaceholder: string;
+          updated: string;
+          updateFailed: string;
+        };
+        trends: {
+          alwaysIncluded: string;
+          description: string;
+          includeLabel: string;
+          included: string;
+          title: string;
           updated: string;
           updateFailed: string;
         };

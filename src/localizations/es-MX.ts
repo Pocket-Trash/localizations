@@ -93,6 +93,21 @@ export const esMX = {
       lastUpdated: "Última actualización: {date}",
       loading: "Cargando tendencias…",
       other: "Otros",
+      partsAndAccessories: "Piezas y accesorios",
+      partsAndAccessoriesChartLabel:
+        "Piezas y accesorios que se poseen actualmente por tipo de producto",
+      partsAndAccessoriesEmpty:
+        "Aún no hay piezas ni accesorios habilitados disponibles.",
+      partsAndAccessoriesError:
+        "Las tendencias de piezas y accesorios no están disponibles en este momento.",
+      partsAndAccessoriesPrivacy:
+        "Los conteos aparecen solo para tipos de producto con al menos cinco coleccionistas y se redondean al múltiplo de cinco más cercano.",
+      partsAndAccessoriesStale:
+        "Las tendencias de piezas y accesorios pueden estar desactualizadas.",
+      partsAndAccessoriesSuppressed:
+        "Algunos tipos de producto habilitados están ocultos porque no alcanzan el umbral de privacidad.",
+      partsAndAccessoriesSuppressedEmpty:
+        "Las tendencias de piezas y accesorios permanecen ocultas hasta alcanzar el umbral de privacidad.",
       productType: "Tipo de producto",
       title: "Tendencias",
     },
@@ -156,6 +171,16 @@ export const esMX = {
           noResults: "Ningún tipo de producto coincide con tu búsqueda.",
           partOrAccessoryLabel: "Marcar {name} como pieza o accesorio",
           searchPlaceholder: "Buscar tipos de producto",
+          updated: "Se actualizó {name}.",
+          updateFailed: "No se pudo actualizar {name}.",
+        },
+        trends: {
+          alwaysIncluded: "Siempre incluido",
+          description:
+            "Elige qué tipos de producto secundarios aparecen en Tendencias. Los tipos de producto principales siempre están incluidos.",
+          includeLabel: "Incluir {name} en Tendencias",
+          included: "Incluido",
+          title: "Tendencias",
           updated: "Se actualizó {name}.",
           updateFailed: "No se pudo actualizar {name}.",
         },
