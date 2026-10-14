@@ -69,9 +69,22 @@ export const enUS = {
     },
     trends: {
       allProductTypes: "All product types",
+      approximateItems: "Approximate items",
       catalogProducts: "Catalog products",
       chartLabel: "Catalog products by product type",
+      collectionItems: "Collection items",
+      collectionItemsChartLabel: "Currently owned items by product type",
+      collectionItemsEmpty: "No collection items are available yet.",
+      collectionItemsError: "Collection-item Trends are unavailable right now.",
+      collectionItemsPrivacy:
+        "Counts appear only for product types with at least five collectors and are rounded to the nearest five.",
+      collectionItemsStale: "Collection-item Trends may be out of date.",
+      collectionItemsSuppressed:
+        "Some product types are hidden because they do not meet the privacy threshold.",
+      collectionItemsSuppressedEmpty:
+        "Collection-item Trends are hidden until the privacy threshold is met.",
       empty: "No catalog products are available for these filters.",
+      lastUpdated: "Last updated {date}",
       loading: "Loading Trends…",
       other: "Other",
       productType: "Product type",
