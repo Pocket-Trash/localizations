@@ -601,6 +601,42 @@ export type CompleteLocalizationResource = Readonly<{
         previousPage: string;
         title: string;
       };
+      lifecycle: {
+        acquisitionDate: string;
+        acquisitionDateUnknown: string;
+        currentlyOwned: string;
+        departureDate: string;
+        entryReason: string;
+        error: {
+          date: string;
+          departure: string;
+          order: string;
+        };
+        exitReason: string;
+        imputed: string;
+        newPeriod: string;
+        reason: {
+          entry: {
+            gift: string;
+            made: string;
+            other: string;
+            purchase: string;
+            trade: string;
+            unknown: string;
+          };
+          exit: {
+            disposed: string;
+            gift: string;
+            lost: string;
+            other: string;
+            sale: string;
+            trade: string;
+          };
+        };
+        recordedEnd: string;
+        recordedStart: string;
+        title: string;
+      };
       field: {
         collection: string;
         cover: string;
