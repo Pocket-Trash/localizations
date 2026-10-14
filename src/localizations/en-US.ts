@@ -1606,6 +1606,9 @@ export const enUS = {
       measurementSystemLabel: "Measurement system",
       metric: "Metric",
       millimeters: "Millimeters",
+      publicTrendsDescription:
+        "Share a page containing only your public collections and approved public items. Trends stay private until you enable this setting.",
+      publicTrendsLabel: "Publish Trends",
       settings: "Settings",
       system: "System",
       theme: "Theme",
