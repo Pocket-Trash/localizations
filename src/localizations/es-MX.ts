@@ -67,6 +67,16 @@ export const esMX = {
     site: {
       name: "",
     },
+    trends: {
+      allProductTypes: "Todos los tipos de producto",
+      catalogProducts: "Productos del catálogo",
+      chartLabel: "Productos del catálogo por tipo de producto",
+      empty: "No hay productos del catálogo disponibles para estos filtros.",
+      loading: "Cargando tendencias…",
+      other: "Otros",
+      productType: "Tipo de producto",
+      title: "Tendencias",
+    },
     changelog: {
       allCategories: "Todas las categorías",
       copyFailed: "No se pudo copiar el enlace",
