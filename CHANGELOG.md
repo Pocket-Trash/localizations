@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.33.0
+
+_Published 2026-10-14._
+
+### Minor Changes
+
+- 5ca5dd6: Add English and Mexican Spanish copy for catalog product Trends.
+
 ## 0.32.2
 
 _Published 2026-10-14._
