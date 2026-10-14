@@ -68,10 +68,15 @@ export const esMX = {
       name: "",
     },
     trends: {
+      allMaterials: "Todos los materiales",
+      allMaterialSpecifics: "Todas las aleaciones y grados",
       allProductTypes: "Todos los tipos de producto",
       approximateCollectors: "Coleccionistas aproximados",
       approximateItems: "Artículos aproximados",
       catalogProducts: "Productos del catálogo",
+      catalogMaterials: "Productos del catálogo por material",
+      catalogMaterialsChartLabel:
+        "Presencia de productos del catálogo por material",
       chartLabel: "Productos del catálogo por tipo de producto",
       collectionItems: "Artículos de colecciones",
       collectionItemsChartLabel:
@@ -87,11 +92,31 @@ export const esMX = {
         "Algunos tipos de producto están ocultos porque no alcanzan el umbral de privacidad.",
       collectionItemsSuppressedEmpty:
         "Las tendencias de artículos de colecciones permanecen ocultas hasta alcanzar el umbral de privacidad.",
+      collectionMaterials: "Artículos actuales por material",
+      collectionMaterialsChartLabel:
+        "Presencia de artículos actuales por material",
+      collectorMaterials: "Coleccionistas por material",
+      collectorMaterialsChartLabel: "Presencia de coleccionistas por material",
       collectors: "Coleccionistas",
       collectorsChartLabel: "Coleccionistas por tipo de producto",
       empty: "No hay productos del catálogo disponibles para estos filtros.",
       lastUpdated: "Última actualización: {date}",
       loading: "Cargando tendencias…",
+      generalMaterial: "General",
+      material: "Material",
+      materialSpecific: "Aleación o grado",
+      materialsEmpty:
+        "No hay datos de materiales disponibles para estos filtros.",
+      materialsError:
+        "Las tendencias por material no están disponibles en este momento.",
+      materialsPrivacy:
+        "Los artículos con varios materiales aparecen en cada material correspondiente. Los conteos de colecciones aparecen solo con al menos cinco coleccionistas y se redondean al múltiplo de cinco más cercano.",
+      materialsStale:
+        "Las tendencias por material pueden estar desactualizadas.",
+      materialsSuppressed:
+        "Algunos materiales están ocultos porque no alcanzan el umbral de privacidad.",
+      materialsSuppressedEmpty:
+        "Las tendencias por material permanecen ocultas hasta alcanzar el umbral de privacidad.",
       other: "Otros",
       partsAndAccessories: "Piezas y accesorios",
       partsAndAccessoriesChartLabel:
@@ -110,6 +135,8 @@ export const esMX = {
         "Las tendencias de piezas y accesorios permanecen ocultas hasta alcanzar el umbral de privacidad.",
       productType: "Tipo de producto",
       title: "Tendencias",
+      unspecifiedMaterial: "Sin especificar",
+      viewProducts: "Ver productos",
     },
     changelog: {
       allCategories: "Todas las categorías",

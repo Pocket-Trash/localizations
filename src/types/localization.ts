@@ -69,10 +69,14 @@ export type CompleteLocalizationResource = Readonly<{
       name: string;
     };
     trends: {
+      allMaterials: string;
+      allMaterialSpecifics: string;
       allProductTypes: string;
       approximateCollectors: string;
       approximateItems: string;
       catalogProducts: string;
+      catalogMaterials: string;
+      catalogMaterialsChartLabel: string;
       chartLabel: string;
       collectionItems: string;
       collectionItemsChartLabel: string;
@@ -82,11 +86,24 @@ export type CompleteLocalizationResource = Readonly<{
       collectionItemsStale: string;
       collectionItemsSuppressed: string;
       collectionItemsSuppressedEmpty: string;
+      collectionMaterials: string;
+      collectionMaterialsChartLabel: string;
+      collectorMaterials: string;
+      collectorMaterialsChartLabel: string;
       collectors: string;
       collectorsChartLabel: string;
       empty: string;
       lastUpdated: string;
       loading: string;
+      generalMaterial: string;
+      material: string;
+      materialSpecific: string;
+      materialsEmpty: string;
+      materialsError: string;
+      materialsPrivacy: string;
+      materialsStale: string;
+      materialsSuppressed: string;
+      materialsSuppressedEmpty: string;
       other: string;
       partsAndAccessories: string;
       partsAndAccessoriesChartLabel: string;
@@ -98,6 +115,8 @@ export type CompleteLocalizationResource = Readonly<{
       partsAndAccessoriesSuppressedEmpty: string;
       productType: string;
       title: string;
+      unspecifiedMaterial: string;
+      viewProducts: string;
     };
     changelog: {
       allCategories: string;
