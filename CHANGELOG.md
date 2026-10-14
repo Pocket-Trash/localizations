@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.33.1
+
+_Published 2026-10-14._
+
+### Patch Changes
+
+- d5e8a13: Add missing catalog action labels and clarify refill compatibility targets.
+
 ## 0.33.0
 
 _Published 2026-10-14._
