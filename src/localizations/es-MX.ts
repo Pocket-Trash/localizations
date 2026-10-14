@@ -502,11 +502,11 @@ export const esMX = {
     },
     slider: {
       productType: {
-        slider: "Deslizador",
-        plate: "Placa para deslizador",
-        insert: "Inserto para deslizador",
-        spinner: "",
-        spinnerButton: "",
+        slider: "Deslizadores",
+        plate: "Placas para deslizadores",
+        insert: "Insertos para deslizadores",
+        spinner: "Spinners",
+        spinnerButton: "Botones para spinners",
       },
       alias: {
         add: "",
@@ -923,13 +923,13 @@ export const esMX = {
         refillModel: "Modelo de repuesto",
       },
       productType: {
-        actuator: "Actuador de pluma",
-        clip: "Clip de pluma",
-        mechanism: "Mecanismo de pluma",
-        pen: "Pluma",
-        refill: "Repuesto",
-        tip: "Punta de pluma",
-        topCap: "Tapa superior de pluma",
+        actuator: "Actuadores de pluma",
+        clip: "Clips de pluma",
+        mechanism: "Mecanismos de pluma",
+        pen: "Plumas",
+        refill: "Repuestos",
+        tip: "Puntas de pluma",
+        topCap: "Tapas superiores de pluma",
       },
       refill: {
         compatiblePens: "Plumas compatibles",
