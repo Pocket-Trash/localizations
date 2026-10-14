@@ -1,5 +1,16 @@
 # @pocket-trash/localizations
 
+## 0.35.0
+
+_Published 2026-10-14._
+
+### Minor Changes
+
+- ae95855: Add English and Spanish copy for material Trends and drill-downs.
+- e4e3064: Add English and Spanish copy for maker and product Trends drill-downs.
+- 8d770b1: Add English and Spanish labels for public collector Trends.
+- 7abb664: Add Parts and Accessories Trends configuration and chart copy.
+
 ## 0.34.0
 
 _Published 2026-10-14._
