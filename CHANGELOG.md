@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.37.0
+
+_Published 2026-10-14._
+
+### Minor Changes
+
+- 2cca4c2: Add localized labels for personal and community composition comparisons.
+- 0399cc6: Add English and Spanish copy for publishing personal Trends.
+
 ## 0.36.0
 
 _Published 2026-10-14._
