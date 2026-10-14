@@ -69,6 +69,12 @@ export type CompleteLocalizationResource = Readonly<{
       name: string;
     };
     trends: {
+      activity: string;
+      activityChartLabel: string;
+      activityDate: string;
+      activityPrivacy: string;
+      activityRange: string;
+      addedToPocketTrash: string;
       allMakers: string;
       allMaterials: string;
       allMaterialSpecifics: string;
@@ -77,6 +83,7 @@ export type CompleteLocalizationResource = Readonly<{
       approximateCollectors: string;
       approximateItems: string;
       catalogProducts: string;
+      catalogRecordsAdded: string;
       catalogMaterials: string;
       catalogMaterialsChartLabel: string;
       chartLabel: string;
@@ -127,6 +134,11 @@ export type CompleteLocalizationResource = Readonly<{
       product: string;
       products: string;
       productsChartLabel: string;
+      range30Days: string;
+      range6Months: string;
+      rangeAll: string;
+      rangeWeek: string;
+      rangeYear: string;
       title: string;
       unspecifiedMaterial: string;
       viewProducts: string;
