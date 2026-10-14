@@ -68,6 +68,14 @@ export const esMX = {
       name: "",
     },
     trends: {
+      activity: "Registros agregados",
+      activityChartLabel:
+        "Registros agregados a Pocket Trash a lo largo del tiempo",
+      activityDate: "Inicio del periodo",
+      activityPrivacy:
+        "La actividad de colecciones aparece solo cuando al menos cinco coleccionistas agregaron registros en un periodo y se redondea al múltiplo de cinco más cercano. Los puntos faltantes son intervalos protegidos por privacidad.",
+      activityRange: "Periodo",
+      addedToPocketTrash: "Agregados a Pocket Trash",
       allMakers: "Todos los fabricantes",
       allMaterials: "Todos los materiales",
       allMaterialSpecifics: "Todas las aleaciones y grados",
@@ -76,6 +84,7 @@ export const esMX = {
       approximateCollectors: "Coleccionistas aproximados",
       approximateItems: "Artículos aproximados",
       catalogProducts: "Productos del catálogo",
+      catalogRecordsAdded: "Registros del catálogo agregados",
       catalogMaterials: "Productos del catálogo por material",
       catalogMaterialsChartLabel:
         "Presencia de productos del catálogo por material",
@@ -154,6 +163,11 @@ export const esMX = {
       products: "Productos más coleccionados",
       productsChartLabel:
         "Productos clasificados por coleccionistas aproximados",
+      range30Days: "30 días",
+      range6Months: "6 meses",
+      rangeAll: "Todo el tiempo",
+      rangeWeek: "1 semana",
+      rangeYear: "1 año",
       title: "Tendencias",
       unspecifiedMaterial: "Sin especificar",
       viewProducts: "Ver productos",
