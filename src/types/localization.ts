@@ -227,69 +227,17 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     archive: {
-      closeSearch: string;
-      controls: string;
-      defaultPenDescription: string;
-      filterDescription: string;
       filters: string;
-      itemCount: string;
-      noDescription: string;
       noItems: string;
       searchPlaceholder: string;
-      searchProducts: string;
-      sortLabel: string;
-      sortProducts: string;
-      sortDescription: string;
-      footer: {
-        fanMade: string;
-        productOwnership: string;
-        resourceFor: string;
-        suggestionsOrContact: string;
-        discord: string;
-      };
-      headline: {
-        grip: string;
-        mechanism: string;
-        pen: string;
-      };
-      lightbox: {
-        archived: string;
-        closeProductDetails: string;
-        nextImage: string;
-        previousImage: string;
-        released: string;
-        specsDescription: string;
-      };
       filter: {
         all: string;
         any: string;
         matchMode: string;
-        bodyDetails: string;
-        category: string;
-        clip: string;
-        finish: string;
-        material: string;
-        mechanism: string;
-        refill: string;
-        size: string;
-        tipNose: string;
-      };
-      sort: {
-        newestDrop: string;
-        oldestDrop: string;
-        priceLowToHigh: string;
-        priceHighToLow: string;
-        weightLightToHeavy: string;
-        weightHeavyToLight: string;
-        diameterThinToThick: string;
-        diameterThickToThin: string;
-        titleAToZ: string;
       };
       spec: {
         diameter: string;
         length: string;
-        model: string;
-        price: string;
         weight: string;
       };
       state: {
