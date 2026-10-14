@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.34.0
+
+_Published 2026-10-14._
+
+### Minor Changes
+
+- 9bebb68: Add English and Spanish copy for privacy-safe collection-item Trends.
+- 77d5bce: Add localized collection ownership lifecycle copy
+
 ## 0.33.1
 
 _Published 2026-10-14._
