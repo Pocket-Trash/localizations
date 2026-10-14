@@ -68,10 +68,14 @@ export const enUS = {
       name: "Pocket Trash",
     },
     trends: {
+      allMaterials: "All materials",
+      allMaterialSpecifics: "All alloys and grades",
       allProductTypes: "All product types",
       approximateCollectors: "Approximate collectors",
       approximateItems: "Approximate items",
       catalogProducts: "Catalog products",
+      catalogMaterials: "Catalog products by material",
+      catalogMaterialsChartLabel: "Catalog product presence by material",
       chartLabel: "Catalog products by product type",
       collectionItems: "Collection items",
       collectionItemsChartLabel: "Currently owned items by product type",
@@ -84,11 +88,28 @@ export const enUS = {
         "Some product types are hidden because they do not meet the privacy threshold.",
       collectionItemsSuppressedEmpty:
         "Collection-item Trends are hidden until the privacy threshold is met.",
+      collectionMaterials: "Currently owned items by material",
+      collectionMaterialsChartLabel:
+        "Currently owned item presence by material",
+      collectorMaterials: "Collectors by material",
+      collectorMaterialsChartLabel: "Collector presence by material",
       collectors: "Collectors",
       collectorsChartLabel: "Collectors by product type",
       empty: "No catalog products are available for these filters.",
       lastUpdated: "Last updated {date}",
       loading: "Loading Trends…",
+      generalMaterial: "General",
+      material: "Material",
+      materialSpecific: "Alloy or grade",
+      materialsEmpty: "No material data is available for these filters.",
+      materialsError: "Material Trends are unavailable right now.",
+      materialsPrivacy:
+        "Items with multiple materials appear in every applicable material. Collection counts appear only with at least five collectors and are rounded to the nearest five.",
+      materialsStale: "Material Trends may be out of date.",
+      materialsSuppressed:
+        "Some materials are hidden because they do not meet the privacy threshold.",
+      materialsSuppressedEmpty:
+        "Material Trends are hidden until the privacy threshold is met.",
       other: "Other",
       partsAndAccessories: "Parts and Accessories",
       partsAndAccessoriesChartLabel:
@@ -107,6 +128,8 @@ export const enUS = {
         "Parts and Accessories Trends are hidden until the privacy threshold is met.",
       productType: "Product type",
       title: "Trends",
+      unspecifiedMaterial: "Unspecified",
+      viewProducts: "View products",
     },
     changelog: {
       allCategories: "All categories",
