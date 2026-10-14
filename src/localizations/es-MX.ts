@@ -69,6 +69,7 @@ export const esMX = {
     },
     trends: {
       allProductTypes: "Todos los tipos de producto",
+      approximateCollectors: "Coleccionistas aproximados",
       approximateItems: "Artículos aproximados",
       catalogProducts: "Productos del catálogo",
       chartLabel: "Productos del catálogo por tipo de producto",
@@ -86,6 +87,8 @@ export const esMX = {
         "Algunos tipos de producto están ocultos porque no alcanzan el umbral de privacidad.",
       collectionItemsSuppressedEmpty:
         "Las tendencias de artículos de colecciones permanecen ocultas hasta alcanzar el umbral de privacidad.",
+      collectors: "Coleccionistas",
+      collectorsChartLabel: "Coleccionistas por tipo de producto",
       empty: "No hay productos del catálogo disponibles para estos filtros.",
       lastUpdated: "Última actualización: {date}",
       loading: "Cargando tendencias…",

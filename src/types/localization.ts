@@ -70,6 +70,7 @@ export type CompleteLocalizationResource = Readonly<{
     };
     trends: {
       allProductTypes: string;
+      approximateCollectors: string;
       approximateItems: string;
       catalogProducts: string;
       chartLabel: string;
@@ -81,6 +82,8 @@ export type CompleteLocalizationResource = Readonly<{
       collectionItemsStale: string;
       collectionItemsSuppressed: string;
       collectionItemsSuppressedEmpty: string;
+      collectors: string;
+      collectorsChartLabel: string;
       empty: string;
       lastUpdated: string;
       loading: string;

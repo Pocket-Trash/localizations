@@ -69,6 +69,7 @@ export const enUS = {
     },
     trends: {
       allProductTypes: "All product types",
+      approximateCollectors: "Approximate collectors",
       approximateItems: "Approximate items",
       catalogProducts: "Catalog products",
       chartLabel: "Catalog products by product type",
@@ -83,6 +84,8 @@ export const enUS = {
         "Some product types are hidden because they do not meet the privacy threshold.",
       collectionItemsSuppressedEmpty:
         "Collection-item Trends are hidden until the privacy threshold is met.",
+      collectors: "Collectors",
+      collectorsChartLabel: "Collectors by product type",
       empty: "No catalog products are available for these filters.",
       lastUpdated: "Last updated {date}",
       loading: "Loading Trends…",
