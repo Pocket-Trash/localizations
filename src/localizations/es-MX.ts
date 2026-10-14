@@ -656,6 +656,44 @@ export const esMX = {
         previousPage: "Página anterior",
         title: "Galería",
       },
+      lifecycle: {
+        acquisitionDate: "Fecha de adquisición",
+        acquisitionDateUnknown: "Se desconoce la fecha de adquisición",
+        currentlyOwned: "Actualmente en la colección",
+        departureDate: "Fecha de salida",
+        entryReason: "Motivo de adquisición",
+        error: {
+          date: "Ingresa una fecha válida.",
+          departure: "Agrega la fecha y el motivo de salida.",
+          order:
+            "La fecha de salida no puede ser anterior a la fecha de adquisición.",
+        },
+        exitReason: "Motivo de salida",
+        imputed:
+          "Fecha estimada a partir de cuándo se agregó este artículo a Pocket Trash",
+        newPeriod: "Registrar este artículo como readquirido",
+        reason: {
+          entry: {
+            gift: "Regalo",
+            made: "Fabricación propia",
+            other: "Otro",
+            purchase: "Compra",
+            trade: "Intercambio",
+            unknown: "Desconocido",
+          },
+          exit: {
+            disposed: "Desecho",
+            gift: "Regalo",
+            lost: "Pérdida",
+            other: "Otro",
+            sale: "Venta",
+            trade: "Intercambio",
+          },
+        },
+        recordedEnd: "Salida registrada el {date}",
+        recordedStart: "Adquisición registrada el {date}",
+        title: "Historial de propiedad",
+      },
       field: {
         collection: "",
         cover: "",
