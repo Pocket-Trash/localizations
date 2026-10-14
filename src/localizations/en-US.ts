@@ -67,6 +67,16 @@ export const enUS = {
     site: {
       name: "Pocket Trash",
     },
+    trends: {
+      allProductTypes: "All product types",
+      catalogProducts: "Catalog products",
+      chartLabel: "Catalog products by product type",
+      empty: "No catalog products are available for these filters.",
+      loading: "Loading Trends…",
+      other: "Other",
+      productType: "Product type",
+      title: "Trends",
+    },
     changelog: {
       allCategories: "All categories",
       copyFailed: "Couldn’t copy link",

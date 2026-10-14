@@ -68,6 +68,16 @@ export type CompleteLocalizationResource = Readonly<{
     site: {
       name: string;
     };
+    trends: {
+      allProductTypes: string;
+      catalogProducts: string;
+      chartLabel: string;
+      empty: string;
+      loading: string;
+      other: string;
+      productType: string;
+      title: string;
+    };
     changelog: {
       allCategories: string;
       copyFailed: string;
