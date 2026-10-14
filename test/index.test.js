@@ -381,9 +381,9 @@ test("catalog filter copy and blank Spanish entries use the right translations",
 test("slider vocabulary is complete in English and Spanish", () => {
   const expected = {
     "en-US": {
-      "web.slider.productType.slider": "Slider",
-      "web.slider.productType.plate": "Slider plate",
-      "web.slider.productType.insert": "Slider insert",
+      "web.slider.productType.slider": "Sliders",
+      "web.slider.productType.plate": "Slider plates",
+      "web.slider.productType.insert": "Slider inserts",
       "web.slider.capability.bodyHosted": "Body-hosted",
       "web.slider.capability.insertDriven": "Insert-driven",
       "web.slider.capability.sliderBodyHoldsMagnets":
@@ -413,9 +413,9 @@ test("slider vocabulary is complete in English and Spanish", () => {
       "web.slider.empty.noOffers": "No setup offers are available.",
     },
     "es-MX": {
-      "web.slider.productType.slider": "Deslizador",
-      "web.slider.productType.plate": "Placa para deslizador",
-      "web.slider.productType.insert": "Inserto para deslizador",
+      "web.slider.productType.slider": "Deslizadores",
+      "web.slider.productType.plate": "Placas para deslizadores",
+      "web.slider.productType.insert": "Insertos para deslizadores",
       "web.slider.capability.bodyHosted": "Integrado en el cuerpo",
       "web.slider.capability.insertDriven": "Basado en inserto",
       "web.slider.capability.sliderBodyHoldsMagnets":

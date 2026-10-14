@@ -486,11 +486,11 @@ export const enUS = {
     },
     slider: {
       productType: {
-        slider: "Slider",
-        plate: "Slider plate",
-        insert: "Slider insert",
-        spinner: "Spinner",
-        spinnerButton: "Spinner button",
+        slider: "Sliders",
+        plate: "Slider plates",
+        insert: "Slider inserts",
+        spinner: "Spinners",
+        spinnerButton: "Spinner buttons",
       },
       alias: {
         add: "Add terminology alias",
@@ -896,13 +896,13 @@ export const enUS = {
         refillModel: "Refill model",
       },
       productType: {
-        actuator: "Pen actuator",
-        clip: "Pen clip",
-        mechanism: "Pen mechanism",
-        pen: "Pen",
-        refill: "Refill",
-        tip: "Pen tip",
-        topCap: "Pen top cap",
+        actuator: "Pen actuators",
+        clip: "Pen clips",
+        mechanism: "Pen mechanisms",
+        pen: "Pens",
+        refill: "Refills",
+        tip: "Pen tips",
+        topCap: "Pen top caps",
       },
       refill: {
         compatiblePens: "Compatible Pens",
