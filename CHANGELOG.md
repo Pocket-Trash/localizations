@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.38.0
+
+_Published 2026-10-14._
+
+### Minor Changes
+
+- 4c7bb45: Add English and Mexican Spanish recorded-activity Trends copy.
+
 ## 0.37.0
 
 _Published 2026-10-14._
