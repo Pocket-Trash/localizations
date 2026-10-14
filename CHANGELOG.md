@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.38.1
+
+_Published 2026-10-14._
+
+### Patch Changes
+
+- 4245cd2: Use plural product type labels in catalog navigation.
+
 ## 0.38.0
 
 _Published 2026-10-14._
