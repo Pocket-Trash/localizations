@@ -1649,6 +1649,9 @@ export const esMX = {
       measurementSystemLabel: "",
       metric: "",
       millimeters: "Milimetros",
+      publicTrendsDescription:
+        "Comparte una página que contiene solo tus colecciones públicas y artículos públicos aprobados. Las tendencias permanecen privadas hasta que actives esta opción.",
+      publicTrendsLabel: "Publicar tendencias",
       settings: "Ajustes",
       system: "Sistema",
       theme: "Tema",

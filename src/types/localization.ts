@@ -1499,6 +1499,8 @@ export type CompleteLocalizationResource = Readonly<{
       measurementSystemLabel: string;
       metric: string;
       millimeters: string;
+      publicTrendsDescription: string;
+      publicTrendsLabel: string;
       settings: string;
       system: string;
       theme: string;
