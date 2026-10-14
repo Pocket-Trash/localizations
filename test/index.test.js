@@ -44,8 +44,8 @@ test("interpolates translation placeholders", () => {
   assert.equal(formatTranslation("app.name"), "Pocket Trash");
   assert.equal(formatTranslation("web.action.saveFlag"), "Save flag");
   assert.equal(
-    formatTranslation("web.archive.itemCount", { visible: 2, total: 3 }),
-    "2 of 3 items",
+    formatTranslation("web.archive.filter.matchMode", { label: "Material" }),
+    "Material match mode",
   );
   assert.equal(
     formatTranslation("web.collections.directory.itemCount", { count: 4 }),
@@ -155,7 +155,7 @@ test("catalogs use nested sources and flat public translations", () => {
   assert.ok(translationKeys.includes("action.save"));
   assert.ok(translationKeys.includes("web.action.saveFlag"));
   assert.ok(translationKeys.includes("web.action.addColor"));
-  assert.ok(translationKeys.includes("web.archive.itemCount"));
+  assert.ok(translationKeys.includes("web.archive.filter.matchMode"));
   assert.ok(translationKeys.includes("web.catalog.colorEffect.fade"));
   assert.ok(translationKeys.includes("web.catalog.field.productType"));
   assert.ok(translationKeys.includes("web.collections.finishChoice.custom"));
