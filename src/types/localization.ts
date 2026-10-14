@@ -96,6 +96,7 @@ export type CompleteLocalizationResource = Readonly<{
       clearSearch: string;
       close: string;
       confirmAdd: string;
+      delete: string;
       deleteCover: string;
       deleteImage: string;
       edit: string;
@@ -105,6 +106,7 @@ export type CompleteLocalizationResource = Readonly<{
       moveFinishOptionUp: string;
       removeFinishOption: string;
       removeSelection: string;
+      save: string;
       saveFlag: string;
       search: string;
       selectCover: string;
