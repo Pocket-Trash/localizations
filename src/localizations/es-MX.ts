@@ -68,9 +68,11 @@ export const esMX = {
       name: "",
     },
     trends: {
+      allMakers: "Todos los fabricantes",
       allMaterials: "Todos los materiales",
       allMaterialSpecifics: "Todas las aleaciones y grados",
       allProductTypes: "Todos los tipos de producto",
+      allProducts: "Todos los productos",
       approximateCollectors: "Coleccionistas aproximados",
       approximateItems: "Artículos aproximados",
       catalogProducts: "Productos del catálogo",
@@ -102,6 +104,20 @@ export const esMX = {
       empty: "No hay productos del catálogo disponibles para estos filtros.",
       lastUpdated: "Última actualización: {date}",
       loading: "Cargando tendencias…",
+      maker: "Fabricante",
+      makerProductsEmpty:
+        "No hay datos de fabricantes o productos disponibles para estos filtros.",
+      makerProductsError:
+        "Las tendencias de fabricantes y productos no están disponibles en este momento.",
+      makerProductsPrivacy:
+        "Los conteos de fabricantes y productos aparecen solo con al menos cinco coleccionistas y se redondean al múltiplo de cinco más cercano.",
+      makerProductsStale:
+        "Las tendencias de fabricantes y productos pueden estar desactualizadas.",
+      makerProductsSuppressed:
+        "Algunos fabricantes o productos están ocultos porque no alcanzan el umbral de privacidad.",
+      makers: "Fabricantes más coleccionados",
+      makersChartLabel:
+        "Fabricantes clasificados por coleccionistas aproximados",
       generalMaterial: "General",
       material: "Material",
       materialSpecific: "Aleación o grado",
@@ -134,6 +150,10 @@ export const esMX = {
       partsAndAccessoriesSuppressedEmpty:
         "Las tendencias de piezas y accesorios permanecen ocultas hasta alcanzar el umbral de privacidad.",
       productType: "Tipo de producto",
+      product: "Producto",
+      products: "Productos más coleccionados",
+      productsChartLabel:
+        "Productos clasificados por coleccionistas aproximados",
       title: "Tendencias",
       unspecifiedMaterial: "Sin especificar",
       viewProducts: "Ver productos",
