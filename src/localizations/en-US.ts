@@ -147,6 +147,15 @@ export const enUS = {
       unspecifiedMaterial: "Unspecified",
       viewProducts: "View products",
     },
+    userTrends: {
+      collectionCount: "Collections",
+      collectionSize: "Collection size",
+      description: "Explore the current composition of your collection.",
+      empty: "No collection items match these filters.",
+      items: "Items",
+      privateNote: "Only you can see these personal Trends.",
+      title: "Your Trends",
+    },
     changelog: {
       allCategories: "All categories",
       copyFailed: "Couldn’t copy link",
