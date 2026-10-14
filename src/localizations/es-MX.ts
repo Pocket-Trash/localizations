@@ -158,6 +158,15 @@ export const esMX = {
       unspecifiedMaterial: "Sin especificar",
       viewProducts: "Ver productos",
     },
+    userTrends: {
+      collectionCount: "Colecciones",
+      collectionSize: "Tamaño de la colección",
+      description: "Explora la composición actual de tu colección.",
+      empty: "Ningún artículo de tu colección coincide con estos filtros.",
+      items: "Artículos",
+      privateNote: "Solo tú puedes ver estas tendencias personales.",
+      title: "Tus tendencias",
+    },
     changelog: {
       allCategories: "Todas las categorías",
       copyFailed: "No se pudo copiar el enlace",

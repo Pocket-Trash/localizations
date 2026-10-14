@@ -131,6 +131,15 @@ export type CompleteLocalizationResource = Readonly<{
       unspecifiedMaterial: string;
       viewProducts: string;
     };
+    userTrends: {
+      collectionCount: string;
+      collectionSize: string;
+      description: string;
+      empty: string;
+      items: string;
+      privateNote: string;
+      title: string;
+    };
     changelog: {
       allCategories: string;
       copyFailed: string;
