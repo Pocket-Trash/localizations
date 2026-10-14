@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.36.0
+
+_Published 2026-10-14._
+
+### Minor Changes
+
+- 5c3c1bd: Add English and Spanish copy for private current-state user Trends.
+
 ## 0.35.0
 
 _Published 2026-10-14._
