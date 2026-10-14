@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.32.2
+
+_Published 2026-10-14._
+
+### Patch Changes
+
+- ea7f5b2: Remove localization copy for the retired Autmog archive.
+
 ## 0.32.1
 
 _Published 2026-10-13._
