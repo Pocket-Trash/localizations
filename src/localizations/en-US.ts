@@ -96,7 +96,9 @@ export const enUS = {
       collectorMaterialsChartLabel: "Collector presence by material",
       collectors: "Collectors",
       collectorsChartLabel: "Collectors by product type",
+      coverage: "{coverage}% coverage",
       empty: "No catalog products are available for these filters.",
+      exactValues: "Exact values",
       lastUpdated: "Last updated {date}",
       loading: "Loading Trends…",
       maker: "Maker",
@@ -147,8 +149,17 @@ export const enUS = {
       rangeAll: "All time",
       rangeWeek: "1 week",
       rangeYear: "1 year",
+      spinnerDescription:
+        "Explore catalog and privacy-safe collection distributions for Spinner characteristics with at least 70% catalog coverage.",
+      spinnerPrivacy:
+        "Collection counts appear only with at least five collectors and are rounded to the nearest five.",
+      spinnerSuppressed:
+        "Some collection values are hidden because they do not meet the privacy threshold.",
+      spinnerTitle: "Spinner details",
+      suppressed: "Hidden",
       title: "Trends",
       unspecifiedMaterial: "Unspecified",
+      value: "Value",
       viewProducts: "View products",
     },
     userTrends: {

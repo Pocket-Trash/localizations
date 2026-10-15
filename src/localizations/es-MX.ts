@@ -101,7 +101,9 @@ export const esMX = {
       collectorMaterialsChartLabel: "Presencia de coleccionistas por material",
       collectors: "Coleccionistas",
       collectorsChartLabel: "Coleccionistas por tipo de producto",
+      coverage: "Cobertura: {coverage}%",
       empty: "No hay productos del catálogo disponibles para estos filtros.",
+      exactValues: "Valores exactos",
       lastUpdated: "Última actualización: {date}",
       loading: "Cargando tendencias…",
       maker: "Fabricante",
@@ -159,8 +161,17 @@ export const esMX = {
       rangeAll: "Todo el tiempo",
       rangeWeek: "1 semana",
       rangeYear: "1 año",
+      spinnerDescription:
+        "Explora las distribuciones del catálogo y de colecciones con privacidad protegida para las características de spinners con al menos un 70% de cobertura en el catálogo.",
+      spinnerPrivacy:
+        "Los conteos de colecciones aparecen solo con al menos cinco coleccionistas y se redondean al múltiplo de cinco más cercano.",
+      spinnerSuppressed:
+        "Algunos valores de colecciones están ocultos porque no alcanzan el umbral de privacidad.",
+      spinnerTitle: "Detalles de spinners",
+      suppressed: "Oculto",
       title: "Tendencias",
       unspecifiedMaterial: "Sin especificar",
+      value: "Valor",
       viewProducts: "Ver productos",
     },
     userTrends: {
