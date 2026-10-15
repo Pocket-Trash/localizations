@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.38.4
+
+_Published 2026-10-15._
+
+### Patch Changes
+
+- cd1215a: Add localized copy for editing product material combinations.
+
 ## 0.38.3
 
 _Published 2026-10-15._
