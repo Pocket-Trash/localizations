@@ -132,6 +132,12 @@ export type CompleteLocalizationResource = Readonly<{
       rangeAll: string;
       rangeWeek: string;
       rangeYear: string;
+      sliderBodyMaterial: string;
+      sliderDescription: string;
+      sliderPlateMaterial: string;
+      sliderPrivacy: string;
+      sliderSuppressed: string;
+      sliderTitle: string;
       spinnerDescription: string;
       spinnerPrivacy: string;
       spinnerSuppressed: string;

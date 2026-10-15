@@ -161,6 +161,15 @@ export const esMX = {
       rangeAll: "Todo el tiempo",
       rangeWeek: "1 semana",
       rangeYear: "1 año",
+      sliderBodyMaterial: "Material del cuerpo del slider",
+      sliderDescription:
+        "Explora las distribuciones del catálogo y de colecciones con privacidad protegida para las características de sliders con al menos un 70% de cobertura en el catálogo.",
+      sliderPlateMaterial: "Material de las placas",
+      sliderPrivacy:
+        "Los conteos de colecciones aparecen solo con al menos cinco coleccionistas y se redondean al múltiplo de cinco más cercano.",
+      sliderSuppressed:
+        "Algunos valores de colecciones están ocultos porque no alcanzan el umbral de privacidad.",
+      sliderTitle: "Detalles de sliders",
       spinnerDescription:
         "Explora las distribuciones del catálogo y de colecciones con privacidad protegida para las características de spinners con al menos un 70% de cobertura en el catálogo.",
       spinnerPrivacy:
