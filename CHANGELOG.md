@@ -1,5 +1,17 @@
 # @pocket-trash/localizations
 
+## 0.39.0
+
+_Published 2026-10-15._
+
+### Minor Changes
+
+- 1ee51d8: Add the compatible refills field label in English and Mexican Spanish.
+
+### Patch Changes
+
+- 04369c6: Add localized Spinner Trends copy.
+
 ## 0.38.4
 
 _Published 2026-10-15._
