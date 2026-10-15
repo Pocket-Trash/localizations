@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.42.1
+
+_Published 2026-10-15._
+
+### Patch Changes
+
+- 1fde749: Add product material weight copy.
+
 ## 0.42.0
 
 _Published 2026-10-15._
