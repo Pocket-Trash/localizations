@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.43.0
+
+_Published 2026-10-15._
+
+### Minor Changes
+
+- 2778ec0: Add public collection lifecycle Trends copy.
+
 ## 0.42.1
 
 _Published 2026-10-15._
