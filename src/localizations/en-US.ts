@@ -140,6 +140,9 @@ export const enUS = {
         "Some enabled product types are hidden because they do not meet the privacy threshold.",
       partsAndAccessoriesSuppressedEmpty:
         "Parts and Accessories Trends are hidden until the privacy threshold is met.",
+      penRefillDescription:
+        "Compare compatible Pens and standalone Refills by refill format.",
+      penRefillTitle: "Pens and Refills",
       productType: "Product type",
       product: "Product",
       products: "Most collected products",
@@ -149,6 +152,7 @@ export const enUS = {
       rangeAll: "All time",
       rangeWeek: "1 week",
       rangeYear: "1 year",
+      refillFormat: "Refill format",
       sliderBodyMaterial: "Slider body material",
       sliderDescription:
         "Explore catalog and privacy-safe collection distributions for Slider characteristics with at least 70% catalog coverage.",
@@ -165,6 +169,7 @@ export const enUS = {
       spinnerSuppressed:
         "Some collection values are hidden because they do not meet the privacy threshold.",
       spinnerTitle: "Spinner details",
+      standaloneRefills: "Standalone Refills",
       suppressed: "Hidden",
       title: "Trends",
       unspecifiedMaterial: "Unspecified",

@@ -151,6 +151,9 @@ export const esMX = {
         "Algunos tipos de producto habilitados están ocultos porque no alcanzan el umbral de privacidad.",
       partsAndAccessoriesSuppressedEmpty:
         "Las tendencias de piezas y accesorios permanecen ocultas hasta alcanzar el umbral de privacidad.",
+      penRefillDescription:
+        "Compara plumas compatibles y repuestos independientes por formato de repuesto.",
+      penRefillTitle: "Plumas y repuestos",
       productType: "Tipo de producto",
       product: "Producto",
       products: "Productos más coleccionados",
@@ -161,6 +164,7 @@ export const esMX = {
       rangeAll: "Todo el tiempo",
       rangeWeek: "1 semana",
       rangeYear: "1 año",
+      refillFormat: "Formato de repuesto",
       sliderBodyMaterial: "Material del cuerpo del slider",
       sliderDescription:
         "Explora las distribuciones del catálogo y de colecciones con privacidad protegida para las características de sliders con al menos un 70% de cobertura en el catálogo.",
@@ -177,6 +181,7 @@ export const esMX = {
       spinnerSuppressed:
         "Algunos valores de colecciones están ocultos porque no alcanzan el umbral de privacidad.",
       spinnerTitle: "Detalles de spinners",
+      standaloneRefills: "Repuestos independientes",
       suppressed: "Oculto",
       title: "Tendencias",
       unspecifiedMaterial: "Sin especificar",

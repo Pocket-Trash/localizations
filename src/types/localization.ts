@@ -123,6 +123,8 @@ export type CompleteLocalizationResource = Readonly<{
       partsAndAccessoriesStale: string;
       partsAndAccessoriesSuppressed: string;
       partsAndAccessoriesSuppressedEmpty: string;
+      penRefillDescription: string;
+      penRefillTitle: string;
       productType: string;
       product: string;
       products: string;
@@ -132,6 +134,7 @@ export type CompleteLocalizationResource = Readonly<{
       rangeAll: string;
       rangeWeek: string;
       rangeYear: string;
+      refillFormat: string;
       sliderBodyMaterial: string;
       sliderDescription: string;
       sliderPlateMaterial: string;
@@ -142,6 +145,7 @@ export type CompleteLocalizationResource = Readonly<{
       spinnerPrivacy: string;
       spinnerSuppressed: string;
       spinnerTitle: string;
+      standaloneRefills: string;
       suppressed: string;
       title: string;
       unspecifiedMaterial: string;
