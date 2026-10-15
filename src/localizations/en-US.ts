@@ -460,6 +460,7 @@ export const enUS = {
         colorValue: "Colour value",
         colors: "Colours",
         description: "Description",
+        defaultWeight: "Default weight",
         finishes: "Finishes",
         finishOptions: "Finish options",
         maker: "Maker",
@@ -504,6 +505,10 @@ export const enUS = {
         edit: "Edit material combination",
         empty: "Add at least one material.",
         title: "Material combination",
+      },
+      materialWeights: {
+        field: "Weight for {material}",
+        title: "Weights by material",
       },
       noProducts: "No products yet.",
       notImplemented: "This product type is not implemented yet.",
