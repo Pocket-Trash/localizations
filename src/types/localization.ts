@@ -92,7 +92,9 @@ export type CompleteLocalizationResource = Readonly<{
       collectorMaterialsChartLabel: string;
       collectors: string;
       collectorsChartLabel: string;
+      coverage: string;
       empty: string;
+      exactValues: string;
       lastUpdated: string;
       loading: string;
       maker: string;
@@ -130,8 +132,14 @@ export type CompleteLocalizationResource = Readonly<{
       rangeAll: string;
       rangeWeek: string;
       rangeYear: string;
+      spinnerDescription: string;
+      spinnerPrivacy: string;
+      spinnerSuppressed: string;
+      spinnerTitle: string;
+      suppressed: string;
       title: string;
       unspecifiedMaterial: string;
+      value: string;
       viewProducts: string;
     };
     userTrends: {
