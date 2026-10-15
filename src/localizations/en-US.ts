@@ -892,6 +892,7 @@ export const enUS = {
       },
       field: {
         aliases: "Aliases",
+        compatibleRefills: "Compatible refills",
         refillModel: "Refill model",
       },
       productType: {

@@ -919,6 +919,7 @@ export const esMX = {
       },
       field: {
         aliases: "Alias",
+        compatibleRefills: "Repuestos compatibles",
         refillModel: "Modelo de repuesto",
       },
       productType: {
