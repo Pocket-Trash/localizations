@@ -149,6 +149,15 @@ export const enUS = {
       rangeAll: "All time",
       rangeWeek: "1 week",
       rangeYear: "1 year",
+      sliderBodyMaterial: "Slider body material",
+      sliderDescription:
+        "Explore catalog and privacy-safe collection distributions for Slider characteristics with at least 70% catalog coverage.",
+      sliderPlateMaterial: "Plate material",
+      sliderPrivacy:
+        "Collection counts appear only with at least five collectors and are rounded to the nearest five.",
+      sliderSuppressed:
+        "Some collection values are hidden because they do not meet the privacy threshold.",
+      sliderTitle: "Slider details",
       spinnerDescription:
         "Explore catalog and privacy-safe collection distributions for Spinner characteristics with at least 70% catalog coverage.",
       spinnerPrivacy:
