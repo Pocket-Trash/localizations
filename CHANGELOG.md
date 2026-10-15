@@ -1,5 +1,14 @@
 # @pocket-trash/localizations
 
+## 0.41.0
+
+_Published 2026-10-15._
+
+### Minor Changes
+
+- d8a60f6: Add the collection product selector label.
+- bb90677: Add Pens and Refills Trends copy.
+
 ## 0.40.0
 
 _Published 2026-10-15._
