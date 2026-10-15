@@ -177,7 +177,11 @@ export const enUS = {
       viewProducts: "View products",
     },
     userTrends: {
+      acquisitions: "Acquisitions",
       collectionCount: "Collections",
+      collectionHistory: "Collection history",
+      collectionHistoryChartLabel:
+        "Collection size, acquisitions, and departures over time",
       collectionSize: "Collection size",
       communityComparison: "Community comparison",
       communityPercentage: "Community %",
@@ -189,7 +193,11 @@ export const enUS = {
       comparisonDescription:
         "Percentages compare composition only; raw collection sizes are never compared.",
       description: "Explore the current composition of your collection.",
+      departures: "Departures",
       empty: "No collection items match these filters.",
+      exactAcquisitionDates: "{count} exact acquisition dates.",
+      imputedAcquisitionDates:
+        "{count} acquisition dates estimated from when items were added to Pocket Trash.",
       items: "Items",
       personalPercentage: "Personal %",
       privateNote: "Only you can see these personal Trends.",

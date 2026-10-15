@@ -189,7 +189,11 @@ export const esMX = {
       viewProducts: "Ver productos",
     },
     userTrends: {
+      acquisitions: "Adquisiciones",
       collectionCount: "Colecciones",
+      collectionHistory: "Historial de la colección",
+      collectionHistoryChartLabel:
+        "Tamaño, adquisiciones y salidas de la colección a lo largo del tiempo",
       collectionSize: "Tamaño de la colección",
       communityComparison: "Comparación con la comunidad",
       communityPercentage: "Comunidad %",
@@ -202,7 +206,11 @@ export const esMX = {
       comparisonDescription:
         "Los porcentajes comparan únicamente la composición; nunca se comparan los tamaños brutos de las colecciones.",
       description: "Explora la composición actual de tu colección.",
+      departures: "Salidas",
       empty: "Ningún artículo de tu colección coincide con estos filtros.",
+      exactAcquisitionDates: "{count} fechas de adquisición exactas.",
+      imputedAcquisitionDates:
+        "{count} fechas de adquisición estimadas según cuándo se agregaron los artículos a Pocket Trash.",
       items: "Artículos",
       personalPercentage: "Personal %",
       privateNote: "Solo tú puedes ver estas tendencias personales.",

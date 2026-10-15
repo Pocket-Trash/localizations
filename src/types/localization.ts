@@ -153,7 +153,10 @@ export type CompleteLocalizationResource = Readonly<{
       viewProducts: string;
     };
     userTrends: {
+      acquisitions: string;
       collectionCount: string;
+      collectionHistory: string;
+      collectionHistoryChartLabel: string;
       collectionSize: string;
       communityComparison: string;
       communityPercentage: string;
@@ -163,7 +166,10 @@ export type CompleteLocalizationResource = Readonly<{
       communityUnavailable: string;
       comparisonDescription: string;
       description: string;
+      departures: string;
       empty: string;
+      exactAcquisitionDates: string;
+      imputedAcquisitionDates: string;
       items: string;
       personalPercentage: string;
       privateNote: string;
