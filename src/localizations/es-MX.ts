@@ -24,15 +24,6 @@ export const esMX = {
     current: "Idioma actual: {locale}",
   },
   catalog: {
-    configurationSlots: {
-      actuator: "Actuador",
-      appearance: "Apariencia",
-      clip: "Clip",
-      material: "Material",
-      mechanism: "Mecanismo",
-      tip: "Punta",
-      topCap: "Tapa superior",
-    },
     markets: {
       global: "Global",
     },
@@ -858,11 +849,6 @@ export const esMX = {
           "compatibility-membership": "Agregar pertenencia de compatibilidad",
           "compatibility-membership-remove":
             "Eliminar pertenencia de compatibilidad",
-          "configuration-choice": "Agregar opción de configuración",
-          "configuration-rule": "Agregar regla de configuración",
-          "configuration-slot": "Agregar campo de configuración",
-          "configuration-slot-required":
-            "Definir campo de configuración obligatorio",
           "offering-identifier": "Agregar identificador de oferta",
           "refill-ink-color": "Agregar color de tinta del repuesto",
           "refill-offering": "Agregar oferta de repuesto",
@@ -871,9 +857,6 @@ export const esMX = {
         actionLabel: "Acción",
         aliases: "Alias",
         and: "y",
-        availableWhen: "Disponible cuando",
-        availableWhenAnd: "Opciones requeridas (todas)",
-        choice: "Opción",
         compatibilityGroup: "Grupo de compatibilidad",
         compatibilityMembership: "Pertenencia de compatibilidad",
         compatibilityRelationship: "Relación de compatibilidad",
@@ -890,13 +873,9 @@ export const esMX = {
         offering: "Oferta",
         refillModel: "Modelo de repuesto",
         registeredGroup: "Grupo registrado",
-        required: "Obligatorio",
         requiredTip: "Punta de pluma requerida",
-        slot: "Campo de configuración",
-        slotKind: "Tipo de campo",
         slug: "Slug",
         target: "Destino",
-        targetChoice: "Opción de destino",
         targetType: {
           group: "Grupo de repuestos",
           refill: "Repuesto individual",
@@ -906,17 +885,16 @@ export const esMX = {
         tipStyle: "Estilo de punta",
       },
       collection: {
+        installedParts: "Piezas instaladas",
+        noInstalledParts: "No hay piezas instaladas",
         noRefill: "Sin repuesto instalado",
         noRefillOffering: "Sin oferta de repuesto seleccionada",
         notSupported: "Compatibilidad no registrada para esta configuración",
         refill: "Repuesto instalado",
         refillOffering: "Oferta de repuesto",
       },
-      configuration: {
-        availableWhen: "Disponible cuando {requirements}",
-        heading: "Configuración",
-        required: "Obligatorio",
-        unknownChoice: "Opción desconocida",
+      compatibleParts: {
+        heading: "Piezas compatibles",
       },
       field: {
         aliases: "Alias",
