@@ -805,6 +805,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
       field: {
         aliases: string;
+        compatibleRefills: string;
         refillModel: string;
       };
       productType: {
