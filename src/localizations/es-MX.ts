@@ -477,6 +477,7 @@ export const esMX = {
         colorValue: "Valor del color",
         colors: "Colores",
         description: "Descripción",
+        defaultWeight: "Peso predeterminado",
         finishes: "Acabados",
         finishOptions: "Opciones de acabado",
         maker: "",
@@ -521,6 +522,10 @@ export const esMX = {
         edit: "Editar combinación de materiales",
         empty: "Agrega al menos un material.",
         title: "Combinación de materiales",
+      },
+      materialWeights: {
+        field: "Peso de {material}",
+        title: "Pesos por material",
       },
       noProducts: "",
       notImplemented: "",

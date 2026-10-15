@@ -423,6 +423,7 @@ export type CompleteLocalizationResource = Readonly<{
         colorValue: string;
         colors: string;
         description: string;
+        defaultWeight: string;
         finishes: string;
         finishOptions: string;
         maker: string;
@@ -463,6 +464,10 @@ export type CompleteLocalizationResource = Readonly<{
         duplicate: string;
         edit: string;
         empty: string;
+        title: string;
+      };
+      materialWeights: {
+        field: string;
         title: string;
       };
       noProducts: string;
