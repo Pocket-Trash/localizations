@@ -246,6 +246,7 @@ export const esMX = {
       addMaker: "",
       addMaterial: "",
       addProduct: "",
+      addProductLink: "Agregar enlace del producto",
       addToCollection: "",
       archive: "Archivar",
       clearAllFilters: "Borrar todos los filtros",
@@ -261,7 +262,10 @@ export const esMX = {
       moreFilters: "Más filtros",
       moveFinishOptionDown: "Mover la opción de acabado hacia abajo",
       moveFinishOptionUp: "Mover la opción de acabado hacia arriba",
+      moveProductLinkDown: "Mover el enlace del producto {number} hacia abajo",
+      moveProductLinkUp: "Mover el enlace del producto {number} hacia arriba",
       removeFinishOption: "Quitar opción de acabado",
+      removeProductLink: "Quitar el enlace del producto {number}",
       removeSelection: "Quitar {name}",
       save: "Guardar",
       saveFlag: "Guardar bandera",
@@ -275,6 +279,9 @@ export const esMX = {
       viewItem: "Ver artículo",
       viewProductDetails: "Ver detalles del producto",
       visitProductPage: "Visitar pagina del producto",
+      visitProductPageFor: "Visitar la página de producto de {name}",
+      visitProductPageNumbered:
+        "Visitar la página de producto {number} de {name}",
     },
     admin: {
       config: {
@@ -466,6 +473,8 @@ export const esMX = {
         duplicateComponent:
           "Cada acabado o color solo puede seleccionarse una vez.",
         duplicateFinishOption: "Esa opción de acabado ya está en la lista.",
+        duplicateProductLink:
+          "Cada enlace del producto solo puede agregarse una vez.",
         fadeColors: "Selecciona al menos dos colores para un degradado.",
         finishOptionRequired: "Agrega al menos una opción de acabado.",
         finishRequired: "Selecciona al menos un acabado.",
@@ -494,6 +503,8 @@ export const esMX = {
         materials: "",
         measurementUnit: "",
         name: "",
+        productLink: "Enlace del producto {number}",
+        productLinks: "Enlaces del producto",
         productType: "",
         rootUrl: "",
         slug: "",
@@ -513,6 +524,8 @@ export const esMX = {
         collectionDescriptionOverride: "",
         makerProductUrl: "",
         markdownDescription: "",
+        productLinks:
+          "Agrega enlaces directos a este producto en el orden en que se mostrarán.",
       },
       images: {
         aspectRatioGuideLink: "Leer la guía de tamaño y resolución de imágenes",

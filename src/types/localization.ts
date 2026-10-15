@@ -202,6 +202,7 @@ export type CompleteLocalizationResource = Readonly<{
       addMaker: string;
       addMaterial: string;
       addProduct: string;
+      addProductLink: string;
       addToCollection: string;
       archive: string;
       clearAllFilters: string;
@@ -217,7 +218,10 @@ export type CompleteLocalizationResource = Readonly<{
       moreFilters: string;
       moveFinishOptionDown: string;
       moveFinishOptionUp: string;
+      moveProductLinkDown: string;
+      moveProductLinkUp: string;
       removeFinishOption: string;
+      removeProductLink: string;
       removeSelection: string;
       save: string;
       saveFlag: string;
@@ -231,6 +235,8 @@ export type CompleteLocalizationResource = Readonly<{
       viewItem: string;
       viewProductDetails: string;
       visitProductPage: string;
+      visitProductPageFor: string;
+      visitProductPageNumbered: string;
     };
     admin: {
       config: {
@@ -411,6 +417,7 @@ export type CompleteLocalizationResource = Readonly<{
         duplicate: string;
         duplicateComponent: string;
         duplicateFinishOption: string;
+        duplicateProductLink: string;
         fadeColors: string;
         finishOptionRequired: string;
         finishRequired: string;
@@ -437,6 +444,8 @@ export type CompleteLocalizationResource = Readonly<{
         materials: string;
         measurementUnit: string;
         name: string;
+        productLink: string;
+        productLinks: string;
         productType: string;
         rootUrl: string;
         slug: string;
@@ -455,6 +464,7 @@ export type CompleteLocalizationResource = Readonly<{
         collectionDescriptionOverride: string;
         makerProductUrl: string;
         markdownDescription: string;
+        productLinks: string;
       };
       images: {
         aspectRatioGuideLink: string;
