@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.43.1
+
+_Published 2026-10-15._
+
+### Patch Changes
+
+- 29c3dfa: Add product link editor and navigation copy.
+
 ## 0.43.0
 
 _Published 2026-10-15._
