@@ -479,6 +479,16 @@ export const esMX = {
       finishOptionCount: "Opciones de acabado: {count}",
       finishPreview: "Vista previa: {finish}",
       materialCount: "Materiales: {count}",
+      materialCombination: {
+        add: "Agregar combinación de materiales",
+        addSingle: "Agregar material",
+        component: "Material {number}",
+        duplicate:
+          "Cada material solo puede aparecer una vez en una combinación.",
+        edit: "Editar combinación de materiales",
+        empty: "Agrega al menos un material.",
+        title: "Combinación de materiales",
+      },
       noProducts: "",
       notImplemented: "",
       partsAndAccessories: "Piezas y accesorios",
