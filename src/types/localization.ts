@@ -25,15 +25,6 @@ export type CompleteLocalizationResource = Readonly<{
     current: string;
   };
   catalog: {
-    configurationSlots: {
-      actuator: string;
-      appearance: string;
-      clip: string;
-      material: string;
-      mechanism: string;
-      tip: string;
-      topCap: string;
-    };
     markets: {
       global: string;
     };
@@ -765,10 +756,6 @@ export type CompleteLocalizationResource = Readonly<{
           "compatibility-group": string;
           "compatibility-membership": string;
           "compatibility-membership-remove": string;
-          "configuration-choice": string;
-          "configuration-rule": string;
-          "configuration-slot": string;
-          "configuration-slot-required": string;
           "offering-identifier": string;
           "refill-ink-color": string;
           "refill-offering": string;
@@ -777,9 +764,6 @@ export type CompleteLocalizationResource = Readonly<{
         actionLabel: string;
         aliases: string;
         and: string;
-        availableWhen: string;
-        availableWhenAnd: string;
-        choice: string;
         compatibilityGroup: string;
         compatibilityMembership: string;
         compatibilityRelationship: string;
@@ -796,13 +780,9 @@ export type CompleteLocalizationResource = Readonly<{
         offering: string;
         refillModel: string;
         registeredGroup: string;
-        required: string;
         requiredTip: string;
-        slot: string;
-        slotKind: string;
         slug: string;
         target: string;
-        targetChoice: string;
         targetType: {
           group: string;
           refill: string;
@@ -812,17 +792,16 @@ export type CompleteLocalizationResource = Readonly<{
         tipStyle: string;
       };
       collection: {
+        installedParts: string;
+        noInstalledParts: string;
         noRefill: string;
         noRefillOffering: string;
         notSupported: string;
         refill: string;
         refillOffering: string;
       };
-      configuration: {
-        availableWhen: string;
+      compatibleParts: {
         heading: string;
-        required: string;
-        unknownChoice: string;
       };
       field: {
         aliases: string;
