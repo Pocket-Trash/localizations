@@ -761,6 +761,7 @@ export const enUS = {
       },
       empty: "No collection items yet.",
       emptyCollections: "You don't have any collections yet.",
+      productSelector: "Product selector",
       error: {
         chooseCollection: "Choose a collection.",
         syncIncomplete: "Your profile is still syncing. Try again.",

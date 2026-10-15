@@ -692,6 +692,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
       empty: string;
       emptyCollections: string;
+      productSelector: string;
       error: {
         chooseCollection: string;
         syncIncomplete: string;

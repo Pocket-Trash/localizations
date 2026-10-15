@@ -785,6 +785,7 @@ export const esMX = {
       },
       empty: "",
       emptyCollections: "",
+      productSelector: "Selector de producto",
       error: {
         chooseCollection: "",
         syncIncomplete: "",
