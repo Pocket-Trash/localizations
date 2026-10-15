@@ -65,6 +65,7 @@ export const enUS = {
       activityPrivacy:
         "Collection activity appears only when at least five collectors added records in a period and is rounded to the nearest five. Missing points are privacy-protected gaps.",
       activityRange: "Time range",
+      acquisitions: "Acquisitions",
       addedToPocketTrash: "Added to Pocket Trash",
       allMakers: "All makers",
       allMaterials: "All materials",
@@ -97,9 +98,15 @@ export const enUS = {
       collectors: "Collectors",
       collectorsChartLabel: "Collectors by product type",
       coverage: "{coverage}% coverage",
+      departures: "Departures",
       empty: "No catalog products are available for these filters.",
       exactValues: "Exact values",
       lastUpdated: "Last updated {date}",
+      lifecycle: "Collection lifecycle",
+      lifecycleChartLabel: "Collection acquisitions and departures over time",
+      lifecyclePrivacy:
+        "Counts appear only when at least five collectors contributed to a period and are rounded to the nearest five. Missing points are privacy-protected gaps.",
+      lifecycleStale: "Collection lifecycle Trends may be out of date.",
       loading: "Loading Trends…",
       maker: "Maker",
       makerProductsEmpty:

@@ -65,6 +65,7 @@ export type CompleteLocalizationResource = Readonly<{
       activityDate: string;
       activityPrivacy: string;
       activityRange: string;
+      acquisitions: string;
       addedToPocketTrash: string;
       allMakers: string;
       allMaterials: string;
@@ -93,9 +94,14 @@ export type CompleteLocalizationResource = Readonly<{
       collectors: string;
       collectorsChartLabel: string;
       coverage: string;
+      departures: string;
       empty: string;
       exactValues: string;
       lastUpdated: string;
+      lifecycle: string;
+      lifecycleChartLabel: string;
+      lifecyclePrivacy: string;
+      lifecycleStale: string;
       loading: string;
       maker: string;
       makerProductsEmpty: string;
