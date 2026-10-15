@@ -66,6 +66,7 @@ export const esMX = {
       activityPrivacy:
         "La actividad de colecciones aparece solo cuando al menos cinco coleccionistas agregaron registros en un periodo y se redondea al múltiplo de cinco más cercano. Los puntos faltantes son intervalos protegidos por privacidad.",
       activityRange: "Periodo",
+      acquisitions: "Adquisiciones",
       addedToPocketTrash: "Agregados a Pocket Trash",
       allMakers: "Todos los fabricantes",
       allMaterials: "Todos los materiales",
@@ -102,9 +103,17 @@ export const esMX = {
       collectors: "Coleccionistas",
       collectorsChartLabel: "Coleccionistas por tipo de producto",
       coverage: "Cobertura: {coverage}%",
+      departures: "Salidas",
       empty: "No hay productos del catálogo disponibles para estos filtros.",
       exactValues: "Valores exactos",
       lastUpdated: "Última actualización: {date}",
+      lifecycle: "Ciclo de vida de la colección",
+      lifecycleChartLabel:
+        "Adquisiciones y salidas de colecciones a lo largo del tiempo",
+      lifecyclePrivacy:
+        "Los conteos aparecen solo cuando al menos cinco coleccionistas contribuyeron en un periodo y se redondean al múltiplo de cinco más cercano. Los puntos faltantes son intervalos protegidos por privacidad.",
+      lifecycleStale:
+        "Las tendencias del ciclo de vida de colecciones pueden estar desactualizadas.",
       loading: "Cargando tendencias…",
       maker: "Fabricante",
       makerProductsEmpty:
