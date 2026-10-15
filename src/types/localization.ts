@@ -432,6 +432,15 @@ export type CompleteLocalizationResource = Readonly<{
       finishOptionCount: string;
       finishPreview: string;
       materialCount: string;
+      materialCombination: {
+        add: string;
+        addSingle: string;
+        component: string;
+        duplicate: string;
+        edit: string;
+        empty: string;
+        title: string;
+      };
       noProducts: string;
       notImplemented: string;
       partsAndAccessories: string;
