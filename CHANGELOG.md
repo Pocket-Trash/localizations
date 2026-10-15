@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.42.0
+
+_Published 2026-10-15._
+
+### Minor Changes
+
+- d151db2: Add personal collection history Trends copy.
+
 ## 0.41.0
 
 _Published 2026-10-15._
