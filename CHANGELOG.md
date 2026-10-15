@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.40.0
+
+_Published 2026-10-15._
+
+### Minor Changes
+
+- 7565abd: Add Slider Trends copy.
+
 ## 0.39.0
 
 _Published 2026-10-15._
