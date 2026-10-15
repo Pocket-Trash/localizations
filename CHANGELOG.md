@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.38.3
+
+_Published 2026-10-15._
+
+### Patch Changes
+
+- a90c4ca: Replace Pen configuration copy with compatible and installed parts
+
 ## 0.38.2
 
 _Published 2026-10-15._
