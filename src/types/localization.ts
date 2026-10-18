@@ -59,6 +59,57 @@ export type CompleteLocalizationResource = Readonly<{
     site: {
       name: string;
     };
+    search: {
+      directory: {
+        collectionItemsPlaceholder: string;
+        collectionsPlaceholder: string;
+        makersPlaceholder: string;
+        materialsPlaceholder: string;
+        productsPlaceholder: string;
+        resourcesPlaceholder: string;
+      };
+      error: string;
+      label: string;
+      loading: string;
+      minimumLength: string;
+      modal: {
+        navigate: string;
+        openResults: string;
+        openSearch: string;
+        seeAllResults: string;
+      };
+      noResults: string;
+      pagination: {
+        firstPage: string;
+        goToPage: string;
+        lastPage: string;
+        nextPage: string;
+        pageStatus: string;
+        previousPage: string;
+      };
+      placeholder: string;
+      resultsCount: string;
+      tabs: {
+        all: string;
+        collections: string;
+        makers: string;
+        materials: string;
+        people: string;
+        products: string;
+        resources: string;
+      };
+      title: string;
+      types: {
+        collection: string;
+        collectionItem: string;
+        maker: string;
+        material: string;
+        materialDetail: string;
+        person: string;
+        product: string;
+        resource: string;
+      };
+    };
     trends: {
       activity: string;
       activityChartLabel: string;
