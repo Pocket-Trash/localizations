@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.44.0
+
+_Published 2026-10-18._
+
+### Minor Changes
+
+- 0d0e855: Add global and directory search translations.
+
 ## 0.43.1
 
 _Published 2026-10-15._
