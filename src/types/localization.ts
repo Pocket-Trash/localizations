@@ -1405,6 +1405,9 @@ export type CompleteLocalizationResource = Readonly<{
         stub: string;
       };
     };
+    profiles: {
+      privateUser: string;
+    };
     resources: {
       action: {
         accept: string;
@@ -1622,8 +1625,11 @@ export type CompleteLocalizationResource = Readonly<{
       measurementSystemLabel: string;
       metric: string;
       millimeters: string;
+      profileVisibilityDescription: string;
+      profileVisibilityLabel: string;
       publicTrendsDescription: string;
       publicTrendsLabel: string;
+      publicTrendsProfileRequirement: string;
       settings: string;
       system: string;
       theme: string;
