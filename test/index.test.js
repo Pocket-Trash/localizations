@@ -30,6 +30,30 @@ test("resolves locale preferences with en-US fallback", () => {
   assert.equal(resolveLocale(null, undefined, "zz"), DEFAULT_LOCALE);
 });
 
+test("staff Discord ticket copy is English-only with the existing fallback", () => {
+  assert.equal("discord" in esMX, false);
+  for (const key of translationKeys.filter((key) =>
+    key.startsWith("discord.tickets."),
+  )) {
+    assert.equal(
+      formatTranslation(key, {}, "es-MX"),
+      formatTranslation(key, {}, "en-US"),
+    );
+  }
+  assert.equal(
+    formatTranslation("discord.tickets.bug", {}, "en-US"),
+    "Bug ticket",
+  );
+  assert.equal(
+    formatTranslation(
+      "discord.tickets.created",
+      { url: "https://linear.app/example" },
+      "en-US",
+    ),
+    "Linear ticket: https://linear.app/example",
+  );
+});
+
 test("orders Accept-Language values by q weight", () => {
   assert.equal(resolveLocale("fr-CA, es-MX;q=0.9, en-US;q=0.8"), "es-MX");
   assert.equal(resolveLocale("fr-CA;q=0.9, en-US;q=0.8, es-MX;q=0.7"), "en-US");

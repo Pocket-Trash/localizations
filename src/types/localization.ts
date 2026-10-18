@@ -11,6 +11,23 @@ type DeepPartial<T> = {
 };
 
 export type CompleteLocalizationResource = Readonly<{
+  discord: {
+    tickets: {
+      prompt: string;
+      bug: string;
+      feature: string;
+      priority: string;
+      noPriority: string;
+      urgent: string;
+      high: string;
+      medium: string;
+      low: string;
+      staffNote: string;
+      created: string;
+      retry: string;
+      unavailable: string;
+    };
+  };
   app: {
     name: string;
   };

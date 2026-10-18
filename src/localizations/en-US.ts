@@ -10,6 +10,24 @@ import type { CompleteLocalizationResource } from "../types/localization.js";
  * this `en-US` catalog at runtime.
  */
 export const enUS = {
+  discord: {
+    tickets: {
+      prompt: "Owners can create one Linear ticket for this support thread.",
+      bug: "Bug ticket",
+      feature: "Feature ticket",
+      priority: "Priority",
+      noPriority: "No priority",
+      urgent: "Urgent",
+      high: "High",
+      medium: "Medium",
+      low: "Low",
+      staffNote: "Staff note (optional)",
+      created: "Linear ticket: {url}",
+      retry:
+        "This ticket is still processing or needs a retry. Use either ticket button to resume the original request; its type, priority and note will not change.",
+      unavailable: "Ticket creation is unavailable in this channel.",
+    },
+  },
   app: {
     name: "Pocket Trash",
   },
