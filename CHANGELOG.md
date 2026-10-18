@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.45.0
+
+_Published 2026-10-18._
+
+### Minor Changes
+
+- da3d1a0: Add English staff Discord ticket controls and messages.
+
 ## 0.44.0
 
 _Published 2026-10-18._
