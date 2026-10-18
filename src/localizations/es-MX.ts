@@ -1530,6 +1530,9 @@ export const esMX = {
         stub: "",
       },
     },
+    profiles: {
+      privateUser: "Usuario privado",
+    },
     resources: {
       action: {
         accept: "Aceptar",
@@ -1775,9 +1778,14 @@ export const esMX = {
       measurementSystemLabel: "",
       metric: "",
       millimeters: "Milimetros",
+      profileVisibilityDescription:
+        "Los perfiles privados no aparecen en la búsqueda de personas ni se pueden consultar en las páginas de perfil. En tu contenido público se muestra “Usuario privado” en lugar de tu nombre de usuario y avatar; los títulos y las descripciones del contenido no cambian.",
+      profileVisibilityLabel: "Visibilidad del perfil",
       publicTrendsDescription:
         "Comparte una página que contiene solo tus colecciones públicas y artículos públicos aprobados. Las tendencias permanecen privadas hasta que actives esta opción.",
       publicTrendsLabel: "Publicar tendencias",
+      publicTrendsProfileRequirement:
+        "Las tendencias solo son visibles mientras tu perfil sea público. La opción que elijas para Publicar tendencias se conserva mientras tu perfil sea privado.",
       settings: "Ajustes",
       system: "Sistema",
       theme: "Tema",

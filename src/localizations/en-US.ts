@@ -1508,6 +1508,9 @@ export const enUS = {
         stub: "Resources are coming soon.",
       },
     },
+    profiles: {
+      privateUser: "Private user",
+    },
     resources: {
       action: {
         accept: "Accept",
@@ -1743,9 +1746,14 @@ export const enUS = {
       measurementSystemLabel: "Measurement system",
       metric: "Metric",
       millimeters: "Millimeters",
+      profileVisibilityDescription:
+        "Private profiles are hidden from People search and profile pages. Your public content shows “Private user” instead of your username and avatar; content titles and descriptions stay unchanged.",
+      profileVisibilityLabel: "Profile visibility",
       publicTrendsDescription:
         "Share a page containing only your public collections and approved public items. Trends stay private until you enable this setting.",
       publicTrendsLabel: "Publish Trends",
+      publicTrendsProfileRequirement:
+        "Trends are visible only while your profile is public. Your Publish Trends choice is saved while your profile is private.",
       settings: "Settings",
       system: "System",
       theme: "Theme",
