@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.46.0
+
+_Published 2026-10-18._
+
+### Minor Changes
+
+- ee96737: Add profile visibility settings and private-user attribution copy.
+
 ## 0.45.0
 
 _Published 2026-10-18._
