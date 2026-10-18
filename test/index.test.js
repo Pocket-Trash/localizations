@@ -61,6 +61,80 @@ test("interpolates translation placeholders", () => {
   );
 });
 
+test("global search copy is complete in English and Mexican Spanish", () => {
+  assert.deepEqual(Object.keys(esMX.web.search), Object.keys(enUS.web.search));
+  for (const group of ["directory", "modal", "pagination", "tabs", "types"]) {
+    assert.deepEqual(
+      Object.keys(esMX.web.search[group]),
+      Object.keys(enUS.web.search[group]),
+    );
+  }
+
+  assert.equal(
+    formatTranslation("web.search.resultsCount", { count: 7 }, "en-US"),
+    "Results: 7",
+  );
+  assert.equal(
+    formatTranslation("web.search.resultsCount", { count: 7 }, "es-MX"),
+    "Resultados: 7",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.search.pagination.pageStatus",
+      { page: 3, pageCount: 16 },
+      "en-US",
+    ),
+    "Page 3 of 16",
+  );
+  assert.equal(
+    formatTranslation(
+      "web.search.pagination.pageStatus",
+      { page: 3, pageCount: 16 },
+      "es-MX",
+    ),
+    "Página 3 de 16",
+  );
+  assert.equal(
+    formatTranslation("web.search.pagination.goToPage", { page: 8 }, "en-US"),
+    "Go to page 8",
+  );
+  assert.equal(
+    formatTranslation("web.search.pagination.goToPage", { page: 8 }, "es-MX"),
+    "Ir a la página 8",
+  );
+
+  for (const locale of ["en-US", "es-MX"]) {
+    for (const key of [
+      "error",
+      "loading",
+      "minimumLength",
+      "noResults",
+      "modal.navigate",
+      "modal.openResults",
+      "modal.seeAllResults",
+      "pagination.firstPage",
+      "pagination.lastPage",
+      "tabs.all",
+      "tabs.collections",
+      "tabs.makers",
+      "tabs.materials",
+      "tabs.people",
+      "tabs.products",
+      "tabs.resources",
+      "types.collection",
+      "types.collectionItem",
+      "types.maker",
+      "types.material",
+      "types.materialDetail",
+      "types.person",
+      "types.product",
+      "types.resource",
+    ]) {
+      assert.ok(translations[locale][`web.search.${key}`]);
+    }
+  }
+});
+
 test("keeps message helpers as compatibility aliases", () => {
   assert.equal(getMessages, getTranslations);
   assert.equal(formatMessage, formatTranslation);
