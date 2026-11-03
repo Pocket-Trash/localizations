@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.47.0
+
+_Published 2026-11-03._
+
+### Minor Changes
+
+- 3eadd56: Add English and Mexican Spanish copy for collection item statuses, prices, notes, and status Trends.
+
 ## 0.46.0
 
 _Published 2026-10-18._
