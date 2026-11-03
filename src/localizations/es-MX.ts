@@ -109,6 +109,100 @@ export const esMX = {
         resource: "Recurso",
       },
     },
+    collectionItemMetadata: {
+      addDisclosure: "Agregar precio, estado o notas",
+      editDisclosure: "Precio, estado y notas",
+      title: "Estado, precios y notas",
+      public: "Público",
+      private: "Privado",
+      publicStatus: "Estado público",
+      privateStatus: "Estado privado",
+      viewPublicVersion: "Ver versión pública",
+      publicVersionTitle: "Versión pública",
+      closePublicVersion: "Cerrar versión pública",
+      grail: "Santo grial",
+      favorite: "Favorito",
+      wantToSell: "Quiero vender",
+      wantToTrade: "Quiero intercambiar",
+      sold: "Vendido",
+      pricePaid: "Precio pagado",
+      priceSold: "Precio de venta",
+      amount: "Importe",
+      currency: "Moneda",
+      paidIsPublic: "Mostrar públicamente el precio pagado",
+      soldIsPrivate: "El precio de venta siempre es privado.",
+      saleDate: "Fecha de venta",
+      notes: "Notas",
+      addNote: "Agregar nota",
+      editNote: "Editar nota",
+      deleteNote: "Eliminar nota",
+      noteName: "Nombre de la nota",
+      noteContent: "Contenido de la nota",
+      noteVisibility: "Visibilidad de la nota",
+      saveNote: "Guardar nota",
+      moveNoteUp: "Mover {name} hacia arriba",
+      moveNoteDown: "Mover {name} hacia abajo",
+      deleteNoteConfirmation:
+        "¿Eliminar permanentemente la nota “{name}”? Esta acción no se puede deshacer.",
+      noNotes: "Aún no hay notas.",
+      publicHidden: "Los metadatos públicos están ocultos actualmente",
+      collectionPrivateWarning:
+        "Estos metadatos se guardan como públicos, pero permanecen ocultos mientras la colección sea privada.",
+      itemPrivateWarning:
+        "Estos metadatos se guardan como públicos, pero permanecen ocultos mientras el artículo sea privado.",
+      unapprovedWarning:
+        "Estos metadatos se guardan como públicos, pero permanecen ocultos hasta que se apruebe el artículo.",
+      unavailableWarning:
+        "Estos metadatos se guardan como públicos, pero el artículo no está disponible públicamente en este momento.",
+      ownerOnlyError:
+        "Solo el propietario del artículo puede cambiar estados, precios o notas.",
+      statusError: "Elige un estado válido.",
+      noteNameError: "Escribe un nombre de nota de entre 1 y 100 caracteres.",
+      duplicateNoteNameError: "Ya existe una nota con este nombre.",
+      noteContentError:
+        "Escribe contenido de entre 5 y 2,000 caracteres para la nota.",
+      notePositionError: "Elige una posición válida para la nota.",
+      moneyPairError:
+        "Ingresa un importe y una moneda, o deja ambos campos vacíos.",
+      moneyAmountError:
+        "Ingresa un importe no negativo con los decimales que admite la moneda seleccionada.",
+      moneyCurrencyError: "Elige una moneda admitida.",
+      soldPriceError:
+        "El precio de venta requiere un período de propiedad finalizado por una venta.",
+      saleDateError:
+        "Ingresa una fecha de venta válida antes de seleccionar Vendido.",
+      saveError:
+        "No pudimos guardar los metadatos del artículo. Inténtalo de nuevo.",
+    },
+    collectionItemStatusTrends: {
+      title: "Estados de los artículos de colección",
+      chartLabel: "Asignaciones de estado de los artículos de colección",
+      tableLabel:
+        "Asignaciones de estado y cantidades de artículos de colección",
+      status: "Estado",
+      assignments: "Asignaciones de estado",
+      percentage: "Porcentaje de asignaciones",
+      unstatused: "Artículos de colección",
+      overlap:
+        "Los valores cuentan asignaciones de estado. Un artículo puede tener varios estados, por lo que las cantidades y los porcentajes pueden superar el número de artículos únicos.",
+      select: "Mostrar artículos de colección con estado {status}",
+      clearSelection: "Borrar selección de estado",
+      results: "Artículos de colección con estado {status}",
+      empty: "No hay artículos de colección que coincidan con este estado.",
+      error: "No pudimos cargar las tendencias de estados. Inténtalo de nuevo.",
+      loading: "Cargando tendencias de estados…",
+      approximateCount: "Aproximadamente {count} artículos de colección",
+      exactPublicCount: "{count} artículos de colección públicos actualmente",
+      anonymousProducts: "Productos de los totales anónimos por estado",
+      anonymousProductCount:
+        "Aproximadamente {count} artículos de colección de {product}",
+      privacy:
+        "Los totales anónimos requieren al menos cinco participantes y se redondean al múltiplo de cinco más cercano.",
+      publicOnly:
+        "Solo se muestran artículos disponibles públicamente y estados públicos.",
+      soldNoPublicPage:
+        "Artículo vendido; no tiene una página pública disponible.",
+    },
     trends: {
       activity: "Registros agregados",
       activityChartLabel:
