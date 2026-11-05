@@ -1109,6 +1109,17 @@ export const esMX = {
         refill: "Repuesto instalado",
         refillOffering: "Oferta de repuesto",
       },
+      interchangeableParts: {
+        yes: "Sí",
+        no: "No",
+        heading: "Piezas intercambiables",
+        help: "¿Se puede cambiar esta pieza por otra de distinto diseño, material o versión sin modificaciones? Reemplazarla por un repuesto idéntico no cuenta. Se da por hecho que la pluma incluye sus piezas de fábrica.",
+        customization: "Requiere modificaciones",
+        confirmationTitle: "Confirmar modificación",
+        confirmation:
+          "Normalmente, esta pieza no es intercambiable en esta pluma. Cambiarla requiere modificaciones. ¿Quieres continuar?",
+        continue: "Sí, continuar",
+      },
       compatibleParts: {
         heading: "Piezas compatibles",
       },

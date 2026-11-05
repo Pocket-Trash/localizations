@@ -1090,6 +1090,17 @@ export const enUS = {
         refill: "Installed refill",
         refillOffering: "Refill offering",
       },
+      interchangeableParts: {
+        yes: "Yes",
+        no: "No",
+        heading: "Interchangeable parts",
+        help: "Can this part be swapped for a different design, material, or version without customization? Replacing it with an identical spare does not count. Standard factory parts are assumed.",
+        customization: "Customization required",
+        confirmationTitle: "Confirm customization",
+        confirmation:
+          "This part is normally not interchangeable on this pen. Changing it requires customization. Do you want to continue?",
+        continue: "Yes, continue",
+      },
       compatibleParts: {
         heading: "Compatible parts",
       },
