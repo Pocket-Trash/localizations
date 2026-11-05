@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.50.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 52db2e8: Explain multiple functional roles on a single pen part.
+
 ## 0.49.0
 
 _Published 2026-11-05._
