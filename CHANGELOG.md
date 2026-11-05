@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.56.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 19664da: Clarify selected collection products, product changes, and empty search results in English and Mexican Spanish.
+
 ## 0.55.0
 
 _Published 2026-11-05._
