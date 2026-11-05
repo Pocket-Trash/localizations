@@ -1116,9 +1116,9 @@ export const esMX = {
         parts: "Piezas que accionan este mecanismo",
         help: "Vincula aquí las piezas y los mecanismos físicos. Estos vínculos no agregan compatibilidad con una pluma.",
         roleInUse:
-          "Elimina los vínculos de esta pieza con los mecanismos y guarda antes de quitarle la función de accionador.",
+          "Elimina los vínculos de esta pieza con los mecanismos y guarda antes de quitarle la función de actuador.",
         invalid:
-          "Elige piezas accionadoras y productos de mecanismo físicos distintos y visibles.",
+          "Elige piezas con la función de actuador y productos de mecanismo físicos distintos y visibles.",
         operates: "Acciona",
         operatedBy: "Accionado por",
       },
