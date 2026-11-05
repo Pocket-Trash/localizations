@@ -1000,6 +1000,15 @@ export type CompleteLocalizationResource = Readonly<{
         refill: string;
         refillOffering: string;
       };
+      actuation: {
+        mechanisms: string;
+        parts: string;
+        help: string;
+        roleInUse: string;
+        invalid: string;
+        operates: string;
+        operatedBy: string;
+      };
       partRoles: {
         heading: string;
         help: string;

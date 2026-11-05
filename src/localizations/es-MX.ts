@@ -1111,6 +1111,17 @@ export const esMX = {
         refill: "Repuesto instalado",
         refillOffering: "Oferta de repuesto",
       },
+      actuation: {
+        mechanisms: "Mecanismos que acciona esta pieza",
+        parts: "Piezas que accionan este mecanismo",
+        help: "Vincula aquí las piezas y los mecanismos físicos. Estos vínculos no agregan compatibilidad con una pluma.",
+        roleInUse:
+          "Elimina los vínculos de esta pieza con los mecanismos y guarda antes de quitarle la función de accionador.",
+        invalid:
+          "Elige piezas accionadoras y productos de mecanismo físicos distintos y visibles.",
+        operates: "Acciona",
+        operatedBy: "Accionado por",
+      },
       partRoles: {
         heading: "¿Qué funciones tiene esta pieza?",
         help: "Selecciona todas las funciones que cumple esta única pieza física. Su tipo de producto sigue siendo el mismo.",

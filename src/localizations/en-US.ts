@@ -1092,6 +1092,17 @@ export const enUS = {
         refill: "Installed refill",
         refillOffering: "Refill offering",
       },
+      actuation: {
+        mechanisms: "Mechanisms this part actuates",
+        parts: "Parts that actuate this mechanism",
+        help: "Link physical parts and mechanisms here. These links do not add compatibility with a pen.",
+        roleInUse:
+          "Remove this part’s mechanism links and save before removing its Actuator role.",
+        invalid:
+          "Choose distinct, visible actuator parts and physical mechanism products.",
+        operates: "Actuates",
+        operatedBy: "Actuated by",
+      },
       partRoles: {
         heading: "What does this part do?",
         help: "Select every role this single physical part performs. Its product type stays the same.",
