@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.57.2
+
+_Published 2026-11-05._
+
+### Patch Changes
+
+- 4c745f7: Describe privacy inheritance for every installed component.
+
 ## 0.57.1
 
 _Published 2026-11-05._
