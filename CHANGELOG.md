@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.53.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- f8e9c61: Clarify product material options, alloys and grades, and reusable material creation.
+
 ## 0.52.0
 
 _Published 2026-11-05._
