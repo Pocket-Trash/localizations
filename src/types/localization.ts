@@ -999,6 +999,16 @@ export type CompleteLocalizationResource = Readonly<{
         refill: string;
         refillOffering: string;
       };
+      interchangeableParts: {
+        yes: string;
+        no: string;
+        heading: string;
+        help: string;
+        customization: string;
+        confirmationTitle: string;
+        confirmation: string;
+        continue: string;
+      };
       compatibleParts: {
         heading: string;
       };
