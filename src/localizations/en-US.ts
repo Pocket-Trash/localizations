@@ -1092,6 +1092,14 @@ export const enUS = {
         refill: "Installed refill",
         refillOffering: "Refill offering",
       },
+      partRoles: {
+        heading: "What does this part do?",
+        help: "Select every role this single physical part performs. Its product type stays the same.",
+        primary: "Required by product type",
+        samePart: "One part, multiple roles",
+        inUse:
+          "This role cannot be removed while the part has compatible pens or installed copies.",
+      },
       interchangeableParts: {
         yes: "Yes",
         no: "No",
