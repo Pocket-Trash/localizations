@@ -569,7 +569,7 @@ export const enUS = {
     catalog: {
       aliases: {
         add: "Add",
-        count: "{count} aliases",
+        count: "Aliases: {count}",
         duplicate: "This product already has that alternative name.",
         help: "Other names for this product that help people find it in search.",
         input: "Alternative product name",

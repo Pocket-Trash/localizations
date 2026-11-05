@@ -575,7 +575,7 @@ export const esMX = {
     catalog: {
       aliases: {
         add: "Agregar",
-        count: "{count} alias",
+        count: "Alias: {count}",
         duplicate: "Este producto ya tiene ese nombre alternativo.",
         help: "Otros nombres de este producto que ayudan a encontrarlo en las búsquedas.",
         input: "Nombre alternativo del producto",
