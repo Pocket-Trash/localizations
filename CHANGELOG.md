@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.49.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 92fd358: Explain customization when installing a pen part without recorded compatibility.
+
 ## 0.48.0
 
 _Published 2026-11-05._
