@@ -573,6 +573,19 @@ export const esMX = {
       },
     },
     catalog: {
+      aliases: {
+        add: "Agregar",
+        count: "Alias: {count}",
+        duplicate: "Este producto ya tiene ese nombre alternativo.",
+        help: "Otros nombres de este producto que ayudan a encontrarlo en las búsquedas.",
+        input: "Nombre alternativo del producto",
+        instruction: "Escribe un nombre y luego presiona Enter o Agregar.",
+        optional: "Opcional",
+        remove: "Quitar el alias {name}",
+        required: "Escribe un nombre alternativo del producto.",
+        tooLong:
+          "Los nombres alternativos del producto deben tener 80 caracteres o menos.",
+      },
       addProductType: {
         pen: "Agregar pluma",
         "pen-actuator": "Agregar actuador de pluma",

@@ -567,6 +567,18 @@ export const enUS = {
       },
     },
     catalog: {
+      aliases: {
+        add: "Add",
+        count: "Aliases: {count}",
+        duplicate: "This product already has that alternative name.",
+        help: "Other names for this product that help people find it in search.",
+        input: "Alternative product name",
+        instruction: "Enter one name, then press Enter or Add.",
+        optional: "Optional",
+        remove: "Remove alias {name}",
+        required: "Enter an alternative product name.",
+        tooLong: "Alternative product names must be 80 characters or fewer.",
+      },
       addProductType: {
         pen: "Add pen",
         "pen-actuator": "Add pen actuator",

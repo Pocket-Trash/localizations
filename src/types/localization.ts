@@ -519,6 +519,18 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     catalog: {
+      aliases: {
+        add: string;
+        count: string;
+        duplicate: string;
+        help: string;
+        input: string;
+        instruction: string;
+        optional: string;
+        remove: string;
+        required: string;
+        tooLong: string;
+      };
       addProductType: {
         pen: string;
         "pen-actuator": string;
