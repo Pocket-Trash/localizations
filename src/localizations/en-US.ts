@@ -1087,6 +1087,8 @@ export const enUS = {
         noRefill: "No refill installed",
         noRefillOffering: "No refill offering selected",
         notSupported: "Compatibility not recorded for this configuration",
+        unlistedConfirmation:
+          "Compatibility has not been recorded for this part. Installing it may require customization. Do you want to continue?",
         refill: "Installed refill",
         refillOffering: "Refill offering",
       },
