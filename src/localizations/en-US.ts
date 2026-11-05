@@ -65,7 +65,6 @@ export const enUS = {
       "pen-tip": "Pen tip",
       "pen-top-cap": "Pen top cap",
       refill: "Refill",
-      "spinner-button": "Spinner button",
     },
     refillCompatibilityGroups: {
       energel: "EnerGel",

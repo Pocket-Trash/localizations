@@ -48,7 +48,6 @@ export const esMX = {
       "pen-tip": "Punta de pluma",
       "pen-top-cap": "Tapa superior de pluma",
       refill: "Repuesto",
-      "spinner-button": "Botón de spinner",
     },
     refillCompatibilityGroups: {
       energel: "EnerGel",

@@ -65,7 +65,6 @@ export type CompleteLocalizationResource = Readonly<{
       "pen-tip": string;
       "pen-top-cap": string;
       refill: string;
-      "spinner-button": string;
     };
     refillCompatibilityGroups: {
       energel: string;
