@@ -876,6 +876,13 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     collections: {
+      productPicker: {
+        change: string;
+        keep: string;
+        selected: string;
+        resetConfirmation: string;
+        noResults: string;
+      };
       add: {
         title: string;
       };
