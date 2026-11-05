@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.57.1
+
+_Published 2026-11-05._
+
+### Patch Changes
+
+- aea8f59: Explain why a private collection locks item visibility.
+
 ## 0.57.0
 
 _Published 2026-11-05._
