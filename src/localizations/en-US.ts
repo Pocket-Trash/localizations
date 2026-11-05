@@ -1092,7 +1092,7 @@ export const enUS = {
       },
       visibility: {
         privateCallout:
-          "This item is public, but it will remain hidden while its collection is private.",
+          "This collection is private, so this item cannot be made public here.",
       },
     },
     pens: {
