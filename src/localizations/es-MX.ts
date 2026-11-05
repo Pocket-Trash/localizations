@@ -908,7 +908,7 @@ export const esMX = {
       privacy: {
         inherited: "Privacidad heredada",
         inheritedDescription:
-          "Este componente instalado sigue la privacidad de su deslizador o spinner principal.",
+          "Este componente instalado usa la privacidad del artículo en el que está instalado.",
         inheritedHelp:
           "Usa el botón de información con un puntero, teclado o toque para saber por qué esta opción de privacidad es de solo lectura.",
         savedPreference:

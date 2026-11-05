@@ -893,7 +893,7 @@ export const enUS = {
       privacy: {
         inherited: "Inherited privacy",
         inheritedDescription:
-          "This installed component follows the privacy of its parent slider or spinner.",
+          "This installed component follows the privacy of the item it is installed on.",
         inheritedHelp:
           "Use the information button with a pointer, keyboard, or touch to learn why this privacy setting is read-only.",
         savedPreference:

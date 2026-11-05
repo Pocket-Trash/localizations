@@ -1130,3 +1130,14 @@ test("scaffolds and syncs locale files from en-US", () => {
     /buttons: \{\n {4}action: \{\n {6}save: '',/,
   );
 });
+
+test("component privacy copy includes Pens by describing the parent item", () => {
+  assert.equal(
+    translations["en-US"]["web.slider.privacy.inheritedDescription"],
+    "This installed component follows the privacy of the item it is installed on.",
+  );
+  assert.equal(
+    translations["es-MX"]["web.slider.privacy.inheritedDescription"],
+    "Este componente instalado usa la privacidad del artículo en el que está instalado.",
+  );
+});
