@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.57.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 301a301: Clarify collection item details and personal description overrides.
+
 ## 0.56.0
 
 _Published 2026-11-05._
