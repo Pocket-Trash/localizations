@@ -1111,6 +1111,14 @@ export const esMX = {
         refill: "Repuesto instalado",
         refillOffering: "Oferta de repuesto",
       },
+      partRoles: {
+        heading: "¿Qué funciones tiene esta pieza?",
+        help: "Selecciona todas las funciones que cumple esta única pieza física. Su tipo de producto sigue siendo el mismo.",
+        primary: "Obligatoria por el tipo de producto",
+        samePart: "Una pieza, varias funciones",
+        inUse:
+          "No se puede quitar esta función mientras la pieza tenga plumas compatibles o ejemplares instalados.",
+      },
       interchangeableParts: {
         yes: "Sí",
         no: "No",
