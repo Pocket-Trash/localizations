@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.52.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 2fccc28: Explain installed actuator and mechanism pairings in English and Mexican Spanish.
+
 ## 0.51.0
 
 _Published 2026-11-05._
