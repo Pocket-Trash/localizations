@@ -694,7 +694,8 @@ export const esMX = {
         productTypeAll: "Todos los tipos de producto",
       },
       help: {
-        collectionDescriptionOverride: "",
+        collectionDescriptionOverride:
+          "Comienza con la descripción del catálogo. Tus cambios solo se aplican a este artículo. Déjalo en blanco para usar el texto del catálogo. Compatible con Markdown. Máximo 5,000 caracteres.",
         makerProductUrl: "",
         markdownDescription: "",
         productLinks:
@@ -979,6 +980,10 @@ export const esMX = {
       },
     },
     collections: {
+      itemDetails: {
+        title: "Detalles del artículo",
+        materialsAndFinish: "Materiales y acabado: {name}",
+      },
       productPicker: {
         change: "Cambiar producto",
         keep: "Conservar este producto",

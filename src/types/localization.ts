@@ -876,6 +876,10 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     collections: {
+      itemDetails: {
+        title: string;
+        materialsAndFinish: string;
+      };
       productPicker: {
         change: string;
         keep: string;
