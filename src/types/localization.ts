@@ -519,6 +519,20 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     catalog: {
+      addProductType: {
+        pen: string;
+        "pen-actuator": string;
+        "pen-clip": string;
+        "pen-mechanism": string;
+        "pen-tip": string;
+        "pen-top-cap": string;
+        refill: string;
+        slider: string;
+        "slider-insert": string;
+        "slider-plate": string;
+        spinner: string;
+        "spinner-button": string;
+      };
       allProducts: string;
       approval: {
         approve: string;

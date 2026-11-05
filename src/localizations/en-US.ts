@@ -59,7 +59,7 @@ export const enUS = {
     },
     productTypes: {
       pen: "Pen",
-      "pen-actuator": "Pen actuator",
+      "pen-actuator": "Pen actuator (e.g. bolt pin, button)",
       "pen-clip": "Pen clip",
       "pen-mechanism": "Pen mechanism",
       "pen-tip": "Pen tip",
@@ -567,6 +567,20 @@ export const enUS = {
       },
     },
     catalog: {
+      addProductType: {
+        pen: "Add pen",
+        "pen-actuator": "Add pen actuator",
+        "pen-clip": "Add pen clip",
+        "pen-mechanism": "Add pen mechanism",
+        "pen-tip": "Add pen tip",
+        "pen-top-cap": "Add pen top cap",
+        refill: "Add refill",
+        slider: "Add slider",
+        "slider-insert": "Add slider insert",
+        "slider-plate": "Add slider plate",
+        spinner: "Add spinner",
+        "spinner-button": "Add spinner button",
+      },
       allProducts: "All Products",
       approval: {
         approve: "Approve product",

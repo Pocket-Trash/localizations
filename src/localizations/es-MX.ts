@@ -41,7 +41,8 @@ export const esMX = {
     },
     productTypes: {
       pen: "Pluma",
-      "pen-actuator": "Actuador de pluma",
+      "pen-actuator":
+        "Actuador de pluma (p. ej., perno de accionamiento, botón)",
       "pen-clip": "Clip de pluma",
       "pen-mechanism": "Mecanismo de pluma",
       "pen-tip": "Punta de pluma",
@@ -572,6 +573,20 @@ export const esMX = {
       },
     },
     catalog: {
+      addProductType: {
+        pen: "Agregar pluma",
+        "pen-actuator": "Agregar actuador de pluma",
+        "pen-clip": "Agregar clip de pluma",
+        "pen-mechanism": "Agregar mecanismo de pluma",
+        "pen-tip": "Agregar punta de pluma",
+        "pen-top-cap": "Agregar tapa superior de pluma",
+        refill: "Agregar repuesto",
+        slider: "Agregar deslizador",
+        "slider-insert": "Agregar inserto para deslizador",
+        "slider-plate": "Agregar placa para deslizador",
+        spinner: "Agregar spinner",
+        "spinner-button": "Agregar botón de spinner",
+      },
       allProducts: "Todos los productos",
       approval: {
         approve: "Aprobar producto",
