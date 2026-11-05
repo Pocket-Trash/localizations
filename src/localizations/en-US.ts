@@ -956,6 +956,14 @@ export const enUS = {
       },
     },
     collections: {
+      productPicker: {
+        change: "Change product",
+        keep: "Keep this product",
+        selected: "Selected product: {name} · {type}",
+        resetConfirmation:
+          "Changing the product will reset your display name, description, and product-specific details. Continue?",
+        noResults: "No products match. Try another search or product type.",
+      },
       add: {
         title: "Add collection",
       },

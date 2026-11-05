@@ -979,6 +979,15 @@ export const esMX = {
       },
     },
     collections: {
+      productPicker: {
+        change: "Cambiar producto",
+        keep: "Conservar este producto",
+        selected: "Producto seleccionado: {name} · {type}",
+        resetConfirmation:
+          "Cambiar el producto restablecerá el nombre para mostrar, la descripción y los detalles específicos del producto. ¿Quieres continuar?",
+        noResults:
+          "No hay productos que coincidan. Prueba con otra búsqueda u otro tipo de producto.",
+      },
       add: {
         title: "",
       },
