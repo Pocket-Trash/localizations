@@ -1111,6 +1111,20 @@ export const esMX = {
         refill: "Repuesto instalado",
         refillOffering: "Oferta de repuesto",
       },
+      installedActuation: {
+        selector: "Pieza que acciona {name}",
+        help: "Elige una pieza de tu colección. Un clip con la función de actuador cumple ambas funciones y se instala una sola vez.",
+        none: "Ninguna pieza actuadora seleccionada",
+        recorded: "Esta combinación está registrada en el catálogo.",
+        warning: "Esta combinación no está registrada en el catálogo.",
+        confirmation:
+          "La compatibilidad entre {actuator} y {mechanism} no está registrada. Esta configuración puede requerir personalización. ¿Quieres continuar?",
+        confirmationRequired:
+          "Confirma la personalización de esta nueva combinación de actuador y mecanismo.",
+        invalid:
+          "Elige una pieza instalada con la función de actuador y un mecanismo físico instalado distinto.",
+        summary: "{actuator} acciona {mechanism}",
+      },
       actuation: {
         mechanisms: "Mecanismos que acciona esta pieza",
         parts: "Piezas que accionan este mecanismo",

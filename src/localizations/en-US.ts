@@ -1092,6 +1092,20 @@ export const enUS = {
         refill: "Installed refill",
         refillOffering: "Refill offering",
       },
+      installedActuation: {
+        selector: "Part used to actuate {name}",
+        help: "Choose one owned part. A clip with the Actuator role fills both roles and is installed once.",
+        none: "No actuating part selected",
+        recorded: "This pairing is recorded in the catalog.",
+        warning: "This pairing is not recorded in the catalog.",
+        confirmation:
+          "Compatibility between {actuator} and {mechanism} is not recorded. This setup may require customization. Do you want to continue?",
+        confirmationRequired:
+          "Confirm customization for this new actuator and mechanism pairing.",
+        invalid:
+          "Choose one installed actuator-role part and one distinct installed physical mechanism.",
+        summary: "{actuator} actuates {mechanism}",
+      },
       actuation: {
         mechanisms: "Mechanisms this part actuates",
         parts: "Parts that actuate this mechanism",
