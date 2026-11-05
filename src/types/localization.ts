@@ -996,6 +996,7 @@ export type CompleteLocalizationResource = Readonly<{
         noRefill: string;
         noRefillOffering: string;
         notSupported: string;
+        unlistedConfirmation: string;
         refill: string;
         refillOffering: string;
       };

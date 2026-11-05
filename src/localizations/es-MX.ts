@@ -1106,6 +1106,8 @@ export const esMX = {
         noRefill: "Sin repuesto instalado",
         noRefillOffering: "Sin oferta de repuesto seleccionada",
         notSupported: "Compatibilidad no registrada para esta configuración",
+        unlistedConfirmation:
+          "No se ha registrado la compatibilidad de esta pieza. Instalarla puede requerir modificaciones. ¿Quieres continuar?",
         refill: "Repuesto instalado",
         refillOffering: "Oferta de repuesto",
       },
