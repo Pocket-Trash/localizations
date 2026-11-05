@@ -626,8 +626,6 @@ test("catalog source-detail copy falls back from blank Spanish entries", () => {
       "Markdown supported. 5,000 characters maximum.",
     "web.catalog.help.makerProductUrl":
       "Direct link to the product on the maker's website.",
-    "web.catalog.help.collectionDescriptionOverride":
-      "Leave blank to use the product description. Markdown supported. 5,000 characters maximum.",
     "web.catalog.error.descriptionLength": "Enter 5,000 characters or fewer.",
     "web.catalog.error.bearingLength": "Enter 200 characters or fewer.",
   };
@@ -641,6 +639,25 @@ test("catalog source-detail copy falls back from blank Spanish entries", () => {
     assert.equal(translations["en-US"][key], english);
     assert.equal(translations["es-MX"][key], english);
   }
+});
+
+test("collection description help explains the personal override in both locales", () => {
+  assert.match(
+    translations["en-US"]["web.catalog.help.collectionDescriptionOverride"],
+    /only to this item/,
+  );
+  assert.match(
+    translations["es-MX"]["web.catalog.help.collectionDescriptionOverride"],
+    /solo se aplican a este artículo/,
+  );
+  assert.equal(
+    translations["en-US"]["web.collections.itemDetails.title"],
+    "Item details",
+  );
+  assert.equal(
+    translations["es-MX"]["web.collections.itemDetails.title"],
+    "Detalles del artículo",
+  );
 });
 
 test("multiple collection copy falls back from blank Spanish entries", () => {

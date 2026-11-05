@@ -685,7 +685,7 @@ export const enUS = {
       },
       help: {
         collectionDescriptionOverride:
-          "Leave blank to use the product description. Markdown supported. 5,000 characters maximum.",
+          "Starts with the catalog description. Your edits apply only to this item. Leave blank to use the catalog text. Markdown supported. 5,000 characters maximum.",
         makerProductUrl: "Direct link to the product on the maker's website.",
         markdownDescription: "Markdown supported. 5,000 characters maximum.",
         productLinks: "Add direct links to this product in display order.",
@@ -956,6 +956,10 @@ export const enUS = {
       },
     },
     collections: {
+      itemDetails: {
+        title: "Item details",
+        materialsAndFinish: "Materials and finish: {name}",
+      },
       productPicker: {
         change: "Change product",
         keep: "Keep this product",
