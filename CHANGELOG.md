@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.51.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 5f8061f: Explain physical actuator and mechanism associations in English and Mexican Spanish.
+
 ## 0.50.0
 
 _Published 2026-11-05._
