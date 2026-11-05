@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.48.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- 0c83c6a: Add pen interchangeability and customization confirmation copy.
+
 ## 0.47.0
 
 _Published 2026-11-03._
