@@ -680,6 +680,27 @@ export const esMX = {
       finishOptionCount: "Opciones de acabado: {count}",
       finishPreview: "Vista previa: {finish}",
       materialCount: "Materiales: {count}",
+      materialOptions: {
+        addOption: "Agregar opción de material",
+        title: "Opción de material",
+        help: "Cada opción es una versión diferente de este producto. Agrega varios materiales a una misma opción cuando esa versión los use juntos.",
+        addComponent: "Agregar otro material a esta opción",
+        material: "Material",
+        materialLabel: "Material {number}",
+        grade: "Aleación o grado (opcional)",
+        gradeLabel: "Aleación o grado (opcional) del material {number}",
+        notSpecified: "Sin especificar",
+        chooseMaterial:
+          "Elige un material para ver las aleaciones o los grados disponibles.",
+        noGrades: "No hay aleaciones ni grados registrados para este material.",
+        gradeHelp:
+          "Las aleaciones y los grados se administran en Administración → Materiales.",
+        missing:
+          "¿Falta un material? Agrégalo a la lista de materiales para poder usarlo en cualquier producto.",
+        addToList: "Agregar a la lista de materiales",
+        removeOption: "Quitar esta opción de material",
+        removeComponent: "Quitar el material {number} de esta opción",
+      },
       materialCombination: {
         add: "Agregar combinación de materiales",
         addSingle: "Agregar material",
