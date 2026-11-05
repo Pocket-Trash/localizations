@@ -679,7 +679,6 @@ test("multiple collection copy falls back from blank Spanish entries", () => {
     "web.collections.placeholder.name",
     "web.collections.select.addNew",
     "web.collections.select.placeholder",
-    "web.collections.visibility.privateCallout",
   ];
 
   for (const key of keys) {
@@ -690,6 +689,17 @@ test("multiple collection copy falls back from blank Spanish entries", () => {
     assert.equal(esMXValue, "");
     assert.equal(translations["es-MX"][key], translations["en-US"][key]);
   }
+});
+
+test("collection visibility copy explains the locked public switch in both locales", () => {
+  assert.equal(
+    translations["en-US"]["web.collections.visibility.privateCallout"],
+    "This collection is private, so this item cannot be made public here.",
+  );
+  assert.equal(
+    translations["es-MX"]["web.collections.visibility.privateCallout"],
+    "Esta colección es privada, así que este artículo no puede hacerse público aquí.",
+  );
 });
 
 test("collection gallery copy is localized in English and Spanish", () => {

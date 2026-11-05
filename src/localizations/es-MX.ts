@@ -1115,7 +1115,8 @@ export const esMX = {
         hasSerialNumber: "Este artículo tiene un número de serie",
       },
       visibility: {
-        privateCallout: "",
+        privateCallout:
+          "Esta colección es privada, así que este artículo no puede hacerse público aquí.",
       },
     },
     pens: {
