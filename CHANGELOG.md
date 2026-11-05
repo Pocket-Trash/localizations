@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.54.0
+
+_Published 2026-11-05._
+
+### Minor Changes
+
+- b88598d: Add product-specific creation actions and explain the pen actuator type in English and Mexican Spanish.
+
 ## 0.53.0
 
 _Published 2026-11-05._
