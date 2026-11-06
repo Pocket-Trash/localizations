@@ -3,55 +3,38 @@ import { resolve } from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 
-export const auditException = Object.freeze({
-  advisoryId: "GHSA-vfj7-8cjw-p6xm",
-  expiresAt: "2026-10-13T23:59:59Z",
-  issue: "ENG-366",
-  owner: "Pocket Trash Engineering",
-  packageName: "braces",
-  rationale:
-    "The advisory has no patched release and is reachable only through the dev-only Changesets CLI with repository-controlled glob patterns.",
-  reviewedAt: "2026-10-06T00:00:00Z",
-  usageBoundary: ".>@changesets/cli>",
-});
-
 const blockingSeverities = new Set(["critical", "high"]);
 
-function isReviewedException(advisory, now) {
-  if (now.getTime() > new Date(auditException.expiresAt).getTime())
-    return false;
+const severities = new Set(["info", "low", "moderate", "high", "critical"]);
+const isRecord = (value) =>
+  value !== null && typeof value === "object" && !Array.isArray(value);
+
+export function evaluateAuditReport(report) {
   if (
-    advisory.github_advisory_id !== auditException.advisoryId ||
-    advisory.module_name !== auditException.packageName ||
-    advisory.patched_versions !== null ||
-    advisory.severity !== "high" ||
-    !Array.isArray(advisory.findings) ||
-    advisory.findings.length === 0
-  )
-    return false;
-
-  return advisory.findings.every(
-    (finding) =>
-      finding?.dev === true &&
-      finding.version === "3.0.3" &&
-      Array.isArray(finding.paths) &&
-      finding.paths.length > 0 &&
-      finding.paths.every(
-        (path) =>
-          typeof path === "string" &&
-          path.startsWith(auditException.usageBoundary),
-      ),
-  );
-}
-
-export function evaluateAuditReport(report, now = new Date()) {
+    !isRecord(report) ||
+    report.error ||
+    !(
+      Object.hasOwn(report, "advisories") ||
+      Object.hasOwn(report, "vulnerabilities")
+    )
+  ) {
+    return { blocking: ["invalid-audit-report"] };
+  }
+  for (const key of ["advisories", "vulnerabilities"]) {
+    if (!Object.hasOwn(report, key)) continue;
+    if (
+      !isRecord(report[key]) ||
+      Object.values(report[key]).some(
+        (entry) => !isRecord(entry) || !severities.has(entry.severity),
+      )
+    )
+      return { blocking: ["invalid-audit-report"] };
+  }
   const advisories =
     report && typeof report === "object" && report.advisories
       ? Object.values(report.advisories)
       : [];
   const blocking = [];
-  const ignored = [];
-
   for (const advisory of advisories) {
     if (
       !advisory ||
@@ -64,8 +47,7 @@ export function evaluateAuditReport(report, now = new Date()) {
       blocking.push("unknown-high-or-critical-advisory");
       continue;
     }
-    if (isReviewedException(advisory, now)) ignored.push(id);
-    else blocking.push(id);
+    blocking.push(id);
   }
 
   const vulnerabilities =
@@ -89,13 +71,14 @@ export function evaluateAuditReport(report, now = new Date()) {
     );
   }
 
-  return { blocking, ignored };
+  return { blocking };
 }
 
 function run() {
   const audit = spawnSync("pnpm", ["audit", "--json"], {
     encoding: "utf8",
     maxBuffer: 20 * 1024 * 1024,
+    timeout: 120_000,
   });
   if (audit.error) {
     console.error(`Security audit could not start: ${audit.error.message}`);
@@ -126,15 +109,18 @@ function run() {
     return 1;
   }
   const result = evaluateAuditReport(report);
-  for (const id of result.ignored) {
-    console.warn(
-      `Temporarily ignoring ${id} through ${auditException.expiresAt} (${auditException.issue}).`,
-    );
-  }
   if (result.blocking.length > 0) {
     console.error(
       `Blocking security advisories: ${result.blocking.join(", ")}`,
     );
+    return 1;
+  }
+  if (
+    audit.status === 1 &&
+    Object.keys(report.advisories ?? {}).length === 0 &&
+    Object.keys(report.vulnerabilities ?? {}).length === 0
+  ) {
+    console.error("Security audit failed without reported findings.");
     return 1;
   }
   console.log("Security audit passed.");
