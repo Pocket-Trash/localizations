@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.57.3
+
+_Published 2026-11-06._
+
+### Patch Changes
+
+- 57d7c1c: Reject malformed security reports and remove the expired braces waiver.
+
 ## 0.57.2
 
 _Published 2026-11-05._
