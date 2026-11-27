@@ -178,6 +178,7 @@ export const esMX = {
       },
     },
     nib: {
+      model: "Modelo de plumín",
       productType: "Plumines",
       create: "Crear plumín",
       specification: "Especificaciones del plumín",

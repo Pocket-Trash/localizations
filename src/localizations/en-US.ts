@@ -194,6 +194,7 @@ export const enUS = {
       },
     },
     nib: {
+      model: "Nib model",
       productType: "Nibs",
       create: "Create nib",
       specification: "Nib specification",

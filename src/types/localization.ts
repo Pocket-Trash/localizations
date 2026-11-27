@@ -188,6 +188,7 @@ export type CompleteLocalizationResource = Readonly<{
       };
     };
     nib: {
+      model: string;
       productType: string;
       create: string;
       specification: string;
