@@ -1,5 +1,13 @@
 # @pocket-trash/localizations
 
+## 0.58.0
+
+_Published 2026-11-27._
+
+### Minor Changes
+
+- 6e22005: Add fountain pen and nib catalog and collection copy in English and Spanish.
+
 ## 0.57.3
 
 _Published 2026-11-06._
