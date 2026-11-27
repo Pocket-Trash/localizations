@@ -42,6 +42,18 @@ export type CompleteLocalizationResource = Readonly<{
     current: string;
   };
   catalog: {
+    fountainPenFillingMechanisms: {
+      cartridgeConverter: string;
+      screwPiston: string;
+      buttonPiston: string;
+      springLoadedPiston: string;
+      vacuumPlunger: string;
+      eyedropper: string;
+      bulkfiller: string;
+      pneumatic: string;
+      lever: string;
+      crescent: string;
+    };
     markets: {
       global: string;
     };
@@ -58,6 +70,8 @@ export type CompleteLocalizationResource = Readonly<{
       topCap: string;
     };
     productTypes: {
+      "fountain-pen": string;
+      nib: string;
       pen: string;
       "pen-actuator": string;
       "pen-clip": string;
@@ -73,6 +87,158 @@ export type CompleteLocalizationResource = Readonly<{
     };
   };
   web: {
+    fountainPen: {
+      productType: string;
+      create: string;
+      fillingAndFit: string;
+      fillingMechanisms: string;
+      connectorFamily: string;
+      cartridgeConverterLength: string;
+      nibAndSectionOptions: string;
+      nibConstruction: string;
+      compatibleNibModels: string;
+      defaultNibModel: string;
+      noIncludedNib: string;
+      addNibOption: string;
+      removeNibOption: string;
+      sectionOptions: string;
+      sectionOptionsHelp: string;
+      addSection: string;
+      editSection: string;
+      removeSection: string;
+      sectionName: string;
+      includedNib: string;
+      bodyAndCapabilities: string;
+      bodySilhouette: string;
+      crossSection: string;
+      facetCount: string;
+      formFactor: string;
+      capClosure: string;
+      nibDeployment: string;
+      finialProfiles: string;
+      finialProfile: string;
+      addFinialProfile: string;
+      removeFinialProfile: string;
+      postable: string;
+      postableHelp: string;
+      ownerReplaceableNib: string;
+      hasClip: string;
+      hasInkWindow: string;
+      capabilityNotes: string;
+      appearanceHelp: string;
+      nibSetup: string;
+      fittedSection: string;
+      installedNib: string;
+      defaultNib: string;
+      ownedNib: string;
+      noNib: string;
+      addNib: string;
+      addNibAndUse: string;
+      nibAdded: string;
+      inlineNibSaveError: string;
+      sectionWithoutNib: string;
+      incompatibleNib: string;
+      confirmCustomization: string;
+      customizationHelp: string;
+      alreadyInstalled: string;
+      unavailableNib: string;
+      sectionRequired: string;
+      options: {
+        length: {
+          short: string;
+          long: string;
+          shortAndLong: string;
+        };
+        construction: {
+          exposed: string;
+          hooded: string;
+          semiHooded: string;
+          inlaid: string;
+          integral: string;
+        };
+        silhouette: {
+          cylindrical: string;
+          cigar: string;
+          tapered: string;
+          reverseTapered: string;
+        };
+        crossSection: {
+          round: string;
+          faceted: string;
+        };
+        formFactor: {
+          standard: string;
+          pocket: string;
+          desk: string;
+        };
+        capClosure: {
+          screw: string;
+          snap: string;
+          magnetic: string;
+          bayonet: string;
+          capless: string;
+        };
+        deployment: {
+          fixed: string;
+          pushButton: string;
+          twist: string;
+          bolt: string;
+          hybrid: string;
+        };
+      };
+    };
+    nib: {
+      model: string;
+      productType: string;
+      create: string;
+      specification: string;
+      form: string;
+      standard: string;
+      completeUnit: string;
+      manufacturerSizeCode: string;
+      sizeFamily: string;
+      mountingInterface: string;
+      offeredWidths: string;
+      writingWidth: string;
+      defaultFeedAndHousing: string;
+      defaultFeedMaterial: string;
+      defaultHousingMaterial: string;
+      feedAndHousing: string;
+      feedMaterial: string;
+      housingMaterial: string;
+      baseMaterialHelp: string;
+      widthHelp: string;
+      mountHelp: string;
+      plating: string;
+      offeredPlatingStyles: string;
+      offeredPlatingMetals: string;
+      platingStyle: string;
+      platingMetal: string;
+      bodyCoating: string;
+      tinesCoating: string;
+      natural: string;
+      platingHelp: string;
+      styles: {
+        unplated: string;
+        full: string;
+        partial: string;
+        twoTone: string;
+        reverseTwoTone: string;
+      };
+      componentMaterials: {
+        plastic: string;
+        ebonite: string;
+        metal: string;
+      };
+      validation: {
+        baseMaterial: string;
+        width: string;
+        unplated: string;
+        full: string;
+        zones: string;
+        offering: string;
+      };
+    };
     site: {
       name: string;
     };
@@ -532,6 +698,8 @@ export type CompleteLocalizationResource = Readonly<{
         tooLong: string;
       };
       addProductType: {
+        "fountain-pen": string;
+        nib: string;
         pen: string;
         "pen-actuator": string;
         "pen-clip": string;
